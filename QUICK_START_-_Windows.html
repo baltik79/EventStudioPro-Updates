@@ -57,7 +57,25 @@ h2.subtitle { text-align: center; color: #8AAAC5; font-size: 13px; margin-top: 0
 
 .section { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px dashed #2a3a55; }
 .section:last-child { border-bottom: none; }
-.section-title { font-weight: 900; font-size: 16px; margin-bottom: 10px; letter-spacing: 0.5px; text-transform: uppercase; }
+.section-title-wrap { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 8px;
+  background: linear-gradient(135deg, #3A5A80, #1E3A5F);
+  border: 2px solid #7EB8F7;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 22px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+.section-title { font-weight: 900; font-size: 16px; letter-spacing: 0.5px; text-transform: uppercase; margin: 0; }
 .section p { margin: 8px 0; font-size: 13px; line-height: 1.65; }
 .section ul { font-size: 13px; line-height: 1.65; padding-left: 20px; margin: 8px 0; }
 .section li { margin-bottom: 4px; }
@@ -133,7 +151,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <div class="content active" data-lang="en">
 
 <div class="section">
-<div class="section-title">Before you buy</div>
+<div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Before you buy</div></div>
 
 <div class="callout danger">
 <div class="callout-title">⚠ Windows only</div>
@@ -149,7 +167,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Critical — read before first use</div>
+<div class="section-title-wrap"><div class="section-num">2</div><div class="section-title">Critical — read before first use</div></div>
 
 <div class="callout danger">
 <div class="callout-title">🛡 Back up your folders first</div>
@@ -176,7 +194,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Smart intruder detection</div>
+<div class="section-title-wrap"><div class="section-num">3</div><div class="section-title">Smart intruder detection</div></div>
 
 <div class="callout info">
 <div class="callout-title">🛡 Smart protection</div>
@@ -192,7 +210,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Antivirus warnings — please read</div>
+<div class="section-title-wrap"><div class="section-num">4</div><div class="section-title">Antivirus warnings — please read</div></div>
 
 <div class="callout warning">
 <div class="callout-title">📥 Browser warnings during download</div>
@@ -227,7 +245,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Purchase process</div>
+<div class="section-title-wrap"><div class="section-num">5</div><div class="section-title">Purchase process</div></div>
 <p>The purchase is handled directly with Baltik Sound in the following steps:</p>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Contact us</strong> by e-mail at <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
@@ -240,7 +258,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Installation — important notes</div>
+<div class="section-title-wrap"><div class="section-num">6</div><div class="section-title">Installation — important notes</div></div>
 <div class="notes">
 <p>• Do NOT place <code>EventStudioPro.exe</code> in the "Program Files" folder. If you do place the program in "Program Files", you must launch it by right-clicking and selecting "Run as administrator".</p>
 <p>• The <code>licence.key</code> you receive from Baltik Sound must be copied into the same folder where <code>EventStudioPro.exe</code> is located so the program can recognise your licence.</p>
@@ -251,6 +269,8 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <hr class="divider">
+
+<div class="section-title-wrap"><div class="section-num">7</div><div class="section-title">Installation — step by step</div></div>
 
 <div class="step"><div class="step-num">STEP 1</div><div class="step-title">Create a folder</div>
 <p>Create a new folder on your C: drive and name it: <code>Event Studio Pro</code></p></div>
@@ -268,7 +288,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <hr class="divider">
 
 <div class="section">
-<div class="section-title">Recommended workflow</div>
+<div class="section-title-wrap"><div class="section-num">8</div><div class="section-title">Recommended workflow</div></div>
 <p>Follow this workflow every time you want to edit content from your Ketron device:</p>
 <div class="workflow">
 <div class="wf-step"><div class="wf-num">1</div><div class="wf-body"><strong>Backup</strong>Copy the USER_VOICE, USER_STYLE, REGISTRATION and PERFORMANCE folders from the Ketron device to a location on your PC.</div></div>
@@ -280,7 +300,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Support</div>
+<div class="section-title-wrap"><div class="section-num">9</div><div class="section-title">Support</div></div>
 <p>For any questions, problems or licence-related requests, please contact Baltik Sound:</p>
 <p style="text-align:center; margin-top:12px;"><a href="mailto:baltiksound@hotmail.com" class="email-link" style="font-size:15px;">baltiksound@hotmail.com</a></p>
 <p>A full user manual is included together with <code>EventStudioPro.exe</code> in the download package.</p>
@@ -291,7 +311,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <div class="content" data-lang="sr">
 
 <div class="section">
-<div class="section-title">Prije kupovine</div>
+<div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Prije kupovine</div></div>
 
 <div class="callout danger">
 <div class="callout-title">⚠ Samo za Windows</div>
@@ -307,7 +327,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Kritično — pročitajte prije prvog korišćenja</div>
+<div class="section-title-wrap"><div class="section-num">2</div><div class="section-title">Kritično — pročitajte prije prvog korišćenja</div></div>
 
 <div class="callout danger">
 <div class="callout-title">🛡 Prvo napravite rezervnu kopiju foldera</div>
@@ -334,7 +354,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Pametno prepoznavanje "uljeza"</div>
+<div class="section-title-wrap"><div class="section-num">3</div><div class="section-title">Pametno prepoznavanje "uljeza"</div></div>
 
 <div class="callout info">
 <div class="callout-title">🛡 Pametna zaštita</div>
@@ -350,7 +370,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Antivirus upozorenja — pažljivo pročitaj</div>
+<div class="section-title-wrap"><div class="section-num">4</div><div class="section-title">Antivirus upozorenja — pažljivo pročitaj</div></div>
 
 <div class="callout warning">
 <div class="callout-title">📥 Browser upozorenja tokom download-a</div>
@@ -385,7 +405,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Postupak kupovine</div>
+<div class="section-title-wrap"><div class="section-num">5</div><div class="section-title">Postupak kupovine</div></div>
 <p>Kupovina se obavlja direktno sa Baltik Sound firmom kroz sljedeće korake:</p>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Kontaktirajte nas</strong> putem e-maila na <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
@@ -398,7 +418,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Instalacija — važne napomene</div>
+<div class="section-title-wrap"><div class="section-num">6</div><div class="section-title">Instalacija — važne napomene</div></div>
 <div class="notes">
 <p>• NEMOJTE stavljati program <code>EventStudioPro.exe</code> u "Program Files" folder. Ako ipak stavite program u "Program Files" folder, tada morate program pokretati desnim klikom miša, a zatim izaberete "Run as administrator".</p>
 <p>• <code>licence.key</code> koji dobijete od Baltik Sound-a morate kopirati u isti folder gdje se nalazi <code>EventStudioPro.exe</code> da bi program prepoznao vašu licencu.</p>
@@ -409,6 +429,8 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <hr class="divider">
+
+<div class="section-title-wrap"><div class="section-num">7</div><div class="section-title">Instalacija — korak po korak</div></div>
 
 <div class="step"><div class="step-num">KORAK 1</div><div class="step-title">Kreirajte folder</div>
 <p>Napravite novi folder na C: disku i nazovite ga: <code>Event Studio Pro</code></p></div>
@@ -426,7 +448,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <hr class="divider">
 
 <div class="section">
-<div class="section-title">Preporučeni workflow (radni proces)</div>
+<div class="section-title-wrap"><div class="section-num">8</div><div class="section-title">Preporučeni workflow (radni proces)</div></div>
 <p>Pratite ovaj redoslijed svaki put kada želite da uređujete sadržaj sa vašeg Ketron uređaja:</p>
 <div class="workflow">
 <div class="wf-step"><div class="wf-num">1</div><div class="wf-body"><strong>Backup</strong>Prekopirajte USER_VOICE, USER_STYLE, REGISTRATION i PERFORMANCE foldere sa Ketron uređaja na neku lokaciju na vašem PC-u.</div></div>
@@ -438,7 +460,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Podrška</div>
+<div class="section-title-wrap"><div class="section-num">9</div><div class="section-title">Podrška</div></div>
 <p>Za sva pitanja, probleme ili zahtjeve vezane za licencu, kontaktirajte Baltik Sound:</p>
 <p style="text-align:center; margin-top:12px;"><a href="mailto:baltiksound@hotmail.com" class="email-link" style="font-size:15px;">baltiksound@hotmail.com</a></p>
 <p>Kompletan manual za upotrebu dolazi zajedno sa <code>EventStudioPro.exe</code> u preuzetom paketu.</p>
@@ -449,7 +471,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <div class="content" data-lang="it">
 
 <div class="section">
-<div class="section-title">Prima dell'acquisto</div>
+<div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Prima dell'acquisto</div></div>
 
 <div class="callout danger">
 <div class="callout-title">⚠ Solo per Windows</div>
@@ -465,7 +487,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Importante — leggere prima del primo utilizzo</div>
+<div class="section-title-wrap"><div class="section-num">2</div><div class="section-title">Importante — leggere prima del primo utilizzo</div></div>
 
 <div class="callout danger">
 <div class="callout-title">🛡 Effettuare prima il backup delle cartelle</div>
@@ -492,7 +514,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Rilevamento intelligente degli "intrusi"</div>
+<div class="section-title-wrap"><div class="section-num">3</div><div class="section-title">Rilevamento intelligente degli "intrusi"</div></div>
 
 <div class="callout info">
 <div class="callout-title">🛡 Protezione intelligente</div>
@@ -508,7 +530,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Avvisi antivirus — leggere attentamente</div>
+<div class="section-title-wrap"><div class="section-num">4</div><div class="section-title">Avvisi antivirus — leggere attentamente</div></div>
 
 <div class="callout warning">
 <div class="callout-title">📥 Avvisi del browser durante il download</div>
@@ -543,7 +565,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Procedura di acquisto</div>
+<div class="section-title-wrap"><div class="section-num">5</div><div class="section-title">Procedura di acquisto</div></div>
 <p>L'acquisto viene gestito direttamente con Baltik Sound attraverso i seguenti passaggi:</p>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Contattateci</strong> via e-mail all'indirizzo <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
@@ -556,7 +578,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Installazione — note importanti</div>
+<div class="section-title-wrap"><div class="section-num">6</div><div class="section-title">Installazione — note importanti</div></div>
 <div class="notes">
 <p>• NON inserire <code>EventStudioPro.exe</code> nella cartella "Program Files". Se si posiziona il programma in "Program Files", è necessario avviarlo facendo clic con il tasto destro e selezionando "Run as administrator" (Esegui come amministratore).</p>
 <p>• Il file <code>licence.key</code> ricevuto da Baltik Sound deve essere copiato nella stessa cartella in cui si trova <code>EventStudioPro.exe</code> affinché il programma riconosca la licenza.</p>
@@ -567,6 +589,8 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <hr class="divider">
+
+<div class="section-title-wrap"><div class="section-num">7</div><div class="section-title">Installazione — passo per passo</div></div>
 
 <div class="step"><div class="step-num">PASSO 1</div><div class="step-title">Creare una cartella</div>
 <p>Creare una nuova cartella sul disco C: e denominarla: <code>Event Studio Pro</code></p></div>
@@ -584,7 +608,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <hr class="divider">
 
 <div class="section">
-<div class="section-title">Flusso di lavoro consigliato</div>
+<div class="section-title-wrap"><div class="section-num">8</div><div class="section-title">Flusso di lavoro consigliato</div></div>
 <p>Seguire questo flusso ogni volta che si desidera modificare i contenuti del dispositivo Ketron:</p>
 <div class="workflow">
 <div class="wf-step"><div class="wf-num">1</div><div class="wf-body"><strong>Backup</strong>Copiare le cartelle USER_VOICE, USER_STYLE, REGISTRATION e PERFORMANCE dal dispositivo Ketron in una posizione sul PC.</div></div>
@@ -596,7 +620,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Supporto</div>
+<div class="section-title-wrap"><div class="section-num">9</div><div class="section-title">Supporto</div></div>
 <p>Per qualsiasi domanda, problema o richiesta relativa alla licenza, contattare Baltik Sound:</p>
 <p style="text-align:center; margin-top:12px;"><a href="mailto:baltiksound@hotmail.com" class="email-link" style="font-size:15px;">baltiksound@hotmail.com</a></p>
 <p>Un manuale utente completo è incluso insieme a <code>EventStudioPro.exe</code> nel pacchetto scaricato.</p>
@@ -607,7 +631,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <div class="content" data-lang="de">
 
 <div class="section">
-<div class="section-title">Vor dem Kauf</div>
+<div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Vor dem Kauf</div></div>
 
 <div class="callout danger">
 <div class="callout-title">⚠ Nur für Windows</div>
@@ -623,7 +647,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Wichtig — vor der ersten Verwendung lesen</div>
+<div class="section-title-wrap"><div class="section-num">2</div><div class="section-title">Wichtig — vor der ersten Verwendung lesen</div></div>
 
 <div class="callout danger">
 <div class="callout-title">🛡 Sichern Sie zuerst Ihre Ordner</div>
@@ -650,7 +674,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Intelligente Eindringling-Erkennung</div>
+<div class="section-title-wrap"><div class="section-num">3</div><div class="section-title">Intelligente Eindringling-Erkennung</div></div>
 
 <div class="callout info">
 <div class="callout-title">🛡 Intelligenter Schutz</div>
@@ -666,7 +690,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Antivirus-Warnungen — bitte lesen</div>
+<div class="section-title-wrap"><div class="section-num">4</div><div class="section-title">Antivirus-Warnungen — bitte lesen</div></div>
 
 <div class="callout warning">
 <div class="callout-title">📥 Browser-Warnungen beim Download</div>
@@ -701,7 +725,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Kaufprozess</div>
+<div class="section-title-wrap"><div class="section-num">5</div><div class="section-title">Kaufprozess</div></div>
 <p>Der Kauf wird direkt mit Baltik Sound in den folgenden Schritten abgewickelt:</p>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Kontaktieren Sie uns</strong> per E-Mail an <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
@@ -714,7 +738,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Installation — wichtige Hinweise</div>
+<div class="section-title-wrap"><div class="section-num">6</div><div class="section-title">Installation — wichtige Hinweise</div></div>
 <div class="notes">
 <p>• Legen Sie <code>EventStudioPro.exe</code> NICHT im Ordner "Program Files" ab. Wenn Sie das Programm dennoch in "Program Files" ablegen, müssen Sie es per Rechtsklick starten und "Als Administrator ausführen" wählen.</p>
 <p>• Die Datei <code>licence.key</code>, die Sie von Baltik Sound erhalten, muss in denselben Ordner kopiert werden, in dem sich <code>EventStudioPro.exe</code> befindet, damit das Programm Ihre Lizenz erkennen kann.</p>
@@ -725,6 +749,8 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <hr class="divider">
+
+<div class="section-title-wrap"><div class="section-num">7</div><div class="section-title">Installation — Schritt für Schritt</div></div>
 
 <div class="step"><div class="step-num">SCHRITT 1</div><div class="step-title">Ordner erstellen</div>
 <p>Erstellen Sie einen neuen Ordner auf Ihrem Laufwerk C: und benennen Sie ihn: <code>Event Studio Pro</code></p></div>
@@ -742,7 +768,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <hr class="divider">
 
 <div class="section">
-<div class="section-title">Empfohlener Arbeitsablauf</div>
+<div class="section-title-wrap"><div class="section-num">8</div><div class="section-title">Empfohlener Arbeitsablauf</div></div>
 <p>Befolgen Sie diesen Arbeitsablauf jedes Mal, wenn Sie Inhalte von Ihrem Ketron-Gerät bearbeiten möchten:</p>
 <div class="workflow">
 <div class="wf-step"><div class="wf-num">1</div><div class="wf-body"><strong>Backup</strong>Kopieren Sie die Ordner USER_VOICE, USER_STYLE, REGISTRATION und PERFORMANCE vom Ketron-Gerät an einen Ort auf Ihrem PC.</div></div>
@@ -754,7 +780,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Support</div>
+<div class="section-title-wrap"><div class="section-num">9</div><div class="section-title">Support</div></div>
 <p>Bei Fragen, Problemen oder lizenzbezogenen Anfragen wenden Sie sich bitte an Baltik Sound:</p>
 <p style="text-align:center; margin-top:12px;"><a href="mailto:baltiksound@hotmail.com" class="email-link" style="font-size:15px;">baltiksound@hotmail.com</a></p>
 <p>Ein vollständiges Benutzerhandbuch ist zusammen mit <code>EventStudioPro.exe</code> im Download-Paket enthalten.</p>
@@ -765,7 +791,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <div class="content" data-lang="ru">
 
 <div class="section">
-<div class="section-title">Перед покупкой</div>
+<div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Перед покупкой</div></div>
 
 <div class="callout danger">
 <div class="callout-title">⚠ Только для Windows</div>
@@ -781,7 +807,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Важно — прочитайте перед первым использованием</div>
+<div class="section-title-wrap"><div class="section-num">2</div><div class="section-title">Важно — прочитайте перед первым использованием</div></div>
 
 <div class="callout danger">
 <div class="callout-title">🛡 Сначала создайте резервную копию папок</div>
@@ -808,7 +834,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Умное распознавание "чужих" файлов</div>
+<div class="section-title-wrap"><div class="section-num">3</div><div class="section-title">Умное распознавание "чужих" файлов</div></div>
 
 <div class="callout info">
 <div class="callout-title">🛡 Умная защита</div>
@@ -824,7 +850,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Предупреждения антивируса — пожалуйста, прочитайте</div>
+<div class="section-title-wrap"><div class="section-num">4</div><div class="section-title">Предупреждения антивируса — пожалуйста, прочитайте</div></div>
 
 <div class="callout warning">
 <div class="callout-title">📥 Предупреждения браузера при загрузке</div>
@@ -859,7 +885,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Процесс покупки</div>
+<div class="section-title-wrap"><div class="section-num">5</div><div class="section-title">Процесс покупки</div></div>
 <p>Покупка осуществляется непосредственно с Baltik Sound следующими шагами:</p>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Свяжитесь с нами</strong> по электронной почте <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
@@ -872,7 +898,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Установка — важные замечания</div>
+<div class="section-title-wrap"><div class="section-num">6</div><div class="section-title">Установка — важные замечания</div></div>
 <div class="notes">
 <p>• НЕ размещайте <code>EventStudioPro.exe</code> в папке "Program Files". Если вы всё же разместите программу в "Program Files", необходимо запускать её правой кнопкой мыши и выбирать "Запуск от имени администратора" (Run as administrator).</p>
 <p>• Файл <code>licence.key</code>, полученный от Baltik Sound, необходимо скопировать в ту же папку, где находится <code>EventStudioPro.exe</code>, чтобы программа распознала вашу лицензию.</p>
@@ -883,6 +909,8 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <hr class="divider">
+
+<div class="section-title-wrap"><div class="section-num">7</div><div class="section-title">Установка — шаг за шагом</div></div>
 
 <div class="step"><div class="step-num">ШАГ 1</div><div class="step-title">Создайте папку</div>
 <p>Создайте новую папку на диске C: и назовите её: <code>Event Studio Pro</code></p></div>
@@ -900,7 +928,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <hr class="divider">
 
 <div class="section">
-<div class="section-title">Рекомендуемый рабочий процесс</div>
+<div class="section-title-wrap"><div class="section-num">8</div><div class="section-title">Рекомендуемый рабочий процесс</div></div>
 <p>Следуйте этому процессу каждый раз, когда вы хотите редактировать содержимое с вашего устройства Ketron:</p>
 <div class="workflow">
 <div class="wf-step"><div class="wf-num">1</div><div class="wf-body"><strong>Резервная копия</strong>Скопируйте папки USER_VOICE, USER_STYLE, REGISTRATION и PERFORMANCE с устройства Ketron в место на вашем ПК.</div></div>
@@ -912,7 +940,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Поддержка</div>
+<div class="section-title-wrap"><div class="section-num">9</div><div class="section-title">Поддержка</div></div>
 <p>По любым вопросам, проблемам или запросам, связанным с лицензией, обращайтесь в Baltik Sound:</p>
 <p style="text-align:center; margin-top:12px;"><a href="mailto:baltiksound@hotmail.com" class="email-link" style="font-size:15px;">baltiksound@hotmail.com</a></p>
 <p>Полное руководство пользователя входит в комплект вместе с <code>EventStudioPro.exe</code> в скачиваемом пакете.</p>
@@ -923,7 +951,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <div class="content" data-lang="sv">
 
 <div class="section">
-<div class="section-title">Innan du köper</div>
+<div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Innan du köper</div></div>
 
 <div class="callout danger">
 <div class="callout-title">⚠ Endast för Windows</div>
@@ -939,7 +967,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Viktigt — läs innan första användningen</div>
+<div class="section-title-wrap"><div class="section-num">2</div><div class="section-title">Viktigt — läs innan första användningen</div></div>
 
 <div class="callout danger">
 <div class="callout-title">🛡 Säkerhetskopiera dina mappar först</div>
@@ -966,7 +994,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Smart detektering av "inkräktare"</div>
+<div class="section-title-wrap"><div class="section-num">3</div><div class="section-title">Smart detektering av "inkräktare"</div></div>
 
 <div class="callout info">
 <div class="callout-title">🛡 Smart skydd</div>
@@ -982,7 +1010,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Antivirusvarningar — läs noga</div>
+<div class="section-title-wrap"><div class="section-num">4</div><div class="section-title">Antivirusvarningar — läs noga</div></div>
 
 <div class="callout warning">
 <div class="callout-title">📥 Webbläsarvarningar vid nedladdning</div>
@@ -1017,7 +1045,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Köpprocess</div>
+<div class="section-title-wrap"><div class="section-num">5</div><div class="section-title">Köpprocess</div></div>
 <p>Köpet hanteras direkt med Baltik Sound i följande steg:</p>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Kontakta oss</strong> via e-post på <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
@@ -1030,7 +1058,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Installation — viktiga anmärkningar</div>
+<div class="section-title-wrap"><div class="section-num">6</div><div class="section-title">Installation — viktiga anmärkningar</div></div>
 <div class="notes">
 <p>• Placera INTE <code>EventStudioPro.exe</code> i mappen "Program Files". Om du ändå placerar programmet i "Program Files" måste du starta det genom att högerklicka och välja "Kör som administratör" (Run as administrator).</p>
 <p>• Filen <code>licence.key</code> som du får från Baltik Sound måste kopieras till samma mapp där <code>EventStudioPro.exe</code> finns för att programmet ska kunna känna igen din licens.</p>
@@ -1041,6 +1069,8 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <hr class="divider">
+
+<div class="section-title-wrap"><div class="section-num">7</div><div class="section-title">Installation — steg för steg</div></div>
 
 <div class="step"><div class="step-num">STEG 1</div><div class="step-title">Skapa en mapp</div>
 <p>Skapa en ny mapp på din C:-enhet och döp den till: <code>Event Studio Pro</code></p></div>
@@ -1058,7 +1088,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <hr class="divider">
 
 <div class="section">
-<div class="section-title">Rekommenderat arbetsflöde</div>
+<div class="section-title-wrap"><div class="section-num">8</div><div class="section-title">Rekommenderat arbetsflöde</div></div>
 <p>Följ detta arbetsflöde varje gång du vill redigera innehåll från din Ketron-enhet:</p>
 <div class="workflow">
 <div class="wf-step"><div class="wf-num">1</div><div class="wf-body"><strong>Säkerhetskopiering</strong>Kopiera mapparna USER_VOICE, USER_STYLE, REGISTRATION och PERFORMANCE från Ketron-enheten till en plats på din PC.</div></div>
@@ -1070,7 +1100,7 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="section">
-<div class="section-title">Support</div>
+<div class="section-title-wrap"><div class="section-num">9</div><div class="section-title">Support</div></div>
 <p>För alla frågor, problem eller licensrelaterade förfrågningar, kontakta Baltik Sound:</p>
 <p style="text-align:center; margin-top:12px;"><a href="mailto:baltiksound@hotmail.com" class="email-link" style="font-size:15px;">baltiksound@hotmail.com</a></p>
 <p>En fullständig användarmanual ingår tillsammans med <code>EventStudioPro.exe</code> i nedladdningspaketet.</p>
