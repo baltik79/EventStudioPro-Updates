@@ -128,6 +128,89 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   h1 { color: #222; }
 }
 
+/* === "What's new" button + accordion (v2.1.1+) === */
+.whats-new-wrap {
+  text-align: center;
+  margin: 20px 0;
+}
+.whats-new-btn {
+  background: linear-gradient(135deg, #2C4A6E 0%, #3A6090 100%);
+  color: #F7D87E;
+  border: 1px solid #F7D87E;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.whats-new-btn:hover {
+  background: linear-gradient(135deg, #3A6090 0%, #4A78B0 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.whats-new-btn .chevron {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s;
+}
+.whats-new-btn.expanded .chevron {
+  transform: rotate(180deg);
+}
+.whats-new-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  background: rgba(28, 42, 68, 0.5);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.whats-new-panel.open {
+  max-height: 2000px;
+  border: 1px solid #3A5A80;
+  padding: 20px;
+}
+.version-card {
+  background: #1A2438;
+  border-left: 4px solid #F7D87E;
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+}
+.version-card:last-child {
+  margin-bottom: 0;
+}
+.version-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.version-num {
+  color: #F7D87E;
+  font-size: 16px;
+  font-weight: bold;
+}
+.version-date {
+  color: #888;
+  font-size: 11px;
+}
+.version-body {
+  color: #BBBBBB;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.version-body strong {
+  color: #7EB8F7;
+}
+@media print {
+  .whats-new-btn { display: none; }
+  .whats-new-panel { max-height: none !important; padding: 20px; border: 1px solid #999; }
+}
+
 </style>
 </head>
 <body>
@@ -149,6 +232,99 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="content active" data-lang="en">
+
+<div class="whats-new-wrap">
+  <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 What's new in updates<span class="chevron">▼</span></button>
+  <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.1</span>
+    <span class="version-date">2026-06-01</span>
+  </div>
+  <div class="version-body">HOTFIX RELEASE — Small laptop support + multi-language fix
+
+NEW: UI Scale dropdown in Lyrics Converter header (75% / 85% / 100% / 110% / 125%)
+NEW: UI Scale applies LIVE to all windows (main, Live Preview, Chord Tools) — no restart needed
+FIX: Chord Tools popup now fits on 14" laptops (1366×768 and 1280×720)
+FIX: Chord Tools popup centers on screen instead of parent window
+FIX: Main window can now be brought to front while Chord Tools is open
+FIX: PDF preview in Chord Tools auto-adjusts to actual pane width
+FIX: Clearer error messages when input folder is empty vs not set
+FIX: Special characters now display correctly in chord-songbook PDFs — German (ä,ö,ü,ß), Italian (à,è,é,ì,ò,ù), BCS (č,ć,š,đ,ž), French, Czech, Polish, Hungarian, Romanian
+FIX: Auto font fallback now triggers for ANY European language characters
+IMPROVED: UI Scale dropdown has "UI:" label for clarity
+IMPROVED: Split pane in Chord Tools allows narrower editor/preview panes</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.0</span>
+    <span class="version-date">2026-05-31</span>
+  </div>
+  <div class="version-body">MINOR RELEASE — Lyrics Chord Tools
+
+NEW: 🎸 Chord Tools — convert chord notation between English (C, D, E) and Solfège (DO, RE, MI)
+NEW: Transpose chords up/down by semitones (full ±11 chromatic range)
+NEW: Live PDF preview inside Chord Tools — see changes immediately
+NEW: Chord color customization per preset
+NEW: 'Remove chords' button in Live Preview — convert chord lyrics to plain text
+NEW: PRESETS button in Chord Tools — switch presets without leaving the dialog
+NEW: Apply Chord Tools changes to all files in a batch
+IMPROVED: Smart chord detection handles ambiguous chords like 'A' and 'E'
+IMPROVED: Text alignment (Left/Center/Right) now works for chord songs
+IMPROVED: Main window changes propagate to Chord Tools preview in real time
+IMPROVED: Antivirus-friendly build — Windows version metadata embedded in .exe
+IMPROVED: Update download retries 3 times automatically before failing
+IMPROVED: Clear instructions when antivirus blocks an update
+FIX: Bottom buttons in Chord Tools stay visible when resizing
+FIX: PRESETS dialog stays on top of Chord Tools
+FIX: Refrain marker (Ref.) properly aligned in chord-songbook layout</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.0.0</span>
+    <span class="version-date">2026-05-29</span>
+  </div>
+  <div class="version-body">MAJOR RELEASE — Event Studio Pro 2.0
+
+NEW: Lyrics Converter module — convert TXT/PDF/images into PDF lyrics books
+NEW: Automatic update download and install
+NEW: 5 built-in lyrics presets (BALTIK LANDSCAPE/PORTRAIT, DALTON, NERO 1/2)
+NEW: Auto-detection of Tesseract OCR with one-click download on first use
+IMPROVED: Window sizes now adapt to small laptop screens
+FIX: Deleting intruder files now properly activates Save
+FIX: Working-copy architecture in USER_VOICE (matches USER_STYLE)
+FIX: Unified 'Unsaved changes' dialog across all modules</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.4</span>
+    <span class="version-date">2026-04-18</span>
+  </div>
+  <div class="version-body">MIDI MAP: Added decimal values (CC/PG) and MSB/LSB/PC display for easy setup with external MIDI apps
+Performance Editor: SET folders can now be renamed with full Undo/Redo support
+Performance Editor: Improved file sorting - subfolders now appear before files
+Performance Editor: Linked files (.mp3.srg, .wav.srg) show source extension in red
+Performance Editor: Bracket numbers [NNNN] are now hidden in slot display
+Registration Editor: ALPHA search split into two columns - BEGINNING and ANY
+Bug fixes and visual improvements</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.3</span>
+    <span class="version-date">2026-04-15</span>
+  </div>
+  <div class="version-body">Bug fix: improved Update download dialog with browser warning instructions
+Improved Dark/Light mode readability for all confirmation dialogs
+Added Chrome browser instructions for download warnings
+Updated Quick Start guide with new Edge UI flow</div>
+</div>
+
+  </div>
+</div>
 
 <div class="section">
 <div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Before you buy</div></div>
@@ -338,6 +514,99 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 
 <div class="content" data-lang="sr">
 
+<div class="whats-new-wrap">
+  <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
+  <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.1</span>
+    <span class="version-date">2026-06-01</span>
+  </div>
+  <div class="version-body">HOTFIX RELEASE — Small laptop support + multi-language fix
+
+NEW: UI Scale dropdown in Lyrics Converter header (75% / 85% / 100% / 110% / 125%)
+NEW: UI Scale applies LIVE to all windows (main, Live Preview, Chord Tools) — no restart needed
+FIX: Chord Tools popup now fits on 14" laptops (1366×768 and 1280×720)
+FIX: Chord Tools popup centers on screen instead of parent window
+FIX: Main window can now be brought to front while Chord Tools is open
+FIX: PDF preview in Chord Tools auto-adjusts to actual pane width
+FIX: Clearer error messages when input folder is empty vs not set
+FIX: Special characters now display correctly in chord-songbook PDFs — German (ä,ö,ü,ß), Italian (à,è,é,ì,ò,ù), BCS (č,ć,š,đ,ž), French, Czech, Polish, Hungarian, Romanian
+FIX: Auto font fallback now triggers for ANY European language characters
+IMPROVED: UI Scale dropdown has "UI:" label for clarity
+IMPROVED: Split pane in Chord Tools allows narrower editor/preview panes</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.0</span>
+    <span class="version-date">2026-05-31</span>
+  </div>
+  <div class="version-body">MINOR RELEASE — Lyrics Chord Tools
+
+NEW: 🎸 Chord Tools — convert chord notation between English (C, D, E) and Solfège (DO, RE, MI)
+NEW: Transpose chords up/down by semitones (full ±11 chromatic range)
+NEW: Live PDF preview inside Chord Tools — see changes immediately
+NEW: Chord color customization per preset
+NEW: 'Remove chords' button in Live Preview — convert chord lyrics to plain text
+NEW: PRESETS button in Chord Tools — switch presets without leaving the dialog
+NEW: Apply Chord Tools changes to all files in a batch
+IMPROVED: Smart chord detection handles ambiguous chords like 'A' and 'E'
+IMPROVED: Text alignment (Left/Center/Right) now works for chord songs
+IMPROVED: Main window changes propagate to Chord Tools preview in real time
+IMPROVED: Antivirus-friendly build — Windows version metadata embedded in .exe
+IMPROVED: Update download retries 3 times automatically before failing
+IMPROVED: Clear instructions when antivirus blocks an update
+FIX: Bottom buttons in Chord Tools stay visible when resizing
+FIX: PRESETS dialog stays on top of Chord Tools
+FIX: Refrain marker (Ref.) properly aligned in chord-songbook layout</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.0.0</span>
+    <span class="version-date">2026-05-29</span>
+  </div>
+  <div class="version-body">MAJOR RELEASE — Event Studio Pro 2.0
+
+NEW: Lyrics Converter module — convert TXT/PDF/images into PDF lyrics books
+NEW: Automatic update download and install
+NEW: 5 built-in lyrics presets (BALTIK LANDSCAPE/PORTRAIT, DALTON, NERO 1/2)
+NEW: Auto-detection of Tesseract OCR with one-click download on first use
+IMPROVED: Window sizes now adapt to small laptop screens
+FIX: Deleting intruder files now properly activates Save
+FIX: Working-copy architecture in USER_VOICE (matches USER_STYLE)
+FIX: Unified 'Unsaved changes' dialog across all modules</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.4</span>
+    <span class="version-date">2026-04-18</span>
+  </div>
+  <div class="version-body">MIDI MAP: Added decimal values (CC/PG) and MSB/LSB/PC display for easy setup with external MIDI apps
+Performance Editor: SET folders can now be renamed with full Undo/Redo support
+Performance Editor: Improved file sorting - subfolders now appear before files
+Performance Editor: Linked files (.mp3.srg, .wav.srg) show source extension in red
+Performance Editor: Bracket numbers [NNNN] are now hidden in slot display
+Registration Editor: ALPHA search split into two columns - BEGINNING and ANY
+Bug fixes and visual improvements</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.3</span>
+    <span class="version-date">2026-04-15</span>
+  </div>
+  <div class="version-body">Bug fix: improved Update download dialog with browser warning instructions
+Improved Dark/Light mode readability for all confirmation dialogs
+Added Chrome browser instructions for download warnings
+Updated Quick Start guide with new Edge UI flow</div>
+</div>
+
+  </div>
+</div>
+
 <div class="section">
 <div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Prije kupovine</div></div>
 
@@ -525,6 +794,99 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="content" data-lang="it">
+
+<div class="whats-new-wrap">
+  <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
+  <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.1</span>
+    <span class="version-date">2026-06-01</span>
+  </div>
+  <div class="version-body">HOTFIX RELEASE — Small laptop support + multi-language fix
+
+NEW: UI Scale dropdown in Lyrics Converter header (75% / 85% / 100% / 110% / 125%)
+NEW: UI Scale applies LIVE to all windows (main, Live Preview, Chord Tools) — no restart needed
+FIX: Chord Tools popup now fits on 14" laptops (1366×768 and 1280×720)
+FIX: Chord Tools popup centers on screen instead of parent window
+FIX: Main window can now be brought to front while Chord Tools is open
+FIX: PDF preview in Chord Tools auto-adjusts to actual pane width
+FIX: Clearer error messages when input folder is empty vs not set
+FIX: Special characters now display correctly in chord-songbook PDFs — German (ä,ö,ü,ß), Italian (à,è,é,ì,ò,ù), BCS (č,ć,š,đ,ž), French, Czech, Polish, Hungarian, Romanian
+FIX: Auto font fallback now triggers for ANY European language characters
+IMPROVED: UI Scale dropdown has "UI:" label for clarity
+IMPROVED: Split pane in Chord Tools allows narrower editor/preview panes</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.0</span>
+    <span class="version-date">2026-05-31</span>
+  </div>
+  <div class="version-body">MINOR RELEASE — Lyrics Chord Tools
+
+NEW: 🎸 Chord Tools — convert chord notation between English (C, D, E) and Solfège (DO, RE, MI)
+NEW: Transpose chords up/down by semitones (full ±11 chromatic range)
+NEW: Live PDF preview inside Chord Tools — see changes immediately
+NEW: Chord color customization per preset
+NEW: 'Remove chords' button in Live Preview — convert chord lyrics to plain text
+NEW: PRESETS button in Chord Tools — switch presets without leaving the dialog
+NEW: Apply Chord Tools changes to all files in a batch
+IMPROVED: Smart chord detection handles ambiguous chords like 'A' and 'E'
+IMPROVED: Text alignment (Left/Center/Right) now works for chord songs
+IMPROVED: Main window changes propagate to Chord Tools preview in real time
+IMPROVED: Antivirus-friendly build — Windows version metadata embedded in .exe
+IMPROVED: Update download retries 3 times automatically before failing
+IMPROVED: Clear instructions when antivirus blocks an update
+FIX: Bottom buttons in Chord Tools stay visible when resizing
+FIX: PRESETS dialog stays on top of Chord Tools
+FIX: Refrain marker (Ref.) properly aligned in chord-songbook layout</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.0.0</span>
+    <span class="version-date">2026-05-29</span>
+  </div>
+  <div class="version-body">MAJOR RELEASE — Event Studio Pro 2.0
+
+NEW: Lyrics Converter module — convert TXT/PDF/images into PDF lyrics books
+NEW: Automatic update download and install
+NEW: 5 built-in lyrics presets (BALTIK LANDSCAPE/PORTRAIT, DALTON, NERO 1/2)
+NEW: Auto-detection of Tesseract OCR with one-click download on first use
+IMPROVED: Window sizes now adapt to small laptop screens
+FIX: Deleting intruder files now properly activates Save
+FIX: Working-copy architecture in USER_VOICE (matches USER_STYLE)
+FIX: Unified 'Unsaved changes' dialog across all modules</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.4</span>
+    <span class="version-date">2026-04-18</span>
+  </div>
+  <div class="version-body">MIDI MAP: Added decimal values (CC/PG) and MSB/LSB/PC display for easy setup with external MIDI apps
+Performance Editor: SET folders can now be renamed with full Undo/Redo support
+Performance Editor: Improved file sorting - subfolders now appear before files
+Performance Editor: Linked files (.mp3.srg, .wav.srg) show source extension in red
+Performance Editor: Bracket numbers [NNNN] are now hidden in slot display
+Registration Editor: ALPHA search split into two columns - BEGINNING and ANY
+Bug fixes and visual improvements</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.3</span>
+    <span class="version-date">2026-04-15</span>
+  </div>
+  <div class="version-body">Bug fix: improved Update download dialog with browser warning instructions
+Improved Dark/Light mode readability for all confirmation dialogs
+Added Chrome browser instructions for download warnings
+Updated Quick Start guide with new Edge UI flow</div>
+</div>
+
+  </div>
+</div>
 
 <div class="section">
 <div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Prima dell'acquisto</div></div>
@@ -714,6 +1076,99 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 
 <div class="content" data-lang="de">
 
+<div class="whats-new-wrap">
+  <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
+  <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.1</span>
+    <span class="version-date">2026-06-01</span>
+  </div>
+  <div class="version-body">HOTFIX RELEASE — Small laptop support + multi-language fix
+
+NEW: UI Scale dropdown in Lyrics Converter header (75% / 85% / 100% / 110% / 125%)
+NEW: UI Scale applies LIVE to all windows (main, Live Preview, Chord Tools) — no restart needed
+FIX: Chord Tools popup now fits on 14" laptops (1366×768 and 1280×720)
+FIX: Chord Tools popup centers on screen instead of parent window
+FIX: Main window can now be brought to front while Chord Tools is open
+FIX: PDF preview in Chord Tools auto-adjusts to actual pane width
+FIX: Clearer error messages when input folder is empty vs not set
+FIX: Special characters now display correctly in chord-songbook PDFs — German (ä,ö,ü,ß), Italian (à,è,é,ì,ò,ù), BCS (č,ć,š,đ,ž), French, Czech, Polish, Hungarian, Romanian
+FIX: Auto font fallback now triggers for ANY European language characters
+IMPROVED: UI Scale dropdown has "UI:" label for clarity
+IMPROVED: Split pane in Chord Tools allows narrower editor/preview panes</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.0</span>
+    <span class="version-date">2026-05-31</span>
+  </div>
+  <div class="version-body">MINOR RELEASE — Lyrics Chord Tools
+
+NEW: 🎸 Chord Tools — convert chord notation between English (C, D, E) and Solfège (DO, RE, MI)
+NEW: Transpose chords up/down by semitones (full ±11 chromatic range)
+NEW: Live PDF preview inside Chord Tools — see changes immediately
+NEW: Chord color customization per preset
+NEW: 'Remove chords' button in Live Preview — convert chord lyrics to plain text
+NEW: PRESETS button in Chord Tools — switch presets without leaving the dialog
+NEW: Apply Chord Tools changes to all files in a batch
+IMPROVED: Smart chord detection handles ambiguous chords like 'A' and 'E'
+IMPROVED: Text alignment (Left/Center/Right) now works for chord songs
+IMPROVED: Main window changes propagate to Chord Tools preview in real time
+IMPROVED: Antivirus-friendly build — Windows version metadata embedded in .exe
+IMPROVED: Update download retries 3 times automatically before failing
+IMPROVED: Clear instructions when antivirus blocks an update
+FIX: Bottom buttons in Chord Tools stay visible when resizing
+FIX: PRESETS dialog stays on top of Chord Tools
+FIX: Refrain marker (Ref.) properly aligned in chord-songbook layout</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.0.0</span>
+    <span class="version-date">2026-05-29</span>
+  </div>
+  <div class="version-body">MAJOR RELEASE — Event Studio Pro 2.0
+
+NEW: Lyrics Converter module — convert TXT/PDF/images into PDF lyrics books
+NEW: Automatic update download and install
+NEW: 5 built-in lyrics presets (BALTIK LANDSCAPE/PORTRAIT, DALTON, NERO 1/2)
+NEW: Auto-detection of Tesseract OCR with one-click download on first use
+IMPROVED: Window sizes now adapt to small laptop screens
+FIX: Deleting intruder files now properly activates Save
+FIX: Working-copy architecture in USER_VOICE (matches USER_STYLE)
+FIX: Unified 'Unsaved changes' dialog across all modules</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.4</span>
+    <span class="version-date">2026-04-18</span>
+  </div>
+  <div class="version-body">MIDI MAP: Added decimal values (CC/PG) and MSB/LSB/PC display for easy setup with external MIDI apps
+Performance Editor: SET folders can now be renamed with full Undo/Redo support
+Performance Editor: Improved file sorting - subfolders now appear before files
+Performance Editor: Linked files (.mp3.srg, .wav.srg) show source extension in red
+Performance Editor: Bracket numbers [NNNN] are now hidden in slot display
+Registration Editor: ALPHA search split into two columns - BEGINNING and ANY
+Bug fixes and visual improvements</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.3</span>
+    <span class="version-date">2026-04-15</span>
+  </div>
+  <div class="version-body">Bug fix: improved Update download dialog with browser warning instructions
+Improved Dark/Light mode readability for all confirmation dialogs
+Added Chrome browser instructions for download warnings
+Updated Quick Start guide with new Edge UI flow</div>
+</div>
+
+  </div>
+</div>
+
 <div class="section">
 <div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Vor dem Kauf</div></div>
 
@@ -902,6 +1357,99 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 
 <div class="content" data-lang="ru">
 
+<div class="whats-new-wrap">
+  <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Что нового в обновлениях<span class="chevron">▼</span></button>
+  <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.1</span>
+    <span class="version-date">2026-06-01</span>
+  </div>
+  <div class="version-body">HOTFIX RELEASE — Small laptop support + multi-language fix
+
+NEW: UI Scale dropdown in Lyrics Converter header (75% / 85% / 100% / 110% / 125%)
+NEW: UI Scale applies LIVE to all windows (main, Live Preview, Chord Tools) — no restart needed
+FIX: Chord Tools popup now fits on 14" laptops (1366×768 and 1280×720)
+FIX: Chord Tools popup centers on screen instead of parent window
+FIX: Main window can now be brought to front while Chord Tools is open
+FIX: PDF preview in Chord Tools auto-adjusts to actual pane width
+FIX: Clearer error messages when input folder is empty vs not set
+FIX: Special characters now display correctly in chord-songbook PDFs — German (ä,ö,ü,ß), Italian (à,è,é,ì,ò,ù), BCS (č,ć,š,đ,ž), French, Czech, Polish, Hungarian, Romanian
+FIX: Auto font fallback now triggers for ANY European language characters
+IMPROVED: UI Scale dropdown has "UI:" label for clarity
+IMPROVED: Split pane in Chord Tools allows narrower editor/preview panes</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.0</span>
+    <span class="version-date">2026-05-31</span>
+  </div>
+  <div class="version-body">MINOR RELEASE — Lyrics Chord Tools
+
+NEW: 🎸 Chord Tools — convert chord notation between English (C, D, E) and Solfège (DO, RE, MI)
+NEW: Transpose chords up/down by semitones (full ±11 chromatic range)
+NEW: Live PDF preview inside Chord Tools — see changes immediately
+NEW: Chord color customization per preset
+NEW: 'Remove chords' button in Live Preview — convert chord lyrics to plain text
+NEW: PRESETS button in Chord Tools — switch presets without leaving the dialog
+NEW: Apply Chord Tools changes to all files in a batch
+IMPROVED: Smart chord detection handles ambiguous chords like 'A' and 'E'
+IMPROVED: Text alignment (Left/Center/Right) now works for chord songs
+IMPROVED: Main window changes propagate to Chord Tools preview in real time
+IMPROVED: Antivirus-friendly build — Windows version metadata embedded in .exe
+IMPROVED: Update download retries 3 times automatically before failing
+IMPROVED: Clear instructions when antivirus blocks an update
+FIX: Bottom buttons in Chord Tools stay visible when resizing
+FIX: PRESETS dialog stays on top of Chord Tools
+FIX: Refrain marker (Ref.) properly aligned in chord-songbook layout</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.0.0</span>
+    <span class="version-date">2026-05-29</span>
+  </div>
+  <div class="version-body">MAJOR RELEASE — Event Studio Pro 2.0
+
+NEW: Lyrics Converter module — convert TXT/PDF/images into PDF lyrics books
+NEW: Automatic update download and install
+NEW: 5 built-in lyrics presets (BALTIK LANDSCAPE/PORTRAIT, DALTON, NERO 1/2)
+NEW: Auto-detection of Tesseract OCR with one-click download on first use
+IMPROVED: Window sizes now adapt to small laptop screens
+FIX: Deleting intruder files now properly activates Save
+FIX: Working-copy architecture in USER_VOICE (matches USER_STYLE)
+FIX: Unified 'Unsaved changes' dialog across all modules</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.4</span>
+    <span class="version-date">2026-04-18</span>
+  </div>
+  <div class="version-body">MIDI MAP: Added decimal values (CC/PG) and MSB/LSB/PC display for easy setup with external MIDI apps
+Performance Editor: SET folders can now be renamed with full Undo/Redo support
+Performance Editor: Improved file sorting - subfolders now appear before files
+Performance Editor: Linked files (.mp3.srg, .wav.srg) show source extension in red
+Performance Editor: Bracket numbers [NNNN] are now hidden in slot display
+Registration Editor: ALPHA search split into two columns - BEGINNING and ANY
+Bug fixes and visual improvements</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.3</span>
+    <span class="version-date">2026-04-15</span>
+  </div>
+  <div class="version-body">Bug fix: improved Update download dialog with browser warning instructions
+Improved Dark/Light mode readability for all confirmation dialogs
+Added Chrome browser instructions for download warnings
+Updated Quick Start guide with new Edge UI flow</div>
+</div>
+
+  </div>
+</div>
+
 <div class="section">
 <div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Перед покупкой</div></div>
 
@@ -1089,6 +1637,99 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 </div>
 
 <div class="content" data-lang="sv">
+
+<div class="whats-new-wrap">
+  <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
+  <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.1</span>
+    <span class="version-date">2026-06-01</span>
+  </div>
+  <div class="version-body">HOTFIX RELEASE — Small laptop support + multi-language fix
+
+NEW: UI Scale dropdown in Lyrics Converter header (75% / 85% / 100% / 110% / 125%)
+NEW: UI Scale applies LIVE to all windows (main, Live Preview, Chord Tools) — no restart needed
+FIX: Chord Tools popup now fits on 14" laptops (1366×768 and 1280×720)
+FIX: Chord Tools popup centers on screen instead of parent window
+FIX: Main window can now be brought to front while Chord Tools is open
+FIX: PDF preview in Chord Tools auto-adjusts to actual pane width
+FIX: Clearer error messages when input folder is empty vs not set
+FIX: Special characters now display correctly in chord-songbook PDFs — German (ä,ö,ü,ß), Italian (à,è,é,ì,ò,ù), BCS (č,ć,š,đ,ž), French, Czech, Polish, Hungarian, Romanian
+FIX: Auto font fallback now triggers for ANY European language characters
+IMPROVED: UI Scale dropdown has "UI:" label for clarity
+IMPROVED: Split pane in Chord Tools allows narrower editor/preview panes</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.0</span>
+    <span class="version-date">2026-05-31</span>
+  </div>
+  <div class="version-body">MINOR RELEASE — Lyrics Chord Tools
+
+NEW: 🎸 Chord Tools — convert chord notation between English (C, D, E) and Solfège (DO, RE, MI)
+NEW: Transpose chords up/down by semitones (full ±11 chromatic range)
+NEW: Live PDF preview inside Chord Tools — see changes immediately
+NEW: Chord color customization per preset
+NEW: 'Remove chords' button in Live Preview — convert chord lyrics to plain text
+NEW: PRESETS button in Chord Tools — switch presets without leaving the dialog
+NEW: Apply Chord Tools changes to all files in a batch
+IMPROVED: Smart chord detection handles ambiguous chords like 'A' and 'E'
+IMPROVED: Text alignment (Left/Center/Right) now works for chord songs
+IMPROVED: Main window changes propagate to Chord Tools preview in real time
+IMPROVED: Antivirus-friendly build — Windows version metadata embedded in .exe
+IMPROVED: Update download retries 3 times automatically before failing
+IMPROVED: Clear instructions when antivirus blocks an update
+FIX: Bottom buttons in Chord Tools stay visible when resizing
+FIX: PRESETS dialog stays on top of Chord Tools
+FIX: Refrain marker (Ref.) properly aligned in chord-songbook layout</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.0.0</span>
+    <span class="version-date">2026-05-29</span>
+  </div>
+  <div class="version-body">MAJOR RELEASE — Event Studio Pro 2.0
+
+NEW: Lyrics Converter module — convert TXT/PDF/images into PDF lyrics books
+NEW: Automatic update download and install
+NEW: 5 built-in lyrics presets (BALTIK LANDSCAPE/PORTRAIT, DALTON, NERO 1/2)
+NEW: Auto-detection of Tesseract OCR with one-click download on first use
+IMPROVED: Window sizes now adapt to small laptop screens
+FIX: Deleting intruder files now properly activates Save
+FIX: Working-copy architecture in USER_VOICE (matches USER_STYLE)
+FIX: Unified 'Unsaved changes' dialog across all modules</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.4</span>
+    <span class="version-date">2026-04-18</span>
+  </div>
+  <div class="version-body">MIDI MAP: Added decimal values (CC/PG) and MSB/LSB/PC display for easy setup with external MIDI apps
+Performance Editor: SET folders can now be renamed with full Undo/Redo support
+Performance Editor: Improved file sorting - subfolders now appear before files
+Performance Editor: Linked files (.mp3.srg, .wav.srg) show source extension in red
+Performance Editor: Bracket numbers [NNNN] are now hidden in slot display
+Registration Editor: ALPHA search split into two columns - BEGINNING and ANY
+Bug fixes and visual improvements</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v1.0.3</span>
+    <span class="version-date">2026-04-15</span>
+  </div>
+  <div class="version-body">Bug fix: improved Update download dialog with browser warning instructions
+Improved Dark/Light mode readability for all confirmation dialogs
+Added Chrome browser instructions for download warnings
+Updated Quick Start guide with new Edge UI flow</div>
+</div>
+
+  </div>
+</div>
 
 <div class="section">
 <div class="section-title-wrap"><div class="section-num">1</div><div class="section-title">Innan du köper</div></div>
@@ -1301,6 +1942,12 @@ function switchLang(lang) {
   }
   document.documentElement.setAttribute('lang', lang);
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleWhatsNew(btn) {
+  btn.classList.toggle('expanded');
+  var panel = btn.nextElementSibling;
+  if (panel) panel.classList.toggle('open');
 }
 </script>
 
