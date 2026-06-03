@@ -238,6 +238,47 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v2.1.4</span>
+    <span class="version-date">2026-06-03</span>
+  </div>
+  <div class="version-body">PDF IMPORT FIX + CHORD ALIGNMENT POLISH — better chord rendering, share presets
+
+NEW: Bold chords toggle in main window COLORS — chord lines render in bold to stand out even with same color as lyrics text
+NEW: Smart chord repositioning — change font or size in main window and chord positions automatically adjust so chords stay over the right syllables
+NEW: Export / Import presets — share your favorite preset settings with friends as .lpreset files (renaming the file = renaming the preset)
+NEW: Single-click on a preset in PRESETS dialog loads it instantly (Load button removed — no longer needed)
+FIX: PDF chord alignment when importing — chord positions now preserved exactly as in source PDF (even chord-collapsed PDFs from accordiespartiti.it)
+FIX: PDF footer filter — CREDITS / COPYRIGHT / AUTORI lines from Italian lyrics sites automatically removed during import
+FIX: PDF stanza breaks — empty lines between verses now correctly preserved during import
+FIX: PDF page with letter-spaced text no longer extracted as "m i m a n c a" — words read correctly
+FIX: PRESETS dialog popups now in selected language (English / Italian) instead of always Serbian
+FIX: Confirmation dialogs (Delete / Save / Replace) now centered on PRESETS window, not screen center</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.3</span>
+    <span class="version-date">2026-06-02</span>
+  </div>
+  <div class="version-body">MAJOR UI POLISH RELEASE — manual zoom, narrower window, persistent geometry
+
+NEW: Manual zoom controls in Chord Tools PDF preview (− / % / + / ↻ buttons, centered toolbar)
+NEW: Manual zoom controls in Live Preview PDF (independent zoom level, same layout)
+NEW: Keyboard shortcuts — Ctrl + + to zoom in, Ctrl + − to zoom out, Ctrl + 0 to reset
+NEW: Zoom levels persisted between sessions (chord_zoom, preview_zoom in settings)
+NEW: Main window size remembered between launches — resize once, it stays that way
+FIX: Minor chord 'm' marker no longer uppercased when case mode is 'Uppercase' — Am stays Am (was AM which is wrong)
+FIX: When 'ref.' line contains chord tokens (e.g. "ref. C F"), chords now display in chord color (gold) not refrain color
+FIX: Bottom action buttons (CONVERT, OCR, etc.) visible at all UI Scale settings (75%, 85%, 100%, 110%, 125%)
+FIX: Color picker dialog title now in selected language (was hardcoded Serbian)
+FIX: Live Preview footer info text now displays in white (was gray, hard to read)
+UI: Main window narrowed (820 → 680 px), PRESETS button moved below Output folder field
+UI: SPACING controls compact and tight against COLORS column
+UI: Page size + Orientation reorganized — stacked vertically left of margins chart</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v2.1.2</span>
     <span class="version-date">2026-06-02</span>
   </div>
@@ -535,6 +576,47 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.4</span>
+    <span class="version-date">2026-06-03</span>
+  </div>
+  <div class="version-body">PDF UVOZ POPRAVKE + POLIRANJE PORAVNAVANJA AKORDA — bolji prikaz, dijeljenje preseta
+
+NOVO: Bold akordi prekidač u COLORS sekciji — chord linije se prikazuju bold tako da se ističu čak i kad su iste boje kao tekst
+NOVO: Pametno pozicioniranje akorda — promijeni font ili size u glavnom prozoru, pozicije akorda se automatski prilagode tako da ostaju iznad pravih slogova
+NOVO: Izvoz / Uvoz preseta — podijeli omiljene postavke sa prijateljima kao .lpreset fajlovi (preimenovanje fajla = preimenovanje preseta)
+NOVO: Jednim klikom na preset u PRESETS prozoru on se odmah učitava (Load dugme uklonjeno — više nije potrebno)
+POPRAVKA: Poravnanje akorda pri PDF uvozu — pozicije akorda sada se očuvane tačno kao u izvornom PDF-u (čak i akorde-collapse PDF-ovi)
+POPRAVKA: PDF footer filter — CREDITS / COPYRIGHT / AUTORI linije sa italijanskih sajtova za tekstove automatski uklonjene
+POPRAVKA: PDF razmaci između strofa — prazne linije između stihova sada se pravilno čuvaju pri uvozu
+POPRAVKA: PDF stranica sa letter-spacing-om više se ne čita kao "m i m a n c a" — riječi se čitaju ispravno
+POPRAVKA: PRESETS popupi sada na odabranom jeziku (engleski / italijanski) umjesto uvijek srpski
+POPRAVKA: Potvrdni dijalozi (Obriši / Sačuvaj / Zamijeni) sada centrirani na PRESETS prozoru, ne na sredini ekrana</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.3</span>
+    <span class="version-date">2026-06-02</span>
+  </div>
+  <div class="version-body">VELIKI UI POLISH — manuelni zoom, uži prozor, perzistentna geometrija
+
+NOVO: Manuelne zoom kontrole u Chord Tools PDF preview-u (− / % / + / ↻ dugmad, centrirana toolbar)
+NOVO: Manuelne zoom kontrole u Live Preview PDF-u (nezavisan zoom nivo)
+NOVO: Tastaturne prečice — Ctrl + + za uvećanje, Ctrl + − za smanjenje, Ctrl + 0 za reset
+NOVO: Zoom nivoi se pamte između sesija
+NOVO: Veličina glavnog prozora se pamti između pokretanja
+POPRAVKA: Minor akord 'm' marker više se ne prebacuje u VELIKO kad je case mode 'Štampana' — Am ostaje Am
+POPRAVKA: Kad 'ref.' linija sadrži akorde, akorde se sada prikazuju u boji akorda (zlatna), ne u boji refrena
+POPRAVKA: Donja akcijska dugmad vidljiva pri svim UI Scale postavkama (75%–125%)
+POPRAVKA: Naslov color picker dijaloga sada na odabranom jeziku
+POPRAVKA: Live Preview footer info tekst sada bijel (bio sivkast, teško čitljiv)
+UI: Glavni prozor uži (820 → 680 px), PRESETS dugme premješteno ispod Output folder polja
+UI: SPACING kontrole kompaktne i tijesno uz COLORS kolonu
+UI: Page size + Orientation reorganizovani — vertikalno složeni lijevo od margins grafikona</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v2.1.2</span>
@@ -836,6 +918,47 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v2.1.4</span>
+    <span class="version-date">2026-06-03</span>
+  </div>
+  <div class="version-body">CORREZIONE IMPORT PDF + RIFINITURA ALLINEAMENTO ACCORDI — migliore rendering, condivisione preset
+
+NUOVO: Pulsante 'Accordi in grassetto' nella sezione COLORS — le righe degli accordi vengono renderizzate in grassetto per risaltare anche con lo stesso colore del testo
+NUOVO: Riposizionamento intelligente degli accordi — cambia font o dimensione e le posizioni degli accordi si adattano automaticamente sopra le sillabe giuste
+NUOVO: Esporta / Importa preset — condividi le tue impostazioni preferite con gli amici tramite file .lpreset (rinominare il file = rinominare il preset)
+NUOVO: Singolo clic su un preset lo carica istantaneamente (pulsante Load rimosso — non più necessario)
+CORREZIONE: Allineamento accordi all'importazione PDF — posizioni preservate esattamente come nel PDF originale (anche dai siti accordiespartiti.it)
+CORREZIONE: Filtro footer PDF — righe CREDITS / COPYRIGHT / AUTORI dai siti italiani di testi automaticamente rimosse
+CORREZIONE: Salti di strofa PDF — righe vuote tra le strofe ora correttamente preservate all'importazione
+CORREZIONE: Pagine PDF con letter-spacing non più estratte come "m i m a n c a" — le parole si leggono correttamente
+CORREZIONE: Popup del dialogo PRESET ora nella lingua selezionata (inglese / italiano) invece di sempre serbo
+CORREZIONE: Dialoghi di conferma (Elimina / Salva / Sostituisci) ora centrati sulla finestra PRESETS, non al centro dello schermo</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.3</span>
+    <span class="version-date">2026-06-02</span>
+  </div>
+  <div class="version-body">GRANDE RIFINITURA UI — zoom manuale, finestra più stretta, geometria persistente
+
+NUOVO: Controlli zoom manuali nell'anteprima PDF di Chord Tools (− / % / + / ↻ pulsanti, toolbar centrata)
+NUOVO: Controlli zoom manuali nell'anteprima Live PDF (livello zoom indipendente)
+NUOVO: Scorciatoie da tastiera — Ctrl + + per ingrandire, Ctrl + − per ridurre, Ctrl + 0 per ripristinare
+NUOVO: Livelli zoom mantenuti tra le sessioni
+NUOVO: Dimensione finestra principale ricordata tra avvii
+CORREZIONE: Marcatore 'm' degli accordi minori non più maiuscolato in modalità 'Stampatello' — Am rimane Am
+CORREZIONE: Quando la riga 'ref.' contiene accordi, questi ora si visualizzano in colore accordi (oro), non rosso
+CORREZIONE: Pulsanti azione inferiori visibili a tutte le impostazioni UI Scale (75%–125%)
+CORREZIONE: Titolo dialogo color picker ora nella lingua selezionata
+CORREZIONE: Testo footer Live Preview ora in bianco (era grigio, difficile da leggere)
+UI: Finestra principale ristretta (820 → 680 px), pulsante PRESETS spostato sotto il campo Output folder
+UI: Controlli SPACING compatti e accostati alla colonna COLORS
+UI: Page size + Orientation riorganizzati — impilati verticalmente a sinistra del grafico dei margini</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v2.1.2</span>
     <span class="version-date">2026-06-02</span>
   </div>
@@ -1133,6 +1256,47 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.4</span>
+    <span class="version-date">2026-06-03</span>
+  </div>
+  <div class="version-body">PDF IMPORT FIX + AKKORD-AUSRICHTUNG POLITUR — bessere Darstellung, Preset-Teilen
+
+NEU: 'Akkorde fett' Schalter im COLORS-Bereich — Akkord-Zeilen werden fett gerendert um auch bei gleicher Farbe wie der Text hervorzustechen
+NEU: Intelligente Akkord-Neupositionierung — ändere Schriftart oder Größe und Akkord-Positionen passen sich automatisch über die richtigen Silben an
+NEU: Preset Export / Import — teile deine Lieblings-Einstellungen mit Freunden als .lpreset-Dateien (Datei umbenennen = Preset umbenennen)
+NEU: Einzel-Klick auf ein Preset lädt es sofort (Load-Button entfernt — nicht mehr nötig)
+FIX: Akkord-Ausrichtung beim PDF-Import — Akkord-Positionen werden jetzt exakt wie im Quell-PDF beibehalten
+FIX: PDF-Footer-Filter — CREDITS / COPYRIGHT / AUTORI Zeilen von italienischen Lyrics-Seiten werden automatisch entfernt
+FIX: PDF-Strophen-Trennungen — Leerzeilen zwischen Strophen werden jetzt beim Import korrekt beibehalten
+FIX: PDF-Seiten mit Letter-Spacing werden nicht mehr als "m i m a n c a" extrahiert — Wörter werden korrekt gelesen
+FIX: PRESETS-Dialog-Popups jetzt in gewählter Sprache (Englisch / Italienisch) statt immer Serbisch
+FIX: Bestätigungs-Dialoge (Löschen / Speichern / Ersetzen) jetzt auf PRESETS-Fenster zentriert, nicht Bildschirm-Mitte</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.3</span>
+    <span class="version-date">2026-06-02</span>
+  </div>
+  <div class="version-body">GROSSE UI-POLITUR — manueller Zoom, schmaleres Fenster, persistente Geometrie
+
+NEU: Manuelle Zoom-Steuerung in Chord Tools PDF-Vorschau (− / % / + / ↻ Tasten, zentrierte Toolbar)
+NEU: Manuelle Zoom-Steuerung in Live-Vorschau PDF (unabhängiger Zoom-Level)
+NEU: Tastenkürzel — Strg + + zum Vergrößern, Strg + − zum Verkleinern, Strg + 0 zum Zurücksetzen
+NEU: Zoom-Stufen bleiben zwischen Sitzungen erhalten
+NEU: Hauptfenster-Größe bleibt zwischen Starts erhalten
+FIX: Moll-Akkord 'm' Markierung wird nicht mehr großgeschrieben im 'Großschrift'-Modus — Am bleibt Am
+FIX: Wenn 'ref.' Zeile Akkorde enthält, werden diese jetzt in Akkord-Farbe (Gold) angezeigt, nicht Refrain-Farbe
+FIX: Untere Aktions-Schaltflächen bei allen UI-Skalierungen sichtbar (75%–125%)
+FIX: Color-Picker-Dialog-Titel jetzt in gewählter Sprache
+FIX: Live-Vorschau-Footer-Text jetzt weiß (war grau, schwer zu lesen)
+UI: Hauptfenster verschmälert (820 → 680 px), PRESETS-Button unter Output folder-Feld verschoben
+UI: SPACING-Steuerungen kompakt und eng an COLORS-Spalte
+UI: Page size + Orientation neu organisiert — vertikal links vom Ränder-Diagramm gestapelt</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v2.1.2</span>
@@ -1434,6 +1598,47 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v2.1.4</span>
+    <span class="version-date">2026-06-03</span>
+  </div>
+  <div class="version-body">ИСПРАВЛЕНИЯ ИМПОРТА PDF + УЛУЧШЕНИЕ ВЫРАВНИВАНИЯ АККОРДОВ — лучший рендеринг, обмен пресетами
+
+НОВОЕ: Переключатель 'Жирные аккорды' в разделе COLORS — строки аккордов отображаются жирным шрифтом, выделяясь даже при том же цвете что и текст
+НОВОЕ: Умное перепозиционирование аккордов — измени шрифт или размер, и позиции аккордов автоматически адаптируются над правильными слогами
+НОВОЕ: Экспорт / Импорт пресетов — поделись любимыми настройками с друзьями через .lpreset файлы (переименование файла = переименование пресета)
+НОВОЕ: Одиночный клик на пресет загружает его мгновенно (кнопка Load удалена — больше не нужна)
+ИСПРАВЛЕНО: Выравнивание аккордов при импорте PDF — позиции аккордов сохраняются точно как в исходном PDF
+ИСПРАВЛЕНО: Фильтр PDF футера — строки CREDITS / COPYRIGHT / AUTORI с итальянских сайтов автоматически удаляются
+ИСПРАВЛЕНО: Разрывы строф PDF — пустые строки между куплетами теперь правильно сохраняются при импорте
+ИСПРАВЛЕНО: PDF страницы с letter-spacing больше не читаются как "m i m a n c a" — слова читаются правильно
+ИСПРАВЛЕНО: Всплывающие окна PRESETS теперь на выбранном языке (английский / итальянский) вместо всегда сербского
+ИСПРАВЛЕНО: Диалоги подтверждения (Удалить / Сохранить / Заменить) теперь центрированы на окне PRESETS, не центре экрана</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.3</span>
+    <span class="version-date">2026-06-02</span>
+  </div>
+  <div class="version-body">БОЛЬШОЕ ОБНОВЛЕНИЕ UI — ручное масштабирование, более узкое окно, сохранение геометрии
+
+НОВОЕ: Ручное управление масштабом в просмотре PDF Chord Tools (− / % / + / ↻ кнопки)
+НОВОЕ: Ручное управление масштабом в Live Preview PDF (независимый уровень)
+НОВОЕ: Сочетания клавиш — Ctrl + + увеличить, Ctrl + − уменьшить, Ctrl + 0 сбросить
+НОВОЕ: Уровни масштаба сохраняются между сессиями
+НОВОЕ: Размер главного окна запоминается между запусками
+ИСПРАВЛЕНО: Маркер 'm' минорного аккорда больше не становится заглавным в режиме 'Заглавные' — Am остаётся Am
+ИСПРАВЛЕНО: Когда строка 'ref.' содержит аккорды, они теперь отображаются в цвете аккордов (золотой), не припева
+ИСПРАВЛЕНО: Нижние кнопки действий видны при всех настройках UI Scale (75%–125%)
+ИСПРАВЛЕНО: Заголовок диалога color picker теперь на выбранном языке
+ИСПРАВЛЕНО: Текст футера Live Preview теперь белый (был серый, плохо читался)
+UI: Главное окно сужено (820 → 680 px), кнопка PRESETS перемещена под поле Output folder
+UI: Элементы SPACING компактнее и плотно к колонке COLORS
+UI: Page size + Orientation реорганизованы — сложены вертикально слева от диаграммы полей</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v2.1.2</span>
     <span class="version-date">2026-06-02</span>
   </div>
@@ -1731,6 +1936,47 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.4</span>
+    <span class="version-date">2026-06-03</span>
+  </div>
+  <div class="version-body">PDF IMPORT FIX + ACKORD-JUSTERING POLISH — bättre rendering, preset-delning
+
+NYTT: 'Feta ackord'-växel i COLORS-sektionen — ackord-rader renderas i fetstil för att framträda även vid samma färg som texten
+NYTT: Smart ackord-omplacering — ändra typsnitt eller storlek och ackord-positioner anpassar sig automatiskt över rätta stavelser
+NYTT: Exportera / Importera presets — dela dina favoritinställningar med vänner som .lpreset-filer (att byta filnamn = att byta presetnamn)
+NYTT: Enkelklick på preset laddar det omedelbart (Load-knapp borttagen — behövs inte längre)
+FIX: Ackord-justering vid PDF-import — ackord-positioner bevaras nu exakt som i käll-PDF
+FIX: PDF-fotfilter — CREDITS / COPYRIGHT / AUTORI-rader från italienska sångtexts-sajter tas automatiskt bort
+FIX: PDF-strofavbrott — tomma rader mellan verser bevaras nu korrekt vid import
+FIX: PDF-sidor med letter-spacing läses inte längre som "m i m a n c a" — ord läses korrekt
+FIX: PRESETS-dialogpopups nu på valt språk (engelska / italienska) istället för alltid serbiska
+FIX: Bekräftelse-dialoger (Ta bort / Spara / Ersätt) nu centrerade på PRESETS-fönster, inte skärm-mitten</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v2.1.3</span>
+    <span class="version-date">2026-06-02</span>
+  </div>
+  <div class="version-body">STOR UI-POLISH — manuell zoom, smalare fönster, persistent geometri
+
+NYTT: Manuella zoom-kontroller i Chord Tools PDF-förhandsgranskning (− / % / + / ↻ knappar)
+NYTT: Manuella zoom-kontroller i Live-förhandsgranskning PDF (oberoende zoom-nivå)
+NYTT: Tangentbordsgenvägar — Ctrl + + för att zooma in, Ctrl + − ut, Ctrl + 0 återställa
+NYTT: Zoom-nivåer kvarstår mellan sessioner
+NYTT: Huvudfönstrets storlek minns mellan starter
+FIX: Moll-ackord 'm' markör versaliseras inte längre i 'Versaler'-läge — Am förblir Am
+FIX: När 'ref.' rad innehåller ackord visas dessa nu i ackord-färg (guld), inte refräng-färg
+FIX: Nedre åtgärds-knappar synliga vid alla UI Scale-inställningar (75%–125%)
+FIX: Color picker-dialogtitel nu på valt språk
+FIX: Live-förhandsgranskning fottext nu vit (var grå, svår att läsa)
+UI: Huvudfönster smalare (820 → 680 px), PRESETS-knapp flyttad under Output folder-fält
+UI: SPACING-kontroller kompakta och tätt mot COLORS-kolumn
+UI: Page size + Orientation omorganiserade — staplade vertikalt vänster om marginal-diagram</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v2.1.2</span>
