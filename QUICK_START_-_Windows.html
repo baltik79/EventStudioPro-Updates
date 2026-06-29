@@ -238,6 +238,30 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v3.0.0</span>
+    <span class="version-date">2026-06-29</span>
+  </div>
+  <div class="version-body">MAJOR RELEASE — 🆕 New module: Baltik Konverter
+
+NEW: Baltik Konverter module — convert Korg arranger styles (.mid) into Ketron Event rhythms (.kst), edit them in a built-in piano-roll editor, snapshot calibration presets, remap drum kits, and play through the internal SoundFont or USB MIDI to a Ketron Event.
+NEW: GeneralUser-GS SoundFont (~30 MB) bundled — internal playback works out of the box, no setup required.
+NEW: Auto-creates a Documents\Baltik Projects folder for your .bkproj working projects.
+NEW: Auto-creates a %APPDATA%\BaltikKetron folder for calibration presets, drum presets, and config.
+
+Lyrics Converter
+NEW: Tag Files dialog — bulk-add or remove tag suffixes (PIANO, V2, OLD, etc.) across all .txt and .pdf files in the ROOT + Output folders. Live preview shows the first 50 files about to be renamed; 'Add' and 'Remove' modes; Position before/after; Smart dedupe to replace existing trailing tags.
+NEW: Live preview is debounced (350 ms) so typing feels smooth even with 1000+ files.
+NEW: Auto-reveal output folder in Explorer after Convert / Save As / Apply.
+NEW: Multi-window geometry persistence — Live Preview, Chord Tools and Tag Files remember their positions.
+NEW: UNDO / REDO buttons in the Tag Files dialog, integrated into the global undo system — undo a rename or a font change, all from one stack.
+FIX: UNDO / REDO buttons (main window + Tag Files) now in UPPERCASE for consistency.
+FIX: Cancel + Apply buttons in the Tag Files dialog stay visible when the window is resized smaller.
+FIX: Autosave debounced to 800 ms — fewer disk writes during rapid edits.
+FIX: Sub-windows (Live Preview, Chord Tools, Tag Files) properly closed when the main window closes.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v2.1.5</span>
     <span class="version-date">2026-06-03</span>
   </div>
@@ -437,6 +461,11 @@ Updated Quick Start guide with new Edge UI flow</div>
 <p>The Lyrics Converter now includes <strong>Chord Tools</strong> — a powerful editor for working with chord-annotated lyrics. Convert chord notation between <strong>English (C, D, E)</strong> and <strong>Solfège (DO, RE, MI)</strong>, transpose chords up/down by semitones, customize chord colors per preset, and apply changes to all files in batch. You can also use the <strong>🧹 Remove chords</strong> button to strip chords from lyrics if you want plain text output.</p>
 </div>
 
+<div class="callout" style="background: rgba(76,175,80,0.08); border-left: 4px solid #4CAF50;">
+<div class="callout-title">🆕 New in v3.0.0: Baltik Konverter</div>
+<p>This version adds the <strong>Baltik Konverter</strong> module — a complete tool for Ketron Event owners. Convert <strong>Korg arranger styles (.mid)</strong> into <strong>Ketron Event rhythms (.kst)</strong>, fine-tune them in a built-in piano-roll editor, remap drum kits, and save your own calibration presets. It plays through a bundled <strong>SoundFont</strong> (no setup needed) or live over USB MIDI to a real Ketron Event. Your working projects are saved as <strong>.bkproj</strong> files in your Documents folder.</p>
+</div>
+
 <div class="callout warning">
 <div class="callout-title">🛡 If antivirus blocks the update</div>
 <p>Some antivirus programs (Windows Defender, Avast, etc.) may flag the auto-update file as suspicious. <strong>This is a false positive</strong> — Event Studio Pro is safe. To allow updates to work normally, add the EventStudioPro folder to your antivirus exclusions:</p>
@@ -587,6 +616,30 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.0.0</span>
+    <span class="version-date">2026-06-29</span>
+  </div>
+  <div class="version-body">VELIKO IZDANJE — 🆕 Novi modul: Baltik Konverter
+
+NOVO: Modul Baltik Konverter — pretvara Korg aranžerske stilove (.mid) u Ketron Event ritmove (.kst), uređuje ih u ugrađenom piano-roll editoru, snima presete kalibracije, premapira drum kitove i svira preko internog SoundFonta ili USB MIDI-ja na Ketron Event.
+NOVO: GeneralUser-GS SoundFont (~30 MB) ugrađen — interno preslušavanje radi odmah, bez ikakvog podešavanja.
+NOVO: Automatski kreira folder Documents\Baltik Projects za tvoje .bkproj radne projekte.
+NOVO: Automatski kreira folder %APPDATA%\BaltikKetron za presete kalibracije, drum presete i konfiguraciju.
+
+Lyrics Converter
+NOVO: Dijalog Tag Files — masovno dodavanje ili uklanjanje sufiksa oznaka (PIANO, V2, OLD itd.) na svim .txt i .pdf fajlovima u ROOT + Output folderima. Pregled uživo prikazuje prvih 50 fajlova pred preimenovanje; režimi 'Add' i 'Remove'; pozicija prije/poslije; pametno uklanjanje duplikata postojećih oznaka.
+NOVO: Pregled uživo je odložen (350 ms) pa je kucanje glatko i sa 1000+ fajlova.
+NOVO: Automatsko otvaranje izlaznog foldera u Exploreru nakon Convert / Save As / Apply.
+NOVO: Pamćenje pozicije više prozora — Live Preview, Chord Tools i Tag Files pamte gdje su bili.
+NOVO: Dugmad UNDO / REDO u dijalogu Tag Files, integrisana u globalni sistem opoziva — opozovi preimenovanje ili promjenu fonta iz iste liste.
+POPRAVKA: Dugmad UNDO / REDO (glavni prozor + Tag Files) sada VELIKIM SLOVIMA radi konzistentnosti.
+POPRAVKA: Dugmad Cancel + Apply u dijalogu Tag Files ostaju vidljiva kada se prozor smanji.
+POPRAVKA: Automatsko snimanje odloženo na 800 ms — manje upisa na disk pri brzom editovanju.
+POPRAVKA: Podprozori (Live Preview, Chord Tools, Tag Files) se pravilno zatvaraju kada se zatvori glavni prozor.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v2.1.5</span>
@@ -788,6 +841,11 @@ Updated Quick Start guide with new Edge UI flow</div>
 <p>Lyrics Converter sada uključuje <strong>Chord Tools (Alati za akorde)</strong> — moćan editor za rad sa tekstovima koji imaju akorde. Konvertujte notaciju između <strong>engleske (C, D, E)</strong> i <strong>solfeggio (DO, RE, MI)</strong>, transponujte akorde gore/dolje po polustepenima, podesite boju akorda po presetu, i primjenite izmjene na sve fajlove odjednom. Možete koristiti i dugme <strong>🧹 Obriši akorde</strong> da uklonite akorde iz teksta ako vam treba samo običan tekst.</p>
 </div>
 
+<div class="callout" style="background: rgba(76,175,80,0.08); border-left: 4px solid #4CAF50;">
+<div class="callout-title">🆕 Novo u v3.0.0: Baltik Konverter</div>
+<p>Ova verzija dodaje modul <strong>Baltik Konverter</strong> — kompletan alat za vlasnike Ketron Event-a. Pretvara <strong>Korg aranžerske stilove (.mid)</strong> u <strong>Ketron Event ritmove (.kst)</strong>, dotjeruje ih u ugrađenom piano-roll editoru, premapira drum kitove i čuva tvoje presete kalibracije. Svira preko ugrađenog <strong>SoundFonta</strong> (bez podešavanja) ili uživo preko USB MIDI-ja na pravi Ketron Event. Radni projekti se čuvaju kao <strong>.bkproj</strong> fajlovi u tvom Documents folderu.</p>
+</div>
+
 <div class="callout warning">
 <div class="callout-title">🛡 Ako antivirus blokira ažuriranje</div>
 <p>Neki antivirus programi (Windows Defender, Avast, itd.) mogu označiti fajl za ažuriranje kao sumnjiv. <strong>To je lažna uzbuna</strong> — Event Studio Pro je siguran. Da bi ažuriranja radila normalno, dodajte EventStudioPro folder u izuzetke antivirusa:</p>
@@ -938,6 +996,30 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.0.0</span>
+    <span class="version-date">2026-06-29</span>
+  </div>
+  <div class="version-body">RILASCIO IMPORTANTE — 🆕 Nuovo modulo: Baltik Konverter
+
+NUOVO: Modulo Baltik Konverter — converte gli stili arranger Korg (.mid) in ritmi Ketron Event (.kst), li modifica in un editor piano-roll integrato, salva preset di calibrazione, rimappa i kit di batteria e li riproduce tramite il SoundFont interno o USB MIDI verso un Ketron Event.
+NUOVO: SoundFont GeneralUser-GS (~30 MB) incluso — la riproduzione interna funziona subito, senza alcuna configurazione.
+NUOVO: Crea automaticamente la cartella Documents\Baltik Projects per i tuoi progetti di lavoro .bkproj.
+NUOVO: Crea automaticamente la cartella %APPDATA%\BaltikKetron per preset di calibrazione, preset di batteria e configurazione.
+
+Lyrics Converter
+NUOVO: Finestra Tag Files — aggiungi o rimuovi in blocco suffissi di tag (PIANO, V2, OLD, ecc.) su tutti i file .txt e .pdf nelle cartelle ROOT + Output. L'anteprima dal vivo mostra i primi 50 file da rinominare; modalità 'Add' e 'Remove'; posizione prima/dopo; deduplica intelligente per sostituire i tag finali esistenti.
+NUOVO: L'anteprima dal vivo è ritardata (350 ms) così la digitazione resta fluida anche con oltre 1000 file.
+NUOVO: Apertura automatica della cartella di output in Explorer dopo Convert / Save As / Apply.
+NUOVO: Memorizzazione della posizione di più finestre — Live Preview, Chord Tools e Tag Files ricordano la loro posizione.
+NUOVO: Pulsanti UNDO / REDO nella finestra Tag Files, integrati nel sistema di annullamento globale — annulla una rinomina o un cambio di font dalla stessa cronologia.
+CORREZIONE: I pulsanti UNDO / REDO (finestra principale + Tag Files) ora in MAIUSCOLO per coerenza.
+CORREZIONE: I pulsanti Cancel + Apply nella finestra Tag Files restano visibili quando la finestra viene rimpicciolita.
+CORREZIONE: Salvataggio automatico ritardato a 800 ms — meno scritture su disco durante modifiche rapide.
+CORREZIONE: Le sotto-finestre (Live Preview, Chord Tools, Tag Files) si chiudono correttamente alla chiusura della finestra principale.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v2.1.5</span>
@@ -1139,6 +1221,11 @@ Updated Quick Start guide with new Edge UI flow</div>
 <p>Il Lyrics Converter ora include <strong>Chord Tools (Strumenti Accordi)</strong> — un potente editor per lavorare con i testi annotati con accordi. Converti la notazione tra <strong>inglese (C, D, E)</strong> e <strong>solfeggio (DO, RE, MI)</strong>, trasponi gli accordi su/giù per semitoni, personalizza il colore degli accordi per preset, e applica le modifiche a tutti i file in batch. Puoi anche usare il pulsante <strong>🧹 Rimuovi accordi</strong> per togliere gli accordi dai testi se ti serve solo il testo semplice.</p>
 </div>
 
+<div class="callout" style="background: rgba(76,175,80,0.08); border-left: 4px solid #4CAF50;">
+<div class="callout-title">🆕 Novità in v3.0.0: Baltik Konverter</div>
+<p>Questa versione aggiunge il modulo <strong>Baltik Konverter</strong> — uno strumento completo per i possessori di Ketron Event. Converte gli <strong>stili arranger Korg (.mid)</strong> in <strong>ritmi Ketron Event (.kst)</strong>, li perfeziona in un editor piano-roll integrato, rimappa i kit di batteria e salva i tuoi preset di calibrazione. Riproduce tramite un <strong>SoundFont</strong> incluso (nessuna configurazione) o dal vivo via USB MIDI verso un vero Ketron Event. I progetti di lavoro vengono salvati come file <strong>.bkproj</strong> nella cartella Documenti.</p>
+</div>
+
 <div class="callout warning">
 <div class="callout-title">🛡 Se l'antivirus blocca l'aggiornamento</div>
 <p>Alcuni programmi antivirus (Windows Defender, Avast, ecc.) potrebbero segnalare il file di aggiornamento come sospetto. <strong>È un falso positivo</strong> — Event Studio Pro è sicuro. Per permettere agli aggiornamenti di funzionare normalmente, aggiungi la cartella EventStudioPro alle esclusioni dell'antivirus:</p>
@@ -1289,6 +1376,30 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.0.0</span>
+    <span class="version-date">2026-06-29</span>
+  </div>
+  <div class="version-body">GROSSE VERSION — 🆕 Neues Modul: Baltik Konverter
+
+NEU: Modul Baltik Konverter — wandelt Korg-Arranger-Styles (.mid) in Ketron-Event-Rhythmen (.kst) um, bearbeitet sie in einem integrierten Piano-Roll-Editor, speichert Kalibrierungs-Presets, mappt Drumkits neu und spielt über das interne SoundFont oder USB-MIDI auf einem Ketron Event.
+NEU: GeneralUser-GS SoundFont (~30 MB) integriert — die interne Wiedergabe funktioniert sofort, ohne Einrichtung.
+NEU: Erstellt automatisch den Ordner Documents\Baltik Projects für deine .bkproj-Arbeitsprojekte.
+NEU: Erstellt automatisch den Ordner %APPDATA%\BaltikKetron für Kalibrierungs-Presets, Drum-Presets und Konfiguration.
+
+Lyrics Converter
+NEU: Dialog Tag Files — füge Tag-Suffixe (PIANO, V2, OLD usw.) bei allen .txt- und .pdf-Dateien in den ROOT- + Output-Ordnern stapelweise hinzu oder entferne sie. Die Live-Vorschau zeigt die ersten 50 umzubenennenden Dateien; Modi 'Add' und 'Remove'; Position davor/danach; intelligente Bereinigung vorhandener End-Tags.
+NEU: Die Live-Vorschau ist entprellt (350 ms), damit das Tippen auch bei über 1000 Dateien flüssig bleibt.
+NEU: Automatisches Öffnen des Ausgabeordners im Explorer nach Convert / Save As / Apply.
+NEU: Positionsspeicherung mehrerer Fenster — Live Preview, Chord Tools und Tag Files merken sich ihre Position.
+NEU: UNDO / REDO-Schaltflächen im Dialog Tag Files, in das globale Rückgängig-System integriert — mache eine Umbenennung oder Schriftänderung aus einem Verlauf rückgängig.
+FIX: UNDO / REDO-Schaltflächen (Hauptfenster + Tag Files) jetzt in GROSSBUCHSTABEN zur Konsistenz.
+FIX: Die Schaltflächen Cancel + Apply im Dialog Tag Files bleiben sichtbar, wenn das Fenster verkleinert wird.
+FIX: Automatisches Speichern auf 800 ms entprellt — weniger Schreibvorgänge bei schnellen Änderungen.
+FIX: Unterfenster (Live Preview, Chord Tools, Tag Files) werden korrekt geschlossen, wenn das Hauptfenster geschlossen wird.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v2.1.5</span>
@@ -1490,6 +1601,11 @@ Updated Quick Start guide with new Edge UI flow</div>
 <p>Der Lyrics Converter enthält jetzt <strong>Chord Tools (Akkord-Werkzeuge)</strong> — einen leistungsstarken Editor für die Arbeit mit Akkord-annotierten Texten. Konvertieren Sie die Notation zwischen <strong>Englisch (C, D, E)</strong> und <strong>Solfège (DO, RE, MI)</strong>, transponieren Sie Akkorde nach oben/unten in Halbtonschritten, passen Sie die Akkordfarbe pro Voreinstellung an und wenden Sie Änderungen auf alle Dateien im Batch an. Sie können auch die Schaltfläche <strong>🧹 Akkorde entfernen</strong> verwenden, um Akkorde aus Texten zu entfernen.</p>
 </div>
 
+<div class="callout" style="background: rgba(76,175,80,0.08); border-left: 4px solid #4CAF50;">
+<div class="callout-title">🆕 Neu in v3.0.0: Baltik Konverter</div>
+<p>Diese Version fügt das Modul <strong>Baltik Konverter</strong> hinzu — ein komplettes Werkzeug für Ketron-Event-Besitzer. Wandelt <strong>Korg-Arranger-Styles (.mid)</strong> in <strong>Ketron-Event-Rhythmen (.kst)</strong> um, verfeinert sie in einem integrierten Piano-Roll-Editor, mappt Drumkits neu und speichert eigene Kalibrierungs-Presets. Die Wiedergabe erfolgt über ein mitgeliefertes <strong>SoundFont</strong> (keine Einrichtung) oder live über USB-MIDI auf einem echten Ketron Event. Arbeitsprojekte werden als <strong>.bkproj</strong>-Dateien im Dokumente-Ordner gespeichert.</p>
+</div>
+
 <div class="callout warning">
 <div class="callout-title">🛡 Wenn das Antivirus das Update blockiert</div>
 <p>Einige Antivirenprogramme (Windows Defender, Avast usw.) könnten die Update-Datei als verdächtig markieren. <strong>Dies ist ein Fehlalarm</strong> — Event Studio Pro ist sicher. Damit Updates normal funktionieren, fügen Sie den Ordner EventStudioPro zu den Antivirus-Ausschlüssen hinzu:</p>
@@ -1640,6 +1756,30 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Что нового в обновлениях<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.0.0</span>
+    <span class="version-date">2026-06-29</span>
+  </div>
+  <div class="version-body">КРУПНЫЙ РЕЛИЗ — 🆕 Новый модуль: Baltik Konverter
+
+НОВОЕ: Модуль Baltik Konverter — преобразует стили аранжировщика Korg (.mid) в ритмы Ketron Event (.kst), редактирует их во встроенном piano-roll редакторе, сохраняет пресеты калибровки, переназначает драм-киты и воспроизводит через внутренний SoundFont или USB MIDI на Ketron Event.
+НОВОЕ: SoundFont GeneralUser-GS (~30 МБ) включён — внутреннее воспроизведение работает сразу, без настройки.
+НОВОЕ: Автоматически создаёт папку Documents\Baltik Projects для ваших рабочих проектов .bkproj.
+НОВОЕ: Автоматически создаёт папку %APPDATA%\BaltikKetron для пресетов калибровки, драм-пресетов и конфигурации.
+
+Lyrics Converter
+НОВОЕ: Диалог Tag Files — массовое добавление или удаление суффиксов-тегов (PIANO, V2, OLD и т.д.) для всех файлов .txt и .pdf в папках ROOT + Output. Предпросмотр показывает первые 50 файлов перед переименованием; режимы 'Add' и 'Remove'; позиция до/после; умное удаление существующих конечных тегов.
+НОВОЕ: Предпросмотр с задержкой (350 мс), поэтому ввод плавный даже при 1000+ файлах.
+НОВОЕ: Автоматическое открытие папки вывода в Проводнике после Convert / Save As / Apply.
+НОВОЕ: Сохранение позиции нескольких окон — Live Preview, Chord Tools и Tag Files запоминают своё положение.
+НОВОЕ: Кнопки UNDO / REDO в диалоге Tag Files, интегрированы в общую систему отмены — отмените переименование или смену шрифта из одной истории.
+ИСПРАВЛЕНО: Кнопки UNDO / REDO (главное окно + Tag Files) теперь ЗАГЛАВНЫМИ для единообразия.
+ИСПРАВЛЕНО: Кнопки Cancel + Apply в диалоге Tag Files остаются видимыми при уменьшении окна.
+ИСПРАВЛЕНО: Автосохранение с задержкой 800 мс — меньше записей на диск при быстром редактировании.
+ИСПРАВЛЕНО: Под-окна (Live Preview, Chord Tools, Tag Files) корректно закрываются при закрытии главного окна.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v2.1.5</span>
@@ -1841,6 +1981,11 @@ Updated Quick Start guide with new Edge UI flow</div>
 <p>Lyrics Converter теперь включает <strong>Chord Tools (Инструменты аккордов)</strong> — мощный редактор для работы с текстами с аккордами. Преобразуйте нотацию между <strong>английской (C, D, E)</strong> и <strong>сольфеджио (DO, RE, MI)</strong>, транспонируйте аккорды вверх/вниз по полутонам, настраивайте цвет аккордов для пресета и применяйте изменения ко всем файлам сразу. Также можно использовать кнопку <strong>🧹 Удалить аккорды</strong>, чтобы удалить аккорды из текста, если нужен только обычный текст.</p>
 </div>
 
+<div class="callout" style="background: rgba(76,175,80,0.08); border-left: 4px solid #4CAF50;">
+<div class="callout-title">🆕 Новое в v3.0.0: Baltik Konverter</div>
+<p>Эта версия добавляет модуль <strong>Baltik Konverter</strong> — полноценный инструмент для владельцев Ketron Event. Преобразует <strong>стили аранжировщика Korg (.mid)</strong> в <strong>ритмы Ketron Event (.kst)</strong>, дорабатывает их во встроенном piano-roll редакторе, переназначает драм-киты и сохраняет ваши пресеты калибровки. Воспроизводит через встроенный <strong>SoundFont</strong> (без настройки) или вживую по USB MIDI на реальном Ketron Event. Рабочие проекты сохраняются в виде файлов <strong>.bkproj</strong> в папке «Документы».</p>
+</div>
+
 <div class="callout warning">
 <div class="callout-title">🛡 Если антивирус блокирует обновление</div>
 <p>Некоторые антивирусные программы (Windows Defender, Avast и др.) могут пометить файл обновления как подозрительный. <strong>Это ложное срабатывание</strong> — Event Studio Pro безопасен. Чтобы обновления работали нормально, добавьте папку EventStudioPro в исключения антивируса:</p>
@@ -1991,6 +2136,30 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.0.0</span>
+    <span class="version-date">2026-06-29</span>
+  </div>
+  <div class="version-body">STOR VERSION — 🆕 Ny modul: Baltik Konverter
+
+NYTT: Modulen Baltik Konverter — konverterar Korg arranger-stilar (.mid) till Ketron Event-rytmer (.kst), redigerar dem i en inbyggd piano-roll-editor, sparar kalibreringsförval, mappar om trumkit och spelar via det interna SoundFont eller USB MIDI till en Ketron Event.
+NYTT: GeneralUser-GS SoundFont (~30 MB) medföljer — intern uppspelning fungerar direkt, ingen konfiguration behövs.
+NYTT: Skapar automatiskt mappen Documents\Baltik Projects för dina .bkproj-arbetsprojekt.
+NYTT: Skapar automatiskt mappen %APPDATA%\BaltikKetron för kalibreringsförval, trumförval och konfiguration.
+
+Lyrics Converter
+NYTT: Dialogen Tag Files — lägg till eller ta bort taggsuffix (PIANO, V2, OLD osv.) i bulk för alla .txt- och .pdf-filer i ROOT- + Output-mapparna. Live-förhandsvisningen visar de första 50 filerna som ska döpas om; lägena 'Add' och 'Remove'; position före/efter; smart borttagning av befintliga sluttaggar.
+NYTT: Live-förhandsvisningen är fördröjd (350 ms) så att skrivandet känns smidigt även med 1000+ filer.
+NYTT: Öppnar automatiskt utdatamappen i Utforskaren efter Convert / Save As / Apply.
+NYTT: Positionsminne för flera fönster — Live Preview, Chord Tools och Tag Files minns sina positioner.
+NYTT: UNDO / REDO-knappar i dialogen Tag Files, integrerade i det globala ångra-systemet — ångra en omdöpning eller ett teckensnittsbyte från samma historik.
+FIX: UNDO / REDO-knappar (huvudfönstret + Tag Files) nu med VERSALER för konsekvens.
+FIX: Knapparna Cancel + Apply i dialogen Tag Files förblir synliga när fönstret förminskas.
+FIX: Autospar fördröjt till 800 ms — färre diskskrivningar vid snabb redigering.
+FIX: Underfönster (Live Preview, Chord Tools, Tag Files) stängs korrekt när huvudfönstret stängs.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v2.1.5</span>
@@ -2190,6 +2359,11 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="callout" style="background: rgba(255,193,7,0.08); border-left: 4px solid #FFC107;">
 <div class="callout-title">🎸 Nytt i v2.1.0: Ackordverktyg</div>
 <p>Lyrics Converter inkluderar nu <strong>Chord Tools (Ackordverktyg)</strong> — en kraftfull editor för att arbeta med ackord-annoterade texter. Konvertera notationen mellan <strong>engelska (C, D, E)</strong> och <strong>solfège (DO, RE, MI)</strong>, transponera ackord upp/ned i halvtonssteg, anpassa ackordfärgen per förinställning och tillämpa ändringar på alla filer i batch. Du kan också använda knappen <strong>🧹 Ta bort ackord</strong> för att ta bort ackord från texter om du bara vill ha vanlig text.</p>
+</div>
+
+<div class="callout" style="background: rgba(76,175,80,0.08); border-left: 4px solid #4CAF50;">
+<div class="callout-title">🆕 Nytt i v3.0.0: Baltik Konverter</div>
+<p>Den här versionen lägger till modulen <strong>Baltik Konverter</strong> — ett komplett verktyg för Ketron Event-ägare. Konverterar <strong>Korg arranger-stilar (.mid)</strong> till <strong>Ketron Event-rytmer (.kst)</strong>, finjusterar dem i en inbyggd piano-roll-editor, mappar om trumkit och sparar dina egna kalibreringsförval. Spelar via ett medföljande <strong>SoundFont</strong> (ingen konfiguration) eller live via USB MIDI till en riktig Ketron Event. Arbetsprojekt sparas som <strong>.bkproj</strong>-filer i din Dokument-mapp.</p>
 </div>
 
 <div class="callout warning">
