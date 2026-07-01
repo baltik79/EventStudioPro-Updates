@@ -238,6 +238,23 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v3.0.2</span>
+    <span class="version-date">2026-07-01</span>
+  </div>
+  <div class="version-body">HOTFIX — Baltik Converter improvements + MIDI Test tab
+
+FIX: MIDI Monitor input now connects on a single click. Previously a busy or stale input port could trap the button in a connect/disconnect loop, which also stopped Calibrate from receiving notes. The port is now freed and retried automatically with a clearer error message.
+NEW: MIDI Test tab — a dedicated diagnostic tool to quickly check which input port receives notes from your Event keyboard, so Calibrate works reliably.
+FIX: Voice calibration options (Calibrate / Calibration Report / Clear slot) are now available out of the box on every machine. The active calibration file was moved to %APPDATA%\BaltikKetron\ and is auto-seeded from the EVENT FACTORY preset on first run. Existing calibrations are migrated, not lost.
+FIX: Clearer error message when SoundFont preview can't start — correctly distinguishes between the audio engine not starting and no .sf2 file loaded.
+FIX: More robust FluidSynth library loading in the packaged build.
+FIX: Orphan process cleanup at startup — automatically closes any stuck Event Studio Pro processes from previous runs, so 'already open' messages, file-in-use errors during updates, and stuck MIDI ports no longer happen.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v3.0.1</span>
     <span class="version-date">2026-07-01</span>
   </div>
@@ -626,6 +643,23 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.0.2</span>
+    <span class="version-date">2026-07-01</span>
+  </div>
+  <div class="version-body">HOTFIX — Baltik Converter poboljšanja + MIDI Test tab
+
+POPRAVKA: MIDI Monitor ulaz sada se konektuje sa jednim klikom. Prije je zauzet ili zaglavljen ulazni port mogao zarobiti dugme u connect/disconnect petlji, što je takođe zaustavljalo Calibrate od primanja nota. Port se sada oslobodi i ponovo pokuša automatski sa jasnijom porukom o grešci.
+NOVO: MIDI Test tab — poseban dijagnostički alat za brzo provjeravanje koji ulazni port prima note sa Event klavijature, tako da Calibrate radi pouzdano.
+POPRAVKA: Opcije Voice kalibracije (Calibrate / Calibration Report / Clear slot) sada su dostupne odmah na svakoj mašini. Aktivni fajl kalibracije premješten je u %APPDATA%\BaltikKetron\ i automatski se popunjava iz EVENT FACTORY preseta pri prvom pokretanju. Postojeće kalibracije se migriraju, ne gube.
+POPRAVKA: Jasnija poruka o grešci kada SoundFont preview ne može da se pokrene — ispravno razlikuje slučaj kada se audio engine ne pokreće i kada nema učitanog .sf2 fajla.
+POPRAVKA: Robusnije učitavanje FluidSynth biblioteke u pakovanom build-u.
+POPRAVKA: Čišćenje zaostalih procesa pri pokretanju — automatski zatvara zaglavljene Event Studio Pro procese iz prethodnih pokretanja, pa se 'already open' poruke, greške pri auto-update-u, i zaglavljeni MIDI portovi više ne dešavaju.
+
+Postojeći kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v3.0.1</span>
@@ -1018,6 +1052,23 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v3.0.2</span>
+    <span class="version-date">2026-07-01</span>
+  </div>
+  <div class="version-body">HOTFIX — Miglioramenti Baltik Converter + scheda MIDI Test
+
+CORREZIONE: L'ingresso MIDI Monitor ora si connette con un solo clic. In precedenza una porta di ingresso occupata o bloccata poteva intrappolare il pulsante in un loop connect/disconnect, che impediva anche a Calibrate di ricevere note. La porta ora viene liberata e riprovata automaticamente con un messaggio di errore più chiaro.
+NUOVO: Scheda MIDI Test — uno strumento diagnostico dedicato per verificare rapidamente quale porta di ingresso riceve note dalla tua tastiera Event, in modo che Calibrate funzioni in modo affidabile.
+CORREZIONE: Le opzioni di calibrazione voci (Calibrate / Calibration Report / Clear slot) sono ora disponibili immediatamente su ogni macchina. Il file di calibrazione attivo è stato spostato in %APPDATA%\BaltikKetron\ e viene popolato automaticamente dal preset EVENT FACTORY al primo avvio. Le calibrazioni esistenti vengono migrate, non perse.
+CORREZIONE: Messaggio di errore più chiaro quando l'anteprima SoundFont non può avviarsi — distingue correttamente tra il motore audio che non si avvia e nessun file .sf2 caricato.
+CORREZIONE: Caricamento più robusto della libreria FluidSynth nel build pacchettizzato.
+CORREZIONE: Pulizia dei processi orfani all'avvio — chiude automaticamente eventuali processi Event Studio Pro bloccati dalle sessioni precedenti, così i messaggi 'già aperto', gli errori di file in uso durante gli aggiornamenti e le porte MIDI bloccate non si verificano più.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v3.0.1</span>
     <span class="version-date">2026-07-01</span>
   </div>
@@ -1406,6 +1457,23 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.0.2</span>
+    <span class="version-date">2026-07-01</span>
+  </div>
+  <div class="version-body">HOTFIX — Baltik Converter Verbesserungen + MIDI Test Tab
+
+FIX: MIDI Monitor-Eingang verbindet jetzt mit einem einzigen Klick. Zuvor konnte ein beschäftigter oder blockierter Eingangsport die Taste in einer Connect/Disconnect-Schleife gefangen halten, was auch Calibrate am Empfangen von Noten hinderte. Der Port wird jetzt automatisch freigegeben und mit einer klareren Fehlermeldung erneut versucht.
+NEU: MIDI Test Tab — ein dediziertes Diagnose-Tool, um schnell zu prüfen, welcher Eingangsport Noten von Ihrem Event-Keyboard empfängt, damit Calibrate zuverlässig funktioniert.
+FIX: Voice-Kalibrierungsoptionen (Calibrate / Calibration Report / Clear slot) sind jetzt auf jedem Computer sofort verfügbar. Die aktive Kalibrierungsdatei wurde nach %APPDATA%\BaltikKetron\ verschoben und wird beim ersten Start automatisch aus dem EVENT FACTORY-Preset befüllt. Bestehende Kalibrierungen werden migriert, nicht verloren.
+FIX: Klarere Fehlermeldung, wenn die SoundFont-Vorschau nicht starten kann — unterscheidet jetzt korrekt zwischen dem Fehlstart der Audio-Engine und einer fehlenden .sf2-Datei.
+FIX: Robusteres Laden der FluidSynth-Bibliothek im paketierten Build.
+FIX: Bereinigung verwaister Prozesse beim Start — schließt automatisch alle festgefahrenen Event Studio Pro-Prozesse aus vorherigen Sitzungen, so dass 'bereits geöffnet'-Meldungen, Datei-in-Verwendung-Fehler während Updates und festgefahrene MIDI-Ports nicht mehr auftreten.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v3.0.1</span>
@@ -1798,6 +1866,23 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v3.0.2</span>
+    <span class="version-date">2026-07-01</span>
+  </div>
+  <div class="version-body">HOTFIX — Улучшения Baltik Converter + вкладка MIDI Test
+
+ИСПРАВЛЕНИЕ: MIDI Monitor вход теперь подключается одним кликом. Раньше занятый или зависший входной порт мог заблокировать кнопку в цикле connect/disconnect, что также мешало Calibrate получать ноты. Порт теперь освобождается и повторяется автоматически с более понятным сообщением об ошибке.
+НОВОЕ: Вкладка MIDI Test — специальный диагностический инструмент для быстрой проверки, какой входной порт получает ноты с вашей клавиатуры Event, чтобы Calibrate работал надежно.
+ИСПРАВЛЕНИЕ: Опции калибровки голосов (Calibrate / Calibration Report / Clear slot) теперь доступны сразу на каждой машине. Активный файл калибровки был перемещен в %APPDATA%\BaltikKetron\ и автоматически заполняется из пресета EVENT FACTORY при первом запуске. Существующие калибровки мигрируют, не теряются.
+ИСПРАВЛЕНИЕ: Более понятное сообщение об ошибке, когда SoundFont preview не может запуститься — правильно различает случаи, когда аудио-движок не запускается и когда .sf2 файл не загружен.
+ИСПРАВЛЕНИЕ: Более надежная загрузка библиотеки FluidSynth в упакованной сборке.
+ИСПРАВЛЕНИЕ: Очистка потерянных процессов при запуске — автоматически закрывает зависшие процессы Event Studio Pro из предыдущих запусков, так что сообщения 'уже открыто', ошибки использования файла при обновлениях и застрявшие MIDI порты больше не возникают.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v3.0.1</span>
     <span class="version-date">2026-07-01</span>
   </div>
@@ -2186,6 +2271,23 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.0.2</span>
+    <span class="version-date">2026-07-01</span>
+  </div>
+  <div class="version-body">HOTFIX — Baltik Converter förbättringar + MIDI Test flik
+
+FIX: MIDI Monitor ingång ansluter nu med ett enda klick. Tidigare kunde en upptagen eller föräldrad ingångsport fånga knappen i en connect/disconnect-loop, som också stoppade Calibrate från att ta emot noter. Porten friges nu och försöks automatiskt igen med ett tydligare felmeddelande.
+NYTT: MIDI Test flik — ett dedikerat diagnosverktyg för att snabbt kontrollera vilken ingångsport som tar emot noter från ditt Event-tangentbord, så att Calibrate fungerar tillförlitligt.
+FIX: Röstkalibreringsalternativ (Calibrate / Calibration Report / Clear slot) är nu tillgängliga direkt på varje maskin. Den aktiva kalibreringsfilen flyttades till %APPDATA%\BaltikKetron\ och fylls automatiskt från EVENT FACTORY-förinställningen vid första körningen. Befintliga kalibreringar migreras, inte förloras.
+FIX: Tydligare felmeddelande när SoundFont-förhandsvisning inte kan starta — skiljer nu korrekt mellan att ljudmotorn inte kan starta och att ingen .sf2-fil är laddad.
+FIX: Mer robust FluidSynth biblioteksladdning i den paketerade byggen.
+FIX: Städning av övergivna processer vid start — stänger automatiskt eventuella låsta Event Studio Pro-processer från tidigare körningar, så att 'already open'-meddelanden, fil-i-användning-fel under uppdateringar och låsta MIDI-portar inte längre inträffar.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v3.0.1</span>
