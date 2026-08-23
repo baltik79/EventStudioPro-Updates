@@ -238,6 +238,68 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v3.2.0</span>
+    <span class="version-date">2026-08-17</span>
+  </div>
+  <div class="version-body">v3.2.0 - Export to your DAW, Yamaha styles read correctly, and no more lost notes
+
+STYLE MASTER PRO
+
+NEW: Export any track from the Global window as a MIDI file for a DAW. Right-click a track name and choose SECTION, WHOLE TRACK or ALL TRACKS. Notes start at tick 0, tempo and time signature are embedded, and blocks are whole bars so they loop without a gap. WHOLE TRACK packs the sections back to back and drops a marker at each one, so your DAW's marker track shows where every section begins.
+
+NEW: Drag a track name straight into your DAW. The name itself is a drag handle - pull it into Cubase and the MIDI file lands there.
+
+NEW: ALL TRACKS writes one file with every track on its own channel, ready to drive separate instruments.
+
+NEW: FILE - EXPORT REPORT (HTML). Everything the program knows about a rhythm in a single file: sections, tracks, the voice used in each section, drum mapping, what was found during import, and how it lines up with your Event. Opens in any browser and prints to PDF.
+
+NEW: TRACK VOICE [SECTION | GLOBAL] switch, alongside TRACK VOLUME. Set a voice for one section or for the whole rhythm, and switch back and forth in any order.
+
+FIX: Import no longer loses notes. A note whose end fell on the same tick as its start was quietly dropped on melodic channels. Measured across 22 styles: 375 such notes, in 6 of 14 Ketron files - one rhythm was losing 213 chord notes, another 48 bass notes. Those notes were in the file all along; you were hearing a thinner rhythm and had no way to know.
+
+FIX: Factory rhythms no longer lose their drum kit. A kit from a bank your Event does not list now passes through untouched instead of being replaced with Standard1.
+
+FIX: Yamaha Genos styles are now read correctly - sections that share one CASM entry, chord-type masks, Maj7 source chords, and intros mirrored into the minor and seventh variants.
+
+FIX: A single corrupt MIDI message is now removed so the file still loads, instead of the whole style refusing to open - and you are told it happened.
+
+IMPROVED: Imported Korg styles arrive with usable Ketron voices instead of whatever happened to be on the strip. Tracks whose Korg voice has no Ketron equivalent fall back to Ketron's own table.
+
+IMPROVED: Exported drums go out on MIDI channel 10 and melodic parts on channel 1 - what DAWs and drum plugins expect. The Event's own channel numbering means nothing outside the Event. Bass is raised two octaves, into the range most VST bass instruments play.
+
+IMPROVED: The Global window can be made far narrower - minimum width dropped from 3132 to 1437 pixels on the test machine.
+
+IMPROVED: Export remembers the last folder and opens it afterwards with the file selected.
+
+IMPROVED: LIVE DK MAPPER now opens DRUM SET on the Event with Standard1 when it starts, and closes it when the window closes.
+
+CHANGE: REMOVE: DUPLICATE NOTES is now FIND: DUPLICATE NOTES, and export no longer stops to ask about duplicates. Duplicate notes are often deliberate - a quieter factory hit and a louder one added on purpose - and removing them would destroy what the author built.
+
+LYRICS CONVERTER
+
+NEW: Italian added, so the module now runs in four languages.
+
+NEW: Drop a file straight onto the LIVE PREVIEW button to open it.
+
+NEW: Progress bar with a STOP button while a conversion runs.
+
+IMPROVED: Live Preview - the editor and preview panels can be resized.
+
+IMPROVED: Text from images now reads Serbian Cyrillic, Serbian Latin, Macedonian and Bulgarian, and works out the script on its own. Language packs download by themselves the first time they are needed.
+
+IMPROVED: Text from images - better reading of light text on dark backgrounds, better paragraph breaks, and website descriptions are no longer picked up as lyrics.
+
+IMPROVED: Text from images - Save & finish opens the folder with the file selected, and the song name and folder are remembered for next time.
+
+IMPROVED: Presets - single click applies, double click renames.
+
+FIX: PDF import no longer splits words on certain fonts, or breaks lines at apostrophes.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v3.1.2</span>
     <span class="version-date">2026-08-10</span>
   </div>
@@ -741,6 +803,68 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.2.0</span>
+    <span class="version-date">2026-08-17</span>
+  </div>
+  <div class="version-body">v3.2.0 - Izvoz u DAW, ispravno citanje Yamaha stilova, i vise se ne gube note
+
+STYLE MASTER PRO
+
+NOVO: Izvezite bilo koju traku iz Global prozora kao MIDI fajl za DAW. Desni klik na naziv trake, pa SECTION, WHOLE TRACK ili ALL TRACKS. Note pocinju od nule, tempo i mjera su upisani, a blokovi su cijeli taktovi pa se petljaju bez rupe. WHOLE TRACK slaze sekcije jednu za drugom i na svaku stavlja marker, pa vam se u DAW-u vidi gdje koja sekcija pocinje.
+
+NOVO: Prevucite naziv trake pravo u DAW. Sam naziv je hvataljka - povucite ga u Cubase i MIDI fajl se stvori tamo.
+
+NOVO: ALL TRACKS pravi jedan fajl sa svakom trakom na svom kanalu, spreman da vodi odvojene instrumente.
+
+NOVO: FILE - EXPORT REPORT (HTML). Sve sto program zna o ritmu u jednom fajlu: sekcije, trake, zvuk u svakoj sekciji, mapiranje bubnjeva, sta je nadjeno pri uvozu, i kako se slaze sa vasim Eventom. Otvara se u svakom browseru i stampa u PDF.
+
+NOVO: Prekidac TRACK VOICE [SECTION | GLOBAL], uz postojeci TRACK VOLUME. Postavite zvuk za jednu sekciju ili za cijeli ritam, i prebacujte se naprijed-nazad bilo kojim redom.
+
+POPRAVKA: Uvoz vise ne gubi note. Nota ciji je kraj padao na isti tick kao pocetak tiho se odbacivala na melodijskim kanalima. Mjereno na 22 stila: 375 takvih nota, u 6 od 14 Ketron fajlova - jedan ritam je gubio 213 akordskih nota, drugi 48 basovih. Te note su cijelo vrijeme bile u fajlu; vi ste slusali osiromasen ritam i niste imali kako da znate.
+
+POPRAVKA: Fabricki ritmovi vise ne gube drum kit. Kit iz banke koju vas Event ne navodi sada prolazi netaknut umjesto da bude zamijenjen sa Standard1.
+
+POPRAVKA: Yamaha Genos stilovi se sada citaju ispravno - sekcije koje dijele jedan CASM unos, maske tipova akorda, Maj7 izvorni akordi, i introi ogledani u mol i septakord varijante.
+
+POPRAVKA: Jedna pokvarena MIDI poruka se sada uklanja pa se fajl ipak ucita, umjesto da cijeli stil odbije da se otvori - i to vam se javi.
+
+POBOLJSANO: Uvezeni Korg stilovi dolaze sa upotrebljivim Ketron zvukovima umjesto sa onim sto se zateklo na traci. Trake ciji Korg zvuk nema Ketron parnjaka vracaju se na Ketronovu vlastitu tabelu.
+
+POBOLJSANO: Izvezeni bubnjevi idu na MIDI kanal 10, a melodijske trake na kanal 1 - kako DAW i drum plugini ocekuju. Eventova numeracija kanala izvan Eventa ne znaci nista. Bas je podignut dvije oktave, u opseg u kojem svira vecina VST bas instrumenata.
+
+POBOLJSANO: Global prozor se moze suziti mnogo vise - minimalna sirina je pala sa 3132 na 1437 piksela na testnoj masini.
+
+POBOLJSANO: Izvoz pamti zadnji folder i poslije otvara taj folder sa oznacenim fajlom.
+
+POBOLJSANO: LIVE DK MAPPER sada pri otvaranju postavi DRUM SET na Eventu na Standard1, i zatvori ga kad se prozor zatvori.
+
+IZMJENA: REMOVE: DUPLICATE NOTES se sada zove FIND: DUPLICATE NOTES, i izvoz vise ne staje da pita o duplikatima. Duple note su cesto namjerne - tisi fabricki udarac i glasniji dodat namjerno - pa bi ih brisanje unistilo ono sto je autor napravio.
+
+LYRICS CONVERTER
+
+NOVO: Dodat italijanski, pa modul sada radi na cetiri jezika.
+
+NOVO: Prevucite fajl pravo na dugme LIVE PREVIEW da ga otvorite.
+
+NOVO: Traka napretka sa STOP dugmetom dok konverzija traje.
+
+POBOLJSANO: Live Preview - velicina editora i pregleda se moze mijenjati.
+
+POBOLJSANO: Citanje teksta sa slike sada prepoznaje srpsku cirilicu, srpsku latinicu, makedonski i bugarski, i samo raspozna koje je pismo. Jezicki paketi se preuzimaju sami kad prvi put zatrebaju.
+
+POBOLJSANO: Citanje teksta sa slike - bolje citanje svijetlog teksta na tamnoj podlozi, bolje prepoznavanje pasusa, i opisi sa sajtova se vise ne kupe kao tekst pjesme.
+
+POBOLJSANO: Citanje teksta sa slike - Save & finish otvara folder sa oznacenim fajlom, a naziv pjesme i folder se pamte za sljedeci put.
+
+POBOLJSANO: Preseti - jedan klik primjenjuje, dupli preimenuje.
+
+POPRAVKA: Uvoz PDF-a vise ne lomi rijeci na nekim fontovima, niti redove na apostrofima.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v3.1.2</span>
@@ -1258,6 +1382,68 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v3.2.0</span>
+    <span class="version-date">2026-08-17</span>
+  </div>
+  <div class="version-body">v3.2.0 - Esportazione verso la DAW, stili Yamaha letti correttamente, e niente piu note perse
+
+STYLE MASTER PRO
+
+NUOVO: Esporta qualsiasi traccia dalla finestra Global come file MIDI per la DAW. Clic destro sul nome della traccia: SECTION, WHOLE TRACK o ALL TRACKS. Le note partono da zero, tempo e metro sono inclusi, e i blocchi sono battute intere cosi vanno in loop senza buchi. WHOLE TRACK mette le sezioni una dopo l'altra e lascia un marker su ognuna, cosi nella DAW si vede dove inizia ogni sezione.
+
+NUOVO: Trascina il nome della traccia direttamente nella DAW. Il nome e la maniglia - trascinalo in Cubase e il file MIDI arriva li.
+
+NUOVO: ALL TRACKS crea un solo file con ogni traccia sul proprio canale, pronto per pilotare strumenti separati.
+
+NUOVO: FILE - EXPORT REPORT (HTML). Tutto quello che il programma sa di un ritmo in un unico file: sezioni, tracce, il suono usato in ogni sezione, mappatura batteria, cosa e stato trovato durante l'importazione e come si accorda con il tuo Event. Si apre in qualsiasi browser e si stampa in PDF.
+
+NUOVO: Interruttore TRACK VOICE [SECTION | GLOBAL], accanto a TRACK VOLUME. Imposta un suono per una sezione o per tutto il ritmo, e passa dall'uno all'altro in qualsiasi ordine.
+
+CORREZIONE: L'importazione non perde piu note. Una nota la cui fine cadeva sullo stesso tick dell'inizio veniva scartata in silenzio sui canali melodici. Misurato su 22 stili: 375 note di questo tipo, in 6 file Ketron su 14 - un ritmo perdeva 213 note di accordo, un altro 48 note di basso. Quelle note erano nel file da sempre; tu sentivi un ritmo impoverito senza poterlo sapere.
+
+CORREZIONE: I ritmi di fabbrica non perdono piu il loro drum kit. Un kit da un banco che il tuo Event non elenca ora passa intatto invece di essere sostituito con Standard1.
+
+CORREZIONE: Gli stili Yamaha Genos vengono ora letti correttamente - sezioni che condividono una voce CASM, maschere dei tipi di accordo, accordi sorgente Maj7 e intro rispecchiati nelle varianti minore e di settima.
+
+CORREZIONE: Un singolo messaggio MIDI corrotto viene ora rimosso cosi il file si carica lo stesso, invece che l'intero stile si rifiuti di aprirsi - e ti viene detto che e successo.
+
+MIGLIORATO: Gli stili Korg importati arrivano con suoni Ketron utilizzabili invece di quello che capitava sulla traccia. Le tracce il cui suono Korg non ha equivalente Ketron ripiegano sulla tabella Ketron.
+
+MIGLIORATO: La batteria esportata esce sul canale MIDI 10 e le parti melodiche sul canale 1 - quello che DAW e plugin di batteria si aspettano. La numerazione dei canali dell'Event non significa nulla fuori dall'Event. Il basso e alzato di due ottave, nella gamma in cui suona la maggior parte dei bassi VST.
+
+MIGLIORATO: La finestra Global si puo restringere molto di piu - larghezza minima scesa da 3132 a 1437 pixel sulla macchina di prova.
+
+MIGLIORATO: L'esportazione ricorda l'ultima cartella e poi la apre con il file selezionato.
+
+MIGLIORATO: LIVE DK MAPPER ora apre DRUM SET sull'Event con Standard1 all'avvio, e lo chiude quando la finestra si chiude.
+
+MODIFICA: REMOVE: DUPLICATE NOTES si chiama ora FIND: DUPLICATE NOTES, e l'esportazione non si ferma piu a chiedere dei duplicati. Le note doppie sono spesso volute - un colpo di fabbrica piu piano e uno piu forte aggiunto apposta - e rimuoverle distruggerebbe quello che l'autore ha costruito.
+
+LYRICS CONVERTER
+
+NUOVO: Aggiunto l'italiano, il modulo funziona ora in quattro lingue.
+
+NUOVO: Trascina un file direttamente sul pulsante LIVE PREVIEW per aprirlo.
+
+NUOVO: Barra di avanzamento con pulsante STOP durante la conversione.
+
+MIGLIORATO: Live Preview - i pannelli editor e anteprima si possono ridimensionare.
+
+MIGLIORATO: Il testo dalle immagini legge ora cirillico serbo, latino serbo, macedone e bulgaro, e capisce da solo quale alfabeto. I pacchetti lingua si scaricano da soli al primo utilizzo.
+
+MIGLIORATO: Testo dalle immagini - lettura migliore di testo chiaro su sfondo scuro, migliore rilevamento dei paragrafi, e le descrizioni dei siti web non vengono piu prese per testo della canzone.
+
+MIGLIORATO: Testo dalle immagini - Save & finish apre la cartella con il file selezionato, e nome del brano e cartella vengono ricordati.
+
+MIGLIORATO: Preset - un clic applica, doppio clic rinomina.
+
+CORREZIONE: L'importazione PDF non spezza piu le parole con certi font, ne le righe sugli apostrofi.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v3.1.2</span>
     <span class="version-date">2026-08-10</span>
   </div>
@@ -1771,6 +1957,68 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.2.0</span>
+    <span class="version-date">2026-08-17</span>
+  </div>
+  <div class="version-body">v3.2.0 - Export in die DAW, Yamaha-Styles korrekt gelesen, und keine verlorenen Noten mehr
+
+STYLE MASTER PRO
+
+NEU: Exportieren Sie jede Spur aus dem Global-Fenster als MIDI-Datei fuer Ihre DAW. Rechtsklick auf einen Spurnamen: SECTION, WHOLE TRACK oder ALL TRACKS. Die Noten beginnen bei null, Tempo und Taktart sind eingebettet, und die Bloecke sind ganze Takte, damit sie ohne Luecke loopen. WHOLE TRACK reiht die Sektionen hintereinander und setzt an jeder einen Marker, sodass die Marker-Spur Ihrer DAW zeigt, wo jede Sektion beginnt.
+
+NEU: Ziehen Sie einen Spurnamen direkt in Ihre DAW. Der Name selbst ist der Anfasser - ziehen Sie ihn nach Cubase und die MIDI-Datei landet dort.
+
+NEU: ALL TRACKS schreibt eine Datei mit jeder Spur auf einem eigenen Kanal, bereit fuer getrennte Instrumente.
+
+NEU: FILE - EXPORT REPORT (HTML). Alles, was das Programm ueber einen Rhythmus weiss, in einer einzigen Datei: Sektionen, Spuren, der Klang in jeder Sektion, Drum-Mapping, was beim Import gefunden wurde und wie es zu Ihrem Event passt. Oeffnet sich in jedem Browser und laesst sich als PDF drucken.
+
+NEU: Schalter TRACK VOICE [SECTION | GLOBAL], neben TRACK VOLUME. Setzen Sie einen Klang fuer eine Sektion oder fuer den ganzen Rhythmus, und wechseln Sie in beliebiger Reihenfolge hin und her.
+
+FIX: Der Import verliert keine Noten mehr. Eine Note, deren Ende auf denselben Tick fiel wie ihr Anfang, wurde auf melodischen Kanaelen stillschweigend verworfen. Gemessen an 22 Styles: 375 solcher Noten, in 6 von 14 Ketron-Dateien - ein Rhythmus verlor 213 Akkordnoten, ein anderer 48 Bassnoten. Diese Noten waren die ganze Zeit in der Datei; Sie hoerten einen ausgeduennten Rhythmus und konnten es nicht wissen.
+
+FIX: Werksrhythmen verlieren ihr Drumkit nicht mehr. Ein Kit aus einer Bank, die Ihr Event nicht auffuehrt, geht jetzt unveraendert durch, statt durch Standard1 ersetzt zu werden.
+
+FIX: Yamaha-Genos-Styles werden jetzt korrekt gelesen - Sektionen, die sich einen CASM-Eintrag teilen, Akkordtyp-Masken, Maj7-Quellakkorde und Intros, die in die Moll- und Septvarianten gespiegelt werden.
+
+FIX: Eine einzelne beschaedigte MIDI-Nachricht wird jetzt entfernt, sodass die Datei trotzdem laedt, statt dass sich der ganze Style weigert zu oeffnen - und Sie werden darauf hingewiesen.
+
+VERBESSERT: Importierte Korg-Styles kommen mit brauchbaren Ketron-Klaengen an statt mit dem, was zufaellig auf der Spur lag. Spuren, deren Korg-Klang kein Ketron-Gegenstueck hat, greifen auf Ketrons eigene Tabelle zurueck.
+
+VERBESSERT: Exportierte Drums gehen auf MIDI-Kanal 10 hinaus, melodische Teile auf Kanal 1 - so wie DAWs und Drum-Plugins es erwarten. Die Kanalnummerierung des Event bedeutet ausserhalb des Event nichts. Der Bass wird zwei Oktaven angehoben, in den Bereich, in dem die meisten VST-Baesse spielen.
+
+VERBESSERT: Das Global-Fenster laesst sich weit schmaler machen - Mindestbreite von 3132 auf 1437 Pixel gesunken.
+
+VERBESSERT: Der Export merkt sich den letzten Ordner und oeffnet ihn danach mit ausgewaehlter Datei.
+
+VERBESSERT: LIVE DK MAPPER oeffnet beim Start DRUM SET am Event mit Standard1 und schliesst es wieder, wenn das Fenster geschlossen wird.
+
+AENDERUNG: REMOVE: DUPLICATE NOTES heisst jetzt FIND: DUPLICATE NOTES, und der Export haelt nicht mehr an, um nach Duplikaten zu fragen. Doppelte Noten sind oft Absicht - ein leiserer Werksschlag und ein lauterer, bewusst hinzugefuegter - und sie zu entfernen wuerde zerstoeren, was der Autor gebaut hat.
+
+LYRICS CONVERTER
+
+NEU: Italienisch hinzugefuegt, das Modul laeuft jetzt in vier Sprachen.
+
+NEU: Ziehen Sie eine Datei direkt auf die Schaltflaeche LIVE PREVIEW, um sie zu oeffnen.
+
+NEU: Fortschrittsbalken mit STOP-Schaltflaeche waehrend der Konvertierung.
+
+VERBESSERT: Live Preview - Editor und Vorschau lassen sich in der Groesse aendern.
+
+VERBESSERT: Text aus Bildern liest jetzt serbisches Kyrillisch, serbisches Latein, Mazedonisch und Bulgarisch und erkennt die Schrift selbst. Sprachpakete laden sich beim ersten Bedarf von allein herunter.
+
+VERBESSERT: Text aus Bildern - besseres Lesen heller Schrift auf dunklem Grund, bessere Absatzerkennung, und Webseitenbeschreibungen werden nicht mehr als Liedtext uebernommen.
+
+VERBESSERT: Text aus Bildern - Save & finish oeffnet den Ordner mit ausgewaehlter Datei, und Liedname und Ordner werden fuer das naechste Mal gemerkt.
+
+VERBESSERT: Presets - ein Klick wendet an, Doppelklick benennt um.
+
+FIX: Der PDF-Import trennt keine Woerter mehr bei bestimmten Schriftarten und bricht Zeilen nicht mehr an Apostrophen um.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v3.1.2</span>
@@ -2288,6 +2536,68 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v3.2.0</span>
+    <span class="version-date">2026-08-17</span>
+  </div>
+  <div class="version-body">v3.2.0 - Экспорт в DAW, правильное чтение стилей Yamaha и больше никаких потерянных нот
+
+STYLE MASTER PRO
+
+НОВОЕ: Экспортируйте любую дорожку из окна Global как MIDI-файл для DAW. Правый клик по имени дорожки: SECTION, WHOLE TRACK или ALL TRACKS. Ноты начинаются с нуля, темп и размер встроены, а блоки состоят из целых тактов, поэтому зацикливаются без разрыва. WHOLE TRACK складывает секции одну за другой и ставит маркер на каждой, так что в DAW видно, где начинается каждая секция.
+
+НОВОЕ: Перетащите имя дорожки прямо в DAW. Само имя - это ручка захвата: тяните его в Cubase, и MIDI-файл окажется там.
+
+НОВОЕ: ALL TRACKS создаёт один файл, где каждая дорожка на своём канале, готовый управлять отдельными инструментами.
+
+НОВОЕ: FILE - EXPORT REPORT (HTML). Всё, что программа знает о ритме, в одном файле: секции, дорожки, звук в каждой секции, сопоставление барабанов, что найдено при импорте и как это согласуется с вашим Event. Открывается в любом браузере и печатается в PDF.
+
+НОВОЕ: Переключатель TRACK VOICE [SECTION | GLOBAL] рядом с TRACK VOLUME. Задайте звук для одной секции или для всего ритма и переключайтесь в любом порядке.
+
+ИСПРАВЛЕНИЕ: Импорт больше не теряет ноты. Нота, конец которой приходился на тот же тик, что и начало, тихо отбрасывалась на мелодических каналах. Измерено на 22 стилях: 375 таких нот в 6 из 14 файлов Ketron - один ритм терял 213 аккордовых нот, другой 48 басовых. Эти ноты всё время были в файле; вы слышали обеднённый ритм и не могли об этом узнать.
+
+ИСПРАВЛЕНИЕ: Заводские ритмы больше не теряют свой набор барабанов. Набор из банка, которого нет в списке вашего Event, теперь проходит нетронутым вместо замены на Standard1.
+
+ИСПРАВЛЕНИЕ: Стили Yamaha Genos читаются правильно - секции с общей записью CASM, маски типов аккордов, исходные аккорды Maj7 и вступления, отражённые в минорный и септаккордовый варианты.
+
+ИСПРАВЛЕНИЕ: Одно повреждённое MIDI-сообщение теперь удаляется, и файл всё же загружается, вместо того чтобы весь стиль отказался открываться - и вам об этом сообщается.
+
+УЛУЧШЕНО: Импортированные стили Korg приходят с пригодными звуками Ketron вместо того, что случайно оказалось на дорожке. Дорожки, чей звук Korg не имеет эквивалента Ketron, переходят к собственной таблице Ketron.
+
+УЛУЧШЕНО: Экспортированные барабаны идут на MIDI-канал 10, а мелодические партии на канал 1 - как того ожидают DAW и барабанные плагины. Нумерация каналов Event за пределами Event ничего не значит. Бас поднят на две октавы, в диапазон, в котором играет большинство VST-басов.
+
+УЛУЧШЕНО: Окно Global можно сделать значительно уже - минимальная ширина упала с 3132 до 1437 пикселей.
+
+УЛУЧШЕНО: Экспорт запоминает последнюю папку и затем открывает её с выделенным файлом.
+
+УЛУЧШЕНО: LIVE DK MAPPER при открытии устанавливает DRUM SET на Event в Standard1 и закрывает его при закрытии окна.
+
+ИЗМЕНЕНИЕ: REMOVE: DUPLICATE NOTES теперь называется FIND: DUPLICATE NOTES, и экспорт больше не останавливается, чтобы спросить о дубликатах. Двойные ноты часто сделаны намеренно - тихий заводской удар и громкий, добавленный специально - и их удаление разрушило бы то, что построил автор.
+
+LYRICS CONVERTER
+
+НОВОЕ: Добавлен итальянский, модуль теперь работает на четырёх языках.
+
+НОВОЕ: Перетащите файл прямо на кнопку LIVE PREVIEW, чтобы открыть его.
+
+НОВОЕ: Полоса выполнения с кнопкой STOP во время конвертации.
+
+УЛУЧШЕНО: Live Preview - размеры панелей редактора и просмотра можно менять.
+
+УЛУЧШЕНО: Текст с изображений теперь читает сербскую кириллицу, сербскую латиницу, македонский и болгарский и сам определяет письменность. Языковые пакеты загружаются самостоятельно при первом использовании.
+
+УЛУЧШЕНО: Текст с изображений - лучше читается светлый текст на тёмном фоне, лучше определяются абзацы, а описания веб-сайтов больше не попадают в текст песни.
+
+УЛУЧШЕНО: Текст с изображений - Save & finish открывает папку с выделенным файлом, а название песни и папка запоминаются.
+
+УЛУЧШЕНО: Пресеты - одиночный клик применяет, двойной переименовывает.
+
+ИСПРАВЛЕНИЕ: Импорт PDF больше не разбивает слова при некоторых шрифтах и не разрывает строки на апострофах.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v3.1.2</span>
     <span class="version-date">2026-08-10</span>
   </div>
@@ -2801,6 +3111,68 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v3.2.0</span>
+    <span class="version-date">2026-08-17</span>
+  </div>
+  <div class="version-body">v3.2.0 - Export till din DAW, Yamaha-stilar lasta korrekt, och inga fler forlorade noter
+
+STYLE MASTER PRO
+
+NYTT: Exportera vilket spar som helst fran Global-fonstret som en MIDI-fil for din DAW. Hogerklicka pa ett sparnamn: SECTION, WHOLE TRACK eller ALL TRACKS. Noterna borjar pa noll, tempo och taktart ar inbaddade, och blocken ar hela takter sa att de loopar utan glapp. WHOLE TRACK lagger sektionerna efter varandra och satter en markor vid varje, sa att din DAW visar var varje sektion borjar.
+
+NYTT: Dra ett sparnamn rakt in i din DAW. Namnet ar handtaget - dra det till Cubase och MIDI-filen hamnar dar.
+
+NYTT: ALL TRACKS skriver en fil med varje spar pa egen kanal, redo att driva separata instrument.
+
+NYTT: FILE - EXPORT REPORT (HTML). Allt programmet vet om en rytm i en enda fil: sektioner, spar, ljudet i varje sektion, trummappning, vad som hittades vid importen och hur det stammer med din Event. Oppnas i vilken webblasare som helst och skrivs ut till PDF.
+
+NYTT: Omkopplaren TRACK VOICE [SECTION | GLOBAL], bredvid TRACK VOLUME. Satt ett ljud for en sektion eller for hela rytmen, och vaxla fram och tillbaka i vilken ordning som helst.
+
+FIX: Importen forlorar inte langre noter. En not vars slut lag pa samma tick som borjan kastades tyst bort pa melodiska kanaler. Matt over 22 stilar: 375 sadana noter, i 6 av 14 Ketron-filer - en rytm forlorade 213 ackordnoter, en annan 48 basnoter. Noterna fanns i filen hela tiden; du horde en urholkad rytm utan att kunna veta om det.
+
+FIX: Fabriksrytmer forlorar inte langre sitt trumkit. Ett kit fran en bank som din Event inte listar gar nu igenom orort i stallet for att bytas mot Standard1.
+
+FIX: Yamaha Genos-stilar lases nu korrekt - sektioner som delar en CASM-post, ackordtypsmasker, Maj7-kallackord och intron speglade till moll- och septimvarianterna.
+
+FIX: Ett enskilt trasigt MIDI-meddelande tas nu bort sa att filen anda laddas, i stallet for att hela stilen vagrar oppnas - och du far veta att det hant.
+
+FORBATTRAT: Importerade Korg-stilar kommer med anvandbara Ketron-ljud i stallet for det som rakade ligga pa sparet. Spar vars Korg-ljud saknar Ketron-motsvarighet faller tillbaka pa Ketrons egen tabell.
+
+FORBATTRAT: Exporterade trummor gar ut pa MIDI-kanal 10 och melodiska partier pa kanal 1 - vad DAW:ar och trumplugins forvantar sig. Events egen kanalnumrering betyder ingenting utanfor Event. Basen hojs tva oktaver, till det omfang dar de flesta VST-basar spelar.
+
+FORBATTRAT: Global-fonstret kan goras betydligt smalare - minsta bredd sankt fran 3132 till 1437 pixlar.
+
+FORBATTRAT: Exporten kommer ihag senaste mappen och oppnar den efterat med filen markerad.
+
+FORBATTRAT: LIVE DK MAPPER oppnar nu DRUM SET pa Event med Standard1 nar den startar, och stanger det nar fonstret stangs.
+
+ANDRING: REMOVE: DUPLICATE NOTES heter nu FIND: DUPLICATE NOTES, och exporten stannar inte langre for att fraga om dubbletter. Dubbla noter ar ofta avsiktliga - ett tystare fabriksslag och ett hogre tillagt med flit - och att ta bort dem skulle forstora det upphovsmannen byggt.
+
+LYRICS CONVERTER
+
+NYTT: Italienska tillagt, modulen kor nu pa fyra sprak.
+
+NYTT: Slapp en fil direkt pa knappen LIVE PREVIEW for att oppna den.
+
+NYTT: Forloppsindikator med STOP-knapp under konvertering.
+
+FORBATTRAT: Live Preview - redigerings- och forhandsgranskningspanelerna kan andra storlek.
+
+FORBATTRAT: Text fran bilder laser nu serbisk kyrilliska, serbisk latinska, makedonska och bulgariska, och listar ut skriftsystemet sjalv. Sprakpaket laddas ner av sig sjalva forsta gangen de behovs.
+
+FORBATTRAT: Text fran bilder - battre lasning av ljus text pa mork bakgrund, battre styckesindelning, och webbplatsbeskrivningar plockas inte langre upp som sangtext.
+
+FORBATTRAT: Text fran bilder - Save & finish oppnar mappen med filen markerad, och langtitel och mapp kommer ihag till nasta gang.
+
+FORBATTRAT: Forinstallningar - ett klick tillampar, dubbelklick byter namn.
+
+FIX: PDF-importen delar inte langre ord vid vissa typsnitt, och bryter inte rader vid apostrofer.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v3.1.2</span>
