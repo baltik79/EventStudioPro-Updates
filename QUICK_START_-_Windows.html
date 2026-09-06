@@ -168,10 +168,24 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   margin-top: 10px;
 }
 .whats-new-panel.open {
-  max-height: 2000px;
+  /* A fixed cap with overflow hidden simply cut the history off: v4.1.0 is
+     longer on its own than the old 2000px limit, so neither it nor any
+     earlier release could be read to the end. The panel now takes a share
+     of the window and scrolls inside itself. */
+  max-height: 70vh;
+  overflow-y: auto;
   border: 1px solid #3A5A80;
   padding: 20px;
 }
+
+.whats-new-panel.open::-webkit-scrollbar { width: 10px; }
+.whats-new-panel.open::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.25); border-radius: 5px;
+}
+.whats-new-panel.open::-webkit-scrollbar-thumb {
+  background: #3A5A80; border-radius: 5px;
+}
+.whats-new-panel.open::-webkit-scrollbar-thumb:hover { background: #4E76A8; }
 .version-card {
   background: #1A2438;
   border-left: 4px solid #F7D87E;
@@ -236,6 +250,74 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 What's new in updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.1.0</span>
+    <span class="version-date">2026-09-07</span>
+  </div>
+  <div class="version-body">v4.1.0 - Yamaha conversion corrected, and recording from the keyboard works
+
+Two of the changes below are ON by default and alter how a style is converted: NOTE LIMITS and GUITAR MODE. A rhythm you converted yesterday can sound different today. Both can be switched off in the IMPORT - YAMAHA group if you prefer the old result, and the program remembers that choice.
+
+STYLE MASTER PRO - YAMAHA CONVERSION
+
+FIX: Drums no longer end up on a chord track. When a style used both Rhythm Sub and Rhythm Main and PERC - Drum Set 3 was off, the main drum part could be moved onto a chord channel, where a drum note plays as a pitch instead of an instrument. Measured across six styles from six Yamaha series: 70sTV Theme recovered 1904 drum notes, 2-4Oyun 1732, 70sTeensMusical 913.
+
+FIX: SFF1 styles now read their own routing table. Styles that store a Ctab record - the s460 and S-series among them - were converted without it, so most of their parts were dropped as undeclared. 8BeatPop kept 908 notes and converted with no bass at all; it now keeps 2512, bass included.
+
+FIX: STRIP GUITAR NOISE now works on Yamaha styles as well. Until now it only ran on the Korg side, although v4.0.0 described it without that limit. If you ticked it on a Yamaha style and heard no difference, that was why.
+
+FIX: The drum kit a Yamaha style asks for is now actually applied. This was announced in v4.0.0, but the step that reads the kits failed silently on every Yamaha import, so it never took effect.
+
+NEW: NOTE LIMITS, on by default. Every Yamaha part states the register its instrument is meant to play in, and the format's rule is that a note outside that range moves by whole octaves until it is back inside. We were ignoring it. Across 63 styles, 97% of bass parts carry a range and the commonest lower limit is E1. Notes only ever move by octaves; none is added or removed, and drum tracks are never touched.
+
+NEW: GUITAR MODE, on by default. Yamaha writes some guitar parts as tablature rather than notes: each note names a string and its octave names the position on the neck. Read as ordinary pitches, those parts came out as something that was not a chord at all. They are now rendered as the chord a guitar would actually sound. This reaches 190 parts across 18 of 40 styles in our test collection.
+
+IMPROVED: The import log now reports when it raises volumes, and which parts it moved into C from their written key. Both were being computed and then lost.
+
+STYLE MASTER PRO - KETRON STYLES
+
+FIX: Voices now match what the keyboard plays. A .kst stores each instrument twice - as a MIDI program change and inside the KSHP table - and the Event reads the KSHP one. We were reading the other. Across 13 factory MIDI styles the two disagree 30 times, and every single file has at least one, most often on Bass and Chord 1. Tracks were therefore labelled, and sent to the keyboard, as voices the Event never plays.
+
+FIX: Voice names now match the Event's own display. A program change carries the number one below what the keyboard shows, and part of the import was reading it as-is.
+
+FIX: An empty part reads as empty. A track with no voice assigned showed a bank and program number the Event never plays. It now shows a dash, the way the keyboard does.
+
+IMPROVED: Your own drum kits are named. Kits captured with DRUM CALIBRATE are now used when naming a track, so a kit you built and named yourself appears by that name instead of User DK 4.
+
+IMPROVED: Groove parts are recognised. Drum Set 3 can hold either a drum kit or one of the Event's own GROOVE patterns. The second case now reads Groove 42 instead of an invented kit name.
+
+STYLE MASTER PRO - CALIBRATION AND RECORDING
+
+NEW: The name field suggests as you type. Type three letters and the matching voices appear with their family beside them - grand finds Bright Grand and Classic Grand, muted shows both the BRASS and the GUITAR one. Any name you type by hand still goes through unchanged, which matters for kits you built yourself: the list is an offer, never a gate.
+
+NEW: Calibration progress is shown. The banner now says how many voices and kits you have captured and where you left off. Calibration is long and nobody finishes it in one sitting.
+
+FIX: Recording from the keyboard works. Several faults together made it appear to do nothing: the whole first bar of every take was discarded, a key already held when the count-in ended was lost, two drum sounds were being filtered out as metronome echo, and recording onto a muted track produced notes nobody could see.
+
+FIX: Drum Set 3 records on the right channel. The editor and the recorder held different channel tables, so a block could not be added to a track that was audibly playing.
+
+IMPROVED: You do not have to calibrate everything - only the voices your own styles use. The dialog now says so.
+
+IMPROVED: LIVE DK MAPPER no longer says Korg throughout, which suggested it only worked with a Korg. It works with any make - Korg, Yamaha including Genos, or another Ketron.
+
+MAIN WINDOW
+
+FIX: Opening Lyrics Converter no longer closes the main window. A sidebar module runs as a second copy of the program, and the cleanup that removes leftover processes mistook the main window for one. Style Master Pro was protected from this in v3.0.4; Lyrics Converter arrived later and was not.
+
+IMPROVED: The module buttons are easier to read. Each name is centred on its own line beside the icon, in capitals, and the two longest ones now break onto a second line instead of losing a letter at each end.
+
+IMPROVED: The module you are working in glows softly, so a glance tells you where you are without reading all six.
+
+NEW: Hovering over a module explains what it does. The same for the UI Scale button and About.
+
+FIX: Tooltips now carry the program's own colours, and no longer run off the edge of the screen. They followed the Windows theme, so on a light desktop they opened as pale boxes over the dark window.
+
+FIX: Making the window shorter no longer lets one module's colour run into the square below it.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.0.0</span>
@@ -900,6 +982,74 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.1.0</span>
+    <span class="version-date">2026-09-07</span>
+  </div>
+  <div class="version-body">v4.1.0 - Ispravljena Yamaha konverzija, i snimanje sa klavijature radi
+
+Dvije izmjene ispod su UKLJUCENE po podrazumijevanom i mijenjaju kako se stil konvertuje: NOTE LIMITS i GUITAR MODE. Ritam koji ste konvertovali juce moze danas zvucati drugacije. Obje se mogu iskljuciti u grupi IMPORT - YAMAHA ako vam je stari rezultat drazi, a program pamti taj izbor.
+
+STYLE MASTER PRO - YAMAHA KONVERZIJA
+
+POPRAVKA: Bubnjevi vise ne zavrsavaju na akordskoj traci. Kada je stil koristio i Rhythm Sub i Rhythm Main, a PERC - Drum Set 3 bio iskljucen, glavna dionica bubnjeva je mogla zavrsiti na akordskom kanalu, gdje se udarac bubnja cuje kao ton umjesto kao instrument. Mjereno na sest stilova iz sest Yamaha serija: 70sTV Theme je vratio 1904 note bubnjeva, 2-4Oyun 1732, 70sTeensMusical 913.
+
+POPRAVKA: SFF1 stilovi sada citaju vlastitu tabelu rasporeda. Stilovi koji nose Ctab zapis - medju njima s460 i S-serija - konvertovali su se bez nje, pa je vecina njihovih dionica odbacivana kao neprijavljena. 8BeatPop je zadrzavao 908 nota i konvertovao se bez basa; sada zadrzava 2512, sa basom.
+
+POPRAVKA: STRIP GUITAR NOISE sada radi i na Yamaha stilovima. Do sada je radio samo na Korg strani, iako ga je v4.0.0 opisala bez tog ogranicenja. Ako ste ga cekirali na Yamaha stilu i niste culi razliku, to je bio razlog.
+
+POPRAVKA: Drum kit koji Yamaha stil trazi sada se stvarno primjenjuje. To je najavljeno u v4.0.0, ali je korak koji cita kitove tiho padao na svakom Yamaha uvozu, pa nikad nije stupio na snagu.
+
+NOVO: NOTE LIMITS, ukljuceno po podrazumijevanom. Svaka Yamaha dionica navodi registar u kojem njen instrument treba da svira, a pravilo formata je da se nota izvan tog opsega pomjera za cijele oktave dok se ne vrati unutra. To smo ignorisali. Na 63 stila, 97% bas dionica nosi opseg, a najcesca donja granica je E1. Note se pomjeraju iskljucivo po oktavama; nijedna se ne dodaje niti uklanja, a trake bubnjeva se nikad ne diraju.
+
+NOVO: GUITAR MODE, ukljuceno po podrazumijevanom. Yamaha neke gitarske dionice pise kao tabulaturu umjesto kao note: svaka nota imenuje zicu, a njena oktava polozaj na vratu. Citane kao obicne visine, te dionice su ispadale kao nesto sto uopste nije akord. Sada se prikazuju kao akord koji bi gitara stvarno odsvirala. To pogadja 190 dionica u 18 od 40 stilova nase testne zbirke.
+
+POBOLJSANO: Log uvoza sada prijavljuje kada podize glasnoce i koje je dionice premjestio u C iz njihovog zapisanog tonaliteta. Oboje se racunalo pa gubilo.
+
+STYLE MASTER PRO - KETRON STILOVI
+
+POPRAVKA: Zvukovi sada odgovaraju onome sto klavijatura svira. .kst cuva svaki instrument dvaput - kao MIDI program change i unutar KSHP tabele - a Event cita ovu drugu. Mi smo citali prvu. Na 13 fabrickih MIDI stilova te dvije se razlikuju 30 puta, i svaki fajl ima bar jednu razliku, najcesce na basu i Chord 1. Trake su zato bile oznacene, i slane klavijaturi, kao zvukovi koje Event nikad ne svira.
+
+POPRAVKA: Nazivi zvukova sada odgovaraju prikazu na Eventu. Program change nosi broj za jedan manji od onoga sto klavijatura pokazuje, a dio uvoza ga je citao takvog kakav je.
+
+POPRAVKA: Prazna dionica se cita kao prazna. Traka bez dodijeljenog zvuka pokazivala je banku i broj programa koje Event nikad ne svira. Sada pokazuje crticu, kao i klavijatura.
+
+POBOLJSANO: Vasi vlastiti drum kitovi imaju imena. Kitovi snimljeni kroz DRUM CALIBRATE sada se koriste pri imenovanju trake, pa se kit koji ste sami napravili i nazvali pojavljuje pod tim imenom umjesto kao User DK 4.
+
+POBOLJSANO: Groove dionice se prepoznaju. Drum Set 3 moze drzati ili drum kit ili jedan od Eventovih GROOVE obrazaca. Drugi slucaj sada pise Groove 42 umjesto izmisljenog naziva kita.
+
+STYLE MASTER PRO - KALIBRACIJA I SNIMANJE
+
+NOVO: Polje za naziv predlaze dok kucate. Ukucajte tri slova i pojave se zvukovi koji odgovaraju, sa porodicom pored - grand nalazi Bright Grand i Classic Grand, muted pokazuje i BRASS i GUITAR verziju. Svaki naziv koji sami ukucate i dalje prolazi nepromijenjen, sto je vazno za kitove koje ste sami napravili: lista je ponuda, nikad kapija.
+
+NOVO: Prikazuje se napredak kalibracije. Traka sada kaze koliko ste zvukova i kitova snimili i gdje ste stali. Kalibracija je duga i niko je ne zavrsi u jednom sjedenju.
+
+POPRAVKA: Snimanje sa klavijature radi. Nekoliko gresaka zajedno cinilo je da izgleda kao da ne radi nista: cijeli prvi takt svakog snimka se odbacivao, dirka koja je vec bila pritisnuta kad se odbrojavanje zavrsi se gubila, dva zvuka bubnja su se filtrirala kao eho metronoma, a snimanje na utisanu traku davalo je note koje niko nije mogao vidjeti.
+
+POPRAVKA: Drum Set 3 snima na pravom kanalu. Editor i snimac su drzali razlicite tabele kanala, pa se blok nije mogao dodati na traku koja je cujno svirala.
+
+POBOLJSANO: Ne morate kalibrisati sve - samo zvukove koje vasi stilovi koriste. Prozor to sada kaze.
+
+POBOLJSANO: LIVE DK MAPPER vise ne pise Korg svuda, sto je sugerisalo da radi samo sa Korgom. Radi sa svakom markom - Korg, Yamaha ukljucujuci Genos, ili drugi Ketron.
+
+GLAVNI PROZOR
+
+POPRAVKA: Otvaranje Lyrics Convertera vise ne zatvara glavni prozor. Modul iz bocne trake se pokrece kao druga kopija programa, a ciscenje zaostalih procesa je glavni prozor zamijenilo za jedan takav. Style Master Pro je od toga zasticen jos u v3.0.4; Lyrics Converter je dosao kasnije i nije bio.
+
+POBOLJSANO: Dugmad modula su citljivija. Svaki naziv je centriran u svom redu pored ikonice, velikim slovima, a dva najduza se sada lome u drugi red umjesto da gube slovo sa svake strane.
+
+POBOLJSANO: Modul u kojem radite blago svijetli, pa se jednim pogledom vidi gdje ste, bez citanja svih sest.
+
+NOVO: Kad zadrzite mis iznad modula, program objasni sta taj modul radi. Isto vazi za UI Scale dugme i About.
+
+POPRAVKA: Objasnjenja sada nose boje programa i vise ne izlaze van ivice ekrana. Ranije su pratila Windows temu, pa su se na svijetloj radnoj povrsini otvarala kao blijede kutije preko tamnog prozora.
+
+POPRAVKA: Smanjivanje prozora po visini vise ne dozvoljava da boja jednog modula predje u kvadrat ispod njega.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.0.0</span>
@@ -1576,6 +1726,74 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.1.0</span>
+    <span class="version-date">2026-09-07</span>
+  </div>
+  <div class="version-body">v4.1.0 - Conversione Yamaha corretta, e la registrazione dalla tastiera funziona
+
+Due delle modifiche qui sotto sono ATTIVE per impostazione predefinita e cambiano il modo in cui uno stile viene convertito: NOTE LIMITS e GUITAR MODE. Un ritmo convertito ieri puo suonare diverso oggi. Entrambe si possono disattivare nel gruppo IMPORT - YAMAHA se preferite il risultato di prima, e il programma ricorda la scelta.
+
+STYLE MASTER PRO - CONVERSIONE YAMAHA
+
+CORREZIONE: La batteria non finisce piu su una traccia di accordi. Quando uno stile usava sia Rhythm Sub sia Rhythm Main e PERC - Drum Set 3 era disattivato, la parte principale di batteria poteva finire su un canale di accordi, dove un colpo di batteria suona come una nota invece che come uno strumento. Misurato su sei stili di sei serie Yamaha: 70sTV Theme ha recuperato 1904 note di batteria, 2-4Oyun 1732, 70sTeensMusical 913.
+
+CORREZIONE: Gli stili SFF1 leggono ora la propria tabella di instradamento. Gli stili che contengono un record Ctab - fra cui s460 e la serie S - venivano convertiti senza di essa, e la maggior parte delle loro parti veniva scartata come non dichiarata. 8BeatPop conservava 908 note e si convertiva senza basso; ora ne conserva 2512, basso compreso.
+
+CORREZIONE: STRIP GUITAR NOISE funziona ora anche sugli stili Yamaha. Finora agiva solo sul lato Korg, benche la v4.0.0 lo descrivesse senza quel limite. Se lo avete spuntato su uno stile Yamaha senza sentire differenza, il motivo era questo.
+
+CORREZIONE: Il kit di batteria richiesto da uno stile Yamaha viene ora davvero applicato. Era annunciato nella v4.0.0, ma il passaggio che legge i kit falliva in silenzio a ogni importazione Yamaha.
+
+NUOVO: NOTE LIMITS, attivo per impostazione predefinita. Ogni parte Yamaha dichiara il registro in cui il suo strumento deve suonare, e la regola del formato e che una nota fuori da quell'intervallo si sposta di ottave intere finche non vi rientra. Lo stavamo ignorando. Su 63 stili, il 97% delle parti di basso porta un intervallo e il limite inferiore piu comune e MI1. Le note si spostano solo di ottave; nessuna viene aggiunta o tolta, e le tracce di batteria non vengono mai toccate.
+
+NUOVO: GUITAR MODE, attivo per impostazione predefinita. Yamaha scrive alcune parti di chitarra come intavolatura invece che come note: ogni nota indica una corda e la sua ottava indica la posizione sul manico. Lette come normali altezze, quelle parti uscivano come qualcosa che non era affatto un accordo. Ora vengono rese come l'accordo che una chitarra suonerebbe davvero. Riguarda 190 parti in 18 stili su 40 della nostra raccolta di prova.
+
+MIGLIORATO: Il registro di importazione segnala ora quando alza i volumi e quali parti ha riportato in DO dalla loro tonalita scritta. Entrambi venivano calcolati e poi persi.
+
+STYLE MASTER PRO - STILI KETRON
+
+CORREZIONE: I suoni corrispondono ora a quello che la tastiera suona. Un .kst memorizza ogni strumento due volte - come program change MIDI e dentro la tabella KSHP - e l'Event legge quest'ultima. Noi leggevamo l'altra. Su 13 stili MIDI di fabbrica le due divergono 30 volte, e ogni singolo file ne ha almeno una, di solito su Basso e Chord 1.
+
+CORREZIONE: I nomi dei suoni corrispondono ora al display dell'Event. Un program change porta il numero inferiore di uno rispetto a quanto mostra la tastiera, e parte dell'importazione lo leggeva cosi com'era.
+
+CORREZIONE: Una parte vuota si legge come vuota. Una traccia senza suono assegnato mostrava un banco e un numero di programma che l'Event non suona mai. Ora mostra un trattino, come fa la tastiera.
+
+MIGLIORATO: I vostri kit di batteria hanno un nome. I kit catturati con DRUM CALIBRATE vengono ora usati per denominare una traccia, cosi un kit che avete costruito e chiamato voi appare con quel nome invece che come User DK 4.
+
+MIGLIORATO: Le parti Groove vengono riconosciute. Drum Set 3 puo contenere un kit di batteria o uno dei pattern GROOVE dell'Event. Il secondo caso ora indica Groove 42 invece di un nome inventato.
+
+STYLE MASTER PRO - CALIBRAZIONE E REGISTRAZIONE
+
+NUOVO: Il campo del nome suggerisce mentre scrivete. Digitate tre lettere e compaiono i suoni corrispondenti con la loro famiglia accanto - grand trova Bright Grand e Classic Grand, muted mostra sia quello BRASS sia quello GUITAR. Qualsiasi nome scritto a mano passa comunque invariato, il che conta per i kit costruiti da voi: l'elenco e un'offerta, mai un cancello.
+
+NUOVO: Viene mostrato l'avanzamento della calibrazione. Il banner dice ora quanti suoni e kit avete catturato e dove vi siete fermati. La calibrazione e lunga e nessuno la finisce in una sola seduta.
+
+CORREZIONE: La registrazione dalla tastiera funziona. Piu difetti insieme la facevano sembrare inerte: l'intera prima battuta di ogni ripresa veniva scartata, un tasto gia premuto alla fine del conteggio andava perso, due suoni di batteria venivano filtrati come eco del metronomo, e registrare su una traccia in mute produceva note che nessuno poteva vedere.
+
+CORREZIONE: Drum Set 3 registra sul canale giusto. L'editor e il registratore avevano tabelle di canali diverse, quindi non si poteva aggiungere un blocco a una traccia che suonava.
+
+MIGLIORATO: Non dovete calibrare tutto - solo i suoni che i vostri stili usano. La finestra ora lo dice.
+
+MIGLIORATO: LIVE DK MAPPER non dice piu Korg dappertutto, cosa che faceva pensare funzionasse solo con un Korg. Funziona con qualsiasi marca - Korg, Yamaha compreso Genos, o un altro Ketron.
+
+FINESTRA PRINCIPALE
+
+CORREZIONE: Aprire Lyrics Converter non chiude piu la finestra principale. Un modulo della barra laterale parte come seconda copia del programma, e la pulizia dei processi rimasti scambiava la finestra principale per uno di essi. Style Master Pro era protetto dalla v3.0.4; Lyrics Converter e arrivato dopo e non lo era.
+
+MIGLIORATO: I pulsanti dei moduli si leggono meglio. Ogni nome e centrato sulla propria riga accanto all'icona, in maiuscolo, e i due piu lunghi vanno ora a capo invece di perdere una lettera per lato.
+
+MIGLIORATO: Il modulo in cui state lavorando emette un leggero bagliore, cosi un'occhiata basta a dire dove siete.
+
+NUOVO: Passando il mouse su un modulo, il programma spiega che cosa fa. Lo stesso per il pulsante UI Scale e per About.
+
+CORREZIONE: I suggerimenti hanno ora i colori del programma e non escono piu dal bordo dello schermo.
+
+CORREZIONE: Ridurre l'altezza della finestra non fa piu sconfinare il colore di un modulo nel riquadro sottostante.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.0.0</span>
     <span class="version-date">2026-09-05</span>
   </div>
@@ -2248,6 +2466,74 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.1.0</span>
+    <span class="version-date">2026-09-07</span>
+  </div>
+  <div class="version-body">v4.1.0 - Yamaha-Konvertierung korrigiert, und die Aufnahme vom Keyboard funktioniert
+
+Zwei der folgenden Aenderungen sind standardmaessig EIN und veraendern, wie ein Style konvertiert wird: NOTE LIMITS und GUITAR MODE. Ein gestern konvertierter Rhythmus kann heute anders klingen. Beide lassen sich in der Gruppe IMPORT - YAMAHA abschalten, wenn Ihnen das alte Ergebnis lieber ist, und das Programm merkt sich die Wahl.
+
+STYLE MASTER PRO - YAMAHA-KONVERTIERUNG
+
+FIX: Schlagzeug landet nicht mehr auf einer Akkordspur. Wenn ein Style sowohl Rhythm Sub als auch Rhythm Main nutzte und PERC - Drum Set 3 aus war, konnte die Hauptschlagzeugspur auf einen Akkordkanal wandern, wo ein Schlagzeugschlag als Tonhoehe statt als Instrument klingt. Gemessen an sechs Styles aus sechs Yamaha-Serien: 70sTV Theme holte 1904 Schlagzeugnoten zurueck, 2-4Oyun 1732, 70sTeensMusical 913.
+
+FIX: SFF1-Styles lesen jetzt ihre eigene Zuordnungstabelle. Styles mit einem Ctab-Datensatz - darunter s460 und die S-Serie - wurden ohne sie konvertiert, sodass die meisten ihrer Teile als nicht deklariert verworfen wurden. 8BeatPop behielt 908 Noten und kam ganz ohne Bass; jetzt behaelt er 2512, Bass inklusive.
+
+FIX: STRIP GUITAR NOISE wirkt jetzt auch auf Yamaha-Styles. Bisher lief es nur auf der Korg-Seite, obwohl v4.0.0 es ohne diese Einschraenkung beschrieb. Wenn Sie es bei einem Yamaha-Style angehakt und keinen Unterschied gehoert haben: das war der Grund.
+
+FIX: Das Drumkit, das ein Yamaha-Style verlangt, wird jetzt tatsaechlich angewendet. Das wurde in v4.0.0 angekuendigt, aber der Schritt, der die Kits liest, schlug bei jedem Yamaha-Import stillschweigend fehl.
+
+NEU: NOTE LIMITS, standardmaessig ein. Jede Yamaha-Spur nennt die Lage, in der ihr Instrument spielen soll, und die Regel des Formats lautet, dass eine Note ausserhalb dieses Bereichs um ganze Oktaven verschoben wird, bis sie wieder darin liegt. Wir haben das ignoriert. Ueber 63 Styles tragen 97% der Bassspuren einen Bereich, und die haeufigste Untergrenze ist E1. Noten wandern nur in Oktaven; keine wird hinzugefuegt oder entfernt, und Schlagzeugspuren werden nie angeruehrt.
+
+NEU: GUITAR MODE, standardmaessig ein. Yamaha schreibt manche Gitarrenspuren als Tabulatur statt als Noten: jede Note nennt eine Saite, und ihre Oktave nennt die Lage am Hals. Als gewoehnliche Tonhoehen gelesen kamen diese Spuren als etwas heraus, das gar kein Akkord war. Sie werden jetzt als der Akkord wiedergegeben, den eine Gitarre wirklich spielen wuerde. Das betrifft 190 Spuren in 18 von 40 Styles unserer Testsammlung.
+
+VERBESSERT: Das Importprotokoll meldet jetzt, wenn es Lautstaerken anhebt, und welche Teile es aus ihrer geschriebenen Tonart nach C geholt hat. Beides wurde berechnet und dann verworfen.
+
+STYLE MASTER PRO - KETRON-STYLES
+
+FIX: Die Klaenge entsprechen jetzt dem, was das Keyboard spielt. Ein .kst speichert jedes Instrument zweimal - als MIDI-Programmwechsel und in der KSHP-Tabelle - und der Event liest die KSHP-Variante. Wir lasen die andere. Ueber 13 Werks-MIDI-Styles weichen die beiden 30-mal voneinander ab, und jede einzelne Datei hat mindestens eine Abweichung, meist bei Bass und Chord 1.
+
+FIX: Die Klangnamen entsprechen jetzt der Anzeige des Event. Ein Programmwechsel traegt die Nummer eins unter dem, was das Keyboard zeigt, und ein Teil des Imports las sie unveraendert.
+
+FIX: Eine leere Spur liest sich als leer. Eine Spur ohne zugewiesenen Klang zeigte eine Bank und eine Programmnummer, die der Event nie spielt. Jetzt zeigt sie einen Strich, so wie das Keyboard.
+
+VERBESSERT: Ihre eigenen Drumkits werden benannt. Mit DRUM CALIBRATE erfasste Kits werden jetzt zur Benennung einer Spur genutzt, sodass ein selbst gebautes und benanntes Kit unter diesem Namen erscheint statt als User DK 4.
+
+VERBESSERT: Groove-Teile werden erkannt. Drum Set 3 kann entweder ein Drumkit oder eines der GROOVE-Muster des Event enthalten. Der zweite Fall zeigt jetzt Groove 42 statt eines erfundenen Kitnamens.
+
+STYLE MASTER PRO - KALIBRIERUNG UND AUFNAHME
+
+NEU: Das Namensfeld macht Vorschlaege beim Tippen. Drei Buchstaben genuegen, und die passenden Klaenge erscheinen mit ihrer Familie daneben - grand findet Bright Grand und Classic Grand, muted zeigt sowohl den BRASS- als auch den GUITAR-Klang. Jeder von Hand getippte Name geht weiterhin unveraendert durch, was fuer selbst gebaute Kits zaehlt: die Liste ist ein Angebot, nie eine Schranke.
+
+NEU: Der Kalibrierungsfortschritt wird angezeigt. Das Banner sagt jetzt, wie viele Klaenge und Kits Sie erfasst haben und wo Sie aufgehoert haben. Die Kalibrierung ist lang, und niemand schafft sie in einer Sitzung.
+
+FIX: Die Aufnahme vom Keyboard funktioniert. Mehrere Fehler zusammen liessen sie wirkungslos erscheinen: der ganze erste Takt jeder Aufnahme wurde verworfen, eine beim Ende des Vorzaehlers schon gehaltene Taste ging verloren, zwei Schlagzeugklaenge wurden als Metronom-Echo herausgefiltert, und eine Aufnahme auf eine stummgeschaltete Spur erzeugte Noten, die niemand sehen konnte.
+
+FIX: Drum Set 3 nimmt auf dem richtigen Kanal auf. Editor und Rekorder hielten unterschiedliche Kanaltabellen, sodass sich einem hoerbar spielenden Track kein Block hinzufuegen liess.
+
+VERBESSERT: Sie muessen nicht alles kalibrieren - nur die Klaenge, die Ihre eigenen Styles benutzen. Der Dialog sagt das jetzt.
+
+VERBESSERT: LIVE DK MAPPER sagt nicht mehr durchweg Korg, was nahelegte, es funktioniere nur mit einem Korg. Es arbeitet mit jeder Marke - Korg, Yamaha einschliesslich Genos, oder einem anderen Ketron.
+
+HAUPTFENSTER
+
+FIX: Das Oeffnen von Lyrics Converter schliesst nicht mehr das Hauptfenster. Ein Modul aus der Seitenleiste startet als zweite Kopie des Programms, und die Bereinigung uebriggebliebener Prozesse hielt das Hauptfenster faelschlich fuer eines davon. Style Master Pro war davor seit v3.0.4 geschuetzt; Lyrics Converter kam spaeter und war es nicht.
+
+VERBESSERT: Die Modulschaltflaechen lassen sich leichter lesen. Jeder Name steht zentriert in seiner eigenen Zeile neben dem Symbol, in Grossbuchstaben, und die beiden laengsten brechen jetzt um, statt an beiden Enden einen Buchstaben zu verlieren.
+
+VERBESSERT: Das Modul, in dem Sie arbeiten, leuchtet sanft auf - ein Blick genuegt, um zu sehen, wo Sie sind.
+
+NEU: Wenn Sie mit der Maus ueber ein Modul fahren, erklaert das Programm, was es tut. Ebenso bei UI Scale und About.
+
+FIX: Die Kurzhinweise tragen jetzt die Farben des Programms und laufen nicht mehr ueber den Bildschirmrand hinaus.
+
+FIX: Ein niedrigeres Fenster laesst die Farbe eines Moduls nicht mehr in das darunterliegende Feld laufen.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.0.0</span>
@@ -2924,6 +3210,74 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.1.0</span>
+    <span class="version-date">2026-09-07</span>
+  </div>
+  <div class="version-body">v4.1.0 - Исправлена конвертация Yamaha, и запись с клавиатуры работает
+
+Два изменения ниже ВКЛЮЧЕНЫ по умолчанию и меняют то, как конвертируется стиль: NOTE LIMITS и GUITAR MODE. Ритм, сконвертированный вчера, сегодня может звучать иначе. Оба можно отключить в группе IMPORT - YAMAHA, если прежний результат вам ближе, и программа запомнит выбор.
+
+STYLE MASTER PRO - КОНВЕРТАЦИЯ YAMAHA
+
+ИСПРАВЛЕНИЕ: Барабаны больше не попадают на аккордовую дорожку. Когда стиль использовал и Rhythm Sub, и Rhythm Main, а PERC - Drum Set 3 был выключен, основная барабанная партия могла оказаться на аккордовом канале, где удар барабана звучит как нота, а не как инструмент. Измерено на шести стилях из шести серий Yamaha: 70sTV Theme вернул 1904 барабанные ноты, 2-4Oyun 1732, 70sTeensMusical 913.
+
+ИСПРАВЛЕНИЕ: Стили SFF1 теперь читают собственную таблицу маршрутизации. Стили с записью Ctab - среди них s460 и серия S - конвертировались без неё, и большинство их партий отбрасывалось как незаявленные. 8BeatPop сохранял 908 нот и конвертировался вовсе без баса; теперь сохраняет 2512, вместе с басом.
+
+ИСПРАВЛЕНИЕ: STRIP GUITAR NOISE теперь работает и на стилях Yamaha. До сих пор он действовал только со стороны Korg, хотя v4.0.0 описывала его без этого ограничения. Если вы включали его на стиле Yamaha и не слышали разницы - вот почему.
+
+ИСПРАВЛЕНИЕ: Барабанный набор, который запрашивает стиль Yamaha, теперь действительно применяется. Это было объявлено в v4.0.0, но шаг, читающий наборы, молча падал при каждом импорте Yamaha.
+
+НОВОЕ: NOTE LIMITS, включено по умолчанию. Каждая партия Yamaha указывает регистр, в котором должен играть её инструмент, и правило формата таково, что нота вне этого диапазона смещается на целые октавы, пока не вернётся внутрь. Мы это игнорировали. На 63 стилях 97% басовых партий несут диапазон, а самая частая нижняя граница - ми первой октавы. Ноты смещаются только октавами; ни одна не добавляется и не удаляется, а барабанные дорожки не трогаются никогда.
+
+НОВОЕ: GUITAR MODE, включено по умолчанию. Некоторые гитарные партии Yamaha записывает как табулатуру, а не как ноты: каждая нота называет струну, а её октава - позицию на грифе. Прочитанные как обычные высоты, эти партии выходили чем-то, что вовсе не было аккордом. Теперь они передаются как аккорд, который гитара сыграла бы на самом деле. Это затрагивает 190 партий в 18 стилях из 40 в нашей тестовой коллекции.
+
+УЛУЧШЕНО: Журнал импорта теперь сообщает, когда поднимает громкости и какие партии перенёс в до из их записанной тональности. И то и другое вычислялось, а затем терялось.
+
+STYLE MASTER PRO - СТИЛИ KETRON
+
+ИСПРАВЛЕНИЕ: Звуки теперь соответствуют тому, что играет клавиатура. Файл .kst хранит каждый инструмент дважды - как MIDI program change и внутри таблицы KSHP - и Event читает вторую. Мы читали первую. На 13 заводских MIDI-стилях они расходятся 30 раз, и в каждом файле есть хотя бы одно расхождение, чаще всего на басу и Chord 1.
+
+ИСПРАВЛЕНИЕ: Названия звуков теперь совпадают с экраном Event. Program change несёт номер на единицу меньше того, что показывает клавиатура, а часть импорта читала его как есть.
+
+ИСПРАВЛЕНИЕ: Пустая партия читается как пустая. Дорожка без назначенного звука показывала банк и номер программы, которые Event никогда не играет. Теперь она показывает прочерк, как и клавиатура.
+
+УЛУЧШЕНО: Ваши барабанные наборы получают имена. Наборы, снятые через DRUM CALIBRATE, теперь используются при именовании дорожки, так что набор, который вы собрали и назвали сами, появляется под этим именем, а не как User DK 4.
+
+УЛУЧШЕНО: Партии Groove распознаются. Drum Set 3 может содержать либо барабанный набор, либо один из паттернов GROOVE самого Event. Второй случай теперь читается как Groove 42, а не как выдуманное имя набора.
+
+STYLE MASTER PRO - КАЛИБРОВКА И ЗАПИСЬ
+
+НОВОЕ: Поле имени подсказывает по мере набора. Наберите три буквы, и появятся подходящие звуки с их семейством рядом - grand находит Bright Grand и Classic Grand, muted показывает и вариант BRASS, и вариант GUITAR. Любое имя, набранное вручную, всё равно проходит без изменений, что важно для наборов, собранных вами: список - это предложение, а не преграда.
+
+НОВОЕ: Показывается ход калибровки. Баннер теперь сообщает, сколько звуков и наборов вы сняли и на чём остановились. Калибровка длинная, и никто не заканчивает её за один присест.
+
+ИСПРАВЛЕНИЕ: Запись с клавиатуры работает. Несколько неполадок вместе создавали впечатление, что она не делает ничего: весь первый такт каждого дубля отбрасывался, клавиша, уже нажатая к концу отсчёта, терялась, два барабанных звука отсеивались как эхо метронома, а запись на приглушённую дорожку давала ноты, которых никто не видел.
+
+ИСПРАВЛЕНИЕ: Drum Set 3 пишется на нужном канале. Редактор и рекордер держали разные таблицы каналов, поэтому блок нельзя было добавить к дорожке, которая слышимо играла.
+
+УЛУЧШЕНО: Не нужно калибровать всё - только те звуки, которые используют ваши стили. Диалог теперь об этом говорит.
+
+УЛУЧШЕНО: LIVE DK MAPPER больше не пишет Korg повсюду, что наводило на мысль, будто он работает только с Korg. Он работает с любой маркой - Korg, Yamaha включая Genos, или другой Ketron.
+
+ГЛАВНОЕ ОКНО
+
+ИСПРАВЛЕНИЕ: Открытие Lyrics Converter больше не закрывает главное окно. Модуль из боковой панели запускается как вторая копия программы, и очистка оставшихся процессов принимала главное окно за один из них. Style Master Pro был защищён от этого с версии v3.0.4; Lyrics Converter появился позже и защиты не имел.
+
+УЛУЧШЕНО: Кнопки модулей читаются легче. Каждое название выровнено по центру своей строки рядом со значком, заглавными буквами, а два самых длинных переносятся на вторую строку вместо того, чтобы терять по букве с каждой стороны.
+
+УЛУЧШЕНО: Модуль, в котором вы работаете, мягко подсвечивается, так что одного взгляда достаточно, чтобы понять, где вы.
+
+НОВОЕ: При наведении мыши на модуль программа объясняет, что он делает. То же для кнопки UI Scale и для About.
+
+ИСПРАВЛЕНИЕ: Подсказки теперь в цветах программы и больше не выходят за край экрана.
+
+ИСПРАВЛЕНИЕ: Уменьшение высоты окна больше не позволяет цвету одного модуля переходить в квадрат под ним.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.0.0</span>
     <span class="version-date">2026-09-05</span>
   </div>
@@ -3596,6 +3950,74 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.1.0</span>
+    <span class="version-date">2026-09-07</span>
+  </div>
+  <div class="version-body">v4.1.0 - Yamaha-konverteringen rattad, och inspelning fran klaviaturen fungerar
+
+Tva av andringarna nedan ar PA som standard och andrar hur en stil konverteras: NOTE LIMITS och GUITAR MODE. En rytm du konverterade igar kan lata annorlunda idag. Bada kan stangas av i gruppen IMPORT - YAMAHA om du foredrar det gamla resultatet, och programmet kommer ihag valet.
+
+STYLE MASTER PRO - YAMAHA-KONVERTERING
+
+FIX: Trummor hamnar inte langre pa ett ackordspar. Nar en stil anvande bade Rhythm Sub och Rhythm Main och PERC - Drum Set 3 var avstangt kunde huvudtrumsparet flyttas till en ackordkanal, dar ett trumslag later som en ton i stallet for ett instrument. Matt over sex stilar fran sex Yamaha-serier: 70sTV Theme fick tillbaka 1904 trumnoter, 2-4Oyun 1732, 70sTeensMusical 913.
+
+FIX: SFF1-stilar laser nu sin egen dirigeringstabell. Stilar med en Ctab-post - daribland s460 och S-serien - konverterades utan den, sa de flesta av deras stammor kastades som odeklarerade. 8BeatPop behöll 908 noter och konverterades helt utan bas; nu behaller den 2512, bas inkluderad.
+
+FIX: STRIP GUITAR NOISE fungerar nu aven pa Yamaha-stilar. Hittills kordes det bara pa Korg-sidan, trots att v4.0.0 beskrev det utan den begransningen. Om du kryssade i det pa en Yamaha-stil och inte horde nagon skillnad var det darfor.
+
+FIX: Trumkitet som en Yamaha-stil ber om tillampas nu pa riktigt. Det annonserades i v4.0.0, men steget som laser kiten misslyckades tyst vid varje Yamaha-import.
+
+NYTT: NOTE LIMITS, pa som standard. Varje Yamaha-stamma anger i vilket register dess instrument ska spela, och formatets regel ar att en not utanfor det omradet flyttas hela oktaver tills den ar tillbaka innanfor. Det ignorerade vi. Over 63 stilar bar 97% av bassstammorna ett omrade, och den vanligaste undre gransen ar E1. Noter flyttas bara i oktaver; ingen laggs till eller tas bort, och trumspar ror man aldrig.
+
+NYTT: GUITAR MODE, pa som standard. Yamaha skriver vissa gitarrstammor som tabulatur i stallet for noter: varje not anger en strang, och dess oktav anger laget pa halsen. Lasta som vanliga tonhojder kom de stammorna ut som nagot som inte var ett ackord alls. Nu ges de som det ackord en gitarr faktiskt skulle spela. Det galler 190 stammor i 18 av 40 stilar i var testsamling.
+
+FORBATTRAT: Importloggen rapporterar nu nar den hojer volymer och vilka stammor den flyttat till C fran deras skrivna tonart. Bada raknades ut och foll sedan bort.
+
+STYLE MASTER PRO - KETRON-STILAR
+
+FIX: Ljuden motsvarar nu det klaviaturen spelar. En .kst lagrar varje instrument tva ganger - som MIDI-programbyte och i KSHP-tabellen - och Event laser den senare. Vi laste den andra. Over 13 fabriks-MIDI-stilar skiljer de sig 30 ganger, och varje enskild fil har minst en skillnad, oftast pa Bas och Chord 1.
+
+FIX: Ljudnamnen motsvarar nu Events egen display. Ett programbyte bar numret ett under vad klaviaturen visar, och en del av importen laste det som det var.
+
+FIX: En tom stamma laser som tom. Ett spar utan tilldelat ljud visade en bank och ett programnummer som Event aldrig spelar. Nu visar det ett streck, precis som klaviaturen.
+
+FORBATTRAT: Dina egna trumkit far namn. Kit som fangats med DRUM CALIBRATE anvands nu vid namngivning av ett spar, sa ett kit du byggt och dopt sjalv visas med det namnet i stallet for User DK 4.
+
+FORBATTRAT: Groove-stammor kanns igen. Drum Set 3 kan halla antingen ett trumkit eller ett av Events egna GROOVE-monster. Det andra fallet laser nu Groove 42 i stallet for ett pahittat kitnamn.
+
+STYLE MASTER PRO - KALIBRERING OCH INSPELNING
+
+NYTT: Namnfaltet foreslar medan du skriver. Skriv tre bokstaver sa dyker de matchande ljuden upp med sin familj bredvid - grand hittar Bright Grand och Classic Grand, muted visar bade BRASS- och GUITAR-varianten. Vilket namn du an skriver for hand gar anda igenom oforandrat, vilket spelar roll for kit du byggt sjalv: listan ar ett erbjudande, aldrig en grind.
+
+NYTT: Kalibreringens forlopp visas. Bannern sager nu hur manga ljud och kit du fangat och var du slutade. Kalibrering tar tid och ingen blir klar pa ett sittande.
+
+FIX: Inspelning fran klaviaturen fungerar. Flera fel tillsammans fick den att verka overksam: hela forsta takten i varje tagning kastades, en tangent som redan halls nar inrakningen tog slut foll bort, tva trumljud filtrerades bort som metronomeko, och inspelning pa ett tystat spar gav noter som ingen kunde se.
+
+FIX: Drum Set 3 spelas in pa ratt kanal. Editorn och inspelaren holl olika kanaltabeller, sa ett block gick inte att lagga till pa ett spar som horbart spelade.
+
+FORBATTRAT: Du behover inte kalibrera allt - bara de ljud dina egna stilar anvander. Dialogen sager det nu.
+
+FORBATTRAT: LIVE DK MAPPER sager inte langre Korg overallt, vilket antydde att den bara fungerade med en Korg. Den fungerar med vilket marke som helst - Korg, Yamaha inklusive Genos, eller en annan Ketron.
+
+HUVUDFONSTER
+
+FIX: Att oppna Lyrics Converter stanger inte langre huvudfonstret. En modul fran sidopanelen startar som en andra kopia av programmet, och stadningen av kvarglomda processer tog huvudfonstret for en sadan. Style Master Pro skyddades fran detta redan i v3.0.4; Lyrics Converter kom senare och gjorde det inte.
+
+FORBATTRAT: Modulknapparna ar lattare att lasa. Varje namn ar centrerat pa sin egen rad bredvid ikonen, med versaler, och de tva langsta bryts nu till en andra rad i stallet for att tappa en bokstav i vardera anden.
+
+FORBATTRAT: Modulen du arbetar i lyser svagt, sa en blick racker for att se var du ar.
+
+NYTT: Nar du hallar musen over en modul forklarar programmet vad den gor. Detsamma for knappen UI Scale och About.
+
+FIX: Verktygstipsen har nu programmets egna farger och hamnar inte langre utanfor skarmkanten.
+
+FIX: Ett lagre fonster later inte langre en moduls farg rinna in i rutan under.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.0.0</span>
