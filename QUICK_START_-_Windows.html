@@ -252,6 +252,36 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.2.0</span>
+    <span class="version-date">2026-09-09</span>
+  </div>
+  <div class="version-body">v4.2.0 - Parts play at their proper level, and a chord strip under the notes
+
+One change below alters how a style sounds after import: expression is no longer read out of a style file. If a rhythm you converted with an earlier version had a part that was almost inaudible, it will now play at its proper level. The reason is below.
+
+STYLE MASTER PRO
+
+FIX: A part is no longer silenced by one moment of a phrase. The import read the first value of every controller in a style and sent it to the keyboard as that track's setting. Expression is not a setting - it moves constantly while a part plays. In FRENCH_MUSETTE, Chord 2 carries 426 expression messages across the full range; the first is 8 out of 127, and the value climbs back to full 60 ticks later. It is the start of a swell, not a level, and that 8 was being applied to the whole part - barely audible, with the volume slider unable to help because volume was never the problem. Measured across four factory styles, two had parts that would have been silenced this way and one had a bass channel whose first value is 0. Expression is still in the mixer for anyone who wants to set it by hand.
+
+NEW: PART VALUES, beside FIND: DUPLICATE NOTES. Opens a table of every value each of the nine parts holds in the section you choose - volume, pan, reverb, chorus, modulation, portamento time and expression. Section buttons across the top switch between INTRO, ARR, FILL, BREAK and END, and sections with no notes are greyed out. A checkbox also focuses the Global editor on whichever section is chosen.
+The last column shows the expression value the style file itself holds in that section, marked when it disagrees with what the program sends. That value cannot be adjusted on the Event at all, so this is the only place it can be seen.
+
+NEW: SHOW CHORDS names the chord the notes make and shows every change on a strip under them, so a progression reads left to right: C, then G7, then Dm. It reads the selected track - click one first. Where that track alone does not form a chord it falls back to all the chord parts together, because some styles share a chord out across them: in RAGTIME's END2_MAJ, Chord 3 plays only E, Chord 4 only C and Chord 5 only G. Where the notes do not form a chord the strip leaves a gap rather than offering a name that might be wrong.
+This is most useful while building an intro. Copy a variation into an INTRO marker, move a measure up or down, and the name changes with it, so a progression can be built by eye instead of by ear.
+
+NEW: The program now says where a change of instrument will be stored. A caption beside TRACK VOICE names the target section and follows the red line while a rhythm plays; with the rhythm stopped it names the section highlighted in PARAMETER. Changing an instrument and hearing no difference - because the change went to a section that was not playing - was not a fault, but from the outside it was identical to one.
+
+IMPROVED: Clicking a section marker now aims TRACK VOICE at that section, so an instrument can be changed there without opening PARAMETER first. During playback the target still follows the red line, because that is what is being heard.
+
+IMPROVED: A selection can now reach past the edge of the view. While dragging a selection box, pushing beyond the top, bottom or sides scrolls the view, so notes that were off screen can be caught too. The speed rises with how far past the edge the pointer goes.
+
+IMPROVED: A held note is now tracked by channel as well as pitch while recording. With one track armed this changes nothing; it is groundwork for recording several tracks at once. The filter that stops the keyboard's own harmony from being recorded still works, and now applies per channel, which is what it always meant.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.1.0</span>
     <span class="version-date">2026-09-07</span>
   </div>
@@ -982,6 +1012,36 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.2.0</span>
+    <span class="version-date">2026-09-09</span>
+  </div>
+  <div class="version-body">v4.2.0 - Dionice sviraju na svojoj pravoj glasnoci, i traka sa akordima ispod nota
+
+Jedna izmjena ispod mijenja kako stil zvuci nakon uvoza: ekspresija se vise ne cita iz fajla stila. Ako je ritam koji ste konvertovali starijom verzijom imao dionicu koja se jedva cula, sada ce svirati na svom pravom nivou. Razlog je ispod.
+
+STYLE MASTER PRO
+
+POPRAVKA: Dionica se vise ne utisava zbog jednog trenutka fraze. Uvoz je citao prvu vrijednost svakog kontrolera u stilu i slao je klavijaturi kao postavku te trake. Ekspresija nije postavka - ona se stalno mijenja dok dionica svira. U FRENCH_MUSETTE, Chord 2 nosi 426 poruka ekspresije kroz cijeli opseg; prva je 8 od 127, a vrijednost se vraca na punu 60 tikova kasnije. To je pocetak uspona, ne nivo, a tih 8 se primjenjivalo na cijelu dionicu - jedva cujno, dok klizac glasnoce nije mogao pomoci jer glasnoca nikad nije bila problem. Mjereno na cetiri fabricka stila, dva su imala dionice koje bi tako bile utisane, a jedan bas kanal cija je prva vrijednost 0. Ekspresija i dalje stoji u mikseru za onoga ko je zeli podesiti rucno.
+
+NOVO: PART VALUES, pored FIND: DUPLICATE NOTES. Otvara tabelu sa svakom vrijednoscu koju svaka od devet dionica drzi u sekciji koju izaberete - glasnoca, pan, reverb, chorus, modulacija, portamento i ekspresija. Dugmad sekcija na vrhu prebacuju izmedju INTRO, ARR, FILL, BREAK i END, a sekcije bez nota su zasivljene. Kvacica takodje fokusira Global editor na izabranu sekciju.
+Zadnja kolona pokazuje vrijednost ekspresije koju sam fajl stila drzi u toj sekciji, oznacenu kada se ne slaze sa onim sto program salje. Ta vrijednost se na Eventu uopste ne moze podesiti, pa je ovo jedino mjesto gdje se moze vidjeti.
+
+NOVO: SHOW CHORDS imenuje akord koji note prave i prikazuje svaku promjenu na traci ispod njih, pa se progresija cita s lijeva na desno: C, pa G7, pa Dm. Cita izabranu traku - prvo kliknite na jednu. Tamo gdje ta traka sama ne pravi akord, vraca se na sve akordske dionice zajedno, jer neki stilovi dijele akord po njima: u RAGTIME END2_MAJ, Chord 3 svira samo E, Chord 4 samo C, a Chord 5 samo G. Tamo gdje note ne prave akord, traka ostavlja prazninu umjesto da ponudi naziv koji bi mogao biti pogresan.
+Ovo je najkorisnije dok gradite intro. Kopirate varijaciju u INTRO marker, pomjerite takt gore ili dolje, i naziv se mijenja s njim, pa se progresija moze graditi okom umjesto uhom.
+
+NOVO: Program sada kaze gdje ce promjena instrumenta biti sacuvana. Natpis pored TRACK VOICE imenuje ciljanu sekciju i prati crvenu liniju dok ritam svira; kad je ritam zaustavljen, imenuje sekciju osvijetljenu u PARAMETER. Promijeniti instrument i ne cuti razliku - jer je promjena otisla u sekciju koja nije svirala - nije bila greska, ali je spolja izgledalo isto kao greska.
+
+POBOLJSANO: Klik na marker sekcije sada usmjerava TRACK VOICE na tu sekciju, pa se instrument moze promijeniti tu bez otvaranja PARAMETER-a. Tokom reprodukcije cilj i dalje prati crvenu liniju, jer se to i cuje.
+
+POBOLJSANO: Selekcija sada moze dosegnuti preko ivice pogleda. Dok vucete okvir selekcije, guranje preko gornje, donje ili bocnih ivica pomjera pogled, pa se mogu uhvatiti i note koje su bile van ekrana. Brzina raste sa tim koliko daleko preko ivice pokazivac ode.
+
+POBOLJSANO: Drzana nota se pri snimanju sada prati i po kanalu, ne samo po visini. Sa jednom naoruzanom trakom ovo ne mijenja nista; to je priprema za snimanje vise traka odjednom. Filter koji sprjecava da se snimi harmonija same klavijature i dalje radi, i sada vazi po kanalu, sto je oduvijek i znacio.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.1.0</span>
@@ -1726,6 +1786,36 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.2.0</span>
+    <span class="version-date">2026-09-09</span>
+  </div>
+  <div class="version-body">v4.2.0 - Le parti suonano al loro vero livello, e una striscia di accordi sotto le note
+
+Una delle modifiche qui sotto cambia come suona uno stile dopo l'importazione: l'espressione non viene piu letta dal file dello stile. Se un ritmo convertito con una versione precedente aveva una parte quasi inudibile, ora suonera al suo livello giusto. Il motivo e sotto.
+
+STYLE MASTER PRO
+
+CORREZIONE: Una parte non viene piu zittita da un singolo momento di una frase. L'importazione leggeva il primo valore di ogni controller nello stile e lo inviava alla tastiera come impostazione di quella traccia. L'espressione non e un'impostazione: si muove continuamente mentre la parte suona. In FRENCH_MUSETTE, Chord 2 porta 426 messaggi di espressione su tutto l'arco; il primo e 8 su 127, e il valore torna al massimo 60 tick dopo. E l'inizio di una crescita, non un livello, e quell'8 veniva applicato a tutta la parte - appena udibile, con il cursore del volume incapace di aiutare perche il volume non era mai stato il problema. Misurato su quattro stili di fabbrica, due avevano parti che sarebbero state zittite cosi e uno aveva un canale di basso il cui primo valore e 0. L'espressione resta nel mixer per chi vuole regolarla a mano.
+
+NUOVO: PART VALUES, accanto a FIND: DUPLICATE NOTES. Apre una tabella con ogni valore che ciascuna delle nove parti ha nella sezione scelta - volume, pan, riverbero, chorus, modulazione, tempo di portamento ed espressione. I pulsanti in alto passano fra INTRO, ARR, FILL, BREAK e END, e le sezioni senza note sono in grigio. Una casella mette anche a fuoco l'editor Global sulla sezione scelta.
+L'ultima colonna mostra il valore di espressione che il file dello stile contiene in quella sezione, evidenziato quando non coincide con quello che il programma invia. Quel valore non si puo regolare affatto sull'Event, quindi questo e l'unico posto in cui si puo vedere.
+
+NUOVO: SHOW CHORDS nomina l'accordo formato dalle note e mostra ogni cambio su una striscia sotto di esse, cosi una progressione si legge da sinistra a destra: DO, poi SOL7, poi REm. Legge la traccia selezionata: cliccatene una prima. Dove quella traccia da sola non forma un accordo, ricade su tutte le parti di accordo insieme, perche alcuni stili se lo distribuiscono: in END2_MAJ di RAGTIME, Chord 3 suona solo MI, Chord 4 solo DO e Chord 5 solo SOL. Dove le note non formano un accordo la striscia lascia un vuoto invece di proporre un nome che potrebbe essere sbagliato.
+E utilissimo mentre si costruisce un intro. Copiate una variazione in un marker INTRO, spostate una misura su o giu, e il nome cambia con essa: una progressione si puo costruire a occhio invece che a orecchio.
+
+NUOVO: Il programma dice ora dove verra salvato un cambio di strumento. Una didascalia accanto a TRACK VOICE nomina la sezione di destinazione e segue la linea rossa mentre il ritmo suona; a ritmo fermo nomina la sezione evidenziata in PARAMETER. Cambiare strumento e non sentire differenza - perche il cambio finiva in una sezione che non stava suonando - non era un difetto, ma da fuori era identico a uno.
+
+MIGLIORATO: Cliccare un marker di sezione punta ora TRACK VOICE su quella sezione, cosi lo strumento si puo cambiare li senza aprire prima PARAMETER. Durante la riproduzione la destinazione segue ancora la linea rossa, perche e quello che si sente.
+
+MIGLIORATO: Una selezione puo ora estendersi oltre il bordo della vista. Trascinando il riquadro di selezione, spingere oltre il bordo superiore, inferiore o laterale fa scorrere la vista, cosi si possono prendere anche note fuori schermo. La velocita cresce con quanto il puntatore va oltre il bordo.
+
+MIGLIORATO: Una nota tenuta viene ora seguita anche per canale, non solo per altezza, durante la registrazione. Con una sola traccia armata questo non cambia nulla; e la base per registrare piu tracce insieme. Il filtro che impedisce di registrare l'armonia della tastiera stessa funziona ancora, e ora vale per canale, che e cio che ha sempre significato.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.1.0</span>
     <span class="version-date">2026-09-07</span>
   </div>
@@ -2466,6 +2556,36 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.2.0</span>
+    <span class="version-date">2026-09-09</span>
+  </div>
+  <div class="version-body">v4.2.0 - Stimmen spielen auf ihrem richtigen Pegel, und ein Akkordstreifen unter den Noten
+
+Eine der folgenden Aenderungen veraendert, wie ein Style nach dem Import klingt: die Expression wird nicht mehr aus der Style-Datei gelesen. Hatte ein mit einer aelteren Version konvertierter Rhythmus eine kaum hoerbare Stimme, spielt sie jetzt auf ihrem richtigen Pegel. Der Grund steht unten.
+
+STYLE MASTER PRO
+
+FIX: Eine Stimme wird nicht mehr von einem einzigen Moment einer Phrase stummgeschaltet. Der Import las den ersten Wert jedes Controllers im Style und schickte ihn als Einstellung dieser Spur ans Keyboard. Expression ist keine Einstellung - sie bewegt sich staendig, waehrend die Stimme spielt. In FRENCH_MUSETTE traegt Chord 2 426 Expression-Nachrichten ueber den gesamten Bereich; die erste ist 8 von 127, und der Wert steigt 60 Ticks spaeter wieder auf voll. Das ist der Anfang einer Steigerung, kein Pegel, und diese 8 wurde auf die ganze Stimme angewandt - kaum hoerbar, und der Lautstaerkeregler konnte nicht helfen, weil die Lautstaerke nie das Problem war. Gemessen an vier Werks-Styles hatten zwei Stimmen, die so verstummt waeren, und einer einen Basskanal, dessen erster Wert 0 ist. Expression steht weiterhin im Mixer, fuer alle, die sie von Hand setzen wollen.
+
+NEU: PART VALUES, neben FIND: DUPLICATE NOTES. Oeffnet eine Tabelle mit jedem Wert, den jede der neun Stimmen in der gewaehlten Sektion haelt - Lautstaerke, Panorama, Hall, Chorus, Modulation, Portamentozeit und Expression. Die Schaltflaechen oben wechseln zwischen INTRO, ARR, FILL, BREAK und END, und Sektionen ohne Noten sind ausgegraut. Ein Kontrollkaestchen richtet den Global-Editor zusaetzlich auf die gewaehlte Sektion aus.
+Die letzte Spalte zeigt den Expression-Wert, den die Style-Datei selbst in dieser Sektion haelt, markiert, wenn er von dem abweicht, was das Programm sendet. Dieser Wert laesst sich am Event ueberhaupt nicht einstellen - hier ist die einzige Stelle, an der er zu sehen ist.
+
+NEU: SHOW CHORDS benennt den Akkord, den die Noten bilden, und zeigt jeden Wechsel auf einem Streifen darunter, sodass sich eine Verbindung von links nach rechts liest: C, dann G7, dann Dm. Gelesen wird die ausgewaehlte Spur - waehlen Sie zuerst eine aus. Wo diese Spur allein keinen Akkord bildet, faellt sie auf alle Akkordstimmen zusammen zurueck, denn manche Styles verteilen einen Akkord ueber sie: in RAGTIMEs END2_MAJ spielt Chord 3 nur E, Chord 4 nur C und Chord 5 nur G. Wo die Noten keinen Akkord bilden, laesst der Streifen eine Luecke, statt einen Namen anzubieten, der falsch sein koennte.
+Am nuetzlichsten ist das beim Bauen eines Intros. Kopieren Sie eine Variation in einen INTRO-Marker, verschieben Sie einen Takt nach oben oder unten, und der Name aendert sich mit - so laesst sich eine Verbindung mit dem Auge bauen statt mit dem Ohr.
+
+NEU: Das Programm sagt jetzt, wo ein Instrumentwechsel gespeichert wird. Eine Beschriftung neben TRACK VOICE nennt die Zielsektion und folgt der roten Linie, waehrend ein Rhythmus laeuft; bei gestopptem Rhythmus nennt sie die in PARAMETER hervorgehobene Sektion. Ein Instrument zu wechseln und keinen Unterschied zu hoeren - weil die Aenderung in eine Sektion ging, die gar nicht spielte - war kein Fehler, sah von aussen aber genauso aus.
+
+VERBESSERT: Ein Klick auf einen Sektionsmarker richtet TRACK VOICE jetzt auf diese Sektion, sodass sich das Instrument dort wechseln laesst, ohne erst PARAMETER zu oeffnen. Waehrend der Wiedergabe folgt das Ziel weiterhin der roten Linie, denn das ist, was man hoert.
+
+VERBESSERT: Eine Auswahl reicht jetzt ueber den Rand der Ansicht hinaus. Waehrend Sie einen Auswahlrahmen ziehen, scrollt ein Schieben ueber den oberen, unteren oder seitlichen Rand die Ansicht mit, sodass auch Noten ausserhalb des Bildschirms erfasst werden. Die Geschwindigkeit steigt damit, wie weit der Zeiger ueber den Rand hinausgeht.
+
+VERBESSERT: Eine gehaltene Note wird bei der Aufnahme jetzt auch nach Kanal verfolgt, nicht nur nach Tonhoehe. Mit einer einzelnen scharfgeschalteten Spur aendert das nichts; es ist die Grundlage fuer die Aufnahme mehrerer Spuren zugleich. Der Filter, der die eigene Harmonie des Keyboards von der Aufnahme fernhaelt, arbeitet weiterhin und gilt jetzt pro Kanal - was er immer gemeint hat.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.1.0</span>
@@ -3210,6 +3330,36 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.2.0</span>
+    <span class="version-date">2026-09-09</span>
+  </div>
+  <div class="version-body">v4.2.0 - Партии звучат на своём настоящем уровне, и полоса аккордов под нотами
+
+Одно из изменений ниже меняет то, как стиль звучит после импорта: экспрессия больше не читается из файла стиля. Если у ритма, сконвертированного прежней версией, была почти неслышная партия, теперь она зазвучит на своём настоящем уровне. Причина ниже.
+
+STYLE MASTER PRO
+
+ИСПРАВЛЕНИЕ: Партия больше не заглушается одним мгновением фразы. Импорт читал первое значение каждого контроллера в стиле и отправлял его клавиатуре как настройку этой дорожки. Экспрессия не настройка - она постоянно меняется, пока партия играет. В FRENCH_MUSETTE Chord 2 несёт 426 сообщений экспрессии по всему диапазону; первое равно 8 из 127, а через 60 тиков значение возвращается к полному. Это начало нарастания, а не уровень, и та восьмёрка применялась ко всей партии - едва слышно, причём регулятор громкости помочь не мог, потому что громкость никогда не была проблемой. Измерено на четырёх заводских стилях: у двух были партии, которые так и заглушались бы, а у одного басовый канал с первым значением 0. Экспрессия по-прежнему есть в микшере для тех, кто хочет задать её вручную.
+
+НОВОЕ: PART VALUES, рядом с FIND: DUPLICATE NOTES. Открывает таблицу со всеми значениями, которые каждая из девяти партий держит в выбранной секции - громкость, панорама, реверберация, хорус, модуляция, время портаменто и экспрессия. Кнопки сверху переключают между INTRO, ARR, FILL, BREAK и END, а секции без нот показаны серым. Флажок также наводит редактор Global на выбранную секцию.
+Последний столбец показывает значение экспрессии, которое хранит сам файл стиля в этой секции, и отмечает его, когда оно расходится с тем, что отправляет программа. На Event это значение вообще нельзя настроить, так что здесь единственное место, где его видно.
+
+НОВОЕ: SHOW CHORDS называет аккорд, который образуют ноты, и показывает каждую смену на полосе под ними, так что последовательность читается слева направо: до, затем соль7, затем ре минор. Читается выбранная дорожка - сначала щёлкните по одной. Там, где эта дорожка сама аккорда не образует, программа берёт все аккордовые партии вместе, потому что некоторые стили распределяют аккорд по ним: в END2_MAJ стиля RAGTIME Chord 3 играет только ми, Chord 4 только до, а Chord 5 только соль. Там, где ноты не образуют аккорда, полоса оставляет пропуск вместо названия, которое могло бы быть неверным.
+Полезнее всего это при построении вступления. Копируете вариацию в маркер INTRO, двигаете такт вверх или вниз - и название меняется вместе с ним, так что последовательность можно строить глазом, а не на слух.
+
+НОВОЕ: Программа теперь говорит, куда будет сохранена смена инструмента. Подпись рядом с TRACK VOICE называет целевую секцию и следует за красной линией, пока ритм играет; при остановленном ритме называет секцию, выделенную в PARAMETER. Сменить инструмент и не услышать разницы - потому что смена уходила в секцию, которая не играла - не было неисправностью, но снаружи выглядело точно так же.
+
+УЛУЧШЕНО: Щелчок по маркеру секции теперь наводит TRACK VOICE на эту секцию, так что инструмент можно сменить прямо там, не открывая сначала PARAMETER. Во время воспроизведения цель по-прежнему следует за красной линией, потому что именно это и слышно.
+
+УЛУЧШЕНО: Выделение теперь может выходить за край окна. Пока вы тянете рамку выделения, выход за верхний, нижний или боковой край прокручивает вид, так что можно захватить и ноты, которые были за экраном. Скорость растёт с тем, насколько далеко за край уходит указатель.
+
+УЛУЧШЕНО: Удерживаемая нота при записи теперь отслеживается и по каналу, а не только по высоте. С одной подготовленной дорожкой это ничего не меняет; это основа для записи нескольких дорожек сразу. Фильтр, не дающий записать собственную гармонию клавиатуры, работает по-прежнему и теперь действует по каналам, что он всегда и означал.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.1.0</span>
     <span class="version-date">2026-09-07</span>
   </div>
@@ -3950,6 +4100,36 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.2.0</span>
+    <span class="version-date">2026-09-09</span>
+  </div>
+  <div class="version-body">v4.2.0 - Stammor spelar pa sin ratta niva, och en ackordremsa under noterna
+
+En av andringarna nedan andrar hur en stil later efter import: expression lases inte langre ur stilfilen. Hade en rytm du konverterade med en tidigare version en stamma som knappt hordes, spelar den nu pa sin ratta niva. Skalet star nedan.
+
+STYLE MASTER PRO
+
+FIX: En stamma tystas inte langre av ett enda ogonblick i en fras. Importen laste det forsta vardet fran varje kontroller i stilen och skickade det till klaviaturen som sparets installning. Expression ar ingen installning - den ror sig hela tiden medan stamman spelar. I FRENCH_MUSETTE bar Chord 2 426 expression-meddelanden over hela omfanget; det forsta ar 8 av 127, och vardet ar tillbaka pa fullt 60 tick senare. Det ar borjan pa en stegring, inte en niva, och den attan lades pa hela stamman - knappt horbar, och volymreglaget kunde inte hjalpa eftersom volymen aldrig var problemet. Matt over fyra fabriksstilar hade tva stammor som skulle ha tystats sa, och en hade en baskanal vars forsta varde ar 0. Expression finns kvar i mixern for den som vill stalla den for hand.
+
+NYTT: PART VALUES, bredvid FIND: DUPLICATE NOTES. Oppnar en tabell over varje varde som var och en av de nio stammorna har i den sektion du valjer - volym, panorering, rumsklang, chorus, modulation, portamentotid och expression. Knapparna overst vaxlar mellan INTRO, ARR, FILL, BREAK och END, och sektioner utan noter ar gragjorda. En kryssruta staller ocksa in Global-editorn pa den valda sektionen.
+Sista kolumnen visar det expression-varde som sjalva stilfilen har i den sektionen, markerat nar det skiljer sig fran vad programmet skickar. Det vardet gar inte att stalla in pa Event over huvud taget, sa har ar enda stallet det syns.
+
+NYTT: SHOW CHORDS namnger ackordet som noterna bildar och visar varje byte pa en remsa under dem, sa att en foljd lases fran vanster till hoger: C, sedan G7, sedan Dm. Den laser det markerade sparet - klicka pa ett forst. Dar det sparet ensamt inte bildar ett ackord faller den tillbaka pa alla ackordstammor tillsammans, eftersom vissa stilar delar ut ett ackord over dem: i RAGTIMEs END2_MAJ spelar Chord 3 bara E, Chord 4 bara C och Chord 5 bara G. Dar noterna inte bildar ett ackord lamnar remsan en lucka i stallet for att erbjuda ett namn som kan vara fel.
+Mest anvandbart ar det nar man bygger ett intro. Kopiera en variation till en INTRO-markor, flytta en takt upp eller ner, och namnet foljer med - sa en foljd kan byggas med ogat i stallet for med orat.
+
+NYTT: Programmet sager nu var ett instrumentbyte kommer att sparas. En text bredvid TRACK VOICE namnger malsektionen och foljer den roda linjen medan en rytm spelar; med rytmen stoppad namnger den sektionen som ar markerad i PARAMETER. Att byta instrument och inte hora nagon skillnad - for att bytet gick till en sektion som inte spelade - var inget fel, men utifran sag det likadant ut.
+
+FORBATTRAT: Ett klick pa en sektionsmarkor riktar nu TRACK VOICE mot den sektionen, sa instrumentet kan bytas dar utan att forst oppna PARAMETER. Under uppspelning foljer malet fortfarande den roda linjen, eftersom det ar det man hor.
+
+FORBATTRAT: En markering kan nu na utanfor vyns kant. Medan du drar en markeringsruta rullar vyn nar du trycker forbi over-, under- eller sidokanten, sa att aven noter utanfor skarmen kan fangas. Farten okar med hur langt forbi kanten pekaren gar.
+
+FORBATTRAT: En hallen not spars nu aven per kanal vid inspelning, inte bara per tonhojd. Med ett enda armerat spar andrar detta ingenting; det ar grunden for att spela in flera spar samtidigt. Filtret som hindrar klaviaturens egen harmoni fran att spelas in fungerar fortfarande, och galler nu per kanal, vilket det alltid har betytt.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.1.0</span>
