@@ -252,6 +252,51 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.3.0</span>
+    <span class="version-date">2026-09-11</span>
+  </div>
+  <div class="version-body">v4.3.0 - Record every track at once, and a Korg style keeps its mixer
+
+Korg conversion changes how a converted style sounds. Until now the converter threw away every controller in the file - volume, pan, reverb, chorus - so every part arrived at the same level and the balance the style's author set was gone. A style converted with an earlier version will sound different after re-converting, and closer to what it sounds like on a Korg.
+
+STYLE MASTER PRO - RECORDING
+
+NEW: REC: ALL TRACKS captures the whole arrangement in one take. Hold chords with your left hand and the Event plays bass, drums and the chord parts; play a melody with your right and that is recorded too. Each part lands on its own track.
+Click a track first - that is where the right hand goes, since an Event style has no melody part of its own. The Event's own harmony layers are not recorded; the keyboard adds them again on playback. While you play, the right hand takes the voice of the track it records to, so what you hear is what you will hear on playback.
+The switch is off by default. A take replaces what is on every one of those tracks for the section being recorded.
+
+FIX: Bass recorded from the Event stays in its own octave. A take that came off the Event had the octave compensation applied a second time, putting notes far below where the bass part sounds at all.
+
+STYLE MASTER PRO - KORG CONVERSION
+
+FIX: A style keeps its mixer. Volume, pan, expression, reverb and chorus now survive the conversion. Measured on three styles: before this, not one controller of any kind came through. Bank and program are still blocked, because a Korg program number names a different instrument on the Event and voices come from the calibration instead.
+One value per part per section is carried across. Future_Pop holds 12,075 pan messages - automation that moves through the bar - and carrying all of it would have grown the file by 54 KB and flooded the keyboard.
+
+FIX: Volumes are read even when a style has no CC7. Three Korg user styles measured here carry no volume messages at all; their levels are in the expression data instead. Oryantal's parts sit at 100, 112, 119, 89, 84, 73, 81 and 81 - the mix its author set, which was being replaced by a flat 100 on every part.
+
+FIX: Guitars and basses get real Ketron voices again. This was announced in v4.1.0 and had never once run: it wrote its result to a place that does not exist, and the error was swallowed into a single line in the log. A Korg import kept its General MIDI voices instead.
+
+STYLE MASTER PRO - MICRO EDIT
+
+FIX: A part no longer plays the wrong instrument. The program sent a part's volume immediately after its voice, and the Event cancels a voice when something follows it. A track showing Strato played a Grand Piano. The mix is now sent first and the voice last.
+
+NEW: SHOW CHORDS names the chord at each change on a strip under the notes, so a progression reads left to right. It reads the selected track, and falls back to all the chord parts where that track alone holds only one note of the chord. A bar whose notes do not form a chord is left blank rather than given a name that might be wrong.
+
+NEW: PART VALUES shows every value each of the nine parts holds in the section you choose: volume, pan, reverb, chorus, modulation, portamento time and expression. Section buttons switch between INTRO, ARR, FILL, BREAK and END. The last column shows the expression value the style file itself holds, marked when it disagrees with what the program sends - that value cannot be adjusted on the Event at all.
+
+NEW: The program says where a change of instrument will be stored. A caption beside TRACK VOICE names the target section and follows the red line while a rhythm plays. Clicking a section marker aims it at that section, so an instrument can be changed there without opening PARAMETER first.
+
+IMPROVED: A selection can reach past the edge of the view. Dragging a selection box beyond the top, bottom or sides scrolls the view, so notes that were off screen can be caught too.
+
+SMALL SCREENS
+
+A window that needs more width than the screen has is capped and its toolbar clipped. If that happens, Windows display scaling at 125% instead of 150% gives the program considerably more room - at 150% a 1920-pixel screen reports 1280 pixels to it, at 125% it reports 1536. That is a Windows setting rather than one in this program, which is why the program's own UI Scale does not help.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.2.0</span>
     <span class="version-date">2026-09-09</span>
   </div>
@@ -1012,6 +1057,51 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.3.0</span>
+    <span class="version-date">2026-09-11</span>
+  </div>
+  <div class="version-body">v4.3.0 - Snimanje svih traka odjednom, i Korg stil zadrzava svoj mikser
+
+Korg konverzija mijenja kako konvertovan stil zvuci. Do sada je konverter odbacivao svaki kontroler iz fajla - glasnocu, pan, reverb, chorus - pa je svaka dionica stizala na istom nivou, a balans koji je autor stila postavio bio je izgubljen. Stil konvertovan starijom verzijom ce poslije ponovne konverzije zvucati drugacije, i blize onome kako zvuci na Korgu.
+
+STYLE MASTER PRO - SNIMANJE
+
+NOVO: REC: ALL TRACKS snima cijeli aranzman u jednom prolazu. Drzite akorde lijevom rukom i Event svira bas, bubnjeve i akordske dionice; svirajte melodiju desnom i i ona se snima. Svaka dionica ide na svoju traku.
+Prvo kliknite na traku - tu ide desna ruka, jer Event stil nema vlastitu melodijsku dionicu. Harmonijski slojevi same klavijature se ne snimaju; klavijatura ih ponovo dodaje pri reprodukciji. Dok svirate, desna ruka uzima zvuk trake na koju snima, pa je ono sto cujete ono sto cete cuti i pri reprodukciji.
+Prekidac je iskljucen po podrazumijevanom. Snimak zamjenjuje ono sto se nalazi na svakoj od tih traka za sekciju koja se snima.
+
+POPRAVKA: Bas snimljen sa Eventa ostaje u svojoj oktavi. Snimak koji je dosao sa Eventa dobijao je oktavnu kompenzaciju drugi put, pa su note zavrsavale daleko ispod mjesta gdje bas uopste zvuci.
+
+STYLE MASTER PRO - KORG KONVERZIJA
+
+POPRAVKA: Stil zadrzava svoj mikser. Glasnoca, pan, ekspresija, reverb i chorus sada prezivljavaju konverziju. Mjereno na tri stila: prije ovoga nijedan kontroler bilo koje vrste nije prolazio. Banka i program su i dalje blokirani, jer Korgov broj programa imenuje drugi instrument na Eventu, a zvukovi dolaze iz kalibracije.
+Prenosi se jedna vrijednost po dionici po sekciji. Future_Pop nosi 12.075 pan poruka - automatiku koja se krece kroz takt - i prenos svega toga bi uvecao fajl za 54 KB i preplavio klavijaturu.
+
+POPRAVKA: Glasnoce se citaju i kada stil nema CC7. Tri Korg korisnicka stila mjerena ovdje ne nose nijednu poruku o glasnoci; njihovi nivoi su u podacima o ekspresiji. Dionice stila Oryantal stoje na 100, 112, 119, 89, 84, 73, 81 i 81 - mix koji je autor postavio, a koji je bio zamjenjivan ravnom stotkom na svakoj dionici.
+
+POPRAVKA: Gitare i basovi ponovo dobijaju prave Ketronove zvukove. To je najavljeno u v4.1.0 i nijednom nije radilo: rezultat se upisivao na mjesto koje ne postoji, a greska je bila progutana u jedan red u logu. Korg uvoz je zadrzavao svoje General MIDI zvukove.
+
+STYLE MASTER PRO - MICRO EDIT
+
+POPRAVKA: Dionica vise ne svira pogresan instrument. Program je slao glasnocu dionice odmah poslije njenog zvuka, a Event ponistava zvuk kada iza njega nesto slijedi. Traka koja je pokazivala Strato svirala je Grand Piano. Mix se sada salje prvi, a zvuk zadnji.
+
+NOVO: SHOW CHORDS imenuje akord pri svakoj promjeni na traci ispod nota, pa se progresija cita s lijeva na desno. Cita izabranu traku, a vraca se na sve akordske dionice tamo gdje ta traka sama drzi samo jednu notu akorda. Takt cije note ne prave akord ostaje prazan umjesto da dobije naziv koji bi mogao biti pogresan.
+
+NOVO: PART VALUES pokazuje svaku vrijednost koju svaka od devet dionica drzi u sekciji koju izaberete: glasnocu, pan, reverb, chorus, modulaciju, portamento i ekspresiju. Dugmad sekcija prebacuju izmedju INTRO, ARR, FILL, BREAK i END. Zadnja kolona pokazuje vrijednost ekspresije koju sam fajl stila drzi, oznacenu kada se ne slaze sa onim sto program salje - ta se vrijednost na Eventu uopste ne moze podesiti.
+
+NOVO: Program kaze gdje ce promjena instrumenta biti sacuvana. Natpis pored TRACK VOICE imenuje ciljanu sekciju i prati crvenu liniju dok ritam svira. Klik na marker sekcije usmjerava ga na tu sekciju, pa se instrument moze promijeniti tu bez otvaranja PARAMETER-a.
+
+POBOLJSANO: Selekcija moze doseci preko ivice pogleda. Vucenje okvira selekcije preko gornje, donje ili bocnih ivica pomjera pogled, pa se mogu uhvatiti i note koje su bile van ekrana.
+
+MALI EKRANI
+
+Prozor kojem treba vise sirine nego sto ekran ima biva ogranicen, a alatna traka odsjecena. Ako se to desi, Windows skaliranje prikaza na 125% umjesto 150% daje programu znatno vise prostora - na 150% ekran od 1920 piksela programu prijavljuje 1280, a na 125% prijavljuje 1536. To je Windows postavka, a ne postavka ovog programa, i zato UI Scale u samom programu tu ne pomaze.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.2.0</span>
@@ -1786,6 +1876,51 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.3.0</span>
+    <span class="version-date">2026-09-11</span>
+  </div>
+  <div class="version-body">v4.3.0 - Registrare tutte le tracce in una volta, e uno stile Korg conserva il suo mixer
+
+La conversione Korg cambia il suono di uno stile convertito. Finora il convertitore scartava ogni controller presente nel file - volume, pan, riverbero, chorus - cosi ogni parte arrivava allo stesso livello e l'equilibrio voluto dall'autore dello stile andava perso. Uno stile convertito con una versione precedente suonera diverso dopo una nuova conversione, e piu vicino a come suona su un Korg.
+
+STYLE MASTER PRO - REGISTRAZIONE
+
+NUOVO: REC: ALL TRACKS registra l'intero arrangiamento in una sola volta. Tenete gli accordi con la mano sinistra e l'Event suona basso, batteria e le parti di accordo; suonate una melodia con la destra e anche quella viene registrata. Ogni parte finisce sulla propria traccia.
+Selezionate prima una traccia: e li che va la mano destra, perche uno stile Event non ha una parte melodica propria. I livelli di armonia della tastiera non vengono registrati; la tastiera li riaggiunge in riproduzione. Mentre suonate, la mano destra assume il suono della traccia su cui registra, cosi quello che sentite e quello che sentirete alla riproduzione.
+L'interruttore e disattivato per impostazione predefinita. Una ripresa sostituisce quanto si trova su ciascuna di quelle tracce per la sezione registrata.
+
+CORREZIONE: Il basso registrato dall'Event resta nella propria ottava. Una ripresa proveniente dall'Event riceveva la compensazione di ottava una seconda volta, portando le note molto sotto la regione in cui la parte di basso suona.
+
+STYLE MASTER PRO - CONVERSIONE KORG
+
+CORREZIONE: Uno stile conserva il suo mixer. Volume, pan, espressione, riverbero e chorus sopravvivono ora alla conversione. Misurato su tre stili: prima di questo, nemmeno un controller di alcun tipo passava. Banco e programma restano bloccati, perche un numero di programma Korg indica uno strumento diverso sull'Event e i suoni provengono dalla calibrazione.
+Viene trasferito un valore per parte per sezione. Future_Pop contiene 12.075 messaggi di pan - automazione che si muove lungo la battuta - e trasferirla tutta avrebbe fatto crescere il file di 54 KB e inondato la tastiera.
+
+CORREZIONE: I volumi vengono letti anche quando uno stile non ha CC7. Tre stili utente Korg misurati qui non contengono alcun messaggio di volume; i loro livelli stanno nei dati di espressione. Le parti di Oryantal stanno a 100, 112, 119, 89, 84, 73, 81 e 81 - il mix voluto dall'autore, che veniva sostituito da un 100 uniforme su ogni parte.
+
+CORREZIONE: Chitarre e bassi ricevono di nuovo veri suoni Ketron. Era annunciato nella v4.1.0 e non ha mai funzionato nemmeno una volta: scriveva il risultato in un posto che non esiste, e l'errore veniva inghiottito in una sola riga di log. Un'importazione Korg manteneva i suoi suoni General MIDI.
+
+STYLE MASTER PRO - MICRO EDIT
+
+CORREZIONE: Una parte non suona piu lo strumento sbagliato. Il programma inviava il volume di una parte subito dopo il suo suono, e l'Event annulla un suono quando qualcosa lo segue. Una traccia che mostrava Strato suonava un Grand Piano. Ora il mix viene inviato per primo e il suono per ultimo.
+
+NUOVO: SHOW CHORDS nomina l'accordo a ogni cambio su una striscia sotto le note, cosi una progressione si legge da sinistra a destra. Legge la traccia selezionata e ricade su tutte le parti di accordo dove quella traccia da sola contiene una sola nota dell'accordo. Una battuta le cui note non formano un accordo resta vuota invece di ricevere un nome che potrebbe essere sbagliato.
+
+NUOVO: PART VALUES mostra ogni valore che ciascuna delle nove parti ha nella sezione scelta: volume, pan, riverbero, chorus, modulazione, tempo di portamento ed espressione. I pulsanti di sezione passano fra INTRO, ARR, FILL, BREAK e END. L'ultima colonna mostra il valore di espressione contenuto nel file dello stile, evidenziato quando non coincide con quello che il programma invia - quel valore non si puo regolare affatto sull'Event.
+
+NUOVO: Il programma dice dove verra salvato un cambio di strumento. Una didascalia accanto a TRACK VOICE nomina la sezione di destinazione e segue la linea rossa mentre il ritmo suona. Cliccare un marker di sezione la punta su quella sezione, cosi lo strumento si puo cambiare li senza aprire prima PARAMETER.
+
+MIGLIORATO: Una selezione puo estendersi oltre il bordo della vista. Trascinare il riquadro di selezione oltre il bordo superiore, inferiore o laterale fa scorrere la vista, cosi si possono prendere anche note fuori schermo.
+
+SCHERMI PICCOLI
+
+Una finestra che richiede piu larghezza di quanta lo schermo ne abbia viene limitata e la sua barra ritagliata. In tal caso, il ridimensionamento del display di Windows al 125% invece del 150% da al programma molto piu spazio: al 150% uno schermo da 1920 pixel gliene dichiara 1280, al 125% ne dichiara 1536. E un'impostazione di Windows e non di questo programma, motivo per cui UI Scale non aiuta.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.2.0</span>
     <span class="version-date">2026-09-09</span>
   </div>
@@ -2556,6 +2691,51 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.3.0</span>
+    <span class="version-date">2026-09-11</span>
+  </div>
+  <div class="version-body">v4.3.0 - Alle Spuren auf einmal aufnehmen, und ein Korg-Style behaelt seinen Mixer
+
+Die Korg-Konvertierung veraendert, wie ein konvertierter Style klingt. Bisher verwarf der Konverter jeden Controller in der Datei - Lautstaerke, Panorama, Hall, Chorus - sodass jede Stimme auf demselben Pegel ankam und die Balance, die der Autor des Styles gesetzt hatte, verloren war. Ein mit einer aelteren Version konvertierter Style klingt nach erneuter Konvertierung anders, und naeher an dem, wie er auf einem Korg klingt.
+
+STYLE MASTER PRO - AUFNAHME
+
+NEU: REC: ALL TRACKS nimmt das ganze Arrangement in einem Durchgang auf. Halten Sie Akkorde mit der linken Hand, und der Event spielt Bass, Schlagzeug und die Akkordstimmen; spielen Sie mit der rechten eine Melodie, wird auch die aufgenommen. Jede Stimme landet auf ihrer eigenen Spur.
+Waehlen Sie zuerst eine Spur - dorthin geht die rechte Hand, denn ein Event-Style hat keine eigene Melodiestimme. Die Harmonielagen des Keyboards werden nicht aufgenommen; das Keyboard fuegt sie bei der Wiedergabe wieder hinzu. Waehrend Sie spielen, nimmt die rechte Hand den Klang der Spur an, auf die sie aufnimmt - was Sie hoeren, ist also, was Sie bei der Wiedergabe hoeren werden.
+Der Schalter ist standardmaessig aus. Eine Aufnahme ersetzt, was auf jeder dieser Spuren fuer die aufgenommene Sektion liegt.
+
+FIX: Ein vom Event aufgenommener Bass bleibt in seiner Oktave. Eine Aufnahme, die vom Event kam, erhielt die Oktavkorrektur ein zweites Mal, was die Noten weit unter den Bereich brachte, in dem die Bassstimme ueberhaupt klingt.
+
+STYLE MASTER PRO - KORG-KONVERTIERUNG
+
+FIX: Ein Style behaelt seinen Mixer. Lautstaerke, Panorama, Expression, Hall und Chorus ueberstehen jetzt die Konvertierung. An drei Styles gemessen: davor kam kein einziger Controller irgendeiner Art durch. Bank und Programm bleiben blockiert, weil eine Korg-Programmnummer auf dem Event ein anderes Instrument benennt und die Klaenge aus der Kalibrierung kommen.
+Uebernommen wird ein Wert pro Stimme pro Sektion. Future_Pop enthaelt 12.075 Panorama-Nachrichten - Automation, die sich durch den Takt bewegt - und sie alle zu uebernehmen haette die Datei um 54 KB wachsen lassen und das Keyboard ueberflutet.
+
+FIX: Lautstaerken werden auch gelesen, wenn ein Style kein CC7 hat. Drei hier gemessene Korg-User-Styles enthalten ueberhaupt keine Lautstaerke-Nachrichten; ihre Pegel stehen in den Expression-Daten. Die Stimmen von Oryantal liegen bei 100, 112, 119, 89, 84, 73, 81 und 81 - die Mischung, die der Autor gesetzt hat und die durch ein glattes 100 auf jeder Stimme ersetzt wurde.
+
+FIX: Gitarren und Baesse bekommen wieder echte Ketron-Klaenge. Das wurde in v4.1.0 angekuendigt und lief kein einziges Mal: es schrieb sein Ergebnis an eine Stelle, die es nicht gibt, und der Fehler wurde zu einer einzigen Zeile im Protokoll verschluckt. Ein Korg-Import behielt seine General-MIDI-Klaenge.
+
+STYLE MASTER PRO - MICRO EDIT
+
+FIX: Eine Stimme spielt nicht mehr das falsche Instrument. Das Programm sandte die Lautstaerke einer Stimme unmittelbar nach ihrem Klang, und der Event verwirft einen Klang, wenn etwas darauf folgt. Eine Spur, die Strato anzeigte, spielte ein Grand Piano. Der Mixer wird jetzt zuerst gesendet und der Klang zuletzt.
+
+NEU: SHOW CHORDS benennt den Akkord bei jedem Wechsel auf einem Streifen unter den Noten, sodass sich eine Verbindung von links nach rechts liest. Gelesen wird die ausgewaehlte Spur; wo diese allein nur einen Ton des Akkords haelt, faellt es auf alle Akkordstimmen zurueck. Ein Takt, dessen Noten keinen Akkord bilden, bleibt leer, statt einen Namen zu bekommen, der falsch sein koennte.
+
+NEU: PART VALUES zeigt jeden Wert, den jede der neun Stimmen in der gewaehlten Sektion haelt: Lautstaerke, Panorama, Hall, Chorus, Modulation, Portamentozeit und Expression. Die Sektionsschaltflaechen wechseln zwischen INTRO, ARR, FILL, BREAK und END. Die letzte Spalte zeigt den Expression-Wert, den die Style-Datei selbst haelt, markiert, wenn er von dem abweicht, was das Programm sendet - dieser Wert laesst sich am Event ueberhaupt nicht einstellen.
+
+NEU: Das Programm sagt, wo ein Instrumentwechsel gespeichert wird. Eine Beschriftung neben TRACK VOICE nennt die Zielsektion und folgt der roten Linie, waehrend ein Rhythmus laeuft. Ein Klick auf einen Sektionsmarker richtet sie auf diese Sektion, sodass sich das Instrument dort wechseln laesst, ohne erst PARAMETER zu oeffnen.
+
+VERBESSERT: Eine Auswahl reicht ueber den Rand der Ansicht hinaus. Ein Auswahlrahmen, der ueber den oberen, unteren oder seitlichen Rand gezogen wird, scrollt die Ansicht mit, sodass auch Noten ausserhalb des Bildschirms erfasst werden.
+
+KLEINE BILDSCHIRME
+
+Ein Fenster, das mehr Breite braucht als der Bildschirm hat, wird begrenzt und seine Werkzeugleiste beschnitten. Falls das passiert: Windows-Anzeigeskalierung auf 125% statt 150% gibt dem Programm deutlich mehr Raum - bei 150% meldet ein 1920-Pixel-Bildschirm ihm 1280 Pixel, bei 125% meldet er 1536. Das ist eine Windows-Einstellung und keine dieses Programms, weshalb dessen eigene UI Scale hier nicht hilft.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.2.0</span>
@@ -3330,6 +3510,51 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.3.0</span>
+    <span class="version-date">2026-09-11</span>
+  </div>
+  <div class="version-body">v4.3.0 - Запись всех дорожек сразу, и стиль Korg сохраняет свой микшер
+
+Конвертация Korg меняет то, как звучит сконвертированный стиль. До сих пор конвертер отбрасывал каждый контроллер из файла - громкость, панораму, реверберацию, хорус - поэтому каждая партия приходила на одном уровне, а баланс, заданный автором стиля, пропадал. Стиль, сконвертированный прежней версией, после повторной конвертации зазвучит иначе - ближе к тому, как он звучит на Korg.
+
+STYLE MASTER PRO - ЗАПИСЬ
+
+НОВОЕ: REC: ALL TRACKS записывает всю аранжировку за один проход. Держите аккорды левой рукой, и Event играет бас, барабаны и аккордовые партии; сыграйте мелодию правой - и она тоже запишется. Каждая партия ложится на свою дорожку.
+Сначала выберите дорожку - туда идёт правая рука, потому что у стиля Event нет собственной мелодической партии. Гармонические слои самой клавиатуры не записываются; клавиатура добавляет их снова при воспроизведении. Пока вы играете, правая рука принимает звук той дорожки, на которую пишется, так что вы слышите то же, что услышите при воспроизведении.
+Переключатель по умолчанию выключен. Дубль заменяет то, что было на каждой из этих дорожек в записываемой секции.
+
+ИСПРАВЛЕНИЕ: Бас, записанный с Event, остаётся в своей октаве. К дублю, пришедшему с Event, октавная компенсация применялась второй раз, из-за чего ноты уходили далеко ниже той области, где басовая партия вообще звучит.
+
+STYLE MASTER PRO - КОНВЕРТАЦИЯ KORG
+
+ИСПРАВЛЕНИЕ: Стиль сохраняет свой микшер. Громкость, панорама, экспрессия, реверберация и хорус теперь переживают конвертацию. Измерено на трёх стилях: до этого не проходил ни один контроллер любого рода. Банк и программа по-прежнему заблокированы, потому что номер программы Korg называет на Event другой инструмент, а звуки берутся из калибровки.
+Переносится одно значение на партию на секцию. Future_Pop содержит 12 075 сообщений панорамы - автоматику, движущуюся сквозь такт - и перенос всего этого увеличил бы файл на 54 КБ и затопил клавиатуру.
+
+ИСПРАВЛЕНИЕ: Громкости читаются даже когда в стиле нет CC7. Три пользовательских стиля Korg, измеренных здесь, вообще не несут сообщений о громкости; их уровни лежат в данных экспрессии. Партии Oryantal стоят на 100, 112, 119, 89, 84, 73, 81 и 81 - это микс, заданный автором, который заменялся ровной сотней на каждой партии.
+
+ИСПРАВЛЕНИЕ: Гитары и басы снова получают настоящие звуки Ketron. Это было объявлено в v4.1.0 и ни разу не работало: результат записывался туда, чего не существует, а ошибка проглатывалась в одну строку журнала. Импорт Korg сохранял свои звуки General MIDI.
+
+STYLE MASTER PRO - MICRO EDIT
+
+ИСПРАВЛЕНИЕ: Партия больше не играет чужим инструментом. Программа отправляла громкость партии сразу после её звука, а Event отменяет звук, когда за ним что-то следует. Дорожка, показывавшая Strato, играла Grand Piano. Теперь микс отправляется первым, а звук последним.
+
+НОВОЕ: SHOW CHORDS называет аккорд при каждой смене на полосе под нотами, так что последовательность читается слева направо. Читается выбранная дорожка, а там, где она одна держит лишь одну ноту аккорда, берутся все аккордовые партии. Такт, чьи ноты аккорда не образуют, остаётся пустым, вместо того чтобы получить имя, которое может оказаться неверным.
+
+НОВОЕ: PART VALUES показывает каждое значение, которое каждая из девяти партий держит в выбранной секции: громкость, панораму, реверберацию, хорус, модуляцию, время портаменто и экспрессию. Кнопки секций переключают между INTRO, ARR, FILL, BREAK и END. Последний столбец показывает значение экспрессии, которое хранит сам файл стиля, и отмечает его при расхождении с тем, что отправляет программа - на Event это значение вообще нельзя настроить.
+
+НОВОЕ: Программа говорит, куда будет сохранена смена инструмента. Подпись рядом с TRACK VOICE называет целевую секцию и следует за красной линией, пока ритм играет. Щелчок по маркеру секции наводит её на эту секцию, так что инструмент можно сменить прямо там, не открывая сначала PARAMETER.
+
+УЛУЧШЕНО: Выделение может выходить за край окна. Рамка выделения, вытянутая за верхний, нижний или боковой край, прокручивает вид, так что можно захватить и ноты за пределами экрана.
+
+НЕБОЛЬШИЕ ЭКРАНЫ
+
+Окно, которому нужно больше ширины, чем есть у экрана, ограничивается, а его панель обрезается. Если это происходит, масштабирование экрана Windows на 125% вместо 150% даёт программе заметно больше места: при 150% экран в 1920 пикселей сообщает ей 1280, при 125% - 1536. Это настройка Windows, а не этой программы, поэтому её собственный UI Scale здесь не помогает.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.2.0</span>
     <span class="version-date">2026-09-09</span>
   </div>
@@ -4100,6 +4325,51 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.3.0</span>
+    <span class="version-date">2026-09-11</span>
+  </div>
+  <div class="version-body">v4.3.0 - Spela in alla spar pa en gang, och en Korg-stil behaller sin mixer
+
+Korg-konverteringen andrar hur en konverterad stil later. Hittills kastade konverteraren varje kontroller i filen - volym, panorering, rumsklang, chorus - sa varje stamma kom fram pa samma niva och balansen stilens upphovsman satt var borta. En stil som konverterats med en tidigare version kommer att lata annorlunda efter omkonvertering, och narmare hur den later pa en Korg.
+
+STYLE MASTER PRO - INSPELNING
+
+NYTT: REC: ALL TRACKS spelar in hela arrangemanget i en tagning. Hall ackord med vansterhanden sa spelar Event bas, trummor och ackordstammorna; spela en melodi med hogerhanden och aven den spelas in. Varje stamma hamnar pa sitt eget spar.
+Valj ett spar forst - dit gar hogerhanden, eftersom en Event-stil inte har nagon egen melodistamma. Klaviaturens egna harmonilager spelas inte in; klaviaturen lagger till dem igen vid uppspelning. Medan du spelar tar hogerhanden ljudet fran sparet den spelas in pa, sa det du hor ar det du kommer att hora vid uppspelning.
+Omkopplaren ar av som standard. En tagning ersatter det som finns pa vart och ett av de sparen for den sektion som spelas in.
+
+FIX: Bas inspelad fran Event stannar i sin egen oktav. En tagning som kom fran Event fick oktavkompensationen en andra gang, vilket lade noterna langt under det omrade dar basstamman over huvud taget later.
+
+STYLE MASTER PRO - KORG-KONVERTERING
+
+FIX: En stil behaller sin mixer. Volym, panorering, expression, rumsklang och chorus overlever nu konverteringen. Matt pa tre stilar: fore detta kom inte en enda kontroller av nagot slag igenom. Bank och program ar fortfarande blockerade, eftersom ett Korg-programnummer anger ett annat instrument pa Event och ljuden kommer fran kalibreringen.
+Ett varde per stamma per sektion fors over. Future_Pop innehaller 12 075 panoreringsmeddelanden - automation som ror sig genom takten - och att fora over allt hade okat filen med 54 KB och oversvammat klaviaturen.
+
+FIX: Volymer lases aven nar en stil saknar CC7. Tre Korg-anvandarstilar som matts har bar inga volymmeddelanden alls; deras nivaer ligger i expression-datan. Oryantals stammor ligger pa 100, 112, 119, 89, 84, 73, 81 och 81 - den mix upphovsmannen satte, som ersattes av en platt 100 pa varje stamma.
+
+FIX: Gitarrer och basar far riktiga Ketron-ljud igen. Det annonserades i v4.1.0 och kordes aldrig en enda gang: resultatet skrevs till en plats som inte finns, och felet slukades till en enda rad i loggen. En Korg-import behöll sina General MIDI-ljud.
+
+STYLE MASTER PRO - MICRO EDIT
+
+FIX: En stamma spelar inte langre fel instrument. Programmet skickade en stammas volym direkt efter dess ljud, och Event upphaver ett ljud nar nagot foljer efter det. Ett spar som visade Strato spelade ett Grand Piano. Mixen skickas nu forst och ljudet sist.
+
+NYTT: SHOW CHORDS namnger ackordet vid varje byte pa en remsa under noterna, sa att en foljd lases fran vanster till hoger. Den laser det markerade sparet och faller tillbaka pa alla ackordstammor dar det sparet ensamt bara haller en ton av ackordet. En takt vars noter inte bildar ett ackord lamnas tom i stallet for att ges ett namn som kan vara fel.
+
+NYTT: PART VALUES visar varje varde som var och en av de nio stammorna har i den sektion du valjer: volym, panorering, rumsklang, chorus, modulation, portamentotid och expression. Sektionsknapparna vaxlar mellan INTRO, ARR, FILL, BREAK och END. Sista kolumnen visar det expression-varde som sjalva stilfilen har, markerat nar det skiljer sig fran vad programmet skickar - det vardet gar inte att stalla in pa Event alls.
+
+NYTT: Programmet sager var ett instrumentbyte kommer att sparas. En text bredvid TRACK VOICE namnger malsektionen och foljer den roda linjen medan en rytm spelar. Ett klick pa en sektionsmarkor riktar den mot den sektionen, sa instrumentet kan bytas dar utan att forst oppna PARAMETER.
+
+FORBATTRAT: En markering kan na utanfor vyns kant. En markeringsruta som dras forbi over-, under- eller sidokanten rullar vyn med, sa att aven noter utanfor skarmen kan fangas.
+
+SMA SKARMAR
+
+Ett fonster som behover mer bredd an skarmen har begransas och dess verktygsfalt beskars. Om det hander ger Windows skalning pa 125% i stallet for 150% programmet betydligt mer utrymme - vid 150% rapporterar en skarm pa 1920 pixlar 1280 pixlar till det, vid 125% rapporterar den 1536. Det ar en Windows-installning och inte en i det har programmet, vilket ar varfor programmets egen UI Scale inte hjalper.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.2.0</span>
