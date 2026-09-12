@@ -252,6 +252,61 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.4.0</span>
+    <span class="version-date">2026-09-12</span>
+  </div>
+  <div class="version-body">v4.4.0 - Finding your MIDI input without playing a note
+
+MAIN WINDOW
+
+NEW: What's New, beside About. The release history of every version, back to the first, read from the program itself instead of from old emails. A customer asked for it: he remembers a feature and wants to check what it does.
+
+STYLE MASTER PRO - GETTING CONNECTED
+
+NEW: SMART TEST finds your MIDI input without you playing a note. It starts the arranger on the Event, listens to what comes back, sets that port in MIDI Monitor and connects it. Four seconds, and nothing is asked of you.
+It is the first button on the MIDI TEST tab, which is now the first tab in the window - it is where to go when nothing works. If no port receives anything, the panel says what to try, in order, rather than only reporting failure.
+
+IMPROVED: The tab order has changed - MIDI TEST, MIDI MONITOR, KETRON USB, LOG. The input is where people get stuck; the output connects by itself almost every time.
+
+IMPROVED: Style Master Pro opens over Event Studio Pro instead of wherever Windows decides. On a wide monitor it used to appear far to the right.
+
+STYLE MASTER PRO - EDITING
+
+FIX: Delete removes what is selected. In GLOBAL mode it removed every note in the rhythm, whatever was selected - a customer lost a whole style trying to delete one note. With nothing selected it now does nothing and says so. Deleting a whole track is still possible, from the track menu, where it is asked for on purpose and confirmed.
+
+NEW: DELETE on a track removes that track's notes from the whole rhythm or from one section, with a count and a confirmation.
+
+NEW: SWAP WITH exchanges two sections completely - notes, length, instruments and mix. Korg has numbered intros the same way since the i3: Intro 3 is usually a one-bar count-in, while Ketron's convention is the opposite. Now they can be put in whichever order suits the style, one pair at a time.
+
+NEW: Right-click offers to delete the selected notes, with the count in the entry.
+
+FIX: VEL -10 and VEL +10 redraw the velocity bars. They changed the numbers and left the bars alone, so the buttons looked dead.
+
+IMPROVED: The tempo is on the toolbar, beside QUANTIZE. Clicking it opens PARAMETER, where it can be changed.
+
+STYLE MASTER PRO - MARKERS AND SECTIONS
+
+FIX: SECTION MARKERS follows the rhythm while it is open. Drawing a note into a section used to leave the row reading empty until the window was closed and reopened.
+
+FIX: A marker can only be named what the Event knows. Both ADD and RENAME now offer the 54 section names rather than a text field, and names already in use are left out. Renaming to something invented was accepted and then quietly ignored.
+
+IMPROVED: PARAMETERS names the first group VARIATIONS rather than ARRANGE, and each of the five groups is framed so the columns read apart.
+
+STYLE MASTER PRO - KORG CONVERSION
+
+FIX: A converted style keeps its tempo. The converter never wrote one, so the program fell back to a default - a style Korg plays at 132 came out at 91.
+
+STYLE MASTER PRO - OTHER
+
+IMPROVED: The MIDI log keeps 2000 messages instead of 200. Two hundred covers about a second of a busy style, which is not enough to see what led to a freeze.
+
+IMPROVED: CALIBRATE VOICES and DRUM CALIBRATE are gone from the FILE menu. Both did what the Calibrate button inside VOICE SELECT and DRUMSET SELECT already does, and that one is better placed: you are already looking at the voice you want to fix.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.3.0</span>
     <span class="version-date">2026-09-11</span>
   </div>
@@ -994,7 +1049,7 @@ Updated Quick Start guide with new Edge UI flow</div>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Contact us</strong> by e-mail at <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
 <li>We will reply with payment details (PayPal) and an <strong>invoice form</strong> to fill in</li>
-<li>Transfer <strong>80 EUR</strong> via PayPal and send us your completed invoice details</li>
+<li>Transfer <strong>100 EUR</strong> via PayPal and send us your completed invoice details</li>
 <li>We will send you the <strong>download link</strong> and installation instructions</li>
 <li>After installing, send us your <strong>Hardware ID</strong> (shown in the program)</li>
 <li>We will send you your <code>licence.key</code> file and your invoice</li>
@@ -1057,6 +1112,61 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.4.0</span>
+    <span class="version-date">2026-09-12</span>
+  </div>
+  <div class="version-body">v4.4.0 - Pronalazenje MIDI ulaza bez sviranja ijedne note
+
+GLAVNI PROZOR
+
+NOVO: What's New, pored About. Istorija svih verzija, sve do prve, procitana iz samog programa umjesto iz starih mejlova. Kupac je to trazio: sjeti se neke mogucnosti i hoce da provjeri sta radi.
+
+STYLE MASTER PRO - POVEZIVANJE
+
+NOVO: SMART TEST nalazi vas MIDI ulaz bez da odsvirate ijednu notu. Pokrene aranzer na Eventu, oslusne sta se vrati, postavi taj port u MIDI Monitoru i poveze ga. Cetiri sekunde, i od vas se ne trazi nista.
+To je prvo dugme na kartici MIDI TEST, koja je sada prva u prozoru - tu se ide kad nista ne radi. Ako nijedan port nista ne prima, panel kaze sta probati, redom, umjesto da samo javi neuspjeh.
+
+POBOLJSANO: Redoslijed kartica je promijenjen - MIDI TEST, MIDI MONITOR, KETRON USB, LOG. Ulaz je ono gdje se ljudi zaglave; izlaz se poveze sam skoro svaki put.
+
+POBOLJSANO: Style Master Pro se otvara preko Event Studio Pro prozora umjesto tamo gdje Windows odluci. Na sirokom monitoru se ranije pojavljivao daleko desno.
+
+STYLE MASTER PRO - EDITOVANJE
+
+POPRAVKA: Delete brise ono sto je izabrano. U GLOBAL modu je brisao svaku notu u ritmu, bez obzira sta je bilo izabrano - kupac je izgubio cijeli stil pokusavajuci obrisati jednu notu. Kad nista nije izabrano, sada ne radi nista i to kaze. Brisanje cijele trake je i dalje moguce, iz menija trake, gdje se trazi namjerno i potvrdjuje.
+
+NOVO: DELETE na traci brise note te trake iz cijelog ritma ili iz jedne sekcije, sa brojem i potvrdom.
+
+NOVO: SWAP WITH potpuno zamjenjuje dvije sekcije - note, duzinu, instrumente i mix. Korg numerise introe isto jos od i3: Intro 3 je obicno jednotaktno odbrojavanje, dok je Ketronov obicaj obrnut. Sada se mogu poredati kako stilu odgovara, par po par.
+
+NOVO: Desni klik nudi brisanje izabranih nota, sa brojem u stavci.
+
+POPRAVKA: VEL -10 i VEL +10 iscrtavaju trake velocityja. Mijenjali su brojeve a trake ostavljali, pa su dugmad izgledala mrtvo.
+
+POBOLJSANO: Tempo je na alatnoj traci, pored QUANTIZE. Klik na njega otvara PARAMETER, gdje se moze promijeniti.
+
+STYLE MASTER PRO - MARKERI I SEKCIJE
+
+POPRAVKA: SECTION MARKERS prati ritam dok je otvoren. Crtanje note u sekciju je ostavljalo red da pise prazno dok se prozor ne zatvori i ponovo otvori.
+
+POPRAVKA: Marker se moze nazvati samo onako kako Event poznaje. I ADD i RENAME sada nude 54 naziva sekcija umjesto tekstualnog polja, a nazivi koji su vec u upotrebi se izostavljaju. Preimenovanje u nesto izmisljeno je bilo prihvatano pa tiho ignorisano.
+
+POBOLJSANO: PARAMETERS prvu grupu naziva VARIATIONS umjesto ARRANGE, a svaka od pet grupa je uokvirena da se kolone citaju odvojeno.
+
+STYLE MASTER PRO - KORG KONVERZIJA
+
+POPRAVKA: Konvertovan stil zadrzava svoj tempo. Konverter ga nikad nije upisivao, pa je program padao na podrazumijevani - stil koji Korg svira na 132 izlazio je na 91.
+
+STYLE MASTER PRO - OSTALO
+
+POBOLJSANO: MIDI log cuva 2000 poruka umjesto 200. Dvije stotine pokrivaju oko sekunde uposlenog stila, sto nije dovoljno da se vidi sta je dovelo do zastoja.
+
+POBOLJSANO: CALIBRATE VOICES i DRUM CALIBRATE su uklonjeni iz FILE menija. Oboje su radili ono sto Calibrate dugme unutar VOICE SELECT i DRUMSET SELECT vec radi, a ono je bolje smjesteno: vec gledate u zvuk koji hocete popraviti.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.3.0</span>
@@ -1811,7 +1921,7 @@ Updated Quick Start guide with new Edge UI flow</div>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Kontaktirajte nas</strong> putem e-maila na <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
 <li>Odgovorićemo vam sa detaljima plaćanja (PayPal) i <strong>obrascem za fakturu</strong> koji treba popuniti</li>
-<li>Uplatite <strong>80 EUR</strong> preko PayPal-a i pošaljite nam popunjene podatke za fakturu</li>
+<li>Uplatite <strong>100 EUR</strong> preko PayPal-a i pošaljite nam popunjene podatke za fakturu</li>
 <li>Poslaćemo vam <strong>link za preuzimanje</strong> i uputstvo za instalaciju</li>
 <li>Nakon instalacije, pošaljite nam svoj <strong>Hardware ID</strong> (prikazan u programu)</li>
 <li>Poslaćemo vam vaš <code>licence.key</code> fajl i fakturu</li>
@@ -1874,6 +1984,61 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.4.0</span>
+    <span class="version-date">2026-09-12</span>
+  </div>
+  <div class="version-body">v4.4.0 - Trovare l'ingresso MIDI senza suonare una nota
+
+FINESTRA PRINCIPALE
+
+NUOVO: What's New, accanto ad About. La cronologia di ogni versione, fino alla prima, letta dal programma stesso invece che da vecchie email. Un cliente l'ha chiesta: si ricorda di una funzione e vuole controllare cosa fa.
+
+STYLE MASTER PRO - COLLEGARSI
+
+NUOVO: SMART TEST trova il vostro ingresso MIDI senza che suoniate una nota. Avvia l'arranger sull'Event, ascolta cosa torna, imposta quella porta in MIDI Monitor e la collega. Quattro secondi, e non vi viene chiesto nulla.
+E il primo pulsante della scheda MIDI TEST, che ora e la prima della finestra: e li che si va quando niente funziona. Se nessuna porta riceve nulla, il pannello dice cosa provare, in ordine, invece di segnalare solo il fallimento.
+
+MIGLIORATO: L'ordine delle schede e cambiato - MIDI TEST, MIDI MONITOR, KETRON USB, LOG. E sull'ingresso che ci si blocca; l'uscita si collega da sola quasi sempre.
+
+MIGLIORATO: Style Master Pro si apre sopra Event Studio Pro invece che dove decide Windows. Su un monitor largo compariva molto a destra.
+
+STYLE MASTER PRO - MODIFICA
+
+CORREZIONE: Delete cancella quello che e selezionato. In modalita GLOBAL cancellava ogni nota del ritmo, qualunque cosa fosse selezionata - un cliente ha perso un intero stile cercando di cancellare una nota. Senza nulla selezionato ora non fa niente e lo dice. Cancellare un'intera traccia resta possibile, dal menu della traccia, dove viene chiesto apposta e confermato.
+
+NUOVO: DELETE su una traccia toglie le note di quella traccia dall'intero ritmo o da una sola sezione, con un conteggio e una conferma.
+
+NUOVO: SWAP WITH scambia due sezioni completamente: note, lunghezza, strumenti e mix. Korg numera gli intro allo stesso modo fin dall'i3: l'Intro 3 e di solito un conteggio di una battuta, mentre la convenzione Ketron e l'opposta. Ora si possono mettere nell'ordine che conviene allo stile, una coppia alla volta.
+
+NUOVO: Il clic destro propone di cancellare le note selezionate, con il conteggio nella voce.
+
+CORREZIONE: VEL -10 e VEL +10 ridisegnano le barre di velocity. Cambiavano i numeri lasciando stare le barre, cosi i pulsanti sembravano morti.
+
+MIGLIORATO: Il tempo e sulla barra, accanto a QUANTIZE. Cliccandolo si apre PARAMETER, dove si puo cambiare.
+
+STYLE MASTER PRO - MARKER E SEZIONI
+
+CORREZIONE: SECTION MARKERS segue il ritmo mentre e aperto. Disegnare una nota in una sezione lasciava la riga con scritto vuoto finche la finestra non veniva chiusa e riaperta.
+
+CORREZIONE: Un marker puo essere chiamato solo come l'Event conosce. Sia ADD sia RENAME offrono ora i 54 nomi di sezione invece di un campo di testo, e i nomi gia in uso vengono esclusi. Rinominare con qualcosa di inventato veniva accettato e poi ignorato in silenzio.
+
+MIGLIORATO: PARAMETERS chiama il primo gruppo VARIATIONS invece di ARRANGE, e ciascuno dei cinque gruppi e incorniciato perche le colonne si leggano separate.
+
+STYLE MASTER PRO - CONVERSIONE KORG
+
+CORREZIONE: Uno stile convertito conserva il suo tempo. Il convertitore non lo scriveva mai, quindi il programma ripiegava su un valore predefinito - uno stile che Korg suona a 132 usciva a 91.
+
+STYLE MASTER PRO - ALTRO
+
+MIGLIORATO: Il log MIDI conserva 2000 messaggi invece di 200. Duecento coprono circa un secondo di uno stile fitto, che non basta per vedere cosa ha portato a un blocco.
+
+MIGLIORATO: CALIBRATE VOICES e DRUM CALIBRATE non sono piu nel menu FILE. Entrambi facevano quello che il pulsante Calibrate dentro VOICE SELECT e DRUMSET SELECT gia fa, ed e collocato meglio: state gia guardando il suono che volete correggere.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.3.0</span>
@@ -2628,7 +2793,7 @@ Updated Quick Start guide with new Edge UI flow</div>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Contattateci</strong> via e-mail all'indirizzo <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
 <li>Vi risponderemo con i dettagli di pagamento (PayPal) e un <strong>modulo di fatturazione</strong> da compilare</li>
-<li>Trasferire <strong>80 EUR</strong> tramite PayPal e inviarci i dati di fatturazione compilati</li>
+<li>Trasferire <strong>100 EUR</strong> tramite PayPal e inviarci i dati di fatturazione compilati</li>
 <li>Vi invieremo il <strong>link per il download</strong> e le istruzioni di installazione</li>
 <li>Dopo l'installazione, inviateci il vostro <strong>Hardware ID</strong> (mostrato nel programma)</li>
 <li>Vi invieremo il file <code>licence.key</code> e la fattura</li>
@@ -2691,6 +2856,61 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.4.0</span>
+    <span class="version-date">2026-09-12</span>
+  </div>
+  <div class="version-body">v4.4.0 - Den MIDI-Eingang finden, ohne eine Note zu spielen
+
+HAUPTFENSTER
+
+NEU: What's New, neben About. Die Versionsgeschichte bis zur ersten Fassung, aus dem Programm selbst gelesen statt aus alten E-Mails. Ein Kunde hat darum gebeten: er erinnert sich an eine Funktion und will nachlesen, was sie tut.
+
+STYLE MASTER PRO - VERBINDUNG
+
+NEU: SMART TEST findet Ihren MIDI-Eingang, ohne dass Sie eine Note spielen. Es startet den Arranger am Event, hoert, was zurueckkommt, traegt diesen Port im MIDI Monitor ein und verbindet ihn. Vier Sekunden, und von Ihnen wird nichts verlangt.
+Es ist die erste Schaltflaeche im Reiter MIDI TEST, der jetzt der erste im Fenster ist - dorthin geht man, wenn nichts geht. Empfaengt kein Port etwas, sagt das Feld der Reihe nach, was zu versuchen ist, statt nur Misserfolg zu melden.
+
+VERBESSERT: Die Reiterfolge hat sich geaendert - MIDI TEST, MIDI MONITOR, KETRON USB, LOG. Am Eingang bleiben die Leute haengen; der Ausgang verbindet sich fast immer von selbst.
+
+VERBESSERT: Style Master Pro oeffnet ueber Event Studio Pro statt dort, wo Windows es hinlegt. Auf einem breiten Monitor erschien es frueher weit rechts.
+
+STYLE MASTER PRO - BEARBEITEN
+
+FIX: Delete loescht, was ausgewaehlt ist. Im GLOBAL-Modus loeschte es jede Note im Rhythmus, was auch immer ausgewaehlt war - ein Kunde verlor einen ganzen Style beim Versuch, eine Note zu loeschen. Ohne Auswahl tut es jetzt nichts und sagt das auch. Eine ganze Spur zu loeschen ist weiterhin moeglich, ueber das Spurmenue, wo man es absichtlich verlangt und bestaetigt.
+
+NEU: DELETE auf einer Spur entfernt deren Noten aus dem ganzen Rhythmus oder aus einer Sektion, mit Anzahl und Bestaetigung.
+
+NEU: SWAP WITH tauscht zwei Sektionen vollstaendig - Noten, Laenge, Instrumente und Mischung. Korg nummeriert Intros seit dem i3 gleich: Intro 3 ist meist ein eintaktiger Vorzaehler, waehrend Ketron es umgekehrt haelt. Jetzt lassen sie sich in die Reihenfolge bringen, die zum Style passt, paarweise.
+
+NEU: Der Rechtsklick bietet an, die ausgewaehlten Noten zu loeschen, mit der Anzahl im Eintrag.
+
+FIX: VEL -10 und VEL +10 zeichnen die Velocity-Balken neu. Sie aenderten die Zahlen und liessen die Balken stehen, sodass die Schaltflaechen tot wirkten.
+
+VERBESSERT: Das Tempo steht in der Werkzeugleiste, neben QUANTIZE. Ein Klick darauf oeffnet PARAMETER, wo es geaendert werden kann.
+
+STYLE MASTER PRO - MARKER UND SEKTIONEN
+
+FIX: SECTION MARKERS folgt dem Rhythmus, solange es offen ist. Eine Note in eine Sektion zu zeichnen liess die Zeile leer stehen, bis das Fenster geschlossen und wieder geoeffnet wurde.
+
+FIX: Ein Marker kann nur heissen, was der Event kennt. ADD und RENAME bieten jetzt die 54 Sektionsnamen statt eines Textfelds, und bereits vergebene Namen bleiben weg. Eine erfundene Umbenennung wurde angenommen und dann stillschweigend ignoriert.
+
+VERBESSERT: PARAMETERS nennt die erste Gruppe VARIATIONS statt ARRANGE, und jede der fuenf Gruppen ist gerahmt, damit sich die Spalten auseinander lesen.
+
+STYLE MASTER PRO - KORG-KONVERTIERUNG
+
+FIX: Ein konvertierter Style behaelt sein Tempo. Der Konverter schrieb nie eines, also griff das Programm auf einen Standardwert zurueck - ein Style, den Korg mit 132 spielt, kam mit 91 heraus.
+
+STYLE MASTER PRO - SONSTIGES
+
+VERBESSERT: Das MIDI-Protokoll haelt 2000 Nachrichten statt 200. Zweihundert decken etwa eine Sekunde eines dichten Styles ab, was nicht reicht, um zu sehen, was zu einem Haenger fuehrte.
+
+VERBESSERT: CALIBRATE VOICES und DRUM CALIBRATE sind aus dem FILE-Menue verschwunden. Beide taten, was die Calibrate-Schaltflaeche in VOICE SELECT und DRUMSET SELECT bereits tut, und die sitzt besser: Sie schauen dort schon auf den Klang, den Sie korrigieren wollen.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.3.0</span>
@@ -3445,7 +3665,7 @@ Updated Quick Start guide with new Edge UI flow</div>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Kontaktieren Sie uns</strong> per E-Mail an <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
 <li>Wir antworten Ihnen mit Zahlungsdetails (PayPal) und einem <strong>Rechnungsformular</strong> zum Ausfüllen</li>
-<li>Überweisen Sie <strong>80 EUR</strong> via PayPal und senden Sie uns Ihre ausgefüllten Rechnungsdaten</li>
+<li>Überweisen Sie <strong>100 EUR</strong> via PayPal und senden Sie uns Ihre ausgefüllten Rechnungsdaten</li>
 <li>Wir senden Ihnen den <strong>Download-Link</strong> und die Installationsanweisungen</li>
 <li>Senden Sie uns nach der Installation Ihre <strong>Hardware ID</strong> (wird im Programm angezeigt)</li>
 <li>Wir senden Ihnen Ihre <code>licence.key</code>-Datei und Ihre Rechnung</li>
@@ -3508,6 +3728,61 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Что нового в обновлениях<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.4.0</span>
+    <span class="version-date">2026-09-12</span>
+  </div>
+  <div class="version-body">v4.4.0 - Найти MIDI-вход, не сыграв ни одной ноты
+
+ГЛАВНОЕ ОКНО
+
+НОВОЕ: What's New, рядом с About. История всех версий, вплоть до первой, читается из самой программы, а не из старых писем. Об этом попросил клиент: он вспоминает какую-то возможность и хочет проверить, что она делает.
+
+STYLE MASTER PRO - ПОДКЛЮЧЕНИЕ
+
+НОВОЕ: SMART TEST находит ваш MIDI-вход без того, чтобы вы сыграли хоть одну ноту. Он запускает аранжировщик на Event, слушает, что приходит обратно, задаёт этот порт в MIDI Monitor и подключает его. Четыре секунды, и от вас не требуется ничего.
+Это первая кнопка на вкладке MIDI TEST, которая теперь первая в окне - туда идут, когда ничего не работает. Если ни один порт ничего не принимает, панель говорит, что пробовать, по порядку, а не просто сообщает о неудаче.
+
+УЛУЧШЕНО: Порядок вкладок изменён - MIDI TEST, MIDI MONITOR, KETRON USB, LOG. Люди застревают именно на входе; выход подключается сам почти всегда.
+
+УЛУЧШЕНО: Style Master Pro открывается поверх Event Studio Pro, а не там, где решит Windows. На широком мониторе он раньше появлялся далеко справа.
+
+STYLE MASTER PRO - РЕДАКТИРОВАНИЕ
+
+ИСПРАВЛЕНИЕ: Delete удаляет то, что выделено. В режиме GLOBAL он удалял каждую ноту ритма, что бы ни было выделено - клиент потерял целый стиль, пытаясь удалить одну ноту. Когда ничего не выделено, теперь он не делает ничего и сообщает об этом. Удалить целую дорожку по-прежнему можно, из меню дорожки, где это запрашивается намеренно и подтверждается.
+
+НОВОЕ: DELETE на дорожке убирает её ноты из всего ритма или из одной секции, с подсчётом и подтверждением.
+
+НОВОЕ: SWAP WITH полностью меняет местами две секции - ноты, длину, инструменты и микс. Korg нумерует вступления одинаково ещё с i3: Intro 3 обычно однотактный отсчёт, тогда как у Ketron принято наоборот. Теперь их можно расставить так, как подходит стилю, по паре за раз.
+
+НОВОЕ: Правый клик предлагает удалить выделенные ноты, с их числом в пункте меню.
+
+ИСПРАВЛЕНИЕ: VEL -10 и VEL +10 перерисовывают полосы velocity. Они меняли числа, а полосы оставляли, из-за чего кнопки выглядели мёртвыми.
+
+УЛУЧШЕНО: Темп вынесен на панель, рядом с QUANTIZE. Щелчок по нему открывает PARAMETER, где его можно изменить.
+
+STYLE MASTER PRO - МАРКЕРЫ И СЕКЦИИ
+
+ИСПРАВЛЕНИЕ: SECTION MARKERS следует за ритмом, пока открыт. Нарисованная в секцию нота оставляла строку с надписью «пусто», пока окно не закроют и не откроют снова.
+
+ИСПРАВЛЕНИЕ: Маркер можно назвать только так, как знает Event. И ADD, и RENAME теперь предлагают 54 названия секций вместо текстового поля, а уже занятые названия исключаются. Переименование во что-то выдуманное принималось, а затем тихо игнорировалось.
+
+УЛУЧШЕНО: PARAMETERS называет первую группу VARIATIONS вместо ARRANGE, и каждая из пяти групп обрамлена, чтобы столбцы читались раздельно.
+
+STYLE MASTER PRO - КОНВЕРТАЦИЯ KORG
+
+ИСПРАВЛЕНИЕ: Сконвертированный стиль сохраняет свой темп. Конвертер его вообще не записывал, поэтому программа откатывалась к значению по умолчанию - стиль, который Korg играет на 132, выходил на 91.
+
+STYLE MASTER PRO - ПРОЧЕЕ
+
+УЛУЧШЕНО: MIDI-журнал хранит 2000 сообщений вместо 200. Двести покрывают около секунды плотного стиля, чего не хватает, чтобы увидеть, что привело к зависанию.
+
+УЛУЧШЕНО: CALIBRATE VOICES и DRUM CALIBRATE убраны из меню FILE. Оба делали то же, что уже делает кнопка Calibrate внутри VOICE SELECT и DRUMSET SELECT, а она расположена удачнее: вы уже смотрите на тот звук, который хотите поправить.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.3.0</span>
@@ -4262,7 +4537,7 @@ Updated Quick Start guide with new Edge UI flow</div>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Свяжитесь с нами</strong> по электронной почте <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
 <li>Мы ответим с деталями оплаты (PayPal) и <strong>формой для выставления счёта</strong>, которую нужно заполнить</li>
-<li>Переведите <strong>80 EUR</strong> через PayPal и отправьте нам заполненные данные для счёта</li>
+<li>Переведите <strong>100 EUR</strong> через PayPal и отправьте нам заполненные данные для счёта</li>
 <li>Мы отправим вам <strong>ссылку для скачивания</strong> и инструкции по установке</li>
 <li>После установки отправьте нам свой <strong>Hardware ID</strong> (отображается в программе)</li>
 <li>Мы отправим вам файл <code>licence.key</code> и ваш счёт</li>
@@ -4325,6 +4600,61 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.4.0</span>
+    <span class="version-date">2026-09-12</span>
+  </div>
+  <div class="version-body">v4.4.0 - Hitta din MIDI-ingang utan att spela en enda ton
+
+HUVUDFONSTER
+
+NYTT: What's New, bredvid About. Versionshistoriken anda tillbaka till den forsta, last ur programmet sjalvt i stallet for ur gamla mejl. En kund bad om det: han minns en funktion och vill kontrollera vad den gor.
+
+STYLE MASTER PRO - ATT FA KONTAKT
+
+NYTT: SMART TEST hittar din MIDI-ingang utan att du spelar en enda ton. Den startar arrangoren pa Event, lyssnar pa vad som kommer tillbaka, staller in den porten i MIDI Monitor och ansluter den. Fyra sekunder, och inget krav pa dig.
+Det ar den forsta knappen pa fliken MIDI TEST, som nu ar forst i fonstret - dit gar man nar ingenting fungerar. Om ingen port tar emot nagot sager panelen vad man ska prova, i tur och ordning, i stallet for att bara rapportera misslyckande.
+
+FORBATTRAT: Flikordningen har andrats - MIDI TEST, MIDI MONITOR, KETRON USB, LOG. Det ar pa ingangen folk fastnar; utgangen ansluter sig sjalv nastan varje gang.
+
+FORBATTRAT: Style Master Pro oppnas over Event Studio Pro i stallet for dar Windows bestammer. Pa en bred skarm dok det tidigare upp langt till hoger.
+
+STYLE MASTER PRO - REDIGERING
+
+FIX: Delete tar bort det som ar markerat. I GLOBAL-lage tog den bort varje ton i rytmen, oavsett vad som var markerat - en kund forlorade en hel stil nar han forsokte ta bort en ton. Utan markering gor den nu ingenting och sager det. Att ta bort ett helt spar gar fortfarande, fran sparmenyn, dar man begar det med avsikt och bekraftar.
+
+NYTT: DELETE pa ett spar tar bort det sparets toner ur hela rytmen eller ur en sektion, med antal och bekraftelse.
+
+NYTT: SWAP WITH byter tva sektioner fullstandigt - toner, langd, instrument och mix. Korg har numrerat intron pa samma satt anda sedan i3: Intro 3 ar oftast en inraknning pa en takt, medan Ketrons ordning ar den omvanda. Nu kan de laggas i den ordning som passar stilen, ett par i taget.
+
+NYTT: Hogerklick erbjuder att ta bort de markerade tonerna, med antalet i menyraden.
+
+FIX: VEL -10 och VEL +10 ritar om velocity-staplarna. De andrade siffrorna och lamnade staplarna, sa knapparna verkade doda.
+
+FORBATTRAT: Tempot star i verktygsfaltet, bredvid QUANTIZE. Ett klick pa det oppnar PARAMETER, dar det kan andras.
+
+STYLE MASTER PRO - MARKORER OCH SEKTIONER
+
+FIX: SECTION MARKERS foljer rytmen medan den ar oppen. Att rita in en ton i en sektion lamnade raden med texten tom tills fonstret stangdes och oppnades igen.
+
+FIX: En markor kan bara heta det Event kanner till. Bade ADD och RENAME erbjuder nu de 54 sektionsnamnen i stallet for ett textfalt, och namn som redan anvands utelamnas. Att doba om till nagot pahittat accepterades och ignorerades sedan tyst.
+
+FORBATTRAT: PARAMETERS kallar den forsta gruppen VARIATIONS i stallet for ARRANGE, och var och en av de fem grupperna ar inramad sa att kolumnerna lases isar.
+
+STYLE MASTER PRO - KORG-KONVERTERING
+
+FIX: En konverterad stil behaller sitt tempo. Konverteraren skrev aldrig nagot, sa programmet foll tillbaka pa ett standardvarde - en stil som Korg spelar i 132 kom ut i 91.
+
+STYLE MASTER PRO - OVRIGT
+
+FORBATTRAT: MIDI-loggen behaller 2000 meddelanden i stallet for 200. Tvahundra tacker ungefar en sekund av en tat stil, vilket inte racker for att se vad som ledde fram till en hangning.
+
+FORBATTRAT: CALIBRATE VOICES och DRUM CALIBRATE ar borta ur FILE-menyn. Bada gjorde det som Calibrate-knappen inne i VOICE SELECT och DRUMSET SELECT redan gor, och den sitter battre: du tittar redan pa det ljud du vill ratta till.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.3.0</span>
@@ -5079,7 +5409,7 @@ Updated Quick Start guide with new Edge UI flow</div>
 <ol style="font-size: 13px; line-height: 1.7;">
 <li><strong>Kontakta oss</strong> via e-post på <a href="mailto:baltiksound@hotmail.com" class="email-link">baltiksound@hotmail.com</a></li>
 <li>Vi svarar med betalningsdetaljer (PayPal) och ett <strong>fakturaformulär</strong> att fylla i</li>
-<li>Överför <strong>80 EUR</strong> via PayPal och skicka oss dina ifyllda fakturauppgifter</li>
+<li>Överför <strong>100 EUR</strong> via PayPal och skicka oss dina ifyllda fakturauppgifter</li>
 <li>Vi skickar dig <strong>nedladdningslänken</strong> och installationsinstruktionerna</li>
 <li>Efter installationen, skicka oss ditt <strong>Hardware ID</strong> (visas i programmet)</li>
 <li>Vi skickar dig din <code>licence.key</code>-fil och din faktura</li>
