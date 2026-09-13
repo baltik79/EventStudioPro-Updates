@@ -252,6 +252,54 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.4.2</span>
+    <span class="version-date">2026-09-13</span>
+  </div>
+  <div class="version-body">v4.4.2 - Fixes across editing, recording and calibration
+
+STYLE MASTER PRO - FIXED
+
+SOLO survives scrolling. Soloing a track and then dragging the position bar brought every other track back on screen from some bar onward. Pressing S twice put it right, which is what gave the cause away: notes hidden by scrolling were being un-hidden without checking whether solo had hidden them in the meantime. This had been there about half a year.
+
+Chords are read from the tracks that play chords. A passing note in a single-note line could rename the whole bar - eight bars sitting on C read as C, C5, C7, C, C7, C. Tracks that sound three or more notes together decide; tracks playing one note at a time are lines, not harmony.
+
+Every section names its chord. The strip reported only changes, so a rhythm sitting on the same chord from the first bar to the intro showed one name at the very start and nothing for the fifty bars after it. Each section now names its own, and that name sits on the marker even when the instruments come in a beat late.
+
+The chord strip follows a transpose. Raising a section or a track left it still calling the old chord.
+
+A track with no voice is no longer given a piano. The voice sync fell back to Grand Piano and pushed it over whatever was correct, on every section change.
+
+The metronome no longer records itself on a drum take. Starting a drum take and touching nothing left the click written into the track: the notes it uses are real wood block hits on a drum channel, so the by-channel rule deliberately left them alone. They are told apart by timing now.
+
+The pre-roll keeps a note per channel. A key struck a moment before capture begins is kept and turned into a real note. In a multi-track take two tracks can hold the same pitch, and the second note-off was cancelling the first one's note.
+
+Arming a track sends that section's instrument, not the style-wide one.
+
+STYLE MASTER PRO - CHANGED
+
+The bottom line describes the rhythm and stays put. It shared a label with every passing message, so selecting a section or copying a bar wiped the style's name off the screen. The description now holds the left of the row and only changes when the rhythm does; what changes while you work sits on the right. It also carries the tempo and, for a converted style, which keyboard it came from.
+
+RENAME says so when a rhythm is full. All 54 section names in use means there is no free name to rename to, and the list held only the marker you already had. It now says that, and points at SWAP WITH.
+
+SECTION MARKERS: every button explains itself, and the columns are centred under their headings.
+
+PARAMETERS: the first group is called VARIATIONS, and each of the five groups is framed.
+
+Q quantizes, the same key Cubase uses.
+
+The recording warning appears at REC rather than when the program opens. It asks whether DRUM SET and BASSIST are switched on, which matters only when recording - and it was the first thing anyone saw, including the many sessions that only convert a style.
+
+CALIBRATION
+
+A corrected EVENT FACTORY preset ships with the program. The old one had 36 names wrong, nine of them melodic voices filed as drum kits, and two whose family entry had gone missing - so asking for the guitar "Folk" answered with the bass.
+
+Your own calibration is not touched by this update, and neither are presets you saved yourself. One thing to know: switching the target device to SD and back loads the default preset for that device, which is now the corrected EVENT FACTORY. If you have calibrated voices of your own, save your preset under your own name first - loading any preset replaces the calibration in use.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.4.1</span>
     <span class="version-date">2026-09-12</span>
   </div>
@@ -1126,6 +1174,54 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.4.2</span>
+    <span class="version-date">2026-09-13</span>
+  </div>
+  <div class="version-body">v4.4.2 - Popravke u editovanju, snimanju i kalibraciji
+
+STYLE MASTER PRO - POPRAVLJENO
+
+SOLO prezivljava pomjeranje. Kad se traka izoluje pa povuce traka pozicije, sve ostale trake su se vracale na ekran od nekog takta nadalje. Dvostruki pritisak na S bi to ispravio, i to je odalo uzrok: note skrivene pomjeranjem su se otkrivale bez provjere da li ih je u medjuvremenu sakrio solo. Ovo je stajalo oko pola godine.
+
+Akordi se citaju iz traka koje sviraju akorde. Prolazna nota u jednoglasnoj liniji je mogla preimenovati cijeli takt - osam taktova na C se citalo kao C, C5, C7, C, C7, C. Odlucuju trake koje sviraju tri ili vise nota zajedno; trake koje sviraju notu po notu su linije, ne harmonija.
+
+Svaka sekcija imenuje svoj akord. Traka je prijavljivala samo promjene, pa je ritam koji stoji na istom akordu od prvog takta do introa pokazivao jedno ime na samom pocetku i nista za pedeset taktova poslije. Svaka sekcija sada imenuje svoj, i to ime stoji na markeru cak i kad instrumenti udju takt kasnije.
+
+Traka akorda prati transpoziciju. Podizanje sekcije ili trake ju je ostavljalo da i dalje zove stari akord.
+
+Traka bez zvuka vise ne dobija klavir. Sinhronizacija zvuka je padala na Grand Piano i gurala ga preko onoga sto je bilo tacno, na svakoj promjeni sekcije.
+
+Metronom vise ne snima sam sebe pri snimanju bubnjeva. Pokretanje snimka bubnjeva bez diranja icega ostavljalo je klik upisan u traku: note koje koristi su pravi udarci wood blocka na bubanj kanalu, pa ih je pravilo po kanalu namjerno ostavljalo. Sada se razlikuju po vremenu.
+
+Predtakt cuva notu po kanalu. Dirka pritisnuta trenutak prije nego snimanje pocne se cuva i pretvara u pravu notu. U snimku sa vise traka dvije trake mogu drzati istu visinu, a drugi note-off je ponistavao notu prve.
+
+Naoruzavanje trake salje instrument te sekcije, ne onaj koji vazi za cijeli stil.
+
+STYLE MASTER PRO - IZMIJENJENO
+
+Donji red opisuje ritam i ostaje na mjestu. Dijelio je natpis sa svakom prolaznom porukom, pa je biranje sekcije ili kopiranje takta brisalo naziv stila sa ekrana. Opis sada drzi lijevu stranu reda i mijenja se samo kad se ritam promijeni; ono sto se mijenja dok radite stoji desno. Nosi i tempo, a za konvertovan stil i sa koje klavijature je dosao.
+
+RENAME kaze kada je ritam pun. Svih 54 naziva sekcija u upotrebi znaci da nema slobodnog naziva za preimenovanje, a lista je drzala samo marker koji vec imate. Sada to kaze, i upucuje na SWAP WITH.
+
+SECTION MARKERS: svako dugme se objasnjava, a kolone su centrirane ispod svojih naslova.
+
+PARAMETERS: prva grupa se zove VARIATIONS, a svaka od pet grupa je uokvirena.
+
+Q kvantizuje, isti taster koji koristi Cubase.
+
+Upozorenje o snimanju se pojavljuje na REC, a ne kad se program otvori. Pita da li su DRUM SET i BASSIST ukljuceni, sto je vazno samo pri snimanju - a bilo je prvo sto bi svako vidio, ukljucujuci mnoge sesije u kojima se samo konvertuje stil.
+
+KALIBRACIJA
+
+Uz program dolazi ispravljen EVENT FACTORY preset. Stari je imao 36 pogresnih naziva, devet od njih melodijskih zvukova zavedenih kao drum kitovi, i dva kojima je nedostajao unos porodice - pa je trazenje gitare "Folk" davalo bas.
+
+Vasa vlastita kalibracija nije dirnuta ovim apdejtom, a ni preseti koje ste sami sacuvali. Jedna stvar koju treba znati: prebacivanje ciljnog uredjaja na SD i nazad ucitava podrazumijevani preset za taj uredjaj, a to je sada ispravljeni EVENT FACTORY. Ako imate vlastite kalibrisane zvukove, prvo sacuvajte svoj preset pod svojim imenom - ucitavanje bilo kojeg preseta zamjenjuje kalibraciju koja je u upotrebi.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.4.1</span>
@@ -2014,6 +2110,54 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.4.2</span>
+    <span class="version-date">2026-09-13</span>
+  </div>
+  <div class="version-body">v4.4.2 - Correzioni in modifica, registrazione e calibrazione
+
+STYLE MASTER PRO - CORRETTO
+
+SOLO sopravvive allo scorrimento. Mettere in solo una traccia e poi trascinare la barra di posizione riportava tutte le altre tracce sullo schermo da una certa battuta in poi. Premere S due volte sistemava tutto, ed e questo che ha rivelato la causa: le note nascoste dallo scorrimento venivano riscoperte senza controllare se nel frattempo le avesse nascoste il solo. C'era da circa sei mesi.
+
+Gli accordi si leggono dalle tracce che suonano accordi. Una nota di passaggio in una linea monofonica poteva rinominare l'intera battuta - otto battute ferme su DO lette come DO, DO5, DO7, DO, DO7, DO. Decidono le tracce che suonano tre o piu note insieme; quelle che suonano una nota alla volta sono linee, non armonia.
+
+Ogni sezione nomina il suo accordo. La striscia segnalava solo i cambi, quindi un ritmo fermo sullo stesso accordo dalla prima battuta all'intro mostrava un nome all'inizio e nulla per le cinquanta battute successive. Ora ogni sezione nomina il proprio, e quel nome sta sul marker anche quando gli strumenti entrano con un movimento di ritardo.
+
+La striscia degli accordi segue una trasposizione. Alzare una sezione o una traccia la lasciava a chiamare ancora il vecchio accordo.
+
+Una traccia senza suono non riceve piu un pianoforte. La sincronizzazione ripiegava sul Grand Piano e lo imponeva su quello che era corretto, a ogni cambio di sezione.
+
+Il metronomo non si registra piu su una ripresa di batteria. Avviare una ripresa di batteria senza toccare nulla lasciava il click scritto nella traccia: le note che usa sono veri colpi di wood block su un canale di batteria, quindi la regola per canale li lasciava stare apposta. Ora si distinguono dal tempo.
+
+Il pre-conteggio conserva una nota per canale. Un tasto premuto un attimo prima dell'inizio della cattura viene mantenuto e trasformato in una nota vera. In una ripresa multitraccia due tracce possono tenere la stessa altezza, e il secondo note-off annullava la nota della prima.
+
+Armare una traccia invia lo strumento di quella sezione, non quello valido per tutto lo stile.
+
+STYLE MASTER PRO - MODIFICATO
+
+La riga in basso descrive il ritmo e resta ferma. Condivideva l'etichetta con ogni messaggio di passaggio, quindi selezionare una sezione o copiare una battuta cancellava il nome dello stile dallo schermo. La descrizione ora occupa la sinistra della riga e cambia solo quando cambia il ritmo; cio che cambia mentre lavorate sta a destra. Porta anche il tempo e, per uno stile convertito, da quale tastiera proviene.
+
+RENAME lo dice quando un ritmo e pieno. Tutti e 54 i nomi di sezione in uso significa che non c'e un nome libero, e la lista conteneva solo il marker che avevate gia. Ora lo dice, e indica SWAP WITH.
+
+SECTION MARKERS: ogni pulsante si spiega da solo, e le colonne sono centrate sotto le loro intestazioni.
+
+PARAMETERS: il primo gruppo si chiama VARIATIONS, e ciascuno dei cinque gruppi e incorniciato.
+
+Q quantizza, lo stesso tasto di Cubase.
+
+L'avviso di registrazione compare su REC invece che all'apertura del programma. Chiede se DRUM SET e BASSIST sono attivi, cosa che conta solo registrando - ed era la prima cosa che chiunque vedeva, comprese le molte sessioni in cui si converte soltanto uno stile.
+
+CALIBRAZIONE
+
+Il programma include un preset EVENT FACTORY corretto. Quello vecchio aveva 36 nomi sbagliati, nove dei quali suoni melodici catalogati come kit di batteria, e due a cui mancava la voce famiglia - cosi chiedere la chitarra "Folk" rispondeva con il basso.
+
+La vostra calibrazione non viene toccata da questo aggiornamento, e nemmeno i preset che avete salvato voi. Una cosa da sapere: cambiare il dispositivo di destinazione su SD e tornare indietro carica il preset predefinito per quel dispositivo, che ora e l'EVENT FACTORY corretto. Se avete suoni calibrati vostri, salvate prima il vostro preset con un nome vostro: caricare un preset sostituisce la calibrazione in uso.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.4.1</span>
     <span class="version-date">2026-09-12</span>
   </div>
@@ -2898,6 +3042,54 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.4.2</span>
+    <span class="version-date">2026-09-13</span>
+  </div>
+  <div class="version-body">v4.4.2 - Korrekturen bei Bearbeitung, Aufnahme und Kalibrierung
+
+STYLE MASTER PRO - BEHOBEN
+
+SOLO ueberlebt das Scrollen. Eine Spur auf Solo zu setzen und dann die Positionsleiste zu ziehen holte ab irgendeinem Takt alle anderen Spuren zurueck auf den Schirm. Zweimal S druecken brachte es in Ordnung, und genau das verriet die Ursache: vom Scrollen versteckte Noten wurden wieder eingeblendet, ohne zu pruefen, ob inzwischen das Solo sie versteckt hatte. Das bestand seit etwa einem halben Jahr.
+
+Akkorde werden aus den Spuren gelesen, die Akkorde spielen. Ein Durchgangston in einer einstimmigen Linie konnte den ganzen Takt umbenennen - acht Takte auf C gelesen als C, C5, C7, C, C7, C. Es entscheiden Spuren, die drei oder mehr Toene zugleich klingen lassen; Spuren mit einem Ton nach dem anderen sind Linien, keine Harmonie.
+
+Jede Sektion benennt ihren Akkord. Der Streifen meldete nur Wechsel, also zeigte ein Rhythmus, der vom ersten Takt bis zum Intro auf demselben Akkord steht, einen Namen ganz am Anfang und nichts fuer die fuenfzig Takte danach. Jede Sektion benennt jetzt ihren eigenen, und dieser Name steht auf dem Marker, auch wenn die Instrumente einen Schlag spaeter einsetzen.
+
+Der Akkordstreifen folgt einer Transposition. Eine Sektion oder Spur anzuheben liess ihn weiterhin den alten Akkord nennen.
+
+Eine Spur ohne Klang bekommt kein Klavier mehr. Der Klangabgleich fiel auf Grand Piano zurueck und schob ihn ueber das Richtige, bei jedem Sektionswechsel.
+
+Das Metronom nimmt sich bei einer Schlagzeugaufnahme nicht mehr selbst auf. Eine Schlagzeugaufnahme zu starten und nichts anzuruehren liess den Klick in der Spur stehen: die Toene, die es benutzt, sind echte Wood-Block-Schlaege auf einem Schlagzeugkanal, also liess die Kanalregel sie absichtlich in Ruhe. Jetzt werden sie am Timing unterschieden.
+
+Der Vorzaehler behaelt eine Note pro Kanal. Eine Taste, die kurz vor Aufnahmebeginn angeschlagen wird, bleibt erhalten und wird zu einer echten Note. In einer Mehrspuraufnahme koennen zwei Spuren dieselbe Tonhoehe halten, und das zweite Note-off loeschte die Note der ersten.
+
+Eine Spur scharfzuschalten sendet das Instrument dieser Sektion, nicht das des ganzen Styles.
+
+STYLE MASTER PRO - GEAENDERT
+
+Die untere Zeile beschreibt den Rhythmus und bleibt stehen. Sie teilte sich die Beschriftung mit jeder fluechtigen Meldung, sodass das Auswaehlen einer Sektion oder das Kopieren eines Takts den Namen des Styles vom Schirm wischte. Die Beschreibung haelt jetzt die linke Seite der Zeile und aendert sich nur, wenn der Rhythmus wechselt; was sich beim Arbeiten aendert, steht rechts. Sie traegt auch das Tempo und, bei einem konvertierten Style, von welchem Keyboard er stammt.
+
+RENAME sagt Bescheid, wenn ein Rhythmus voll ist. Alle 54 Sektionsnamen in Gebrauch heisst, es gibt keinen freien Namen, und die Liste enthielt nur den Marker, den man schon hatte. Jetzt sagt sie das und verweist auf SWAP WITH.
+
+SECTION MARKERS: jede Schaltflaeche erklaert sich selbst, und die Spalten stehen zentriert unter ihren Ueberschriften.
+
+PARAMETERS: die erste Gruppe heisst VARIATIONS, und jede der fuenf Gruppen ist gerahmt.
+
+Q quantisiert, dieselbe Taste wie in Cubase.
+
+Der Aufnahmehinweis erscheint bei REC statt beim Programmstart. Er fragt, ob DRUM SET und BASSIST eingeschaltet sind, was nur beim Aufnehmen zaehlt - und es war das Erste, was jeder sah, auch in den vielen Sitzungen, in denen nur ein Style konvertiert wird.
+
+KALIBRIERUNG
+
+Ein korrigiertes EVENT-FACTORY-Preset liegt dem Programm bei. Das alte hatte 36 falsche Namen, davon neun melodische Klaenge, die als Drumkits gefuehrt wurden, und zwei, denen der Familieneintrag fehlte - sodass die Frage nach der Gitarre "Folk" den Bass lieferte.
+
+Ihre eigene Kalibrierung wird von diesem Update nicht angeruehrt, und Ihre selbst gespeicherten Presets auch nicht. Eines sollten Sie wissen: das Zielgeraet auf SD und zurueck zu stellen laedt das Standard-Preset fuer dieses Geraet, und das ist jetzt das korrigierte EVENT FACTORY. Wenn Sie eigene kalibrierte Klaenge haben, speichern Sie Ihr Preset zuerst unter eigenem Namen - jedes geladene Preset ersetzt die gerade benutzte Kalibrierung.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.4.1</span>
@@ -3786,6 +3978,54 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.4.2</span>
+    <span class="version-date">2026-09-13</span>
+  </div>
+  <div class="version-body">v4.4.2 - Исправления в редактировании, записи и калибровке
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+SOLO переживает прокрутку. Включить соло на дорожке, а затем потянуть полосу позиции возвращало все остальные дорожки на экран начиная с некоторого такта. Двойное нажатие S всё исправляло, и это выдало причину: ноты, скрытые прокруткой, открывались обратно без проверки, не скрыло ли их тем временем соло. Это держалось около полугода.
+
+Аккорды читаются с дорожек, которые играют аккорды. Проходящая нота в одноголосной линии могла переименовать целый такт - восемь тактов на до читались как до, до5, до7, до, до7, до. Решают дорожки, звучащие тремя и более нотами сразу; дорожки по одной ноте - это линии, а не гармония.
+
+Каждая секция называет свой аккорд. Полоса сообщала только о сменах, поэтому ритм, стоящий на одном аккорде от первого такта до вступления, показывал одно имя в самом начале и ничего следующие пятьдесят тактов. Теперь каждая секция называет свой, и это имя стоит на маркере, даже когда инструменты вступают на долю позже.
+
+Полоса аккордов следует за транспонированием. Поднять секцию или дорожку оставляло её называть прежний аккорд.
+
+Дорожка без звука больше не получает фортепиано. Синхронизация звука откатывалась к Grand Piano и продавливала его поверх правильного, при каждой смене секции.
+
+Метроном больше не записывает сам себя при записи барабанов. Запустить запись барабанов и ничего не трогать оставляло клик записанным в дорожку: ноты, которые он использует, - это настоящие удары вуд-блока на барабанном канале, поэтому правило по каналам намеренно их не трогало. Теперь они различаются по времени.
+
+Отсчёт сохраняет ноту по каналу. Клавиша, нажатая за мгновение до начала записи, сохраняется и превращается в настоящую ноту. В многодорожечной записи две дорожки могут держать одну высоту, и второй note-off отменял ноту первой.
+
+Подготовка дорожки к записи отправляет инструмент этой секции, а не общий для всего стиля.
+
+STYLE MASTER PRO - ИЗМЕНЕНО
+
+Нижняя строка описывает ритм и остаётся на месте. Она делила надпись с каждым проходящим сообщением, поэтому выбор секции или копирование такта стирали название стиля с экрана. Описание теперь занимает левую часть строки и меняется только при смене ритма; то, что меняется по ходу работы, стоит справа. Оно несёт также темп и, для сконвертированного стиля, с какой клавиатуры он пришёл.
+
+RENAME сообщает, когда ритм заполнен. Все 54 названия секций заняты - значит, свободного названия нет, а список содержал лишь тот маркер, который у вас уже был. Теперь он об этом говорит и указывает на SWAP WITH.
+
+SECTION MARKERS: каждая кнопка объясняет себя, а столбцы выровнены по центру под своими заголовками.
+
+PARAMETERS: первая группа называется VARIATIONS, и каждая из пяти групп обрамлена.
+
+Q квантует - та же клавиша, что и в Cubase.
+
+Предупреждение о записи появляется при REC, а не при открытии программы. Оно спрашивает, включены ли DRUM SET и BASSIST, что важно только при записи, - а было первым, что видел каждый, включая множество сеансов, где стиль только конвертируют.
+
+КАЛИБРОВКА
+
+С программой поставляется исправленный пресет EVENT FACTORY. В старом было 36 неверных названий, девять из них - мелодические звуки, записанные как барабанные наборы, и два, у которых пропала запись о семействе, - так что запрос гитары "Folk" отвечал басом.
+
+Ваша собственная калибровка этим обновлением не затрагивается, как и пресеты, сохранённые вами. Одно стоит знать: переключение целевого устройства на SD и обратно загружает пресет по умолчанию для этого устройства, а это теперь исправленный EVENT FACTORY. Если у вас есть свои откалиброванные звуки, сначала сохраните свой пресет под своим именем - загрузка любого пресета заменяет используемую калибровку.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.4.1</span>
     <span class="version-date">2026-09-12</span>
   </div>
@@ -4670,6 +4910,54 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.4.2</span>
+    <span class="version-date">2026-09-13</span>
+  </div>
+  <div class="version-body">v4.4.2 - Rattelser i redigering, inspelning och kalibrering
+
+STYLE MASTER PRO - FIXAT
+
+SOLO overlever rullning. Att solo-satta ett spar och sedan dra positionslisten tog tillbaka alla andra spar till skarmen fran nagon takt och framat. Att trycka S tva ganger ratade till det, och det var det som avslojade orsaken: toner som dolts av rullningen togs fram igen utan att kontrollera om solot hunnit dolja dem. Detta hade funnits i ungefar ett halvar.
+
+Ackord lases fran de spar som spelar ackord. En genomgangston i en enstammig linje kunde doba om hela takten - atta takter pa C lasta som C, C5, C7, C, C7, C. Det ar spar som later tre eller fler toner samtidigt som avgor; spar med en ton i taget ar linjer, inte harmoni.
+
+Varje sektion namnger sitt ackord. Remsan rapporterade bara byten, sa en rytm som star pa samma ackord fran forsta takten till intot visade ett namn allra forst och ingenting de femtio takterna darefter. Nu namnger varje sektion sitt eget, och det namnet star pa markoren aven nar instrumenten kommer in ett slag senare.
+
+Ackordremsan foljer en transponering. Att hoja en sektion eller ett spar lamnade den att fortfarande kalla det gamla ackordet.
+
+Ett spar utan ljud far inte langre ett piano. Ljudsynkroniseringen foll tillbaka pa Grand Piano och tryckte det over det som var ratt, vid varje sektionsbyte.
+
+Metronomen spelar inte langre in sig sjalv vid en trumtagning. Att starta en trumtagning och inte rora nagot lamnade klicket inskrivet i sparet: tonerna den anvander ar riktiga wood block-slag pa en trumkanal, sa kanalregeln lat dem vara med flit. Nu skiljs de at pa timingen.
+
+Inrakningen behaller en ton per kanal. En tangent som slas an strax innan inspelningen borjar behalls och blir en riktig ton. I en flerspårstagning kan tva spar halla samma tonhojd, och det andra note-off tog bort den forstas ton.
+
+Att armera ett spar skickar den sektionens instrument, inte det som galler hela stilen.
+
+STYLE MASTER PRO - ANDRAT
+
+Nedersta raden beskriver rytmen och star kvar. Den delade etikett med varje forbipasserande meddelande, sa att valja en sektion eller kopiera en takt torkade bort stilens namn fran skarmen. Beskrivningen haller nu radens vanstra del och andras bara nar rytmen gor det; det som andras medan du arbetar star till hoger. Den bar ocksa tempot och, for en konverterad stil, vilken klaviatur den kom fran.
+
+RENAME sager ifran nar en rytm ar full. Alla 54 sektionsnamn i bruk betyder att det inte finns nagot ledigt namn, och listan innehöll bara den markor du redan hade. Nu sager den det, och pekar pa SWAP WITH.
+
+SECTION MARKERS: varje knapp forklarar sig sjalv, och kolumnerna ar centrerade under sina rubriker.
+
+PARAMETERS: den forsta gruppen heter VARIATIONS, och var och en av de fem grupperna ar inramad.
+
+Q kvantiserar, samma tangent som i Cubase.
+
+Inspelningsvarningen visas vid REC i stallet for nar programmet oppnas. Den fragar om DRUM SET och BASSIST ar pa, vilket bara spelar roll vid inspelning - och det var det forsta alla sag, inklusive de manga sessioner dar man bara konverterar en stil.
+
+KALIBRERING
+
+En rattad EVENT FACTORY-forinstallning foljer med programmet. Den gamla hade 36 fel namn, nio av dem melodiska ljud som forts upp som trumkit, och tva som saknade familjeuppgift - sa att fraga efter gitarren "Folk" svarade med basen.
+
+Din egen kalibrering ror denna uppdatering inte, och inte heller forinstallningar du sparat sjalv. En sak att veta: att byta malenhet till SD och tillbaka laddar standardforinstallningen for den enheten, som nu ar den rattade EVENT FACTORY. Har du egna kalibrerade ljud, spara din forinstallning under eget namn forst - att ladda nagon forinstallning ersatter den kalibrering som anvands.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.4.1</span>
