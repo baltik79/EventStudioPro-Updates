@@ -252,6 +252,106 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.8.0 - Working through marked bars
+
+
+STYLE MASTER PRO - FIXED
+
+Changing the length of an EMPTY variation no longer shortens the ones
+with music in them. Setting END1_SEV, which had no notes, from 4 bars
+to 1 shortened END1_MAJ and END1_MIN instead - deleting bars 2 to 4 of
+each - while END1_SEV stayed at 4. The change went everywhere except
+the section being edited. Reported by a user, who called it dangerous,
+and he was right.
+
+The rule now matches what the instrument's own styles do, measured
+across all of them: where MAJ, MIN and SEV hold notes they share a
+length, and an empty one is a placeholder that can sit at a length of
+its own.
+
+The bar count of an empty variation stands on its own. A variation the
+instrument gives a default length - four bars for an arrangement, one
+for a fill - reported that default even where the family had been set
+to something else, so ARR_B set to six showed four. A variation now
+speaks for itself only where someone has actually changed it.
+
+The bar number in PARAMETERS follows the variation you are on. Scroll
+it and it went back to what it was on the next redraw, so the number
+sat where it started and only one bar could ever be removed.
+
+A section made from a song is as long as the bars that were marked.
+One bar sent to FILA_MAJ left the section at the four bars it had been
+sitting at, so styles built from songs came out with three empty bars
+between every fill.
+
+The red DELETE button works on marked bars. With a stretch of bars
+marked it looked for marked notes instead, found none, and answered
+"Nothing selected - click a note..." - which is confusing when
+something plainly is selected. It now removes the notes inside those
+bars. The bars themselves stay; DELETE SELECTED BARS on the
+right-click menu is still the one that takes bars out.
+
+With bars marked, a right-click on a note gives the note's menu again.
+Every right-click went to the marker menu, so "Select all &lt;note&gt; in
+&lt;track&gt;" became unreachable exactly when you are working through
+marked bars.
+
+The mixer's scope picker says what it chooses: "Apply to sections:".
+A user read "ALL SECTIONS (Global)" as "apply this to all parts", set
+a pan, and expected every track to take it. Reasonable - on a Ketron a
+part IS a track, and that was the only ALL in the window.
+
+
+STYLE MASTER PRO - NEW
+
+TRANSPOSE SELECTION, on the right-click menu when bars are marked. Up
+or Down, to an octave either way, the same shape as the transpose menu
+on the track headers. It moves the notes inside the marked bars, so a
+part lifted from a song that sits a step or two off can be moved
+without selecting its notes by hand first.
+
+Drums stay where they are - a drum note's pitch IS the instrument, so
+moving one turns a kick into a tom rather than raising it - and hidden
+tracks are left alone.
+
+A selection can be dragged past the edge of the screen, in both
+directions. Hold the pointer against either edge and the view keeps
+moving, the selection growing with it. It stops when you come back
+inside, or when the timeline ends.
+
+Right-click any value in the MIX window to put it on every track at
+once. Wanting the same reverb on everything is ordinary; doing it nine
+times is not.
+
+Empty sections are named more faintly than the ones holding music. All
+54 sit on the timeline from the start - the format wants them there -
+so a section with music and one without looked exactly alike. A glance
+along the ribbon now shows where your work stops.
+
+
+STYLE MASTER PRO - CHANGED
+
+Scrolling the wheel over an instrument name no longer changes the
+instrument. That name sits in the track strip, exactly where the
+pointer passes on its way to scroll the window, so a style could have
+its voices changed by someone who never meant to touch them and never
+saw it happen - the strip shows one name, so the only sign was the
+sound. Double-click still opens the picker. The volume display keeps
+its wheel.
+
+The row marked by right-clicking a key in the piano roll is brighter,
+so it can be followed across the whole window. It still sits under the
+notes.
+
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.7.1</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -1362,6 +1462,50 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.8.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.8.0 - Rad sa obiljezenim taktovima
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Mijenjanje duzine PRAZNE varijacije vise ne skracuje one sa muzikom. Postavljanje END1_SEV, koji nije imao nota, sa 4 takta na 1 skracivalo je END1_MAJ i END1_MIN umjesto njega - brisuci taktove 2 do 4 u svakom - dok je END1_SEV ostajao na 4. Izmjena je isla svuda osim na sekciju koja se uredjuje. Prijavio kupac, koji je to nazvao opasnim, i bio je u pravu.
+
+Pravilo sada odgovara onome sto instrumentovi vlastiti stilovi rade, mjereno na svima: tamo gdje MAJ, MIN i SEV drze note, dijele duzinu, a prazna je rezervno mjesto koje moze stajati na svojoj.
+
+Broj taktova prazne varijacije stoji sam za sebe. Varijacija kojoj instrument daje podrazumijevanu duzinu - cetiri takta za aranzman, jedan za fil - prijavljivala je tu podrazumijevanu i tamo gdje je porodica bila postavljena na nesto drugo, pa je ARR_B postavljen na sest pokazivao cetiri. Varijacija sada govori za sebe samo tamo gdje ju je neko stvarno mijenjao.
+
+Broj takta u PARAMETERS prati varijaciju na kojoj ste. Kad se pomjeri, vracao se na ono sto je bio pri sljedecem iscrtavanju, pa je broj stajao gdje je i poceo i uvijek se mogao ukloniti samo jedan takt.
+
+Sekcija napravljena od pjesme duga je onoliko koliko su taktovi bili obiljezeni. Jedan takt poslat u FILA_MAJ ostavljao je sekciju na cetiri takta na kojima je stajala, pa su stilovi gradjeni od pjesama izlazili sa po tri prazna takta izmedju svakog fila.
+
+Crveno dugme DELETE radi na obiljezenim taktovima. Sa obiljezenim nizom taktova trazilo je obiljezene note, nije ih nalazilo i odgovaralo "Nothing selected - click a note..." - sto zbunjuje kada nesto ocigledno jeste izabrano. Sada uklanja note unutar tih taktova. Sami taktovi ostaju; DELETE SELECTED BARS iz menija desnog klika je i dalje onaj koji vadi taktove.
+
+Sa obiljezenim taktovima, desni klik na notu opet daje meni note. Svaki desni klik je isao na meni markera, pa je "Select all &lt;note&gt; in &lt;track&gt;" postajalo nedostupno bas kada radite kroz obiljezene taktove.
+
+Birac opsega u mikseru kaze sta bira: "Apply to sections:". Kupac je procitao "ALL SECTIONS (Global)" kao "primijeni ovo na sve dionice", postavio pan i ocekivao da ga svaka traka preuzme. Razumno - na Ketronu je dionica ujedno i traka, a to je bilo jedino ALL u prozoru.
+
+STYLE MASTER PRO - NOVO
+
+TRANSPOSE SELECTION, u meniju desnog klika kada su taktovi obiljezeni. Gore ili dolje, do oktave u oba smjera, istog oblika kao meni za transponovanje na zaglavljima traka. Pomjera note unutar obiljezenih taktova, pa se dionica preuzeta iz pjesme koja stoji stepen ili dva sa strane moze pomjeriti.
+
+Obiljezavanje taktova se pomjera u oba smjera. Drzite pokazivac uz bilo koju ivicu i pogled nastavlja da se krece, a selekcija raste sa njim. Staje kada se vratite unutra, ili kada se traka zavrsi.
+
+Desni klik na bilo koju vrijednost u MIX prozoru stavlja je na sve trake odjednom. Htjeti isti reverb na svemu je obicna stvar; raditi to devet puta nije.
+
+Prazne sekcije su imenovane blijedje od onih koje drze muziku. Svih 54 stoje na traci od pocetka - format ih trazi - pa je sekcija sa muzikom izgledala isto kao i ona bez nje. Jedan pogled duz trake sada pokazuje gdje vam rad staje.
+
+STYLE MASTER PRO - IZMIJENJENO
+
+Okretanje tocka misa iznad naziva instrumenta vise ne mijenja instrument. Taj naziv stoji u traci trake, tacno tamo kuda pokazivac prolazi na putu da pomjeri prozor, pa je stil mogao dobiti promijenjene zvukove od nekoga ko ih nije namjeravao dirati i nikad nije vidio da se to desilo - traka pokazuje jedno ime, pa je jedini znak bio zvuk. Dvoklik i dalje otvara birac. Prikaz glasnoce zadrzava svoj tocak.
+
+Red obiljezen desnim klikom na dirku u notnom sistemu je svjetliji, pa se moze pratiti kroz cijeli prozor. I dalje stoji ispod nota.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.7.1</span>
@@ -2486,6 +2630,50 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.8.0 - Lavorare con le battute marcate
+
+STYLE MASTER PRO - CORRETTO
+
+Cambiare la lunghezza di una variazione VUOTA non accorcia piu quelle che contengono musica. Portare END1_SEV, che non aveva note, da 4 battute a 1 accorciava invece END1_MAJ e END1_MIN - cancellando le battute da 2 a 4 di ciascuna - mentre END1_SEV restava a 4. La modifica andava ovunque tranne che sulla sezione in lavorazione. Segnalato da un utente, che l'ha definita pericolosa, e aveva ragione.
+
+La regola corrisponde ora a quello che fanno gli stili dello strumento stesso, misurato su tutti: dove MAJ, MIN e SEV contengono note condividono una lunghezza, e una vuota e un segnaposto che puo stare su una lunghezza propria.
+
+Il conteggio di battute di una variazione vuota sta da solo. Una variazione a cui lo strumento assegna una lunghezza predefinita - quattro battute per un arrangiamento, una per un fill - riportava quella predefinita anche dove la famiglia era stata impostata diversamente, cosi ARR_B impostato a sei mostrava quattro. Una variazione parla ora per se stessa solo dove qualcuno l'ha davvero cambiata.
+
+Il numero di battuta in PARAMETERS segue la variazione su cui siete. Scorrendolo tornava a quello che era al ridisegno successivo, cosi il numero restava dov'era partito e si poteva togliere sempre e solo una battuta.
+
+Una sezione creata da un brano e lunga quanto le battute marcate. Una battuta mandata a FILA_MAJ lasciava la sezione alle quattro battute su cui stava, quindi gli stili costruiti dai brani uscivano con tre battute vuote fra ogni fill.
+
+Il pulsante rosso DELETE agisce sulle battute marcate. Con un tratto di battute marcato cercava invece note marcate, non ne trovava e rispondeva "Nothing selected - click a note..." - il che confonde quando qualcosa e palesemente selezionato. Ora rimuove le note dentro quelle battute. Le battute restano; DELETE SELECTED BARS nel menu del tasto destro e ancora quello che toglie le battute.
+
+Con battute marcate, un clic destro su una nota ridà il menu della nota. Ogni clic destro andava al menu dei marker, quindi "Select all &lt;note&gt; in &lt;track&gt;" diventava irraggiungibile proprio mentre si lavora sulle battute marcate.
+
+Il selettore di ambito del mixer dice cosa sceglie: "Apply to sections:". Un utente ha letto "ALL SECTIONS (Global)" come "applica a tutte le parti", ha impostato un pan e si aspettava che ogni traccia lo prendesse. Ragionevole: su un Ketron una parte E una traccia, e quello era l'unico ALL nella finestra.
+
+STYLE MASTER PRO - NUOVO
+
+TRANSPOSE SELECTION, nel menu del tasto destro quando ci sono battute marcate. Su o giu, fino a un'ottava in entrambi i sensi, della stessa forma del menu di trasposizione sulle intestazioni delle tracce. Sposta le note dentro le battute marcate, cosi una parte presa da un brano che sta un tono o due fuori si puo spostare.
+
+La marcatura delle battute scorre in entrambe le direzioni. Tenete il puntatore contro un bordo e la vista continua a muoversi, con la selezione che cresce con essa. Si ferma quando rientrate, o quando la timeline finisce.
+
+Cliccate col destro un qualunque valore nella finestra MIX per metterlo su tutte le tracce in una volta. Volere lo stesso riverbero su tutto e normale; farlo nove volte no.
+
+Le sezioni vuote sono nominate piu tenui di quelle che contengono musica. Tutte e 54 stanno sulla timeline fin dall'inizio - il formato le richiede - quindi una sezione con musica e una senza sembravano identiche. Uno sguardo lungo il nastro mostra ora dove finisce il vostro lavoro.
+
+STYLE MASTER PRO - MODIFICATO
+
+Far girare la rotella sopra il nome di uno strumento non cambia piu lo strumento. Quel nome sta nella striscia della traccia, esattamente dove passa il puntatore mentre va a scorrere la finestra, cosi uno stile poteva vedersi cambiare i suoni da chi non aveva alcuna intenzione di toccarli e non se n'e mai accorto - la striscia mostra un nome, quindi l'unico segnale era il suono. Il doppio clic apre ancora il selettore. Il display del volume mantiene la sua rotella.
+
+La riga marcata col clic destro su un tasto nel piano roll e piu luminosa, cosi si puo seguire per tutta la finestra. Resta sotto le note.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.7.1</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -3606,6 +3794,50 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.8.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.8.0 - Arbeiten mit markierten Takten
+
+STYLE MASTER PRO - BEHOBEN
+
+Die Laenge einer LEEREN Variation zu aendern kuerzt nicht mehr die, in denen Musik steht. END1_SEV, das keine Noten hatte, von 4 Takten auf 1 zu setzen kuerzte stattdessen END1_MAJ und END1_MIN - loeschte dort jeweils die Takte 2 bis 4 - waehrend END1_SEV bei 4 blieb. Die Aenderung ging ueberall hin, nur nicht auf die bearbeitete Sektion. Von einem Nutzer gemeldet, der es gefaehrlich nannte, und er hatte recht.
+
+Die Regel entspricht jetzt dem, was die Styles des Instruments selbst tun, an allen gemessen: wo MAJ, MIN und SEV Noten enthalten, teilen sie eine Laenge, und eine leere ist ein Platzhalter, der eine eigene haben darf.
+
+Die Taktzahl einer leeren Variation steht fuer sich. Eine Variation, der das Instrument eine Standardlaenge gibt - vier Takte fuer ein Arrangement, einen fuer ein Fill - meldete diesen Standard auch dort, wo die Familie auf etwas anderes gesetzt war, sodass ARR_B mit sechs die Zahl vier zeigte. Eine Variation spricht jetzt nur dort fuer sich, wo sie jemand tatsaechlich geaendert hat.
+
+Die Taktzahl in PARAMETERS folgt der Variation, auf der Sie sind. Beim Scrollen sprang sie beim naechsten Neuzeichnen auf ihren alten Wert zurueck, sodass die Zahl stehen blieb und sich immer nur ein Takt entfernen liess.
+
+Eine aus einem Song gemachte Sektion ist so lang wie die markierten Takte. Ein Takt nach FILA_MAJ geschickt liess die Sektion bei den vier Takten, auf denen sie sass, sodass aus Songs gebaute Styles mit drei leeren Takten zwischen jedem Fill herauskamen.
+
+Die rote DELETE-Schaltflaeche wirkt auf markierte Takte. Bei einem markierten Taktbereich suchte sie stattdessen markierte Noten, fand keine und antwortete "Nothing selected - click a note..." - was verwirrt, wenn offensichtlich etwas ausgewaehlt ist. Sie entfernt nun die Noten in diesen Takten. Die Takte selbst bleiben; DELETE SELECTED BARS im Rechtsklickmenue nimmt weiterhin Takte heraus.
+
+Bei markierten Takten liefert ein Rechtsklick auf eine Note wieder das Notenmenue. Jeder Rechtsklick ging zum Markermenue, sodass "Select all &lt;note&gt; in &lt;track&gt;" genau dann unerreichbar wurde, wenn man markierte Takte bearbeitet.
+
+Die Bereichsauswahl des Mixers sagt, was sie waehlt: "Apply to sections:". Ein Nutzer las "ALL SECTIONS (Global)" als "auf alle Stimmen anwenden", stellte ein Panorama ein und erwartete, dass jede Spur es uebernimmt. Verstaendlich - auf einem Ketron IST eine Stimme eine Spur, und das war das einzige ALL im Fenster.
+
+STYLE MASTER PRO - NEU
+
+TRANSPOSE SELECTION im Rechtsklickmenue, wenn Takte markiert sind. Auf oder ab, bis zu einer Oktave in beide Richtungen, in derselben Form wie das Transponiermenue an den Spurkoepfen. Es verschiebt die Noten innerhalb der markierten Takte, sodass eine aus einem Song gehobene Stimme, die einen Ton oder zwei danebenliegt, versetzt werden kann.
+
+Das Markieren von Takten scrollt in beide Richtungen. Halten Sie den Zeiger an einen der Raender und die Ansicht laeuft weiter, die Auswahl waechst mit. Sie haelt an, wenn Sie wieder hineinkommen, oder wenn die Zeitleiste endet.
+
+Ein Rechtsklick auf einen beliebigen Wert im MIX-Fenster setzt ihn auf alle Spuren zugleich. Denselben Hall ueberall zu wollen ist gewoehnlich; es neunmal zu tun nicht.
+
+Leere Sektionen sind blasser benannt als die mit Musik. Alle 54 stehen von Anfang an auf der Zeitleiste - das Format verlangt sie - sodass eine Sektion mit Musik und eine ohne genau gleich aussahen. Ein Blick entlang des Bandes zeigt jetzt, wo Ihre Arbeit aufhoert.
+
+STYLE MASTER PRO - GEAENDERT
+
+Das Mausrad ueber einem Instrumentennamen aendert das Instrument nicht mehr. Dieser Name steht im Spurstreifen, genau dort, wo der Zeiger auf dem Weg zum Scrollen vorbeikommt, sodass ein Style seine Klaenge von jemandem geaendert bekommen konnte, der sie nie anruehren wollte und es nie bemerkte - der Streifen zeigt einen Namen, also war das einzige Zeichen der Klang. Ein Doppelklick oeffnet weiterhin die Auswahl. Die Lautstaerkeanzeige behaelt ihr Rad.
+
+Die per Rechtsklick auf eine Taste im Piano Roll markierte Zeile ist heller und laesst sich durch das ganze Fenster verfolgen. Sie liegt weiterhin unter den Noten.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.7.1</span>
@@ -4730,6 +4962,50 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.8.0 - Работа с размеченными тактами
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Изменение длины ПУСТОЙ вариации больше не укорачивает те, в которых есть музыка. Перевод END1_SEV, где нот не было, с 4 тактов на 1 укорачивал вместо неё END1_MAJ и END1_MIN - удаляя такты со 2 по 4 в каждой, - тогда как END1_SEV оставался на 4. Изменение уходило куда угодно, только не в редактируемую секцию. Сообщил пользователь, назвав это опасным, и был прав.
+
+Правило теперь соответствует тому, что делают собственные стили инструмента, измерено на всех: там, где MAJ, MIN и SEV содержат ноты, они разделяют одну длину, а пустая - это место-заполнитель, которое может иметь свою.
+
+Число тактов пустой вариации стоит само по себе. Вариация, которой инструмент задаёт длину по умолчанию - четыре такта для аранжировки, один для филла, - сообщала эту длину и там, где семейство было выставлено иначе, так что ARR_B с шестью показывал четыре. Вариация теперь говорит за себя только там, где её действительно меняли.
+
+Номер такта в PARAMETERS следует за той вариацией, на которой вы находитесь. При прокрутке он возвращался к прежнему при следующей перерисовке, поэтому число оставалось там, где началось, и убрать можно было всегда только один такт.
+
+Секция, сделанная из песни, длиной ровно в размеченные такты. Один такт, отправленный в FILA_MAJ, оставлял секцию на тех четырёх тактах, где она стояла, поэтому стили, построенные из песен, выходили с тремя пустыми тактами между каждым филлом.
+
+Красная кнопка DELETE работает по размеченным тактам. При размеченном отрезке тактов она искала размеченные ноты, не находила их и отвечала "Nothing selected - click a note..." - что сбивает с толку, когда что-то явно выделено. Теперь она убирает ноты внутри этих тактов. Сами такты остаются; DELETE SELECTED BARS в меню правого щелчка по-прежнему вынимает такты.
+
+При размеченных тактах правый щелчок по ноте снова даёт меню ноты. Каждый правый щелчок уходил в меню маркеров, так что "Select all &lt;note&gt; in &lt;track&gt;" становилось недоступным ровно тогда, когда вы работаете по размеченным тактам.
+
+Выбор области в микшере говорит, что он выбирает: "Apply to sections:". Пользователь прочитал "ALL SECTIONS (Global)" как "применить ко всем партиям", задал панораму и ждал, что её возьмёт каждая дорожка. Разумно: на Ketron партия и есть дорожка, а это было единственное ALL в окне.
+
+STYLE MASTER PRO - НОВОЕ
+
+TRANSPOSE SELECTION в меню правого щелчка, когда такты размечены. Вверх или вниз, до октавы в обе стороны, той же формы, что и меню транспонирования в заголовках дорожек. Команда двигает ноты внутри размеченных тактов, так что партию, взятую из песни и стоящую на тон-другой в стороне, можно сдвинуть.
+
+Разметка тактов прокручивается в обе стороны. Держите указатель у любого края, и вид продолжает двигаться, а выделение растёт вместе с ним. Он останавливается, когда вы возвращаетесь внутрь или когда кончается лента.
+
+Правый щелчок по любому значению в окне MIX ставит его на все дорожки сразу. Хотеть одну и ту же реверберацию на всём - обычное дело; делать это девять раз - нет.
+
+Пустые секции названы бледнее тех, в которых есть музыка. Все 54 стоят на ленте с самого начала - того требует формат, - поэтому секция с музыкой и без выглядели одинаково. Взгляд вдоль ленты теперь показывает, где ваша работа заканчивается.
+
+STYLE MASTER PRO - ИЗМЕНЕНО
+
+Прокрутка колёсика над названием инструмента больше не меняет инструмент. Это название стоит в полосе дорожки, ровно там, где проходит указатель по пути к прокрутке окна, так что стилю могли сменить звуки те, кто и не думал их трогать и не заметил этого, - полоса показывает одно имя, поэтому единственным признаком был звук. Двойной щелчок по-прежнему открывает выбор. Индикатор громкости сохраняет своё колёсико.
+
+Строка, отмеченная правым щелчком по клавише в нотном поле, ярче, и её можно проследить через всё окно. Она по-прежнему под нотами.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.7.1</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -5850,6 +6126,50 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.8.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.8.0 - Att arbeta med markerade takter
+
+STYLE MASTER PRO - FIXAT
+
+Att andra langden pa en TOM variation kortar inte langre de som har musik i sig. Att satta END1_SEV, som saknade toner, fran 4 takter till 1 kortade i stallet END1_MAJ och END1_MIN - och tog bort takt 2 till 4 i vardera - medan END1_SEV lag kvar pa 4. Andringen gick overallt utom till den sektion som redigerades. Rapporterat av en anvandare, som kallade det farligt, och han hade ratt.
+
+Regeln motsvarar nu vad instrumentets egna stilar gor, matt over dem alla: dar MAJ, MIN och SEV har toner delar de en langd, och en tom ar en platshallare som far ha en egen.
+
+Taktantalet for en tom variation star for sig sjalvt. En variation som instrumentet ger en standardlangd - fyra takter for ett arrangemang, en for ett fill - rapporterade den standarden aven dar familjen satts till nagot annat, sa ARR_B satt till sex visade fyra. En variation talar nu for sig sjalv bara dar nagon faktiskt andrat den.
+
+Taktnumret i PARAMETERS foljer den variation du star pa. Nar man rullade det gick det tillbaka till vad det var vid nasta omritning, sa siffran lag kvar dar den borjade och bara en takt kunde nagonsin tas bort.
+
+En sektion som gjorts av en lat ar sa lang som de markerade takterna. En takt skickad till FILA_MAJ lamnade sektionen pa de fyra takter den lag pa, sa stilar byggda fran latar kom ut med tre tomma takter mellan varje fill.
+
+Den roda DELETE-knappen verkar pa markerade takter. Med ett markerat taktomrade letade den i stallet efter markerade toner, fann inga och svarade "Nothing selected - click a note..." - vilket forvirrar nar nagot uppenbart ar markerat. Den tar nu bort tonerna inuti de takterna. Sjalva takterna star kvar; DELETE SELECTED BARS i hogerklicksmenyn ar fortfarande den som tar ut takter.
+
+Med takter markerade ger ett hogerklick pa en ton tonens meny igen. Varje hogerklick gick till markormenyn, sa "Select all &lt;note&gt; in &lt;track&gt;" blev onabart precis nar man arbetar med markerade takter.
+
+Mixerns omfangsvaljare sager vad den valjer: "Apply to sections:". En anvandare laste "ALL SECTIONS (Global)" som "tillampa pa alla stammor", satte en panorering och vantade sig att varje spar skulle ta den. Rimligt - pa en Ketron AR en stamma ett spar, och det var det enda ALL i fonstret.
+
+STYLE MASTER PRO - NYTT
+
+TRANSPOSE SELECTION, i hogerklicksmenyn nar takter ar markerade. Upp eller ner, till en oktav at bada hallen, med samma form som transponeringsmenyn pa sparhuvudena. Den flyttar tonerna inuti de markerade takterna, sa en stamma tagen ur en lat som ligger ett steg eller tva fel kan flyttas.
+
+Markering av takter rullar at bada hallen. Hall pekaren mot endera kanten och vyn fortsatter rora sig, med markeringen vaxande. Den stannar nar du kommer in igen, eller nar tidslinjen tar slut.
+
+Hogerklicka vilket varde som helst i MIX-fonstret for att satta det pa alla spar pa en gang. Att vilja ha samma rumsklang pa allt ar vanligt; att gora det nio ganger ar det inte.
+
+Tomma sektioner ar namngivna svagare an de som har musik. Alla 54 ligger pa tidslinjen fran borjan - formatet kraver dem - sa en sektion med musik och en utan sag precis likadana ut. En blick langs bandet visar nu var ditt arbete slutar.
+
+STYLE MASTER PRO - ANDRAT
+
+Att rulla hjulet over ett instrumentnamn andrar inte langre instrumentet. Det namnet star i sparremsan, precis dar pekaren passerar pa vag att rulla fonstret, sa en stil kunde fa sina ljud andrade av nagon som aldrig tankt rora dem och aldrig sag det handa - remsan visar ett namn, sa det enda tecknet var ljudet. Dubbelklick oppnar fortfarande valjaren. Volymvisningen behaller sitt hjul.
+
+Raden som markeras genom hogerklick pa en tangent i piano roll ar ljusare, sa den kan foljas genom hela fonstret. Den ligger fortfarande under tonerna.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.7.1</span>
