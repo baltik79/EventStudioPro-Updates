@@ -252,6 +252,49 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.7.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.0 - Minor and seventh sections now reach the Event
+
+STYLE MASTER PRO - FIXED
+
+Minor and seventh sections now reach the Event. Until now every style exported from the program told the instrument it had major sections only. The minor and seventh sections were written in full, with all their music, and the Event ignored them - in STYLE EDIT they appeared empty. A style header carries one byte per section family listing which chord variations exist, and we never wrote it. It is written now, and your MIN and SEV sections arrive with their asterisks and their music.
+If you have styles exported with an earlier version, open and export them again to bring their minor and seventh sections back.
+
+Bass that sounded like slides. On some styles - intros especially - the lowest bass notes came out of the Event as articulation noises rather than notes. The Event plays a bass note as a note from a certain pitch upwards; below that, the same message means slide or fret noise. We measured where that line sits on the instrument, and the program now lifts any section whose bass falls under it, by whole octaves, leaving sections already in range exactly as they were.
+
+The exported style ends where the last section ends. The Event reads the last section's length from the distance between its marker and the end of the file - there is no marker after it to measure against. Our export ended on the last note, so a four-bar ending could arrive as however long its notes happened to be.
+
+A song's time signature reaches every section, not only the boxes at the top. A 3/4 song used to export the sections it had not filled as four-beat bars, which the Event read as ragged lengths.
+
+Notes are cut at the end of a marked-out selection. One held note reaching past the end used to make a one-bar fill two bars long.
+
+The bright selection block is cleared once a section is made from it, instead of staying lit over bars that no longer matter.
+
+STYLE MASTER PRO - NEW
+
+REMOVE THE SONG. Once you have cut a song into sections, the song itself was still sitting in the style with all its original notes. A new entry in the marker menu removes it - marker, notes and the bars it reserved - and one Ctrl+Z brings it all back.
+
+A bar counter follows the cursor while you mark out bars, showing the real length of what you have selected: 8 bars, 3 bars 2 beats. No more counting by eye.
+
+STYLE MASTER PRO - CHANGED
+
+PERC to Drum Set 2 is now the default for a Korg style. Drum Set 3 on some Event models ignores a kit of your own and plays a factory one, where Drum Set 2 honours it. Drum Set 3 remains available and unticked - a style that genuinely uses three drum parts still needs it, and styles you have already saved with it keep working exactly as before.
+
+Section lists are easier to aim at. The lists of 54 sections - COPY ALL NOTES TO, COPY ACTIVE NOTES TO, SONG PART TO SECTION, SWAP WITH - now carry a light band behind every second family of three, so INT2 stands apart from INT1 and INT3 at a glance. The two SONG entries wear their own colour, since they act on the song rather than on the marker under the cursor.
+
+Marking out bars. Hold Shift and click anywhere on the bar ribbon to carry on from where you stopped, instead of starting the selection again. The grab zone on a selection's edge went from 12 pixels to 30, so picking an edge back up no longer means hunting for it.
+
+UNDER THE HOOD
+
+The largest parts of the program are now shipped compiled rather than as readable source. Nothing changes in how the program behaves; it is simply harder for someone to take the work apart.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.6.0</span>
     <span class="version-date">2026-09-22</span>
   </div>
@@ -1284,6 +1327,49 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.7.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.0 - Molske i septakordske sekcije sada stizu do Eventa
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Molske i septakordske sekcije sada stizu do Eventa. Do sada je svaki stil izvezen iz programa govorio instrumentu da ima samo durske sekcije. Molske i septakordske su bile upisane u cijelosti, sa svom svojom muzikom, a Event ih je ignorisao - u STYLE EDIT su izgledale prazno. Zaglavlje stila nosi jedan bajt po porodici sekcija koji navodi koje akordske varijacije postoje, a mi ga nikad nismo upisivali. Sada se upisuje, i vase MIN i SEV sekcije stizu sa svojim zvjezdicama i svojom muzikom.
+Ako imate stilove izvezene starijom verzijom, otvorite ih i izvezite ponovo da im se vrate molske i septakordske sekcije.
+
+Bas koji je zvucao kao klizanje. Na nekim stilovima - posebno u introima - najnize note basa izlazile su iz Eventa kao artikulacijski sumovi umjesto kao note. Event svira bas notu kao notu od odredjene visine navise; ispod toga ista poruka znaci klizanje ili sum praga. Izmjerili smo gdje ta granica stoji na instrumentu, i program sada podize svaku sekciju ciji bas padne ispod nje, po cijelim oktavama, ostavljajuci sekcije koje su vec u opsegu tacno onakvim kakve su bile.
+
+Izvezeni stil zavrsava tamo gdje zavrsava posljednja sekcija. Event cita duzinu posljednje sekcije iz razmaka izmedju njenog markera i kraja fajla - poslije nje nema markera po kojem bi mjerio. Nas izvoz je zavrsavao na zadnjoj noti, pa je cetvorotaktni ending mogao stici onoliko dug koliko su mu note slucajno bile.
+
+Takt pjesme stize do svake sekcije, ne samo do polja na vrhu. Pjesma u 3/4 je ranije izvozila sekcije koje nije popunila kao cetvorodobne taktove, sto je Event citao kao neujednacene duzine.
+
+Note se sijeku na kraju obiljezenog dijela. Jedna drzana nota koja prelazi preko kraja pravila je od jednotaktnog fila dvotaktni.
+
+Osvijetljeni blok selekcije se gasi kad se od njega napravi sekcija, umjesto da ostane upaljen preko taktova koji vise nisu vazni.
+
+STYLE MASTER PRO - NOVO
+
+REMOVE THE SONG. Kad pjesmu izrezete na sekcije, sama pjesma je i dalje stajala u stilu sa svim svojim originalnim notama. Nova stavka u meniju markera je uklanja - marker, note i taktove koje je zauzimala - a jedan Ctrl+Z vraca sve nazad.
+
+Brojac taktova prati kursor dok obiljezavate taktove i pokazuje stvarnu duzinu onoga sto ste izabrali: 8 taktova, 3 takta 2 dobe. Nema vise brojanja okom.
+
+STYLE MASTER PRO - IZMIJENJENO
+
+PERC na Drum Set 2 je sada podrazumijevano za Korg stil. Drum Set 3 na nekim Event modelima ignorise vas vlastiti kit i svira fabricki, dok ga Drum Set 2 postuje. Drum Set 3 ostaje dostupan i neoznacen - stil koji stvarno koristi tri bubanj dionice i dalje ga treba, a stilovi koje ste vec sacuvali s njim rade tacno kao i prije.
+
+Liste sekcija su lakse za pogoditi. Liste od 54 sekcije - COPY ALL NOTES TO, COPY ACTIVE NOTES TO, SONG PART TO SECTION, SWAP WITH - sada nose svijetlu traku iza svake druge porodice od tri, pa se INT2 odvaja od INT1 i INT3 na prvi pogled. Dvije SONG stavke nose svoju boju, jer djeluju na pjesmu a ne na marker pod kursorom.
+
+Obiljezavanje taktova. Drzite Shift i kliknite bilo gdje na traci taktova da nastavite odakle ste stali, umjesto da selekciju pocinjete iznova. Zona za hvatanje ivice selekcije je sa 12 piksela povecana na 30, pa ponovno hvatanje ivice vise ne znaci lov na nju.
+
+ISPOD HAUBE
+
+Najveci dijelovi programa sada se isporucuju kompajlovani umjesto kao citljiv izvorni kod. U ponasanju programa se ne mijenja nista; samo je teze nekome da rad rastavi.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.6.0</span>
@@ -2330,6 +2416,49 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.7.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.0 - Le sezioni minori e di settima arrivano ora all'Event
+
+STYLE MASTER PRO - CORRETTO
+
+Le sezioni minori e di settima arrivano ora all'Event. Finora ogni stile esportato dal programma diceva allo strumento di avere solo sezioni maggiori. Le sezioni minori e di settima erano scritte per intero, con tutta la loro musica, e l'Event le ignorava - in STYLE EDIT apparivano vuote. L'intestazione di uno stile porta un byte per famiglia di sezioni che elenca quali varianti di accordo esistono, e noi non lo scrivevamo mai. Ora viene scritto, e le vostre sezioni MIN e SEV arrivano con i loro asterischi e la loro musica.
+Se avete stili esportati con una versione precedente, apriteli ed esportateli di nuovo per riportare le loro sezioni minori e di settima.
+
+Bassi che suonavano come slide. Su alcuni stili - soprattutto negli intro - le note di basso piu gravi uscivano dall'Event come rumori di articolazione invece che come note. L'Event suona una nota di basso come nota da una certa altezza in su; sotto quella, lo stesso messaggio significa slide o rumore di tasto. Abbiamo misurato dove si trova quella linea sullo strumento, e il programma alza ora di ottave intere ogni sezione il cui basso vi finisca sotto, lasciando invariate quelle gia in gamma.
+
+Lo stile esportato finisce dove finisce l'ultima sezione. L'Event legge la lunghezza dell'ultima sezione dalla distanza fra il suo marker e la fine del file - dopo non c'e alcun marker con cui misurare. La nostra esportazione finiva sull'ultima nota, quindi un finale di quattro battute poteva arrivare lungo quanto capitava alle sue note.
+
+Il tempo in chiave di un brano raggiunge ogni sezione, non solo i campi in alto. Un brano in 3/4 esportava le sezioni non riempite come battute da quattro movimenti, che l'Event leggeva come lunghezze irregolari.
+
+Le note vengono tagliate alla fine di una selezione delimitata. Una sola nota tenuta oltre la fine trasformava un fill di una battuta in uno di due.
+
+Il blocco luminoso della selezione si spegne quando da esso si crea una sezione, invece di restare acceso su battute che non contano piu.
+
+STYLE MASTER PRO - NUOVO
+
+REMOVE THE SONG. Una volta tagliato un brano in sezioni, il brano stesso restava nello stile con tutte le sue note originali. Una nuova voce nel menu dei marker lo rimuove - marker, note e le battute che occupava - e un solo Ctrl+Z riporta tutto.
+
+Un contatore di battute segue il cursore mentre delimitate le battute e mostra la lunghezza reale di cio che avete selezionato: 8 battute, 3 battute 2 movimenti. Basta contare a occhio.
+
+STYLE MASTER PRO - MODIFICATO
+
+PERC su Drum Set 2 e ora l'impostazione predefinita per uno stile Korg. Su alcuni modelli Event, Drum Set 3 ignora un kit vostro e suona quello di fabbrica, mentre Drum Set 2 lo rispetta. Drum Set 3 resta disponibile e non selezionato - uno stile che usa davvero tre parti di batteria ne ha ancora bisogno, e gli stili gia salvati con esso funzionano esattamente come prima.
+
+Le liste delle sezioni sono piu facili da centrare. Le liste di 54 sezioni - COPY ALL NOTES TO, COPY ACTIVE NOTES TO, SONG PART TO SECTION, SWAP WITH - portano ora una fascia chiara dietro ogni seconda famiglia di tre, cosi INT2 si distingue da INT1 e INT3 a colpo d'occhio. Le due voci SONG hanno un colore proprio, perche agiscono sul brano e non sul marker sotto il cursore.
+
+Delimitare le battute. Tenete premuto Shift e fate clic in qualunque punto del nastro delle battute per proseguire da dove vi siete fermati, invece di ricominciare la selezione. La zona di presa sul bordo di una selezione e passata da 12 a 30 pixel, quindi riprendere un bordo non vuol dire piu andarlo a caccia.
+
+SOTTO IL COFANO
+
+Le parti piu grandi del programma vengono ora distribuite compilate anziche come sorgente leggibile. Nel comportamento del programma non cambia nulla; e semplicemente piu difficile smontare il lavoro.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.6.0</span>
     <span class="version-date">2026-09-22</span>
   </div>
@@ -3372,6 +3501,49 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.7.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.0 - Moll- und Sept-Sektionen erreichen jetzt den Event
+
+STYLE MASTER PRO - BEHOBEN
+
+Moll- und Sept-Sektionen erreichen jetzt den Event. Bisher teilte jeder aus dem Programm exportierte Style dem Instrument mit, er habe nur Dur-Sektionen. Die Moll- und Sept-Sektionen waren vollstaendig geschrieben, mit ihrer ganzen Musik, und der Event ignorierte sie - in STYLE EDIT erschienen sie leer. Der Kopf eines Styles traegt ein Byte je Sektionsfamilie, das auffuehrt, welche Akkordvarianten es gibt, und wir haben es nie geschrieben. Jetzt wird es geschrieben, und Ihre MIN- und SEV-Sektionen kommen mit ihren Sternchen und ihrer Musik an.
+Haben Sie Styles mit einer aelteren Version exportiert, oeffnen und exportieren Sie sie erneut, damit ihre Moll- und Sept-Sektionen zurueckkehren.
+
+Baesse, die wie Slides klangen. Bei manchen Styles - vor allem in Intros - kamen die tiefsten Bassnoten aus dem Event als Artikulationsgeraeusche statt als Noten. Der Event spielt eine Bassnote ab einer bestimmten Tonhoehe aufwaerts als Note; darunter bedeutet dieselbe Nachricht Slide oder Bundgeraeusch. Wir haben am Instrument gemessen, wo diese Grenze liegt, und das Programm hebt nun jede Sektion, deren Bass darunter faellt, um ganze Oktaven an und laesst Sektionen, die bereits im Bereich liegen, genau so, wie sie waren.
+
+Der exportierte Style endet dort, wo die letzte Sektion endet. Der Event liest die Laenge der letzten Sektion aus dem Abstand zwischen ihrem Marker und dem Dateiende - danach gibt es keinen Marker mehr zum Messen. Unser Export endete auf der letzten Note, sodass ein viertaktiges Ende so lang ankommen konnte, wie seine Noten zufaellig reichten.
+
+Die Taktart eines Songs erreicht jede Sektion, nicht nur die Felder oben. Ein Song in 3/4 exportierte die nicht gefuellten Sektionen als Viervierteltakte, was der Event als unregelmaessige Laengen las.
+
+Noten werden am Ende einer markierten Auswahl abgeschnitten. Eine einzige gehaltene Note ueber das Ende hinaus machte aus einem eintaktigen Fill einen zweitaktigen.
+
+Der helle Auswahlblock erlischt, sobald daraus eine Sektion entsteht, statt ueber Takten weiterzuleuchten, die nicht mehr zaehlen.
+
+STYLE MASTER PRO - NEU
+
+REMOVE THE SONG. Nachdem Sie einen Song in Sektionen zerlegt haben, sass der Song selbst weiterhin mit all seinen Originalnoten im Style. Ein neuer Eintrag im Markermenue entfernt ihn - Marker, Noten und die belegten Takte - und ein einziges Strg+Z holt alles zurueck.
+
+Ein Taktzaehler folgt dem Cursor, waehrend Sie Takte markieren, und zeigt die wirkliche Laenge der Auswahl: 8 Takte, 3 Takte 2 Schlaege. Kein Abzaehlen mehr mit dem Auge.
+
+STYLE MASTER PRO - GEAENDERT
+
+PERC auf Drum Set 2 ist jetzt die Voreinstellung fuer einen Korg-Style. Drum Set 3 ignoriert auf manchen Event-Modellen ein eigenes Kit und spielt ein Werks-Kit, waehrend Drum Set 2 es respektiert. Drum Set 3 bleibt verfuegbar und nicht angehakt - ein Style, der wirklich drei Schlagzeugstimmen nutzt, braucht es weiterhin, und bereits damit gespeicherte Styles arbeiten genau wie zuvor.
+
+Sektionslisten sind leichter zu treffen. Die Listen mit 54 Sektionen - COPY ALL NOTES TO, COPY ACTIVE NOTES TO, SONG PART TO SECTION, SWAP WITH - tragen jetzt ein helles Band hinter jeder zweiten Dreierfamilie, sodass sich INT2 auf einen Blick von INT1 und INT3 abhebt. Die beiden SONG-Eintraege haben eine eigene Farbe, weil sie auf den Song wirken und nicht auf den Marker unter dem Cursor.
+
+Takte markieren. Halten Sie die Umschalttaste und klicken Sie irgendwo auf das Taktband, um dort weiterzumachen, wo Sie aufgehoert haben, statt die Auswahl neu zu beginnen. Die Greifzone am Rand einer Auswahl ist von 12 auf 30 Pixel gewachsen, sodass das Wiederaufnehmen eines Randes keine Sucherei mehr ist.
+
+UNTER DER HAUBE
+
+Die groessten Teile des Programms werden jetzt kompiliert ausgeliefert statt als lesbarer Quelltext. Am Verhalten des Programms aendert das nichts; es ist lediglich schwerer, die Arbeit auseinanderzunehmen.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.6.0</span>
@@ -4418,6 +4590,49 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.7.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.0 - Минорные и септаккордовые секции теперь доходят до Event
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Минорные и септаккордовые секции теперь доходят до Event. До сих пор каждый стиль, экспортированный из программы, сообщал инструменту, что в нём есть только мажорные секции. Минорные и септаккордовые были записаны полностью, со всей своей музыкой, а Event их игнорировал - в STYLE EDIT они выглядели пустыми. Заголовок стиля несёт по одному байту на семейство секций с перечнем того, какие аккордовые варианты существуют, и мы его никогда не записывали. Теперь он записывается, и ваши секции MIN и SEV приходят со своими звёздочками и своей музыкой.
+Если у вас есть стили, экспортированные прежней версией, откройте и экспортируйте их снова, чтобы вернуть минорные и септаккордовые секции.
+
+Бас, звучавший как скольжение. На некоторых стилях - особенно во вступлениях - самые низкие басовые ноты выходили из Event как шумы артикуляции, а не как ноты. Event играет басовую ноту как ноту начиная с определённой высоты; ниже неё то же сообщение означает скольжение или шум лада. Мы измерили, где проходит эта граница на инструменте, и программа теперь поднимает целыми октавами любую секцию, чей бас оказался ниже, оставляя те, что уже в диапазоне, ровно такими, какими они были.
+
+Экспортированный стиль заканчивается там, где заканчивается последняя секция. Event читает длину последней секции по расстоянию между её маркером и концом файла - после неё нет маркера, по которому мерить. Наш экспорт заканчивался на последней ноте, поэтому четырёхтактная концовка могла прийти такой длины, какой случайно оказались её ноты.
+
+Размер песни доходит до каждой секции, а не только до полей наверху. Песня в 3/4 раньше экспортировала незаполненные секции как четырёхдольные такты, что Event читал как неровные длины.
+
+Ноты обрезаются в конце выделенного участка. Одна удерживаемая нота, выходящая за конец, превращала однотактный филл в двухтактный.
+
+Яркий блок выделения гаснет, как только из него сделана секция, вместо того чтобы гореть над тактами, которые больше не важны.
+
+STYLE MASTER PRO - НОВОЕ
+
+REMOVE THE SONG. После того как песня нарезана на секции, сама песня по-прежнему оставалась в стиле со всеми исходными нотами. Новый пункт в меню маркеров убирает её - маркер, ноты и занятые такты - а один Ctrl+Z возвращает всё обратно.
+
+Счётчик тактов следует за курсором, пока вы размечаете такты, и показывает настоящую длину выделенного: 8 тактов, 3 такта 2 доли. Больше не нужно считать на глаз.
+
+STYLE MASTER PRO - ИЗМЕНЕНО
+
+PERC на Drum Set 2 теперь по умолчанию для стиля Korg. На некоторых моделях Event Drum Set 3 игнорирует ваш собственный набор и играет заводской, тогда как Drum Set 2 его уважает. Drum Set 3 остаётся доступным и неотмеченным - стилю, который действительно использует три барабанные партии, он по-прежнему нужен, а стили, уже сохранённые с ним, работают точно как прежде.
+
+В списки секций легче попасть. Списки из 54 секций - COPY ALL NOTES TO, COPY ACTIVE NOTES TO, SONG PART TO SECTION, SWAP WITH - теперь несут светлую полосу за каждым вторым семейством из трёх, так что INT2 отличается от INT1 и INT3 с первого взгляда. Два пункта SONG носят свой цвет, поскольку действуют на песню, а не на маркер под курсором.
+
+Разметка тактов. Удерживайте Shift и щёлкните в любом месте ленты тактов, чтобы продолжить с того места, где остановились, вместо того чтобы начинать выделение заново. Зона захвата на краю выделения выросла с 12 до 30 пикселей, так что подхватить край больше не значит охотиться за ним.
+
+ПОД КАПОТОМ
+
+Наиболее крупные части программы теперь поставляются скомпилированными, а не как читаемый исходный код. В поведении программы не меняется ничего; просто труднее разобрать работу на части.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.6.0</span>
     <span class="version-date">2026-09-22</span>
   </div>
@@ -5460,6 +5675,49 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.7.0</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.0 - Moll- och septimsektioner nar nu fram till Event
+
+STYLE MASTER PRO - FIXAT
+
+Moll- och septimsektioner nar nu fram till Event. Hittills har varje stil som exporterats fran programmet talat om for instrumentet att den bara hade dursektioner. Moll- och septimsektionerna skrevs i sin helhet, med all sin musik, och Event ignorerade dem - i STYLE EDIT sag de tomma ut. En stils huvud bar en byte per sektionsfamilj som listar vilka ackordvarianter som finns, och den skrev vi aldrig. Nu skrivs den, och dina MIN- och SEV-sektioner kommer fram med sina asterisker och sin musik.
+Har du stilar som exporterats med en tidigare version, oppna och exportera dem igen sa kommer deras moll- och septimsektioner tillbaka.
+
+Bas som lat som glissandon. Pa vissa stilar - sarskilt i inton - kom de lagsta bastonerna ut ur Event som artikulationsljud i stallet for toner. Event spelar en baston som en ton fran en viss tonhojd och uppat; under den betyder samma meddelande glissando eller bandljud. Vi matte var den gransen ligger pa instrumentet, och programmet lyfter nu varje sektion vars bas hamnar under den, med hela oktaver, och lamnar sektioner som redan ligger inom omradet precis som de var.
+
+Den exporterade stilen slutar dar sista sektionen slutar. Event laser sista sektionens langd ur avstandet mellan dess markor och filens slut - efter den finns ingen markor att mata mot. Var export slutade pa sista tonen, sa ett fyrtakters slut kunde komma fram sa langt som dess toner rakade racka.
+
+En lats taktart nar varje sektion, inte bara falten hogst upp. En lat i 3/4 exporterade tidigare de sektioner den inte fyllt som fyrtaktiga takter, vilket Event laste som ojamna langder.
+
+Toner kapas vid slutet av ett utmarkt omrade. En enda hallen ton forbi slutet gjorde ett entakts fill tva takter langt.
+
+Det ljusa markeringsblocket slocknar nar en sektion gjorts av det, i stallet for att lysa kvar over takter som inte langre spelar nagon roll.
+
+STYLE MASTER PRO - NYTT
+
+REMOVE THE SONG. Nar du skurit upp en lat i sektioner lag sjalva laten kvar i stilen med alla sina ursprungliga toner. En ny post i markormenyn tar bort den - markor, toner och de takter den upptog - och ett enda Ctrl+Z tar tillbaka allt.
+
+En taktraknare foljer markoren medan du markerar ut takter och visar den verkliga langden pa det du valt: 8 takter, 3 takter 2 slag. Inget mer raknande med ogat.
+
+STYLE MASTER PRO - ANDRAT
+
+PERC till Drum Set 2 ar nu standard for en Korg-stil. Drum Set 3 pa vissa Event-modeller ignorerar ett eget kit och spelar ett fabrikskit, medan Drum Set 2 respekterar det. Drum Set 3 finns kvar och ar inte ikryssat - en stil som verkligen anvander tre trumstammor behover det fortfarande, och stilar du redan sparat med det fungerar precis som forut.
+
+Sektionslistorna ar lattare att traffa. Listorna med 54 sektioner - COPY ALL NOTES TO, COPY ACTIVE NOTES TO, SONG PART TO SECTION, SWAP WITH - bar nu ett ljust band bakom varannan familj om tre, sa att INT2 skiljer sig fran INT1 och INT3 vid en blick. De tva SONG-posterna har en egen farg, eftersom de verkar pa laten och inte pa markoren under markoren.
+
+Markera ut takter. Hall Shift och klicka var som helst pa taktbandet for att fortsatta dar du slutade, i stallet for att borja om markeringen. Greppzonen vid en markerings kant gick fran 12 till 30 pixlar, sa att ta upp en kant igen ar inte langre en jakt.
+
+UNDER HUVEN
+
+Programmets storsta delar levereras nu kompilerade i stallet for som lasbar kallkod. I hur programmet beter sig andras ingenting; det ar bara svarare att plocka isar arbetet.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.6.0</span>
