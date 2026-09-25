@@ -252,6 +252,41 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.7.1</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.1 - A section is as long as you made it
+
+STYLE MASTER PRO - FIXED
+
+A section's length follows the section, not the parameter table. The export took the family's declared number of bars, so a section you had trimmed by hand still went out at its old size and the Event played bars that were not there. PARAMETERS now also shows the length of the section you are looking at.
+Where a family's MAJ, MIN and SEV all hold notes they are always the same length - measured against the instrument's own styles rather than assumed - and an empty one sits at a single bar.
+
+One Korg program, one voice. Voices on Chord 1 to 5 could change by themselves, most often when reopening a style the program had made: the same program number was translated twice by two different routes, and the second overwrote the first, so the track strip and the Event disagreed about what was playing. There is one translation now, and both routes use it.
+
+A crash writes itself down. The program could close and leave nothing behind - no message, nothing to send us. If it happens now, the reason is written to crash.log in the settings folder, beside your voice calibration:
+C:\Users\&lt;you&gt;\AppData\Roaming\BaltikKetron\
+It rolls over at 256 KB and never grows past two files. If the program ever closes on you, send us that file.
+
+STYLE MASTER PRO - CHANGED
+
+ADD/DELETE BARS, on the right-click menu, now changes the whole family. Until now it changed only the section you clicked, so ARRA_MIN could end up two bars while ARRA_MAJ stayed at four - which is not something the instrument's own styles ever do. It now reaches the variations of that family that hold notes, and leaves empty ones at their single bar. PARAMETERS has always worked this way; the two agree now. One Ctrl+Z undoes the lot.
+
+The marker menu tells its SONG and DELETE rows apart by colour, using the same grey as the section lists.
+
+STYLE MASTER PRO - WORKING FROM A SONG
+
+Once a part of a song has become a section, those bars can be taken out of the song in one step: right-click the song's marker and choose DELETE SELECTED BARS. The bars are removed rather than emptied - what follows moves up, and the song gets shorter, so what is left on screen is what still has to be done. Ctrl+Z brings them back.
+
+The selection stays where you put it after a section is made from it, and travels with the song when the song moves, instead of sliding out from under itself. So the same bars are ready for the command above without marking them again.
+
+The song keeps an empty bar on either side of it, so a section cut from it does not read as part of it.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.7.0</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -1327,6 +1362,41 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Šta je novo u ažuriranjima<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.7.1</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.1 - Sekcija je duga onoliko koliko ste je napravili
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Duzina sekcije prati sekciju, a ne tabelu parametara. Izvoz je uzimao broj taktova koji je porodica prijavila, pa je sekcija koju ste rucno skratili i dalje izlazila u svojoj staroj velicini, a Event je svirao taktove kojih nema. PARAMETERS sada pokazuje i duzinu sekcije koju gledate.
+Tamo gdje MAJ, MIN i SEV jedne porodice drze note, uvijek su iste duzine - izmjereno na instrumentovim vlastitim stilovima, a ne pretpostavljeno - a prazna stoji na jednom taktu.
+
+Jedan Korgov program, jedan zvuk. Zvukovi na Chord 1 do 5 su se mogli sami mijenjati, najcesce pri ponovnom otvaranju stila koji je program napravio: isti broj programa se prevodio dvaput, dvama razlicitim putevima, i drugi je prepisivao prvi - pa se traka i Event nisu slagali o tome sta svira. Sada postoji jedan prevod, i oba puta ga koriste.
+
+Pad se sam zapisuje. Program se mogao zatvoriti i ne ostaviti nista za sobom - bez poruke, bez icega da nam posaljete. Ako se to sada desi, razlog se upisuje u crash.log u folderu sa podesavanjima, pored vase kalibracije zvukova:
+C:\Users\&lt;vi&gt;\AppData\Roaming\BaltikKetron\
+Prelama se na 256 KB i nikad ne naraste preko dva fajla. Ako vam se program ikad zatvori, posaljite nam taj fajl.
+
+STYLE MASTER PRO - IZMIJENJENO
+
+ADD/DELETE BARS, iz menija desnog klika, sada mijenja cijelu porodicu. Do sada je mijenjao samo sekciju na koju ste kliknuli, pa je ARRA_MIN mogao zavrsiti na dva takta dok je ARRA_MAJ ostao na cetiri - sto instrumentovi vlastiti stilovi nikad ne rade. Sada dohvata varijacije te porodice koje drze note, a prazne ostavlja na njihovom jednom taktu. PARAMETERS je oduvijek radio ovako; sada se to dvoje slaze. Jedan Ctrl+Z ponistava sve.
+
+Meni markera razlikuje svoje SONG i DELETE redove bojom, koristeci istu sivu kao i liste sekcija.
+
+STYLE MASTER PRO - RAD SA PJESMOM
+
+Kada dio pjesme jednom postane sekcija, ti taktovi se mogu izvaditi iz pjesme u jednom koraku: desni klik na marker pjesme pa DELETE SELECTED BARS. Taktovi se uklanjaju, ne prazne - ono sto slijedi se pomjera gore, a pjesma postaje kraca, pa je ono sto ostaje na ekranu ono sto jos treba uraditi. Ctrl+Z ih vraca.
+
+Selekcija ostaje tamo gdje ste je postavili nakon sto se od nje napravi sekcija, i putuje sa pjesmom kada se pjesma pomjeri, umjesto da isklizne ispod sebe. Tako su isti taktovi spremni za gornju komandu bez ponovnog obiljezavanja.
+
+Pjesma cuva po jedan prazan takt sa svake strane, pa se sekcija izrezana iz nje ne cita kao njen dio.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.7.0</span>
@@ -2416,6 +2486,41 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.7.1</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.1 - Una sezione e lunga quanto l'avete fatta
+
+STYLE MASTER PRO - CORRETTO
+
+La lunghezza di una sezione segue la sezione, non la tabella dei parametri. L'esportazione prendeva il numero di battute dichiarato dalla famiglia, cosi una sezione accorciata a mano usciva ancora nella sua vecchia misura e l'Event suonava battute che non c'erano. PARAMETERS mostra ora anche la lunghezza della sezione che state guardando.
+Dove MAJ, MIN e SEV di una famiglia contengono note, hanno sempre la stessa lunghezza - misurato sugli stili dello strumento stesso, non supposto - e una vuota resta a una battuta.
+
+Un programma Korg, un suono. I suoni su Chord da 1 a 5 potevano cambiare da soli, soprattutto riaprendo uno stile creato dal programma: lo stesso numero di programma veniva tradotto due volte per due strade diverse, e la seconda sovrascriveva la prima, cosi la traccia e l'Event non erano d'accordo su cosa stesse suonando. Ora la traduzione e una sola, e entrambe le strade la usano.
+
+Un crash si scrive da solo. Il programma poteva chiudersi senza lasciare nulla - nessun messaggio, niente da inviarci. Se accade ora, il motivo viene scritto in crash.log nella cartella delle impostazioni, accanto alla vostra calibrazione dei suoni:
+C:\Users\&lt;voi&gt;\AppData\Roaming\BaltikKetron\
+Si rinnova a 256 KB e non supera mai due file. Se il programma dovesse chiudersi, inviateci quel file.
+
+STYLE MASTER PRO - MODIFICATO
+
+ADD/DELETE BARS, nel menu del tasto destro, cambia ora l'intera famiglia. Finora cambiava solo la sezione su cui avevate cliccato, cosi ARRA_MIN poteva finire a due battute mentre ARRA_MAJ restava a quattro - cosa che gli stili dello strumento non fanno mai. Ora raggiunge le variazioni della famiglia che contengono note e lascia quelle vuote alla loro battuta singola. PARAMETERS ha sempre funzionato cosi; ora i due concordano. Un solo Ctrl+Z annulla tutto.
+
+Il menu dei marker distingue per colore le sue voci SONG e DELETE, usando lo stesso grigio delle liste di sezioni.
+
+STYLE MASTER PRO - LAVORARE DA UN BRANO
+
+Una volta che una parte di brano e diventata sezione, quelle battute si possono togliere dal brano in un passaggio: clic destro sul marker del brano e DELETE SELECTED BARS. Le battute vengono rimosse, non svuotate - cio che segue risale e il brano si accorcia, cosi quel che resta sullo schermo e quel che c'e ancora da fare. Ctrl+Z le riporta.
+
+La selezione resta dove l'avete messa dopo che ne e stata creata una sezione, e viaggia con il brano quando il brano si sposta, invece di sfilarsi da sotto. Cosi le stesse battute sono pronte per il comando sopra senza marcarle di nuovo.
+
+Il brano mantiene una battuta vuota su ciascun lato, cosi una sezione ritagliata da esso non viene letta come sua parte.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.7.0</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -3501,6 +3606,41 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Was ist neu in den Updates<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.7.1</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.1 - Eine Sektion ist so lang, wie Sie sie gemacht haben
+
+STYLE MASTER PRO - BEHOBEN
+
+Die Laenge einer Sektion folgt der Sektion, nicht der Parametertabelle. Der Export nahm die von der Familie angegebene Taktzahl, sodass eine von Hand gekuerzte Sektion weiterhin in ihrer alten Groesse hinausging und der Event Takte spielte, die es nicht gab. PARAMETERS zeigt jetzt auch die Laenge der Sektion, die Sie gerade ansehen.
+Wo MAJ, MIN und SEV einer Familie Noten enthalten, sind sie immer gleich lang - an den Styles des Instruments selbst gemessen, nicht angenommen - und eine leere steht bei einem Takt.
+
+Ein Korg-Programm, ein Klang. Klaenge auf Chord 1 bis 5 konnten sich von selbst aendern, am ehesten beim erneuten Oeffnen eines vom Programm erstellten Styles: dieselbe Programmnummer wurde zweimal auf zwei verschiedenen Wegen uebersetzt, und der zweite ueberschrieb den ersten, sodass Spur und Event sich nicht einig waren, was spielte. Es gibt jetzt eine Uebersetzung, und beide Wege nutzen sie.
+
+Ein Absturz schreibt sich selbst auf. Das Programm konnte sich schliessen und nichts hinterlassen - keine Meldung, nichts, was Sie uns schicken koennten. Geschieht es jetzt, wird der Grund in crash.log im Einstellungsordner festgehalten, neben Ihrer Klangkalibrierung:
+C:\Users\&lt;Sie&gt;\AppData\Roaming\BaltikKetron\
+Die Datei wird bei 256 KB umgebrochen und waechst nie ueber zwei Dateien hinaus. Sollte sich das Programm je schliessen, schicken Sie uns diese Datei.
+
+STYLE MASTER PRO - GEAENDERT
+
+ADD/DELETE BARS im Rechtsklickmenue aendert jetzt die ganze Familie. Bisher aenderte es nur die angeklickte Sektion, sodass ARRA_MIN bei zwei Takten landen konnte, waehrend ARRA_MAJ bei vier blieb - was die Styles des Instruments nie tun. Es erreicht nun die Variationen der Familie, die Noten enthalten, und laesst leere bei ihrem einen Takt. PARAMETERS hat immer so gearbeitet; die beiden stimmen jetzt ueberein. Ein einziges Strg+Z macht alles rueckgaengig.
+
+Das Markermenue unterscheidet seine SONG- und DELETE-Zeilen durch Farbe und nutzt dasselbe Grau wie die Sektionslisten.
+
+STYLE MASTER PRO - ARBEITEN MIT EINEM SONG
+
+Ist ein Teil eines Songs erst eine Sektion geworden, lassen sich diese Takte in einem Schritt aus dem Song nehmen: Rechtsklick auf den Marker des Songs und DELETE SELECTED BARS. Die Takte werden entfernt, nicht geleert - was folgt, rueckt auf, und der Song wird kuerzer, sodass auf dem Bildschirm steht, was noch zu tun ist. Strg+Z holt sie zurueck.
+
+Die Auswahl bleibt, wo Sie sie gesetzt haben, nachdem eine Sektion daraus entstanden ist, und wandert mit dem Song, wenn der Song sich bewegt, statt unter sich wegzurutschen. So sind dieselben Takte fuer den obigen Befehl bereit, ohne sie erneut zu markieren.
+
+Der Song behaelt links und rechts je einen leeren Takt, damit eine daraus geschnittene Sektion nicht als Teil von ihm gelesen wird.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.7.0</span>
@@ -4590,6 +4730,41 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.7.1</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.1 - Секция длиной ровно такая, какой вы её сделали
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Длина секции следует за секцией, а не за таблицей параметров. Экспорт брал число тактов, заявленное семейством, поэтому секция, укороченная вручную, всё равно выходила прежнего размера, и Event играл такты, которых нет. PARAMETERS теперь показывает и длину той секции, на которую вы смотрите.
+Там, где MAJ, MIN и SEV одного семейства содержат ноты, они всегда одной длины - измерено на собственных стилях инструмента, а не предположено, - а пустая стоит на одном такте.
+
+Одна программа Korg, один звук. Звуки на Chord с 1 по 5 могли меняться сами, чаще всего при повторном открытии стиля, созданного программой: один и тот же номер программы переводился дважды двумя разными путями, и второй перезаписывал первый, так что дорожка и Event расходились в том, что звучит. Теперь перевод один, и оба пути пользуются им.
+
+Сбой записывает себя сам. Программа могла закрыться и не оставить ничего - ни сообщения, ни того, что можно было бы нам прислать. Если это случится теперь, причина записывается в crash.log в папке настроек, рядом с вашей калибровкой звуков:
+C:\Users\&lt;вы&gt;\AppData\Roaming\BaltikKetron\
+Файл перезапускается на 256 КБ и никогда не разрастается больше двух файлов. Если программа когда-нибудь закроется, пришлите нам этот файл.
+
+STYLE MASTER PRO - ИЗМЕНЕНО
+
+ADD/DELETE BARS в меню правого щелчка теперь меняет всё семейство. До сих пор менялась только та секция, по которой вы щёлкнули, так что ARRA_MIN мог оказаться на двух тактах, пока ARRA_MAJ оставался на четырёх, - чего собственные стили инструмента никогда не делают. Теперь команда доходит до тех вариаций семейства, в которых есть ноты, а пустые оставляет на их одном такте. PARAMETERS всегда работал так; теперь они совпадают. Один Ctrl+Z отменяет всё.
+
+Меню маркеров различает строки SONG и DELETE цветом, используя тот же серый, что и списки секций.
+
+STYLE MASTER PRO - РАБОТА С ПЕСНЕЙ
+
+Как только часть песни стала секцией, эти такты можно вынуть из песни за один шаг: правый щелчок по маркеру песни и DELETE SELECTED BARS. Такты удаляются, а не опустошаются - то, что идёт дальше, поднимается, и песня становится короче, так что на экране остаётся то, что ещё предстоит сделать. Ctrl+Z возвращает их.
+
+Выделение остаётся там, где вы его поставили, после того как из него сделана секция, и движется вместе с песней, когда песня смещается, а не уползает из-под себя. Так те же такты готовы для команды выше без повторной разметки.
+
+Песня сохраняет по пустому такту с каждой стороны, чтобы вырезанная из неё секция не читалась как её часть.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.7.0</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -5675,6 +5850,41 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.7.1</span>
+    <span class="version-date">2026-09-25</span>
+  </div>
+  <div class="version-body">v4.7.1 - En sektion ar sa lang som du gjorde den
+
+STYLE MASTER PRO - FIXAT
+
+En sektions langd foljer sektionen, inte parametertabellen. Exporten tog det antal takter familjen uppgav, sa en sektion du kortat for hand gick anda ut i sin gamla storlek och Event spelade takter som inte fanns. PARAMETERS visar nu ocksa langden pa den sektion du tittar pa.
+Dar en familjs MAJ, MIN och SEV innehaller toner ar de alltid lika langa - matt pa instrumentets egna stilar, inte antaget - och en tom ligger pa en takt.
+
+Ett Korg-program, ett ljud. Ljud pa Chord 1 till 5 kunde andras av sig sjalva, oftast nar man oppnade om en stil programmet gjort: samma programnummer oversattes tva ganger pa tva olika vagar, och den andra skrev over den forsta, sa sparet och Event var oense om vad som spelade. Nu finns en oversattning, och bada vagarna anvander den.
+
+En krasch skriver ner sig sjalv. Programmet kunde stangas och lamna ingenting efter sig - inget meddelande, inget att skicka oss. Hander det nu skrivs orsaken till crash.log i installningsmappen, bredvid din ljudkalibrering:
+C:\Users\&lt;du&gt;\AppData\Roaming\BaltikKetron\
+Den vands vid 256 KB och vaxer aldrig forbi tva filer. Skulle programmet nagon gang stangas, skicka oss den filen.
+
+STYLE MASTER PRO - ANDRAT
+
+ADD/DELETE BARS i hogerklicksmenyn andrar nu hela familjen. Hittills andrades bara den sektion du klickat pa, sa ARRA_MIN kunde hamna pa tva takter medan ARRA_MAJ lag kvar pa fyra - vilket instrumentets egna stilar aldrig gor. Den nar nu de variationer i familjen som innehaller toner och lamnar tomma pa sin enda takt. PARAMETERS har alltid fungerat sa; nu stammer de overens. Ett enda Ctrl+Z angrar alltsammans.
+
+Markormenyn skiljer sina SONG- och DELETE-rader at med farg och anvander samma gra som sektionslistorna.
+
+STYLE MASTER PRO - ATT ARBETA FRAN EN LAT
+
+Nar en del av en lat val blivit en sektion kan de takterna tas ut ur laten i ett steg: hogerklicka pa latens markor och valj DELETE SELECTED BARS. Takterna tas bort, inte toms - det som foljer flyttas upp och laten blir kortare, sa det som star kvar pa skarmen ar det som aterstar att gora. Ctrl+Z tar tillbaka dem.
+
+Markeringen stannar dar du satte den efter att en sektion gjorts av den, och foljer med laten nar laten flyttar sig, i stallet for att glida undan under sig sjalv. Sa ar samma takter redo for kommandot ovan utan att markeras igen.
+
+Laten behaller en tom takt pa vardera sidan, sa att en sektion som klippts ur den inte lases som en del av den.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.7.0</span>
