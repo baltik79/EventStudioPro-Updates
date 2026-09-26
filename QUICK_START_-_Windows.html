@@ -252,6 +252,35 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.1</span>
+    <span class="version-date">2026-09-26</span>
+  </div>
+  <div class="version-body">v4.8.1 - A style no longer inherits the one before it
+
+STYLE MASTER PRO - FIXED
+
+A style no longer inherits the previous style's mixer values. Load one style, then another, and the second could be saved carrying the first one's modulation - the same four numbers on a style that has no modulation anywhere. On the instrument that is a screaming chord part. Importing now starts from the defaults, and the log says what it discarded.
+
+Three things that were telling you something untrue rather than saying no.
+The bar field when adding a section offered a position it cannot give - the instrument decides the order itself, and a section asked for at bar 10 or at bar 31 arrived at 58 either way. The field is greyed now and says so.
+A tempo outside the program's range of 40-250 was changed without a word. It is announced.
+PARAMETERS keeps a length you set by hand, so a two-bar section can actually be made one. It used to apply and then be overwritten by the family's number a moment later.
+
+Playback answers at once. Soloing Drum Set 2 was silent until a restart: it shares a live channel with Drum Set 3, and the volume was decided per track, so whichever was muted always wrote last. A voice picked while the rhythm plays now appears on the track strip immediately, and a note still ringing is sounded again, so the new instrument is heard without waiting for the chord to end.
+
+The wheel zooms the grid only. It zoomed over the marker names and the section strip as well - both are rulers, and reading one while it changes size under the pointer is no use.
+
+STYLE MASTER PRO - NEW
+
+The header carries a strip showing all 54 sections at a glance - lit where there is music, dark where there is not, with a frame around where you are and a click to go there. A button at its left chooses what the row shows, or turns it off.
+
+With bars marked, the chords inside them can be brought to C major, C minor or C seventh, with the key confirmed before anything moves.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.0</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -1464,6 +1493,35 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.1</span>
+    <span class="version-date">2026-09-26</span>
+  </div>
+  <div class="version-body">v4.8.1 - Stil vise ne nasljedjuje onaj prije njega
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Stil vise ne nasljedjuje vrijednosti miksera prethodnog stila. Ucitate jedan stil, pa drugi, i drugi se mogao sacuvati noseci modulaciju onog prvog - ista cetiri broja na stilu koji nigdje nema modulacije. Na instrumentu je to akordska dionica koja vristi. Uvoz sada krece od podrazumijevanih vrijednosti, a log kaze sta je odbacio.
+
+Tri stvari koje su govorile nesto netacno umjesto da kazu ne.
+Polje za takt pri dodavanju sekcije nudilo je poziciju koju ne moze dati - instrument sam odlucuje redoslijed, pa je sekcija trazena na taktu 10 ili na taktu 31 svejedno stizala na 58. Polje je sada zasivljeno i to kaze.
+Tempo izvan programskog opsega od 40-250 mijenjao se bez rijeci. Sada se najavljuje.
+PARAMETERS cuva duzinu koju ste postavili rukom, pa se dvotaktna sekcija stvarno moze napraviti jednotaktnom. Ranije se primijenila pa je trenutak kasnije prepisivao porodicni broj.
+
+Reprodukcija odgovara odmah. Izolovanje Drum Set 2 nije se culo do ponovnog pokretanja: dijeli zivi kanal sa Drum Set 3, a glasnoca se odlucivala po traci, pa je utisana uvijek pisala zadnja. Zvuk izabran dok ritam svira sada se odmah pojavljuje na traci, a nota koja jos zvuci se ponovo odsvira, pa se novi instrument cuje bez cekanja da se akord zavrsi.
+
+Tocak zumira samo mrezu. Zumirao je i preko naziva markera i preko trake sekcija - oboje su lenjiri, a citati jedan dok mijenja velicinu pod pokazivacem nema smisla.
+
+STYLE MASTER PRO - NOVO
+
+Zaglavlje nosi traku koja prikazuje svih 54 sekcije odjednom - osvijetljene tamo gdje ima muzike, tamne gdje nema, sa okvirom oko mjesta gdje se nalazite i klikom da odete tamo. Dugme sa njene lijeve strane bira sta red pokazuje, ili ga gasi.
+
+Kada su taktovi obiljezeni, akordi unutar njih se mogu dovesti na C dur, C mol ili C septakord, uz potvrdu tonaliteta prije nego se isto pomjeri.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.0</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -2628,6 +2686,35 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.8.1</span>
+    <span class="version-date">2026-09-26</span>
+  </div>
+  <div class="version-body">v4.8.1 - Uno stile non eredita piu quello precedente
+
+STYLE MASTER PRO - CORRETTO
+
+Uno stile non eredita piu i valori del mixer dello stile precedente. Caricate uno stile, poi un altro, e il secondo poteva essere salvato portandosi dietro la modulazione del primo - gli stessi quattro numeri su uno stile che non ha modulazione da nessuna parte. Sullo strumento e una parte di accordi che urla. L'importazione parte ora dai valori predefiniti, e il log dice cosa ha scartato.
+
+Tre cose che dicevano qualcosa di falso invece di dire no.
+Il campo della battuta quando si aggiunge una sezione offriva una posizione che non puo dare - l'ordine lo decide lo strumento, e una sezione chiesta alla battuta 10 o alla 31 arrivava comunque alla 58. Ora il campo e in grigio e lo dice.
+Un tempo fuori dall'intervallo 40-250 del programma veniva cambiato senza una parola. Ora viene annunciato.
+PARAMETERS conserva una lunghezza impostata a mano, cosi una sezione di due battute si puo davvero fare di una. Prima si applicava e un istante dopo veniva sovrascritta dal numero della famiglia.
+
+La riproduzione risponde subito. Mettere in solo Drum Set 2 restava muto fino al riavvio: condivide un canale dal vivo con Drum Set 3, e il volume veniva deciso per traccia, quindi quella muta scriveva sempre per ultima. Un suono scelto mentre il ritmo suona compare ora subito sulla traccia, e una nota ancora in risonanza viene risuonata, cosi il nuovo strumento si sente senza aspettare la fine dell'accordo.
+
+La rotella ingrandisce solo la griglia. Ingrandiva anche sui nomi dei marker e sulla striscia delle sezioni - entrambi sono righelli, e leggerne uno mentre cambia dimensione sotto il puntatore non serve a nulla.
+
+STYLE MASTER PRO - NUOVO
+
+L'intestazione porta una striscia che mostra tutte e 54 le sezioni a colpo d'occhio - accese dove c'e musica, spente dove non ce n'e, con una cornice attorno al punto in cui vi trovate e un clic per andarci. Un pulsante alla sua sinistra sceglie cosa mostra la riga, o la spegne.
+
+Con battute marcate, gli accordi al loro interno si possono portare a DO maggiore, DO minore o DO settima, con la tonalita confermata prima che qualcosa si muova.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.8.0</span>
@@ -3796,6 +3883,35 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.1</span>
+    <span class="version-date">2026-09-26</span>
+  </div>
+  <div class="version-body">v4.8.1 - Ein Style erbt nicht mehr den vorherigen
+
+STYLE MASTER PRO - BEHOBEN
+
+Ein Style erbt nicht mehr die Mixerwerte des vorherigen Styles. Laden Sie einen Style, dann einen zweiten, und der zweite konnte mit der Modulation des ersten gespeichert werden - dieselben vier Zahlen auf einem Style, der nirgends Modulation hat. Am Instrument ist das eine schreiende Akkordstimme. Der Import beginnt jetzt bei den Standardwerten, und das Protokoll sagt, was er verworfen hat.
+
+Drei Dinge, die etwas Unwahres sagten, statt nein zu sagen.
+Das Taktfeld beim Hinzufuegen einer Sektion bot eine Position an, die es nicht geben kann - die Reihenfolge bestimmt das Instrument, und eine bei Takt 10 oder bei Takt 31 verlangte Sektion landete so oder so bei 58. Das Feld ist jetzt ausgegraut und sagt das.
+Ein Tempo ausserhalb des Programmbereichs von 40-250 wurde wortlos geaendert. Jetzt wird es angesagt.
+PARAMETERS behaelt eine von Hand gesetzte Laenge, sodass aus einer zweitaktigen Sektion wirklich eine eintaktige werden kann. Vorher wurde sie angewandt und einen Moment spaeter von der Zahl der Familie ueberschrieben.
+
+Die Wiedergabe antwortet sofort. Drum Set 2 auf Solo zu setzen blieb bis zum Neustart stumm: es teilt sich einen Live-Kanal mit Drum Set 3, und die Lautstaerke wurde pro Spur entschieden, sodass die stumme immer zuletzt schrieb. Ein waehrend des Rhythmus gewaehlter Klang erscheint jetzt sofort im Spurstreifen, und eine noch klingende Note wird erneut angeschlagen, sodass das neue Instrument zu hoeren ist, ohne das Ende des Akkords abzuwarten.
+
+Das Rad zoomt nur das Raster. Es zoomte auch ueber den Markernamen und der Sektionsleiste - beide sind Lineale, und eines zu lesen, waehrend es unter dem Zeiger die Groesse aendert, bringt nichts.
+
+STYLE MASTER PRO - NEU
+
+Die Kopfzeile traegt eine Leiste, die alle 54 Sektionen auf einen Blick zeigt - hell, wo Musik ist, dunkel, wo keine ist, mit einem Rahmen um die Stelle, an der Sie sind, und einem Klick, um dorthin zu gehen. Eine Schaltflaeche links davon waehlt, was die Zeile zeigt, oder schaltet sie aus.
+
+Bei markierten Takten lassen sich die Akkorde darin nach C-Dur, c-Moll oder C7 bringen, mit Bestaetigung der Tonart, bevor sich etwas bewegt.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.0</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -4962,6 +5078,35 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.1</span>
+    <span class="version-date">2026-09-26</span>
+  </div>
+  <div class="version-body">v4.8.1 - Стиль больше не наследует предыдущий
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Стиль больше не наследует значения микшера предыдущего стиля. Загрузите один стиль, затем другой - и второй мог сохраниться с модуляцией первого: те же четыре числа на стиле, где модуляции нет нигде. На инструменте это кричащая аккордовая партия. Импорт теперь начинается со значений по умолчанию, а журнал говорит, что он отбросил.
+
+Три вещи, которые говорили неправду вместо того, чтобы сказать нет.
+Поле такта при добавлении секции предлагало позицию, которую дать не может: порядок решает сам инструмент, и секция, запрошенная на такте 10 или на 31, всё равно приходила на 58. Поле теперь серое и об этом сообщает.
+Темп вне программного диапазона 40-250 менялся без единого слова. Теперь об этом сообщается.
+PARAMETERS сохраняет длину, заданную вручную, так что двухтактную секцию действительно можно сделать однотактной. Раньше она применялась и через мгновение перезаписывалась числом семейства.
+
+Воспроизведение отвечает сразу. Соло на Drum Set 2 оставалось беззвучным до перезапуска: он делит живой канал с Drum Set 3, а громкость решалась по дорожке, поэтому приглушённая всегда писала последней. Звук, выбранный во время игры ритма, теперь сразу появляется на дорожке, а ещё звучащая нота проигрывается заново, так что новый инструмент слышен, не дожидаясь конца аккорда.
+
+Колёсико масштабирует только сетку. Оно масштабировало и над названиями маркеров, и над полосой секций - и то и другое линейки, а читать линейку, пока она меняет размер под указателем, бессмысленно.
+
+STYLE MASTER PRO - НОВОЕ
+
+В заголовке появилась полоса, показывающая все 54 секции сразу: светлые там, где есть музыка, тёмные там, где нет, с рамкой вокруг того места, где вы находитесь, и щелчком, чтобы перейти туда. Кнопка слева от неё выбирает, что показывает строка, или отключает её.
+
+При размеченных тактах аккорды внутри них можно привести к до мажору, до минору или до септаккорду, с подтверждением тональности до того, как что-либо сдвинется.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.0</span>
     <span class="version-date">2026-09-25</span>
   </div>
@@ -6126,6 +6271,35 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.8.1</span>
+    <span class="version-date">2026-09-26</span>
+  </div>
+  <div class="version-body">v4.8.1 - En stil arver inte langre den foregaende
+
+STYLE MASTER PRO - FIXAT
+
+En stil arver inte langre foregaende stils mixervarden. Ladda en stil, sedan en till, och den andra kunde sparas med den forstas modulation - samma fyra siffror pa en stil som inte har nagon modulation nagonstans. Pa instrumentet ar det en skrikande ackordstamma. Importen utgar nu fran standardvardena, och loggen sager vad den kastade.
+
+Tre saker som sa nagot osant i stallet for att saga nej.
+Taktfaltet nar man lagger till en sektion erbjod en position det inte kan ge - instrumentet bestammer ordningen sjalv, och en sektion som begardes vid takt 10 eller vid takt 31 hamnade pa 58 anda. Faltet ar nu gragjort och sager det.
+Ett tempo utanfor programmets omrade 40-250 andrades utan ett ord. Nu sags det till.
+PARAMETERS behaller en langd du satt for hand, sa en sektion pa tva takter kan faktiskt goras till en. Tidigare tillampades den och skrevs ett ogonblick senare over av familjens siffra.
+
+Uppspelningen svarar direkt. Att solo-satta Drum Set 2 var tyst till omstart: den delar en live-kanal med Drum Set 3, och volymen bestamdes per spar, sa den tystade skrev alltid sist. Ett ljud som valjs medan rytmen spelar syns nu direkt i sparremsan, och en ton som fortfarande klingar spelas om, sa det nya instrumentet hors utan att vanta pa att ackordet ska ta slut.
+
+Hjulet zoomar bara rutnatet. Det zoomade ocksa over markornamnen och sektionsremsan - bada ar linjaler, och att lasa en medan den andrar storlek under pekaren ar till ingen nytta.
+
+STYLE MASTER PRO - NYTT
+
+Huvudet bar en remsa som visar alla 54 sektioner pa en gang - upplysta dar det finns musik, morka dar det inte gor det, med en ram runt dar du ar och ett klick for att ga dit. En knapp till vanster om den valjer vad raden visar, eller slar av den.
+
+Med takter markerade kan ackorden i dem foras till C-dur, c-moll eller C7, med tonarten bekraftad innan nagot flyttas.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.8.0</span>
