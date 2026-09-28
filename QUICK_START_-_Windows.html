@@ -252,6 +252,51 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.2</span>
+    <span class="version-date">2026-09-28</span>
+  </div>
+  <div class="version-body">v4.8.2 - Kits that stay saved, markers you can size and delete
+
+PLEASE NOTE: with notes selected, the mouse wheel over the grid moves them up or down one semitone per notch (as before v4.8.1). To zoom while notes are selected, hold the right mouse button or Ctrl while turning the wheel, or click an empty spot first to clear the selection. Ctrl+Z undoes a transpose.
+
+STYLE MASTER PRO - FIXED
+
+Drum kits you save are now kept. Kits saved in DK MAPPER (GLOBAL window, Korg Kit menu), Ketron kits and JV remaps - synonyms and reference kits - were lost every time the program closed. They stayed in the list for the rest of that session and were gone on the next start. We are sorry: anything saved before v4.8.2 could not be kept and has to be saved once more. From this version on it stays. Factory kits can no longer be deleted. If you edit one, your version takes its place, and deleting your version brings the factory kit back.
+
+Transposing with the mouse wheel is back. It worked before v4.8.1 and was lost in that version by mistake, so the wheel only zoomed. A user reported it. With notes selected and the pointer over the grid, one notch moves them one semitone up or down; their place in time does not change. Quick turns of the wheel count as one step, so a single Ctrl+Z undoes them all.
+
+Right-click a marker -> SONG PART TO SECTION:
+- the tempo no longer jumps back to 120 afterwards;
+- the bar dialog uses the bar numbers shown on the ruler;
+- it uses what you selected last - bars on the bar ribbon or notes in the grid.
+
+MARKERS -> + ADD: bars marked on the ribbon stay on the same music when sections move.
+
+Copying notes into MAJ, MIN or SEV (right-click a marker -> COPY ALL / COPY ACTIVE NOTES TO, or SONG PART TO SECTION): the variations of that section that hold notes keep one length, as the Event expects.
+
+GLOBAL window grid: long notes no longer disappear when zooming, and the velocity lines under the grid no longer disappear after a zoom. Undo and zoom are much faster on big styles.
+
+Saving a .kst: the imported MIDI song itself is no longer written into the file - only the sections made from it.
+
+Projects (.bkproj): reopening a project keeps every section's length and the bass octave as they were saved.
+
+Voice names for the high banks are correct, for example Synbass3 on the BASS track.
+
+STYLE MASTER PRO - NEW
+
+MIDI SETUP HELP: a button at the top left of the STYLE MASTER PRO main window. It opens a written guide to the first connection between the program and your Event, in English, Serbian, German and Italian.
+
+MARKERS -> + ADD has a new "Length (bars)" field. Turn the mouse wheel to change it, and click the number to confirm (the same as OK). The new empty block gets that length, and everything after it moves right.
+
+MARKERS -> + ADD also lists sections that stand as empty slots, marked "(empty slot)", so a marker can always be added. Where a section goes is still decided by the Ketron order.
+
+Right-click a marker name on the bar ribbon -> DELETE MARKER removes the marker with its notes and bars, and the sections after it close up. Ctrl+Z brings it back. DELETE ALL NOTES IN still only empties a section.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.1</span>
     <span class="version-date">2026-09-26</span>
   </div>
@@ -1493,6 +1538,51 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.2</span>
+    <span class="version-date">2026-09-28</span>
+  </div>
+  <div class="version-body">v4.8.2 - Kitovi koji ostaju sacuvani, markeri kojima zadajete duzinu i koje brisete
+
+VAZNO: kada su note selektovane, tockic misa iznad mreze pomjera ih gore ili dole za jedan polustepen po kliku (kao prije v4.8.1). Da zumirate dok su note selektovane, drzite desno dugme misa ili Ctrl dok okrecete tockic, ili prvo kliknite u prazno da skinete selekciju. Ctrl+Z ponistava transponovanje.
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Drum kitovi koje sacuvate sada ostaju. Kitovi sacuvani u DK MAPPER-u (GLOBAL prozor, meni Korg Kit), Ketron kitovi i JV remapiranja - sinonimi i referentni kitovi - gubili su se svaki put kad se program zatvori. Ostajali su u listi do kraja te sesije, a pri sljedecem pokretanju ih vise nije bilo. Zao nam je: ono sto je sacuvano prije v4.8.2 nije se moglo zadrzati i treba ga sacuvati jos jednom. Od ove verzije ostaje. Fabricki kitovi se vise ne mogu obrisati. Ako neki izmijenite, vasa verzija zauzima njegovo mjesto, a kad obrisete svoju verziju, fabricki kit se vraca.
+
+Transponovanje tockicem misa je vraceno. Radilo je prije v4.8.1, a u toj verziji je greskom izgubljeno, pa je tockic samo zumirao. Prijavio je korisnik. Kada su note selektovane i kursor je iznad mreze, jedan klik ih pomjera za jedan polustepen gore ili dole; njihovo mjesto u vremenu se ne mijenja. Brzi okreti tockica racunaju se kao jedan korak, pa ih jedan Ctrl+Z vraca sve.
+
+Desni klik na marker -> SONG PART TO SECTION:
+- tempo se poslije vise ne vraca na 120;
+- prozor za taktove koristi brojeve taktova prikazane na lenjiru;
+- koristi ono sto ste posljednje izabrali - taktove na traci taktova ili note u mrezi.
+
+MARKERS -> + ADD: taktovi oznaceni na traci ostaju na istoj muzici kada se sekcije pomjeraju.
+
+Kopiranje nota u MAJ, MIN ili SEV (desni klik na marker -> COPY ALL / COPY ACTIVE NOTES TO, ili SONG PART TO SECTION): varijacije te sekcije koje imaju note zadrzavaju jednu duzinu, kako Event ocekuje.
+
+Mreza GLOBAL prozora: duge note vise ne nestaju pri zumiranju, a velocity linije ispod mreze vise ne nestaju poslije zuma. Undo i zum su mnogo brzi na velikim stilovima.
+
+Cuvanje .kst fajla: sama uvezena MIDI pjesma se vise ne upisuje u fajl - samo sekcije napravljene od nje.
+
+Projekti (.bkproj): kad ponovo otvorite projekat, svaka sekcija zadrzava svoju duzinu, a bas svoju oktavu, kako su sacuvani.
+
+Imena zvukova za visoke banke su tacna, na primjer Synbass3 na BASS traci.
+
+STYLE MASTER PRO - NOVO
+
+MIDI SETUP HELP: dugme gore lijevo u glavnom prozoru STYLE MASTER PRO. Otvara pisano uputstvo za prvo povezivanje programa i vaseg Eventa, na engleskom, srpskom, njemackom i italijanskom.
+
+MARKERS -> + ADD ima novo polje "Length (bars)". Okrenite tockic misa da ga promijenite, a kliknite na broj da potvrdite (isto kao OK). Novi prazni blok dobija tu duzinu, a sve iza njega se pomjera udesno.
+
+MARKERS -> + ADD sada navodi i sekcije koje stoje kao prazna mjesta, oznacene "(empty slot)", pa se marker uvijek moze dodati. Gdje sekcija ide i dalje odredjuje Ketron redoslijed.
+
+Desni klik na ime markera na traci taktova -> DELETE MARKER uklanja marker sa njegovim notama i taktovima, a sekcije iza njega se primaknu. Ctrl+Z ga vraca. DELETE ALL NOTES IN i dalje samo prazni sekciju.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.1</span>
     <span class="version-date">2026-09-26</span>
   </div>
@@ -2686,6 +2776,51 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.8.2</span>
+    <span class="version-date">2026-09-28</span>
+  </div>
+  <div class="version-body">v4.8.2 - Kit che restano salvati, marker con lunghezza e da eliminare
+
+NOTA: con le note selezionate, la rotella del mouse sopra la griglia le sposta su o giu di un semitono per scatto (come prima della v4.8.1). Per zoomare con le note selezionate, tenete premuto il tasto destro del mouse o Ctrl mentre girate la rotella, oppure cliccate prima su un punto vuoto per togliere la selezione. Ctrl+Z annulla una trasposizione.
+
+STYLE MASTER PRO - CORRETTO
+
+I drum kit che salvate ora vengono conservati. I kit salvati nel DK MAPPER (finestra GLOBAL, menu Korg Kit), i kit Ketron e i remap JV - sinonimi e kit di riferimento - andavano persi ogni volta che il programma veniva chiuso. Restavano nell'elenco fino alla fine della sessione e al successivo avvio erano spariti. Ci dispiace: cio che e stato salvato prima della v4.8.2 non si e potuto conservare e va salvato ancora una volta. Da questa versione resta. I kit di fabbrica non si possono piu eliminare. Se ne modificate uno, la vostra versione prende il suo posto, ed eliminando la vostra versione torna il kit di fabbrica.
+
+La trasposizione con la rotella del mouse e tornata. Funzionava prima della v4.8.1 ed e andata persa per errore in quella versione, cosi la rotella faceva solo lo zoom. L'ha segnalato un utente. Con le note selezionate e il puntatore sopra la griglia, uno scatto le sposta di un semitono su o giu; la loro posizione nel tempo non cambia. Giri rapidi della rotella contano come un solo passo, quindi un solo Ctrl+Z li annulla tutti.
+
+Clic destro su un marker -> SONG PART TO SECTION:
+- il tempo non torna piu a 120 dopo l'operazione;
+- la finestra delle battute usa i numeri di battuta mostrati sul righello;
+- usa cio che avete selezionato per ultimo - battute sulla barra delle battute o note nella griglia.
+
+MARKERS -> + ADD: le battute marcate sulla barra restano sulla stessa musica quando le sezioni si spostano.
+
+Copia di note in MAJ, MIN o SEV (clic destro su un marker -> COPY ALL / COPY ACTIVE NOTES TO, oppure SONG PART TO SECTION): le variazioni di quella sezione che contengono note mantengono una sola lunghezza, come si aspetta l'Event.
+
+Griglia della finestra GLOBAL: le note lunghe non spariscono piu con lo zoom, e le linee di velocity sotto la griglia non spariscono piu dopo uno zoom. Undo e zoom sono molto piu veloci sugli stili grandi.
+
+Salvataggio di un .kst: il brano MIDI importato non viene piu scritto nel file - solo le sezioni ricavate da esso.
+
+Progetti (.bkproj): riaprendo un progetto, ogni sezione mantiene la sua lunghezza e il basso la sua ottava, come erano stati salvati.
+
+I nomi delle voci per i banchi alti sono corretti, per esempio Synbass3 sulla traccia BASS.
+
+STYLE MASTER PRO - NUOVO
+
+MIDI SETUP HELP: un pulsante in alto a sinistra nella finestra principale di STYLE MASTER PRO. Apre una guida scritta per il primo collegamento tra il programma e il vostro Event, in inglese, serbo, tedesco e italiano.
+
+MARKERS -> + ADD ha un nuovo campo "Length (bars)". Girate la rotella del mouse per cambiarlo e cliccate sul numero per confermare (come OK). Il nuovo blocco vuoto riceve quella lunghezza e tutto cio che segue si sposta a destra.
+
+MARKERS -> + ADD elenca ora anche le sezioni che esistono come posti vuoti, contrassegnate "(empty slot)", cosi un marker si puo sempre aggiungere. La posizione di una sezione e sempre decisa dall'ordine Ketron.
+
+Clic destro sul nome di un marker nella barra delle battute -> DELETE MARKER rimuove il marker con le sue note e battute, e le sezioni successive si accostano. Ctrl+Z lo ripristina. DELETE ALL NOTES IN svuota ancora soltanto una sezione.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.8.1</span>
@@ -3883,6 +4018,51 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.2</span>
+    <span class="version-date">2026-09-28</span>
+  </div>
+  <div class="version-body">v4.8.2 - Kits bleiben gespeichert, Marker mit Laenge und zum Loeschen
+
+HINWEIS: Bei ausgewaehlten Noten verschiebt das Mausrad ueber dem Raster sie pro Raste um einen Halbton nach oben oder unten (wie vor v4.8.1). Um bei ausgewaehlten Noten zu zoomen, halten Sie beim Drehen des Rades die rechte Maustaste oder Ctrl gedrueckt, oder klicken Sie zuerst auf eine leere Stelle, um die Auswahl aufzuheben. Ctrl+Z macht eine Transposition rueckgaengig.
+
+STYLE MASTER PRO - BEHOBEN
+
+Drum-Kits, die Sie speichern, bleiben jetzt erhalten. Im DK MAPPER gespeicherte Kits (Fenster GLOBAL, Menue Korg Kit), Ketron-Kits und JV-Remaps - Synonyme und Referenz-Kits - gingen bei jedem Schliessen des Programms verloren. Sie standen bis zum Ende der Sitzung in der Liste und waren beim naechsten Start weg. Es tut uns leid: Was vor v4.8.2 gespeichert wurde, konnte nicht erhalten werden und muss noch einmal gespeichert werden. Ab dieser Version bleibt es. Werks-Kits koennen nicht mehr geloescht werden. Wenn Sie eines bearbeiten, tritt Ihre Version an seine Stelle, und wenn Sie Ihre Version loeschen, kommt das Werks-Kit zurueck.
+
+Das Transponieren mit dem Mausrad ist zurueck. Es funktionierte vor v4.8.1 und ging in dieser Version versehentlich verloren, sodass das Rad nur noch zoomte. Ein Benutzer hat es gemeldet. Mit ausgewaehlten Noten und dem Zeiger ueber dem Raster verschiebt eine Raste sie um einen Halbton nach oben oder unten; ihre Position in der Zeit aendert sich nicht. Schnelle Drehungen des Rades zaehlen als ein Schritt, sodass ein einziges Ctrl+Z sie alle rueckgaengig macht.
+
+Rechtsklick auf einen Marker -> SONG PART TO SECTION:
+- das Tempo springt danach nicht mehr auf 120 zurueck;
+- der Takt-Dialog verwendet die Taktnummern, die auf dem Lineal stehen;
+- es wird verwendet, was Sie zuletzt ausgewaehlt haben - Takte auf der Taktleiste oder Noten im Raster.
+
+MARKERS -> + ADD: auf der Leiste markierte Takte bleiben auf derselben Musik, wenn sich Sektionen verschieben.
+
+Kopieren von Noten nach MAJ, MIN oder SEV (Rechtsklick auf einen Marker -> COPY ALL / COPY ACTIVE NOTES TO, oder SONG PART TO SECTION): die Variationen dieser Sektion, die Noten enthalten, behalten eine gemeinsame Laenge, wie es das Event erwartet.
+
+Raster im Fenster GLOBAL: lange Noten verschwinden beim Zoomen nicht mehr, und die Velocity-Linien unter dem Raster verschwinden nach einem Zoom nicht mehr. Undo und Zoom sind bei grossen Styles viel schneller.
+
+Speichern einer .kst: der importierte MIDI-Song selbst wird nicht mehr in die Datei geschrieben - nur die daraus erstellten Sektionen.
+
+Projekte (.bkproj): Beim erneuten Oeffnen eines Projekts behalten alle Sektionen ihre Laenge und der Bass seine Oktave, wie sie gespeichert wurden.
+
+Die Klangnamen fuer die hohen Baenke sind korrekt, zum Beispiel Synbass3 auf der BASS-Spur.
+
+STYLE MASTER PRO - NEU
+
+MIDI SETUP HELP: eine Schaltflaeche oben links im Hauptfenster von STYLE MASTER PRO. Sie oeffnet eine schriftliche Anleitung fuer die erste Verbindung zwischen dem Programm und Ihrem Event, auf Englisch, Serbisch, Deutsch und Italienisch.
+
+MARKERS -> + ADD hat ein neues Feld "Length (bars)". Drehen Sie das Mausrad, um es zu aendern, und klicken Sie auf die Zahl, um zu bestaetigen (wie OK). Der neue leere Block erhaelt diese Laenge, und alles danach rueckt nach rechts.
+
+MARKERS -> + ADD listet jetzt auch Sektionen, die als leere Plaetze stehen, markiert mit "(empty slot)", sodass sich immer ein Marker hinzufuegen laesst. Wohin eine Sektion kommt, bestimmt weiterhin die Ketron-Reihenfolge.
+
+Rechtsklick auf einen Markernamen auf der Taktleiste -> DELETE MARKER entfernt den Marker mit seinen Noten und Takten, und die Sektionen danach ruecken auf. Ctrl+Z holt ihn zurueck. DELETE ALL NOTES IN leert eine Sektion weiterhin nur.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.1</span>
     <span class="version-date">2026-09-26</span>
   </div>
@@ -5078,6 +5258,51 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.2</span>
+    <span class="version-date">2026-09-28</span>
+  </div>
+  <div class="version-body">v4.8.2 - Наборы сохраняются, маркеры с длиной и удалением
+
+ВНИМАНИЕ: при выделенных нотах колесо мыши над сеткой сдвигает их вверх или вниз на полутон за один щелчок (как до v4.8.1). Чтобы масштабировать при выделенных нотах, удерживайте правую кнопку мыши или Ctrl, вращая колесо, или сначала щёлкните по пустому месту, чтобы снять выделение. Ctrl+Z отменяет транспонирование.
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Сохранённые вами наборы ударных теперь не пропадают. Наборы, сохранённые в DK MAPPER (окно GLOBAL, меню Korg Kit), наборы Ketron и JV-ремапы - синонимы и эталонные наборы - терялись при каждом закрытии программы. Они оставались в списке до конца сеанса, а при следующем запуске их уже не было. Нам жаль: то, что было сохранено до v4.8.2, сохранить не удалось, и это нужно сохранить ещё раз. Начиная с этой версии всё остаётся. Заводские наборы больше нельзя удалить. Если вы измените один из них, ваша версия займёт его место, а после удаления вашей версии заводской набор вернётся.
+
+Транспонирование колесом мыши вернулось. Оно работало до v4.8.1 и по ошибке пропало в этой версии, поэтому колесо только масштабировало. Об этом сообщил пользователь. При выделенных нотах и указателе над сеткой один щелчок сдвигает их на полутон вверх или вниз; их место во времени не меняется. Быстрые повороты колеса считаются одним шагом, поэтому один Ctrl+Z отменяет их все.
+
+Правый щелчок по маркеру -> SONG PART TO SECTION:
+- темп после этого больше не возвращается к 120;
+- окно тактов использует номера тактов, показанные на линейке;
+- используется то, что вы выделили последним - такты на ленте тактов или ноты в сетке.
+
+MARKERS -> + ADD: такты, отмеченные на ленте, остаются на той же музыке, когда секции сдвигаются.
+
+Копирование нот в MAJ, MIN или SEV (правый щелчок по маркеру -> COPY ALL / COPY ACTIVE NOTES TO, или SONG PART TO SECTION): вариации этой секции, содержащие ноты, сохраняют одну длину, как ожидает Event.
+
+Сетка окна GLOBAL: длинные ноты больше не исчезают при масштабировании, а линии velocity под сеткой больше не исчезают после масштабирования. Undo и масштабирование гораздо быстрее на больших стилях.
+
+Сохранение .kst: сама импортированная MIDI-песня больше не записывается в файл - только созданные из неё секции.
+
+Проекты (.bkproj): при повторном открытии проекта каждая секция сохраняет свою длину, а бас - свою октаву, как они были сохранены.
+
+Названия тембров для верхних банков правильные, например Synbass3 на дорожке BASS.
+
+STYLE MASTER PRO - НОВОЕ
+
+MIDI SETUP HELP: кнопка в левом верхнем углу главного окна STYLE MASTER PRO. Она открывает письменное руководство по первому подключению программы к вашему Event на английском, сербском, немецком и итальянском языках.
+
+У MARKERS -> + ADD новое поле "Length (bars)". Вращайте колесо мыши, чтобы изменить его, и щёлкните по числу, чтобы подтвердить (то же, что OK). Новый пустой блок получает эту длину, а всё после него сдвигается вправо.
+
+MARKERS -> + ADD теперь также показывает секции, которые существуют как пустые места, с пометкой "(empty slot)", так что маркер всегда можно добавить. Место секции по-прежнему определяется порядком Ketron.
+
+Правый щелчок по имени маркера на ленте тактов -> DELETE MARKER удаляет маркер вместе с его нотами и тактами, а следующие секции сдвигаются. Ctrl+Z возвращает его. DELETE ALL NOTES IN по-прежнему только очищает секцию.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.1</span>
     <span class="version-date">2026-09-26</span>
   </div>
@@ -6271,6 +6496,51 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.8.2</span>
+    <span class="version-date">2026-09-28</span>
+  </div>
+  <div class="version-body">v4.8.2 - Kit som forblir sparade, markorer med langd och radering
+
+OBS: med noter markerade flyttar mushjulet over rutnatet dem upp eller ner en halvton per steg (som fore v4.8.1). For att zooma medan noter ar markerade, hall ner hoger musknapp eller Ctrl medan du vrider hjulet, eller klicka forst pa en tom plats for att ta bort markeringen. Ctrl+Z angrar en transponering.
+
+STYLE MASTER PRO - FIXAT
+
+Trumkit som du sparar finns nu kvar. Kit sparade i DK MAPPER (fonstret GLOBAL, menyn Korg Kit), Ketron-kit och JV-omvandlingar - synonymer och referenskit - forsvann varje gang programmet stangdes. De fanns kvar i listan resten av sessionen och var borta vid nasta start. Vi beklagar: det som sparades fore v4.8.2 kunde inte behallas och maste sparas en gang till. Fran och med den har versionen finns det kvar. Fabrikskit kan inte langre raderas. Om du andrar ett tar din version dess plats, och nar du raderar din version kommer fabrikskitet tillbaka.
+
+Transponering med mushjulet ar tillbaka. Den fungerade fore v4.8.1 och forsvann av misstag i den versionen, sa hjulet bara zoomade. En anvandare rapporterade det. Med noter markerade och pekaren over rutnatet flyttar ett steg dem en halvton upp eller ner; deras plats i tiden andras inte. Snabba vridningar av hjulet raknas som ett steg, sa ett enda Ctrl+Z angrar dem alla.
+
+Hogerklicka pa en markor -> SONG PART TO SECTION:
+- tempot hoppar inte langre tillbaka till 120 efterat;
+- taktdialogen anvander taktnumren som visas pa linjalen;
+- den anvander det du markerade senast - takter pa taktbandet eller noter i rutnatet.
+
+MARKERS -> + ADD: takter markerade pa bandet stannar pa samma musik nar sektioner flyttas.
+
+Kopiering av noter till MAJ, MIN eller SEV (hogerklicka pa en markor -> COPY ALL / COPY ACTIVE NOTES TO, eller SONG PART TO SECTION): de variationer i sektionen som innehaller noter behaller en och samma langd, som Event forvantar sig.
+
+Rutnatet i fonstret GLOBAL: langa noter forsvinner inte langre vid zoomning, och velocity-linjerna under rutnatet forsvinner inte langre efter en zoom. Undo och zoom ar mycket snabbare pa stora stilar.
+
+Spara en .kst: den importerade MIDI-laten skrivs inte langre in i filen - bara sektionerna som gjorts av den.
+
+Projekt (.bkproj): nar ett projekt oppnas igen behaller varje sektion sin langd och basen sin oktav, sa som de sparades.
+
+Ljudnamnen for de hoga bankerna ar korrekta, till exempel Synbass3 pa BASS-sparet.
+
+STYLE MASTER PRO - NYTT
+
+MIDI SETUP HELP: en knapp uppe till vanster i huvudfonstret for STYLE MASTER PRO. Den oppnar en skriven guide for den forsta anslutningen mellan programmet och din Event, pa engelska, serbiska, tyska och italienska.
+
+MARKERS -> + ADD har ett nytt falt "Length (bars)". Vrid mushjulet for att andra det och klicka pa siffran for att bekrafta (samma som OK). Det nya tomma blocket far den langden, och allt efter det flyttas at hoger.
+
+MARKERS -> + ADD visar nu ocksa sektioner som star som tomma platser, markerade "(empty slot)", sa att en markor alltid kan laggas till. Var en sektion hamnar bestams fortfarande av Ketron-ordningen.
+
+Hogerklicka pa ett markornamn pa taktbandet -> DELETE MARKER tar bort markoren med dess noter och takter, och sektionerna efter den ruckar ihop. Ctrl+Z tar tillbaka den. DELETE ALL NOTES IN tommer fortfarande bara en sektion.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.8.1</span>
