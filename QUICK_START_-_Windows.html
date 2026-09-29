@@ -252,6 +252,50 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.3</span>
+    <span class="version-date">2026-09-29</span>
+  </div>
+  <div class="version-body">v4.8.3 - Pitch bend kept, Chord Setup read from the style
+
+STYLE MASTER PRO - FIXED
+
+Pitch bend is kept. Until now a style loaded into the program lost its pitch bends - for example the bass slides in the Event's own styles - when it was saved as .kst again. They now go back into the saved style, and they travel with the notes when sections are copied, swapped, renamed, extended (ADD BARS WITH SAME NOTES) or shortened (DELETE SELECTED BARS). Projects (.bkproj) keep them too.
+
+Right-click a marker -> DELETE MARKER now also removes that section's own instruments and mixer settings. A section added later with the same name (MARKERS button -> + ADD) starts clean instead of taking over the deleted one's sounds. Tempo and time signature stay those of the style. Ctrl+Z brings everything back.
+
+A Korg, Yamaha or new style starts with a clean Chord Setup instead of the previous style's.
+
+MIX button in the Global window: a MIX window left open now shows the newly loaded style's settings (Chord Setup, volume, pan, reverb, chorus) at once, and follows Ctrl+Z / redo and an opened project. Before, it had to be closed and opened again.
+
+Closing the program while the MIDI Monitor input is connected (MIDI Monitor on the main window) or while DK MAPPER is open (Global window) no longer risks an error or a crash on exit.
+
+Saved styles (.kst) are cleaner: portamento and wha-wha messages are written only for the tracks that actually use them, instead of on every track in every section. The Event's own styles never send them.
+
+STYLE MASTER PRO - NEW
+
+Korg styles: pitch bend is converted. The bass slides and the bends of the solo parts (ACC1-ACC5) now come across to the Event instead of being dropped. Drum and percussion bends are still left out.
+
+MIX -> Chord Setup shows a Ketron style's own settings - Parallel / Close / Logic, and Normal / Retrigger / Retrigger Pitch per chord part and section - read from the style when it is loaded. A change made there is written back into the saved style. Everything else in the style's header stays exactly as the Event saved it.
+
+Projects (.bkproj) now keep the mix per section (volume, pan, reverb, Chord Setup) and, for a style that came from the Event, its own Ketron header. A reopened project is saved to the Event exactly as it came.
+
+Loading a style (drag a .kst or .mid into the Global window) or opening a project (.bkproj): if the MAJ, MIN and SEV variations of a section hold notes but have different lengths, a warning now appears. It lists the sections and explains the Event's rule: variations with notes must be the same length, and an empty variation is only a placeholder. "Yes" makes them equal (the longest wins, nothing is cut, Ctrl+Z undoes it). "No" leaves the style as it is.
+
+IMPORT PARTS (button in the Global window) - what it does and what it does not:
+- It takes sections and tracks out of Korg and Ketron STYLES, the kind that have section markers.
+- A song - a MIDI file without section markers - is refused at once, with a note on what to do instead: drag the song's .mid (or .midi, .kar) into the Global window (a dialog assigns its channels), mark the bars on the ruler, then right-click a marker -> SONG PART TO SECTION.
+- Importing a section in another time signature (3/4 into 4/4 or the other way round) now asks first.
+- The style's tempo is no longer replaced by the tempo of the imported file.
+
+A NOTE ON AN OLD ENTRY
+
+The LIVE PREVIEW button mentioned in v3.2.0 no longer exists. To open a style, drag it into the Global window.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.2</span>
     <span class="version-date">2026-09-28</span>
   </div>
@@ -1538,6 +1582,50 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.3</span>
+    <span class="version-date">2026-09-29</span>
+  </div>
+  <div class="version-body">v4.8.3 - Pitch bend se cuva, Chord Setup se cita iz stila
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Pitch bend se cuva. Do sada je stil ucitan u program gubio svoje pitch bend poruke - na primjer klizanja basa u Eventovim fabrickim stilovima - kada bi se ponovo sacuvao kao .kst. Sada se vracaju u sacuvani stil i putuju sa notama kada se sekcije kopiraju, zamjenjuju, preimenuju, produzavaju (ADD BARS WITH SAME NOTES) ili skracuju (DELETE SELECTED BARS). Projekti (.bkproj) ih takodje cuvaju.
+
+Desni klik na marker -> DELETE MARKER sada uklanja i instrumente i mikser postavke te sekcije. Sekcija dodata kasnije pod istim imenom (dugme MARKERS -> + ADD) pocinje cista, umjesto da preuzme zvukove obrisane. Tempo i takt ostaju onakvi kakvi su u stilu. Ctrl+Z vraca sve.
+
+Korg, Yamaha ili novi stil pocinje sa cistim Chord Setup-om, umjesto sa onim od prethodnog stila.
+
+Dugme MIX u Global prozoru: MIX prozor koji ostane otvoren sada odmah prikazuje postavke novo ucitanog stila (Chord Setup, jacina, pan, reverb, chorus) i prati Ctrl+Z / redo i otvoreni projekat. Ranije ga je trebalo zatvoriti i ponovo otvoriti.
+
+Zatvaranje programa dok je ulaz MIDI Monitora povezan (MIDI Monitor u glavnom prozoru) ili dok je DK MAPPER otvoren (Global prozor) vise ne rizikuje gresku ili pad pri izlasku.
+
+Sacuvani stilovi (.kst) su cistiji: portamento i wha-wha poruke upisuju se samo za trake koje ih stvarno koriste, umjesto na svaku traku u svakoj sekciji. Eventovi fabricki stilovi ih nikad ne salju.
+
+STYLE MASTER PRO - NOVO
+
+Korg stilovi: pitch bend se konvertuje. Klizanja basa i bendovi solo dionica (ACC1-ACC5) sada stizu na Event umjesto da se odbace. Bendovi bubnjeva i perkusija i dalje se izostavljaju.
+
+MIX -> Chord Setup prikazuje vlastite postavke Ketron stila - Parallel / Close / Logic, i Normal / Retrigger / Retrigger Pitch po akordskoj dionici i sekciji - procitane iz stila kad se ucita. Izmjena napravljena tu upisuje se nazad u sacuvani stil. Sve ostalo u zaglavlju stila ostaje tacno onako kako ga je Event sacuvao.
+
+Projekti (.bkproj) sada cuvaju mix po sekciji (jacina, pan, reverb, Chord Setup) i, za stil koji je dosao sa Eventa, njegovo vlastito Ketron zaglavlje. Ponovo otvoren projekat cuva se na Event tacno onakav kakav je dosao.
+
+Ucitavanje stila (prevucite .kst ili .mid u Global prozor) ili otvaranje projekta (.bkproj): ako MAJ, MIN i SEV varijacije neke sekcije imaju note, a razlicite duzine, sada se pojavljuje upozorenje. Ono navodi sekcije i objasnjava Eventovo pravilo: varijacije sa notama moraju biti iste duzine, a prazna varijacija je samo rezervisano mjesto. "Yes" ih izjednacava (pobjedjuje najduza, nista se ne sijece, Ctrl+Z ponistava). "No" ostavlja stil kakav jeste.
+
+IMPORT PARTS (dugme u Global prozoru) - sta radi, a sta ne:
+- Uzima sekcije i trake iz Korg i Ketron STILOVA, onih koji imaju markere sekcija.
+- Pjesma - MIDI fajl bez markera sekcija - odmah se odbija, uz napomenu sta uraditi umjesto toga: prevucite .mid pjesme (ili .midi, .kar) u Global prozor (otvara se prozor za raspodjelu kanala), oznacite taktove na lenjiru, pa desni klik na marker -> SONG PART TO SECTION.
+- Uvoz sekcije u drugom taktu (3/4 u 4/4 ili obrnuto) sada prvo pita.
+- Tempo stila se vise ne zamjenjuje tempom uvezenog fajla.
+
+NAPOMENA UZ STARI UNOS
+
+Dugme LIVE PREVIEW pomenuto u v3.2.0 vise ne postoji. Da otvorite stil, prevucite ga u Global prozor.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.2</span>
     <span class="version-date">2026-09-28</span>
   </div>
@@ -2776,6 +2864,50 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.8.3</span>
+    <span class="version-date">2026-09-29</span>
+  </div>
+  <div class="version-body">v4.8.3 - Pitch bend conservato, Chord Setup letto dallo stile
+
+STYLE MASTER PRO - CORRETTO
+
+Il pitch bend viene conservato. Finora uno stile caricato nel programma perdeva i suoi pitch bend - per esempio gli scivolamenti del basso negli stili di fabbrica dell'Event - quando veniva salvato di nuovo come .kst. Ora tornano nello stile salvato e viaggiano con le note quando le sezioni vengono copiate, scambiate, rinominate, allungate (ADD BARS WITH SAME NOTES) o accorciate (DELETE SELECTED BARS). Anche i progetti (.bkproj) li conservano.
+
+Clic destro su un marker -> DELETE MARKER ora rimuove anche gli strumenti e le impostazioni del mixer di quella sezione. Una sezione aggiunta piu tardi con lo stesso nome (pulsante MARKERS -> + ADD) parte pulita invece di prendere i suoni di quella eliminata. Tempo e tempo in chiave restano quelli dello stile. Ctrl+Z riporta tutto.
+
+Uno stile Korg, Yamaha o nuovo parte con un Chord Setup pulito invece di quello dello stile precedente.
+
+Pulsante MIX nella finestra Global: una finestra MIX lasciata aperta ora mostra subito le impostazioni dello stile appena caricato (Chord Setup, volume, pan, riverbero, chorus) e segue Ctrl+Z / redo e un progetto aperto. Prima bisognava chiuderla e riaprirla.
+
+Chiudere il programma mentre l'ingresso del MIDI Monitor e collegato (MIDI Monitor nella finestra principale) o mentre DK MAPPER e aperto (finestra Global) non rischia piu un errore o un crash all'uscita.
+
+Gli stili salvati (.kst) sono piu puliti: i messaggi di portamento e wha-wha vengono scritti solo per le tracce che li usano davvero, invece che su ogni traccia in ogni sezione. Gli stili di fabbrica dell'Event non li inviano mai.
+
+STYLE MASTER PRO - NUOVO
+
+Stili Korg: il pitch bend viene convertito. Gli scivolamenti del basso e i bend delle parti soliste (ACC1-ACC5) ora arrivano all'Event invece di essere scartati. I bend di batteria e percussioni restano esclusi.
+
+MIX -> Chord Setup mostra le impostazioni proprie di uno stile Ketron - Parallel / Close / Logic, e Normal / Retrigger / Retrigger Pitch per parte accordale e sezione - lette dallo stile al caricamento. Una modifica fatta li viene riscritta nello stile salvato. Tutto il resto dell'intestazione dello stile resta esattamente come l'Event l'ha salvato.
+
+I progetti (.bkproj) ora conservano il mix per sezione (volume, pan, riverbero, Chord Setup) e, per uno stile che viene dall'Event, la sua intestazione Ketron. Un progetto riaperto viene salvato sull'Event esattamente come era arrivato.
+
+Caricando uno stile (trascinate un .kst o un .mid nella finestra Global) o aprendo un progetto (.bkproj): se le variazioni MAJ, MIN e SEV di una sezione contengono note ma hanno lunghezze diverse, ora appare un avviso. Elenca le sezioni e spiega la regola dell'Event: le variazioni con note devono avere la stessa lunghezza, e una variazione vuota e solo un segnaposto. "Yes" le rende uguali (vince la piu lunga, nulla viene tagliato, Ctrl+Z annulla). "No" lascia lo stile com'e.
+
+IMPORT PARTS (pulsante nella finestra Global) - cosa fa e cosa non fa:
+- Prende sezioni e tracce da STILI Korg e Ketron, quelli che hanno marker di sezione.
+- Un brano - un file MIDI senza marker di sezione - viene rifiutato subito, con una nota su cosa fare invece: trascinate il .mid del brano (o .midi, .kar) nella finestra Global (una finestra assegna i suoi canali), marcate le battute sul righello, poi clic destro su un marker -> SONG PART TO SECTION.
+- Importare una sezione in un altro tempo in chiave (3/4 in 4/4 o viceversa) ora chiede prima.
+- Il tempo dello stile non viene piu sostituito dal tempo del file importato.
+
+UNA NOTA SU UNA VECCHIA VOCE
+
+Il pulsante LIVE PREVIEW citato nella v3.2.0 non esiste piu. Per aprire uno stile, trascinatelo nella finestra Global.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.8.2</span>
@@ -4018,6 +4150,50 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.3</span>
+    <span class="version-date">2026-09-29</span>
+  </div>
+  <div class="version-body">v4.8.3 - Pitch Bend bleibt erhalten, Chord Setup aus dem Style gelesen
+
+STYLE MASTER PRO - BEHOBEN
+
+Pitch Bend bleibt erhalten. Bisher verlor ein in das Programm geladener Style seine Pitch Bends - zum Beispiel die Bass-Slides in den Werks-Styles des Event -, wenn er wieder als .kst gespeichert wurde. Jetzt kommen sie zurueck in den gespeicherten Style und wandern mit den Noten, wenn Sektionen kopiert, getauscht, umbenannt, verlaengert (ADD BARS WITH SAME NOTES) oder gekuerzt (DELETE SELECTED BARS) werden. Projekte (.bkproj) behalten sie ebenfalls.
+
+Rechtsklick auf einen Marker -> DELETE MARKER entfernt jetzt auch die Instrumente und Mixer-Einstellungen dieser Sektion. Eine spaeter mit demselben Namen hinzugefuegte Sektion (Schaltflaeche MARKERS -> + ADD) beginnt sauber, statt die Klaenge der geloeschten zu uebernehmen. Tempo und Taktart bleiben die des Styles. Ctrl+Z holt alles zurueck.
+
+Ein Korg-, Yamaha- oder neuer Style beginnt mit einem sauberen Chord Setup statt mit dem des vorherigen Styles.
+
+Schaltflaeche MIX im Global-Fenster: Ein offen gelassenes MIX-Fenster zeigt jetzt sofort die Einstellungen des neu geladenen Styles (Chord Setup, Lautstaerke, Pan, Hall, Chorus) und folgt Ctrl+Z / Redo und einem geoeffneten Projekt. Vorher musste es geschlossen und wieder geoeffnet werden.
+
+Das Schliessen des Programms, waehrend der Eingang des MIDI Monitors verbunden ist (MIDI Monitor im Hauptfenster) oder DK MAPPER geoeffnet ist (Global-Fenster), riskiert beim Beenden keinen Fehler und keinen Absturz mehr.
+
+Gespeicherte Styles (.kst) sind sauberer: Portamento- und Wha-Wha-Meldungen werden nur fuer die Spuren geschrieben, die sie wirklich verwenden, statt auf jede Spur in jeder Sektion. Die Werks-Styles des Event senden sie nie.
+
+STYLE MASTER PRO - NEU
+
+Korg-Styles: Pitch Bend wird konvertiert. Die Bass-Slides und die Bends der Solostimmen (ACC1-ACC5) kommen jetzt beim Event an, statt verworfen zu werden. Bends von Schlagzeug und Percussion bleiben weiterhin aussen vor.
+
+MIX -> Chord Setup zeigt die eigenen Einstellungen eines Ketron-Styles - Parallel / Close / Logic, und Normal / Retrigger / Retrigger Pitch pro Akkordstimme und Sektion -, gelesen aus dem Style beim Laden. Eine Aenderung dort wird in den gespeicherten Style zurueckgeschrieben. Alles andere im Header des Styles bleibt genau so, wie das Event es gespeichert hat.
+
+Projekte (.bkproj) behalten jetzt den Mix pro Sektion (Lautstaerke, Pan, Hall, Chord Setup) und, bei einem Style, der vom Event kam, seinen eigenen Ketron-Header. Ein wieder geoeffnetes Projekt wird genau so auf das Event gespeichert, wie es kam.
+
+Laden eines Styles (eine .kst oder .mid in das Global-Fenster ziehen) oder Oeffnen eines Projekts (.bkproj): Wenn die Variationen MAJ, MIN und SEV einer Sektion Noten enthalten, aber unterschiedlich lang sind, erscheint jetzt eine Warnung. Sie listet die Sektionen auf und erklaert die Regel des Event: Variationen mit Noten muessen gleich lang sein, und eine leere Variation ist nur ein Platzhalter. "Yes" macht sie gleich lang (die laengste gewinnt, nichts wird abgeschnitten, Ctrl+Z macht es rueckgaengig). "No" laesst den Style, wie er ist.
+
+IMPORT PARTS (Schaltflaeche im Global-Fenster) - was es tut und was nicht:
+- Es uebernimmt Sektionen und Spuren aus Korg- und Ketron-STYLES, also solchen mit Sektionsmarkern.
+- Ein Song - eine MIDI-Datei ohne Sektionsmarker - wird sofort abgelehnt, mit einem Hinweis, was stattdessen zu tun ist: die .mid des Songs (oder .midi, .kar) in das Global-Fenster ziehen (ein Dialog weist die Kanaele zu), die Takte auf dem Lineal markieren, dann Rechtsklick auf einen Marker -> SONG PART TO SECTION.
+- Der Import einer Sektion in einer anderen Taktart (3/4 in 4/4 oder umgekehrt) fragt jetzt vorher nach.
+- Das Tempo des Styles wird nicht mehr durch das Tempo der importierten Datei ersetzt.
+
+HINWEIS ZU EINEM ALTEN EINTRAG
+
+Die in v3.2.0 erwaehnte Schaltflaeche LIVE PREVIEW gibt es nicht mehr. Um einen Style zu oeffnen, ziehen Sie ihn in das Global-Fenster.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.2</span>
     <span class="version-date">2026-09-28</span>
   </div>
@@ -5258,6 +5434,50 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v4.8.3</span>
+    <span class="version-date">2026-09-29</span>
+  </div>
+  <div class="version-body">v4.8.3 - Pitch bend сохраняется, Chord Setup читается из стиля
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Pitch bend сохраняется. До сих пор стиль, загруженный в программу, терял свои pitch bend - например, скольжения баса в заводских стилях Event, - когда его снова сохраняли как .kst. Теперь они возвращаются в сохранённый стиль и перемещаются вместе с нотами, когда секции копируются, меняются местами, переименовываются, удлиняются (ADD BARS WITH SAME NOTES) или укорачиваются (DELETE SELECTED BARS). Проекты (.bkproj) тоже их сохраняют.
+
+Правый щелчок по маркеру -> DELETE MARKER теперь удаляет также инструменты и настройки микшера этой секции. Секция, добавленная позже с тем же именем (кнопка MARKERS -> + ADD), начинается с чистого листа, а не получает звуки удалённой. Темп и размер остаются такими, как в стиле. Ctrl+Z возвращает всё.
+
+Стиль Korg, Yamaha или новый стиль начинается с чистого Chord Setup, а не с настроек предыдущего стиля.
+
+Кнопка MIX в окне Global: оставленное открытым окно MIX теперь сразу показывает настройки только что загруженного стиля (Chord Setup, громкость, панорама, реверберация, хорус) и следует за Ctrl+Z / redo и открытым проектом. Раньше его нужно было закрыть и открыть снова.
+
+Закрытие программы, когда вход MIDI Monitor подключён (MIDI Monitor в главном окне) или когда открыт DK MAPPER (окно Global), больше не грозит ошибкой или сбоем при выходе.
+
+Сохранённые стили (.kst) стали чище: сообщения portamento и wha-wha записываются только для дорожек, которые их действительно используют, а не на каждую дорожку в каждой секции. Заводские стили Event никогда их не отправляют.
+
+STYLE MASTER PRO - НОВОЕ
+
+Стили Korg: pitch bend конвертируется. Скольжения баса и бенды сольных партий (ACC1-ACC5) теперь доходят до Event, а не отбрасываются. Бенды ударных и перкуссии по-прежнему не переносятся.
+
+MIX -> Chord Setup показывает собственные настройки стиля Ketron - Parallel / Close / Logic и Normal / Retrigger / Retrigger Pitch для каждой аккордовой партии и секции, - прочитанные из стиля при загрузке. Изменение, сделанное там, записывается обратно в сохранённый стиль. Всё остальное в заголовке стиля остаётся в точности таким, как его сохранил Event.
+
+Проекты (.bkproj) теперь сохраняют микс по секциям (громкость, панорама, реверберация, Chord Setup), а для стиля, пришедшего с Event, - его собственный заголовок Ketron. Повторно открытый проект сохраняется на Event в точности таким, каким он пришёл.
+
+Загрузка стиля (перетащите .kst или .mid в окно Global) или открытие проекта (.bkproj): если вариации MAJ, MIN и SEV секции содержат ноты, но имеют разную длину, теперь появляется предупреждение. Оно перечисляет секции и объясняет правило Event: вариации с нотами должны быть одной длины, а пустая вариация - лишь заполнитель. "Yes" выравнивает их (побеждает самая длинная, ничего не обрезается, Ctrl+Z отменяет). "No" оставляет стиль как есть.
+
+IMPORT PARTS (кнопка в окне Global) - что делает и чего не делает:
+- Берёт секции и дорожки из СТИЛЕЙ Korg и Ketron, то есть из тех, где есть маркеры секций.
+- Песня - MIDI-файл без маркеров секций - сразу отклоняется с подсказкой, что делать вместо этого: перетащите .mid песни (или .midi, .kar) в окно Global (откроется окно распределения каналов), отметьте такты на линейке, затем правый щелчок по маркеру -> SONG PART TO SECTION.
+- Импорт секции в другом размере (3/4 в 4/4 или наоборот) теперь сначала спрашивает.
+- Темп стиля больше не заменяется темпом импортированного файла.
+
+ПРИМЕЧАНИЕ К СТАРОЙ ЗАПИСИ
+
+Кнопки LIVE PREVIEW, упомянутой в v3.2.0, больше нет. Чтобы открыть стиль, перетащите его в окно Global.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.2</span>
     <span class="version-date">2026-09-28</span>
   </div>
@@ -6496,6 +6716,50 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v4.8.3</span>
+    <span class="version-date">2026-09-29</span>
+  </div>
+  <div class="version-body">v4.8.3 - Pitch bend behalls, Chord Setup lases fran stilen
+
+STYLE MASTER PRO - FIXAT
+
+Pitch bend behalls. Hittills forlorade en stil som laddats in i programmet sina pitch bends - till exempel basglidningarna i Events egna stilar - nar den sparades som .kst igen. Nu kommer de tillbaka in i den sparade stilen och foljer med noterna nar sektioner kopieras, byts, byter namn, forlangs (ADD BARS WITH SAME NOTES) eller kortas (DELETE SELECTED BARS). Projekt (.bkproj) behaller dem ocksa.
+
+Hogerklicka pa en markor -> DELETE MARKER tar nu ocksa bort sektionens egna instrument och mixerinstallningar. En sektion som senare laggs till med samma namn (knappen MARKERS -> + ADD) borjar ren i stallet for att ta over den raderades ljud. Tempo och taktart forblir stilens. Ctrl+Z tar tillbaka allt.
+
+En Korg-, Yamaha- eller ny stil borjar med ett rent Chord Setup i stallet for den foregaende stilens.
+
+Knappen MIX i fonstret Global: ett MIX-fonster som lamnas oppet visar nu direkt den nyss laddade stilens installningar (Chord Setup, volym, pan, reverb, chorus) och foljer Ctrl+Z / redo och ett oppnat projekt. Tidigare maste det stangas och oppnas igen.
+
+Att stanga programmet medan MIDI Monitors ingang ar ansluten (MIDI Monitor i huvudfonstret) eller medan DK MAPPER ar oppet (fonstret Global) riskerar inte langre ett fel eller en krasch vid avslut.
+
+Sparade stilar (.kst) ar renare: portamento- och wha-wha-meddelanden skrivs bara for de spar som faktiskt anvander dem, i stallet for pa varje spar i varje sektion. Events egna stilar skickar dem aldrig.
+
+STYLE MASTER PRO - NYTT
+
+Korg-stilar: pitch bend konverteras. Basglidningarna och bendarna i solostammorna (ACC1-ACC5) kommer nu fram till Event i stallet for att kastas. Bendar pa trummor och slagverk utelamnas fortfarande.
+
+MIX -> Chord Setup visar en Ketron-stils egna installningar - Parallel / Close / Logic, och Normal / Retrigger / Retrigger Pitch per ackordstamma och sektion - lasta fran stilen nar den laddas. En andring som gors dar skrivs tillbaka in i den sparade stilen. Allt annat i stilens huvud forblir exakt som Event sparade det.
+
+Projekt (.bkproj) behaller nu mixen per sektion (volym, pan, reverb, Chord Setup) och, for en stil som kom fran Event, dess eget Ketron-huvud. Ett projekt som oppnas igen sparas till Event exakt som det kom.
+
+Ladda en stil (dra en .kst eller .mid in i fonstret Global) eller oppna ett projekt (.bkproj): om variationerna MAJ, MIN och SEV i en sektion innehaller noter men har olika langd visas nu en varning. Den listar sektionerna och forklarar Events regel: variationer med noter maste vara lika langa, och en tom variation ar bara en platshallare. "Yes" gor dem lika langa (den langsta vinner, inget klipps bort, Ctrl+Z angrar). "No" lamnar stilen som den ar.
+
+IMPORT PARTS (knapp i fonstret Global) - vad den gor och inte gor:
+- Den tar sektioner och spar ur Korg- och Ketron-STILAR, alltsa sadana som har sektionsmarkorer.
+- En lat - en MIDI-fil utan sektionsmarkorer - avvisas direkt, med en anvisning om vad man gor i stallet: dra latens .mid (eller .midi, .kar) in i fonstret Global (en dialog fordelar dess kanaler), markera takterna pa linjalen och hogerklicka sedan pa en markor -> SONG PART TO SECTION.
+- Import av en sektion i en annan taktart (3/4 till 4/4 eller tvart om) fragar nu forst.
+- Stilens tempo ersatts inte langre av den importerade filens tempo.
+
+EN KOMMENTAR TILL ETT GAMMALT INLAGG
+
+Knappen LIVE PREVIEW som namns i v3.2.0 finns inte langre. For att oppna en stil, dra in den i fonstret Global.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.8.2</span>
