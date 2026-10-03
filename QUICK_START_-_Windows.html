@@ -252,6 +252,72 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.0.0</span>
+    <span class="version-date">2026-10-01</span>
+  </div>
+  <div class="version-body">v5.0.0 - Record with the style playing, a tempo for each variation
+
+PLEASE NOTE:
+- v5.0.0 is a free update for every existing customer, like all the updates before it.
+- The first time you start this version, the program shows its licence agreement (EULA) in six languages. Click Accept once and it does not appear again. You can read it again at any time: About -> Licence Agreement.
+- Pressing REC with no track armed now records the track you recorded last, instead of asking which track.
+
+STYLE MASTER PRO - NEW
+
+Three ways to record. REC in the Global window is now a split button: the gold arrow beside it (or a right-click on REC) opens a menu with three modes:
+- ONE TRACK - records the armed track, as before.
+- ONE TRACK + THE STYLE PLAYS - the other tracks play while you record one, so you hear how your part fits, for example the drums while you record the bass. While you play you hear the track's own sound.
+- ALL TRACKS (WHOLE ARRANGEMENT) - hold chords with the left hand and the Event plays the whole arrangement; every part lands on its own track.
+The text colour of REC shows the mode (red / green / amber), and REC blinks while recording.
+Ticking START WITH THIS MODE, the last row of that menu, makes the chosen mode the one REC uses every time the program starts; otherwise a chosen mode lasts until the program closes, and the program starts with ONE TRACK.
+
+ALL TRACKS starts the Event for you, selects the section's variation (Arr A-D) and sets its tempo, so the Event plays the style with its own instruments and volumes, at the section's tempo, and the recording lands on the bars. On the Event:
+- press MENU, then MIDI, then UTILITY: tick CLOCK IN, and check that LOCAL OFF is NOT ticked (if it is, the keys make no sound);
+- set K.START off and HOLD on;
+- press the chord during the count-in - C MAJ, C MIN or C7 for a MAJ, MIN or SEV section - and bass and chords start with bar 1.
+While CLOCK IN is ticked, the Event waits for the program's clock and a chord does not start the style, so untick it again when you play the Event on its own. The program cannot read the time signature and tempo from the Event, so before recording set them in PARAMETER to those of the style playing on the Event. This works in x/8 time signatures too, for example 7/8. During an ALL TRACKS take the metronome is silent - the style's drums are the beat - but the count-in still clicks. Pan, reverb and chorus reported by the Event are shown on the tracks and in MIX.
+
+KST MIX, a new button right of REC in the Global window, takes only the mix - volume, pan, reverb and chorus per section - from a Ketron .kst into the sections of the current project; notes and instruments stay. Use it after recording in ALL TRACKS: the Event sends scaled volumes while it plays, so the exact volumes come from the style file itself. To get that file, make an empty folder DEV_STYLE on the Event's USB stick, restart the Event and save the style as a User Style; its .KST can then be used with KST MIX or dragged into the Global window. UNDO takes KST MIX back.
+
+MIDI RESET, a new button beside REC, stops play and recording and clears hanging notes on the Event - the same as EXIT + SAVE on the Event. START, BAR, PLAY, STOP, REC and the SINGLE/GLOBAL switches are now only as wide as their text, so the Global window is no wider with the new buttons.
+
+Tooltips everywhere, in four languages. Every visible control now explains itself when you hold the pointer over it: the main window (toolbar, File and Help menus, MIDI TEST, MIDI MONITOR, KETRON USB), the Global window (all buttons and right-click menus, including the marker menu), MIX, PARAMETER, IMPORT PARTS and the other dialogs. Choose the language in the Global window: FILE -> TOOLTIP LANGUAGE - English, Serbian, Italian or German. English is the default, and the choice is kept for the next start. Button names and technical terms stay in English.
+
+A tempo for each variation. ARR A, ARR B, ARR C and ARR D can now each play at a different speed. Set it in the PARAMETER window (SINGLE) of the section. The Event keeps one tempo for a variation together with its fill and break, so ARR x, FILL x and BREAK x (and their MIN and SEV) always share it: changing one changes the others. The tempos are saved in the style and read back when it is opened.
+
+Licence agreement: the program now has an end user licence agreement, with the notices for the third-party components it includes. Showing Event Studio Pro in videos, screenshots, tutorials and reviews is explicitly welcome.
+
+STYLE MASTER PRO - FIXED
+
+Copying notes into an empty section now gives it the length of the section the notes come from - 4 bars stay 4 bars - as PARAMETER shows.
+
+A MIDI file with leftover data after its end (some programs write that) is now read instead of refused with "data byte must be in range 0..127", both when dragged into the Global window and in IMPORT PARTS.
+
+IMPORT PARTS: a MIDI file whose markers carry the Event's own section names (ARRA_MAJ, END1_MIN ...) is now recognised as a style, not as a song.
+
+IMPORT PARTS, Korg styles: the endings are now copied into the MIN and SEV variants too, as the intros already were, so an ending plays in every chord type.
+
+START in the Global window now takes the view back to the start also when bars are marked on the ribbon.
+
+Bars can no longer be marked inside the "Audya Style 1.0" marker on the bar ribbon above the notes.
+
+In a new, empty project, clicking a marker or a bar number no longer sends the program's default instruments to the Event, where they replaced the instruments of the style playing there.
+
+After recording, the play line goes back to where the recording began, ready to listen to it.
+
+The metronome while recording (Global window) now stays on the beat for the whole take. Before, it fell further and further behind the longer the take.
+
+The last messages still shown in Serbian - in the Global window's status line and in DK MAPPER -> JV remap editor - are now in English.
+
+WORTH KNOWING
+
+TRANSPOSE -> C, at the bottom left of the Global window under the notation, transposes a whole song file so that it can be played in C.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.3</span>
     <span class="version-date">2026-09-29</span>
   </div>
@@ -1582,6 +1648,72 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.0.0</span>
+    <span class="version-date">2026-10-01</span>
+  </div>
+  <div class="version-body">v5.0.0 - Snimanje dok stil svira, poseban tempo za svaku varijaciju
+
+VAZNO:
+- v5.0.0 je besplatan update za svakog postojeceg kupca, kao i svi update-i prije njega.
+- Kada prvi put pokrenete ovu verziju, program pokazuje svoj ugovor o licenci (EULA) na sest jezika. Kliknite Accept jednom i vise se ne pojavljuje. Mozete ga ponovo procitati u svakom trenutku: About -> Licence Agreement.
+- Pritisak na REC kada nijedna traka nije naoruzana sada snima traku koja je posljednja snimana, umjesto da pita koju traku.
+
+STYLE MASTER PRO - NOVO
+
+Tri nacina snimanja. REC u Global prozoru je sada podijeljeno dugme: zlatna strelica pored njega (ili desni klik na REC) otvara meni sa tri nacina:
+- ONE TRACK - snima naoruzanu traku, kao i do sada.
+- ONE TRACK + THE STYLE PLAYS - ostale trake sviraju dok snimate jednu, pa cujete kako se vasa dionica uklapa, na primjer bubnjeve dok snimate bas. Dok svirate, cujete zvuk same trake.
+- ALL TRACKS (WHOLE ARRANGEMENT) - drzite akorde lijevom rukom i Event svira cijeli aranzman; svaka dionica zavrsava na svojoj traci.
+Boja teksta na REC pokazuje nacin (crvena / zelena / narandzasta), a REC trepce dok snima.
+Ako stiklirate START WITH THIS MODE, posljednji red tog menija, izabrani nacin postaje onaj koji REC koristi pri svakom pokretanju programa; inace izabrani nacin vazi dok se program ne zatvori, a program pocinje sa ONE TRACK.
+
+ALL TRACKS sam pokrece Event, bira varijaciju sekcije (Arr A-D) i podesava tempo, pa Event svira stil sa njegovim vlastitim instrumentima i jacinama, u tempu sekcije, a snimak pada tacno na taktove. Na Eventu:
+- pritisnite MENU, zatim MIDI, zatim UTILITY: stiklirajte CLOCK IN i provjerite da LOCAL OFF NIJE stikliran (ako jeste, tasteri ne daju zvuk);
+- iskljucite K.START i ukljucite HOLD;
+- pritisnite akord tokom odbrojavanja - C MAJ, C MIN ili C7 za MAJ, MIN ili SEV sekciju - i bas i akordi pocinju sa prvim taktom.
+Dok je CLOCK IN stikliran, Event ceka sat programa i akord ne pokrece stil, pa ga odstiklirajte kada svirate Event samostalno. Program ne moze procitati takt i tempo sa Eventa, pa ih prije snimanja u PARAMETER podesite tako da budu isti kao u stilu koji svira na Eventu. Ovo radi i u taktovima x/8, na primjer 7/8. Tokom ALL TRACKS snimanja metronom cuti - ritam daju bubnjevi stila - ali odbrojavanje se i dalje cuje. Pan, reverb i chorus koje Event javlja prikazuju se na trakama i u MIX.
+
+KST MIX, novo dugme desno od REC u Global prozoru, preuzima samo mix - jacinu, pan, reverb i chorus po sekciji - iz Ketron .kst fajla u sekcije trenutnog projekta; note i instrumenti ostaju. Koristite ga poslije snimanja u ALL TRACKS: Event dok svira salje skalirane jacine, pa tacne jacine dolaze iz samog fajla stila. Da dobijete taj fajl, napravite prazan folder DEV_STYLE na USB stiku Eventa, ponovo pokrenite Event i sacuvajte stil kao User Style; njegov .KST tada mozete koristiti sa KST MIX ili ga prevuci u Global prozor. UNDO ponistava KST MIX.
+
+MIDI RESET, novo dugme pored REC, zaustavlja reprodukciju i snimanje i brise zaglavljene note na Eventu - isto kao EXIT + SAVE na Eventu. START, BAR, PLAY, STOP, REC i prekidaci SINGLE/GLOBAL sada su siroki samo koliko njihov tekst, pa Global prozor nije siri sa novim dugmadima.
+
+Tooltipovi svuda, na cetiri jezika. Svaka vidljiva kontrola sada objasnjava sama sebe kada drzite kursor iznad nje: glavni prozor (traka sa alatima, meniji File i Help, MIDI TEST, MIDI MONITOR, KETRON USB), Global prozor (sva dugmad i meniji na desni klik, ukljucujuci meni markera), MIX, PARAMETER, IMPORT PARTS i ostali prozori. Jezik birate u Global prozoru: FILE -> TOOLTIP LANGUAGE - engleski, srpski, italijanski ili njemacki. Podrazumijevan je engleski, a izbor se pamti za sljedece pokretanje. Imena dugmadi i tehnicki izrazi ostaju na engleskom.
+
+Poseban tempo za svaku varijaciju. ARR A, ARR B, ARR C i ARR D sada mogu svirati svaka u drugoj brzini. Podesava se u prozoru PARAMETER (SINGLE) te sekcije. Event cuva jedan tempo za varijaciju zajedno sa njenim fill-om i break-om, pa ARR x, FILL x i BREAK x (i njihovi MIN i SEV) uvijek dijele isti tempo: promjena jednog mijenja i ostale. Tempi se cuvaju u stilu i citaju se nazad kada se stil otvori.
+
+Ugovor o licenci: program sada ima ugovor o licenci za krajnjeg korisnika, sa obavjestenjima o komponentama drugih autora koje sadrzi. Prikazivanje programa Event Studio Pro u videima, na slikama ekrana, u uputstvima i recenzijama izricito je dobrodoslo.
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Kopiranje nota u praznu sekciju sada joj daje duzinu sekcije iz koje note dolaze - 4 takta ostaju 4 takta - kako pokazuje PARAMETER.
+
+MIDI fajl koji iza svog kraja ima zaostale podatke (neki programi to upisuju) sada se cita, umjesto da bude odbijen porukom "data byte must be in range 0..127", i kada se prevuce u Global prozor i u IMPORT PARTS.
+
+IMPORT PARTS: MIDI fajl ciji markeri nose Eventova vlastita imena sekcija (ARRA_MAJ, END1_MIN ...) sada se prepoznaje kao stil, a ne kao pjesma.
+
+IMPORT PARTS, Korg stilovi: zavrseci (endings) se sada kopiraju i u MIN i SEV varijante, kao sto su se intro-i vec kopirali, pa zavrsetak svira u svakoj vrsti akorda.
+
+START u Global prozoru sada vraca prikaz na pocetak i kada su na traci oznaceni taktovi.
+
+Taktovi se vise ne mogu oznaciti unutar markera "Audya Style 1.0" na traci taktova iznad nota.
+
+U novom, praznom projektu klik na marker ili broj takta vise ne salje podrazumijevane instrumente programa na Event, gdje su zamjenjivali instrumente stila koji tamo svira.
+
+Poslije snimanja linija reprodukcije se vraca tamo gdje je snimanje pocelo, spremna da ga preslusate.
+
+Metronom tokom snimanja (Global prozor) sada ostaje u taktu cijelo vrijeme snimanja. Ranije je sve vise kasnio sto je snimak bio duzi.
+
+Posljednje poruke koje su se jos prikazivale na srpskom - u statusnoj liniji Global prozora i u DK MAPPER -> JV remap editoru - sada su na engleskom.
+
+DOBRO JE ZNATI
+
+TRANSPOSE -> C, dole lijevo u Global prozoru ispod notnog prikaza, transponuje cijeli fajl pjesme tako da se moze svirati u C.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.3</span>
     <span class="version-date">2026-09-29</span>
   </div>
@@ -2864,6 +2996,72 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.0.0</span>
+    <span class="version-date">2026-10-01</span>
+  </div>
+  <div class="version-body">v5.0.0 - Registrare mentre lo stile suona, un tempo per ogni variazione
+
+NOTA:
+- v5.0.0 e un aggiornamento gratuito per ogni cliente esistente, come tutti gli aggiornamenti precedenti.
+- Al primo avvio di questa versione il programma mostra il suo contratto di licenza (EULA) in sei lingue. Cliccate Accept una volta e non comparira piu. Potete rileggerlo in qualsiasi momento: About -> Licence Agreement.
+- Premendo REC senza nessuna traccia armata ora si registra l'ultima traccia registrata, invece di chiedere quale traccia.
+
+STYLE MASTER PRO - NUOVO
+
+Tre modi di registrare. REC nella finestra Global e ora un pulsante diviso: la freccia dorata accanto (o un clic destro su REC) apre un menu con tre modi:
+- ONE TRACK - registra la traccia armata, come prima.
+- ONE TRACK + THE STYLE PLAYS - le altre tracce suonano mentre ne registrate una, cosi sentite come si inserisce la vostra parte, per esempio la batteria mentre registrate il basso. Mentre suonate sentite il suono della traccia stessa.
+- ALL TRACKS (WHOLE ARRANGEMENT) - tenete gli accordi con la mano sinistra e l'Event suona l'intero arrangiamento; ogni parte finisce sulla propria traccia.
+Il colore del testo di REC indica il modo (rosso / verde / ambra), e REC lampeggia durante la registrazione.
+Spuntando START WITH THIS MODE, l'ultima riga di quel menu, il modo scelto diventa quello che REC usa a ogni avvio del programma; altrimenti un modo scelto vale fino alla chiusura del programma, e il programma parte con ONE TRACK.
+
+ALL TRACKS avvia l'Event per voi, seleziona la variazione della sezione (Arr A-D) e ne imposta il tempo, cosi l'Event suona lo stile con i suoi strumenti e volumi, al tempo della sezione, e la registrazione cade sulle battute. Sull'Event:
+- premete MENU, poi MIDI, poi UTILITY: spuntate CLOCK IN e controllate che LOCAL OFF NON sia spuntato (se lo e, i tasti non suonano);
+- disattivate K.START e attivate HOLD;
+- premete l'accordo durante il conteggio - C MAJ, C MIN o C7 per una sezione MAJ, MIN o SEV - e basso e accordi partono con la battuta 1.
+Finche CLOCK IN e spuntato, l'Event aspetta il clock del programma e un accordo non avvia lo stile, quindi toglietegli la spunta quando suonate l'Event da solo. Il programma non puo leggere il tempo in chiave e il tempo dall'Event, quindi prima di registrare impostateli in PARAMETER uguali a quelli dello stile che suona sull'Event. Funziona anche nei tempi x/8, per esempio 7/8. Durante una ripresa ALL TRACKS il metronomo tace - il ritmo lo danno le batterie dello stile - ma il conteggio iniziale si sente ancora. Pan, riverbero e chorus comunicati dall'Event vengono mostrati sulle tracce e in MIX.
+
+KST MIX, un nuovo pulsante a destra di REC nella finestra Global, prende solo il mix - volume, pan, riverbero e chorus per sezione - da un .kst Ketron e lo porta nelle sezioni del progetto corrente; note e strumenti restano. Usatelo dopo una registrazione ALL TRACKS: mentre suona, l'Event invia volumi scalati, quindi i volumi esatti vengono dal file dello stile. Per ottenere quel file create una cartella vuota DEV_STYLE sulla chiavetta USB dell'Event, riavviate l'Event e salvate lo stile come User Style; il suo .KST si puo poi usare con KST MIX o trascinare nella finestra Global. UNDO annulla KST MIX.
+
+MIDI RESET, un nuovo pulsante accanto a REC, ferma riproduzione e registrazione e cancella le note rimaste appese sull'Event - come EXIT + SAVE sull'Event. START, BAR, PLAY, STOP, REC e i selettori SINGLE/GLOBAL sono ora larghi solo quanto il loro testo, cosi la finestra Global non diventa piu larga con i nuovi pulsanti.
+
+Tooltip ovunque, in quattro lingue. Ogni controllo visibile ora spiega se stesso quando ci tenete sopra il puntatore: la finestra principale (barra degli strumenti, menu File e Help, MIDI TEST, MIDI MONITOR, KETRON USB), la finestra Global (tutti i pulsanti e i menu del clic destro, compreso il menu dei marker), MIX, PARAMETER, IMPORT PARTS e le altre finestre. La lingua si sceglie nella finestra Global: FILE -> TOOLTIP LANGUAGE - inglese, serbo, italiano o tedesco. L'inglese e predefinito, e la scelta viene ricordata al prossimo avvio. I nomi dei pulsanti e i termini tecnici restano in inglese.
+
+Un tempo per ogni variazione. ARR A, ARR B, ARR C e ARR D possono ora suonare ciascuna a una velocita diversa. Si imposta nella finestra PARAMETER (SINGLE) della sezione. L'Event tiene un solo tempo per una variazione insieme al suo fill e al suo break, quindi ARR x, FILL x e BREAK x (e i loro MIN e SEV) lo condividono sempre: cambiandone uno cambiano anche gli altri. I tempi vengono salvati nello stile e riletti quando lo si apre.
+
+Contratto di licenza: il programma ha ora un contratto di licenza con l'utente finale, con le note sui componenti di terzi che include. Mostrare Event Studio Pro in video, screenshot, tutorial e recensioni e espressamente benvenuto.
+
+STYLE MASTER PRO - CORRETTO
+
+Copiare note in una sezione vuota le da ora la lunghezza della sezione da cui provengono le note - 4 battute restano 4 battute - come mostra PARAMETER.
+
+Un file MIDI con dati residui dopo la sua fine (alcuni programmi li scrivono) ora viene letto invece di essere rifiutato con "data byte must be in range 0..127", sia trascinandolo nella finestra Global sia in IMPORT PARTS.
+
+IMPORT PARTS: un file MIDI i cui marker portano i nomi di sezione dell'Event (ARRA_MAJ, END1_MIN ...) ora viene riconosciuto come stile, non come brano.
+
+IMPORT PARTS, stili Korg: i finali vengono ora copiati anche nelle varianti MIN e SEV, come gia avveniva per gli intro, cosi un finale suona con ogni tipo di accordo.
+
+START nella finestra Global ora riporta la vista all'inizio anche quando ci sono battute marcate sulla barra.
+
+Non si possono piu marcare battute dentro il marker "Audya Style 1.0" sulla barra delle battute sopra le note.
+
+In un progetto nuovo e vuoto, cliccare un marker o un numero di battuta non invia piu all'Event gli strumenti predefiniti del programma, che sostituivano quelli dello stile che vi suonava.
+
+Dopo la registrazione, la linea di riproduzione torna dove la registrazione e iniziata, pronta per l'ascolto.
+
+Il metronomo durante la registrazione (finestra Global) ora resta a tempo per tutta la ripresa. Prima restava sempre piu indietro quanto piu la ripresa era lunga.
+
+Gli ultimi messaggi ancora in serbo - nella riga di stato della finestra Global e in DK MAPPER -> JV remap editor - sono ora in inglese.
+
+BUONO A SAPERSI
+
+TRANSPOSE -> C, in basso a sinistra nella finestra Global sotto la notazione, traspone un intero file di brano in modo che si possa suonare in Do.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.8.3</span>
@@ -4150,6 +4348,72 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.0.0</span>
+    <span class="version-date">2026-10-01</span>
+  </div>
+  <div class="version-body">v5.0.0 - Aufnehmen, waehrend der Style spielt, ein Tempo fuer jede Variation
+
+HINWEIS:
+- v5.0.0 ist ein kostenloses Update fuer jeden bestehenden Kunden, wie alle Updates davor.
+- Beim ersten Start dieser Version zeigt das Programm seinen Lizenzvertrag (EULA) in sechs Sprachen. Klicken Sie einmal auf Accept, danach erscheint er nicht mehr. Sie koennen ihn jederzeit wieder lesen: About -> Licence Agreement.
+- Ein Druck auf REC ohne scharfgeschaltete Spur nimmt jetzt die zuletzt aufgenommene Spur auf, statt zu fragen, welche Spur.
+
+STYLE MASTER PRO - NEU
+
+Drei Arten aufzunehmen. REC im Global-Fenster ist jetzt eine geteilte Schaltflaeche: der goldene Pfeil daneben (oder ein Rechtsklick auf REC) oeffnet ein Menue mit drei Modi:
+- ONE TRACK - nimmt die scharfgeschaltete Spur auf, wie bisher.
+- ONE TRACK + THE STYLE PLAYS - die anderen Spuren spielen, waehrend Sie eine aufnehmen, sodass Sie hoeren, wie Ihre Stimme passt, zum Beispiel das Schlagzeug, waehrend Sie den Bass aufnehmen. Beim Spielen hoeren Sie den eigenen Klang der Spur.
+- ALL TRACKS (WHOLE ARRANGEMENT) - halten Sie Akkorde mit der linken Hand, und das Event spielt das ganze Arrangement; jede Stimme landet auf ihrer eigenen Spur.
+Die Textfarbe von REC zeigt den Modus (rot / gruen / bernstein), und REC blinkt waehrend der Aufnahme.
+Wenn Sie START WITH THIS MODE, die letzte Zeile dieses Menues, anhaken, wird der gewaehlte Modus zu dem, den REC bei jedem Programmstart verwendet; sonst gilt ein gewaehlter Modus bis zum Schliessen des Programms, und das Programm startet mit ONE TRACK.
+
+ALL TRACKS startet das Event fuer Sie, waehlt die Variation der Sektion (Arr A-D) und stellt das Tempo ein, sodass das Event den Style mit seinen eigenen Instrumenten und Lautstaerken im Tempo der Sektion spielt und die Aufnahme auf den Takten liegt. Am Event:
+- druecken Sie MENU, dann MIDI, dann UTILITY: haken Sie CLOCK IN an und pruefen Sie, dass LOCAL OFF NICHT angehakt ist (sonst geben die Tasten keinen Ton);
+- schalten Sie K.START aus und HOLD ein;
+- druecken Sie den Akkord waehrend des Einzaehlens - C MAJ, C MIN oder C7 fuer eine MAJ-, MIN- oder SEV-Sektion -, dann beginnen Bass und Akkorde mit Takt 1.
+Solange CLOCK IN angehakt ist, wartet das Event auf den Takt des Programms und ein Akkord startet den Style nicht; entfernen Sie den Haken also wieder, wenn Sie das Event allein spielen. Das Programm kann Taktart und Tempo nicht vom Event lesen; stellen Sie sie deshalb vor der Aufnahme in PARAMETER so ein wie beim Style, der auf dem Event spielt. Das funktioniert auch in x/8-Taktarten, zum Beispiel 7/8. Waehrend einer ALL-TRACKS-Aufnahme schweigt das Metronom - den Takt geben die Drums des Styles -, das Einzaehlen ist aber weiterhin zu hoeren. Pan, Hall und Chorus, die das Event meldet, werden auf den Spuren und in MIX angezeigt.
+
+KST MIX, eine neue Schaltflaeche rechts von REC im Global-Fenster, uebernimmt nur den Mix - Lautstaerke, Pan, Hall und Chorus pro Sektion - aus einer Ketron-.kst in die Sektionen des aktuellen Projekts; Noten und Instrumente bleiben. Verwenden Sie es nach einer ALL-TRACKS-Aufnahme: das Event sendet beim Spielen skalierte Lautstaerken, die genauen Werte kommen daher aus der Style-Datei selbst. Um diese Datei zu erhalten, legen Sie auf dem USB-Stick des Event einen leeren Ordner DEV_STYLE an, starten das Event neu und speichern den Style als User Style; seine .KST kann dann mit KST MIX verwendet oder ins Global-Fenster gezogen werden. UNDO nimmt KST MIX zurueck.
+
+MIDI RESET, eine neue Schaltflaeche neben REC, stoppt Wiedergabe und Aufnahme und loescht haengende Noten am Event - wie EXIT + SAVE am Event. START, BAR, PLAY, STOP, REC und die Schalter SINGLE/GLOBAL sind jetzt nur so breit wie ihr Text, sodass das Global-Fenster mit den neuen Schaltflaechen nicht breiter wird.
+
+Tooltips ueberall, in vier Sprachen. Jedes sichtbare Bedienelement erklaert sich jetzt selbst, wenn Sie den Zeiger darauf halten: das Hauptfenster (Werkzeugleiste, Menues File und Help, MIDI TEST, MIDI MONITOR, KETRON USB), das Global-Fenster (alle Schaltflaechen und Rechtsklick-Menues, einschliesslich des Marker-Menues), MIX, PARAMETER, IMPORT PARTS und die anderen Dialoge. Die Sprache waehlen Sie im Global-Fenster: FILE -> TOOLTIP LANGUAGE - Englisch, Serbisch, Italienisch oder Deutsch. Englisch ist voreingestellt, und die Wahl bleibt fuer den naechsten Start erhalten. Namen von Schaltflaechen und Fachbegriffe bleiben englisch.
+
+Ein Tempo fuer jede Variation. ARR A, ARR B, ARR C und ARR D koennen jetzt jeweils in einem anderen Tempo spielen. Eingestellt wird es im Fenster PARAMETER (SINGLE) der Sektion. Das Event fuehrt ein Tempo fuer eine Variation zusammen mit ihrem Fill und Break, daher teilen ARR x, FILL x und BREAK x (und ihre MIN und SEV) es immer: aendert man eines, aendern sich die anderen mit. Die Tempi werden im Style gespeichert und beim Oeffnen wieder gelesen.
+
+Lizenzvertrag: das Programm hat jetzt einen Endbenutzer-Lizenzvertrag, mit den Hinweisen zu den enthaltenen Komponenten Dritter. Event Studio Pro in Videos, Screenshots, Anleitungen und Rezensionen zu zeigen, ist ausdruecklich erwuenscht.
+
+STYLE MASTER PRO - BEHOBEN
+
+Das Kopieren von Noten in eine leere Sektion gibt ihr jetzt die Laenge der Sektion, aus der die Noten kommen - 4 Takte bleiben 4 Takte -, wie PARAMETER zeigt.
+
+Eine MIDI-Datei mit Restdaten nach ihrem Ende (manche Programme schreiben das) wird jetzt gelesen, statt mit "data byte must be in range 0..127" abgelehnt zu werden, sowohl beim Ziehen in das Global-Fenster als auch in IMPORT PARTS.
+
+IMPORT PARTS: eine MIDI-Datei, deren Marker die eigenen Sektionsnamen des Event tragen (ARRA_MAJ, END1_MIN ...), wird jetzt als Style erkannt, nicht als Song.
+
+IMPORT PARTS, Korg-Styles: die Endings werden jetzt auch in die MIN- und SEV-Varianten kopiert, wie schon die Intros, sodass ein Ending in jeder Akkordart spielt.
+
+START im Global-Fenster bringt die Ansicht jetzt auch dann an den Anfang zurueck, wenn auf der Leiste Takte markiert sind.
+
+Takte koennen nicht mehr innerhalb des Markers "Audya Style 1.0" auf der Taktleiste ueber den Noten markiert werden.
+
+In einem neuen, leeren Projekt sendet ein Klick auf einen Marker oder eine Taktnummer nicht mehr die Standardinstrumente des Programms an das Event, wo sie die Instrumente des dort spielenden Styles ersetzten.
+
+Nach der Aufnahme geht die Abspiellinie dorthin zurueck, wo die Aufnahme begann, bereit zum Anhoeren.
+
+Das Metronom waehrend der Aufnahme (Global-Fenster) bleibt jetzt die ganze Aufnahme ueber im Takt. Vorher fiel es immer weiter zurueck, je laenger die Aufnahme dauerte.
+
+Die letzten noch auf Serbisch angezeigten Meldungen - in der Statuszeile des Global-Fensters und im DK MAPPER -> JV remap editor - sind jetzt auf Englisch.
+
+GUT ZU WISSEN
+
+TRANSPOSE -> C, unten links im Global-Fenster unter der Notenansicht, transponiert eine ganze Song-Datei so, dass sie in C gespielt werden kann.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.3</span>
     <span class="version-date">2026-09-29</span>
   </div>
@@ -5434,6 +5698,72 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.0.0</span>
+    <span class="version-date">2026-10-01</span>
+  </div>
+  <div class="version-body">v5.0.0 - Запись под звучащий стиль, свой темп для каждой вариации
+
+ВНИМАНИЕ:
+- v5.0.0 - бесплатное обновление для каждого существующего клиента, как и все обновления до него.
+- При первом запуске этой версии программа показывает лицензионное соглашение (EULA) на шести языках. Нажмите Accept один раз, и оно больше не появится. Его можно перечитать в любое время: About -> Licence Agreement.
+- Нажатие REC, когда ни одна дорожка не готова к записи, теперь записывает последнюю записанную дорожку, а не спрашивает, какую.
+
+STYLE MASTER PRO - НОВОЕ
+
+Три способа записи. REC в окне Global теперь разделённая кнопка: золотая стрелка рядом с ней (или правый щелчок по REC) открывает меню с тремя режимами:
+- ONE TRACK - записывает готовую к записи дорожку, как раньше.
+- ONE TRACK + THE STYLE PLAYS - остальные дорожки играют, пока вы записываете одну, и вы слышите, как ваша партия вписывается, например ударные, пока вы записываете бас. Пока вы играете, вы слышите собственный звук дорожки.
+- ALL TRACKS (WHOLE ARRANGEMENT) - держите аккорды левой рукой, и Event играет всю аранжировку; каждая партия попадает на свою дорожку.
+Цвет текста REC показывает режим (красный / зелёный / янтарный), а REC мигает во время записи.
+Если отметить START WITH THIS MODE, последнюю строку этого меню, выбранный режим станет тем, который REC использует при каждом запуске программы; иначе выбранный режим действует до закрытия программы, а программа запускается с ONE TRACK.
+
+ALL TRACKS сам запускает Event, выбирает вариацию секции (Arr A-D) и задаёт темп, поэтому Event играет стиль со своими собственными инструментами и громкостями в темпе секции, а запись ложится на такты. На Event:
+- нажмите MENU, затем MIDI, затем UTILITY: отметьте CLOCK IN и проверьте, что LOCAL OFF НЕ отмечен (иначе клавиши не звучат);
+- выключите K.START и включите HOLD;
+- нажмите аккорд во время отсчёта - C MAJ, C MIN или C7 для секции MAJ, MIN или SEV, - и бас и аккорды начнутся с первого такта.
+Пока CLOCK IN отмечен, Event ждёт синхронизацию от программы и аккорд не запускает стиль, поэтому снимите отметку, когда играете на Event без программы. Программа не может прочитать размер и темп с Event, поэтому перед записью задайте их в PARAMETER такими же, как у стиля, который играет на Event. Это работает и в размерах x/8, например 7/8. Во время записи ALL TRACKS метроном молчит - долю задают ударные стиля, - но отсчёт по-прежнему звучит. Панорама, реверберация и хорус, которые сообщает Event, показываются на дорожках и в MIX.
+
+KST MIX, новая кнопка справа от REC в окне Global, берёт из Ketron .kst только микс - громкость, панораму, реверберацию и хорус по секциям - и переносит его в секции текущего проекта; ноты и инструменты остаются. Используйте её после записи в ALL TRACKS: во время игры Event отправляет масштабированные громкости, поэтому точные значения берутся из самого файла стиля. Чтобы получить этот файл, создайте пустую папку DEV_STYLE на USB-флешке Event, перезапустите Event и сохраните стиль как User Style; его .KST затем можно использовать с KST MIX или перетащить в окно Global. UNDO отменяет KST MIX.
+
+MIDI RESET, новая кнопка рядом с REC, останавливает воспроизведение и запись и снимает зависшие ноты на Event - то же, что EXIT + SAVE на Event. START, BAR, PLAY, STOP, REC и переключатели SINGLE/GLOBAL теперь шириной только по своему тексту, поэтому окно Global с новыми кнопками не стало шире.
+
+Подсказки везде, на четырёх языках. Каждый видимый элемент управления теперь объясняет себя, когда вы задерживаете над ним указатель: главное окно (панель инструментов, меню File и Help, MIDI TEST, MIDI MONITOR, KETRON USB), окно Global (все кнопки и меню правого щелчка, включая меню маркеров), MIX, PARAMETER, IMPORT PARTS и другие окна. Язык выбирается в окне Global: FILE -> TOOLTIP LANGUAGE - английский, сербский, итальянский или немецкий. По умолчанию английский, выбор сохраняется до следующего запуска. Названия кнопок и технические термины остаются на английском.
+
+Свой темп для каждой вариации. ARR A, ARR B, ARR C и ARR D теперь могут играть каждая в своём темпе. Он задаётся в окне PARAMETER (SINGLE) секции. Event хранит один темп для вариации вместе с её fill и break, поэтому ARR x, FILL x и BREAK x (и их MIN и SEV) всегда его разделяют: изменение одного меняет остальные. Темпы сохраняются в стиле и читаются при его открытии.
+
+Лицензионное соглашение: у программы теперь есть лицензионное соглашение с конечным пользователем и сведения о входящих в неё компонентах третьих лиц. Показывать Event Studio Pro в видео, на снимках экрана, в уроках и обзорах прямо приветствуется.
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Копирование нот в пустую секцию теперь даёт ей длину секции, из которой взяты ноты - 4 такта остаются 4 тактами, - как показывает PARAMETER.
+
+MIDI-файл с остаточными данными после конца (некоторые программы их записывают) теперь читается, а не отклоняется с сообщением "data byte must be in range 0..127", как при перетаскивании в окно Global, так и в IMPORT PARTS.
+
+IMPORT PARTS: MIDI-файл, маркеры которого несут собственные имена секций Event (ARRA_MAJ, END1_MIN ...), теперь распознаётся как стиль, а не как песня.
+
+IMPORT PARTS, стили Korg: концовки теперь копируются и в варианты MIN и SEV, как уже копировались вступления, поэтому концовка звучит при любом типе аккорда.
+
+START в окне Global теперь возвращает вид к началу и тогда, когда на ленте отмечены такты.
+
+Такты больше нельзя отметить внутри маркера "Audya Style 1.0" на ленте тактов над нотами.
+
+В новом пустом проекте щелчок по маркеру или номеру такта больше не отправляет на Event стандартные инструменты программы, которые заменяли инструменты играющего там стиля.
+
+После записи линия воспроизведения возвращается туда, где запись началась, - можно сразу прослушать.
+
+Метроном во время записи (окно Global) теперь держит долю на протяжении всей записи. Раньше он всё больше отставал, чем дольше шла запись.
+
+Последние сообщения, которые ещё показывались на сербском, - в строке состояния окна Global и в DK MAPPER -> JV remap editor - теперь на английском.
+
+ПОЛЕЗНО ЗНАТЬ
+
+TRANSPOSE -> C, внизу слева в окне Global под нотным видом, транспонирует весь файл песни так, чтобы его можно было играть в До.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v4.8.3</span>
     <span class="version-date">2026-09-29</span>
   </div>
@@ -6716,6 +7046,72 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.0.0</span>
+    <span class="version-date">2026-10-01</span>
+  </div>
+  <div class="version-body">v5.0.0 - Spela in medan stilen spelar, ett tempo for varje variation
+
+OBS:
+- v5.0.0 ar en gratis uppdatering for alla befintliga kunder, liksom alla uppdateringar fore den.
+- Forsta gangen du startar den har versionen visar programmet sitt licensavtal (EULA) pa sex sprak. Klicka pa Accept en gang sa visas det inte igen. Du kan lasa det igen nar som helst: About -> Licence Agreement.
+- Ett tryck pa REC nar inget spar ar armerat spelar nu in det spar som spelades in senast, i stallet for att fraga vilket spar.
+
+STYLE MASTER PRO - NYTT
+
+Tre satt att spela in. REC i fonstret Global ar nu en delad knapp: den gyllene pilen bredvid (eller ett hogerklick pa REC) oppnar en meny med tre lagen:
+- ONE TRACK - spelar in det armerade sparet, som tidigare.
+- ONE TRACK + THE STYLE PLAYS - de andra sparen spelar medan du spelar in ett, sa att du hor hur din stamma passar, till exempel trummorna medan du spelar in basen. Medan du spelar hor du sparets eget ljud.
+- ALL TRACKS (WHOLE ARRANGEMENT) - hall ackord med vanster hand sa spelar Event hela arrangemanget; varje stamma hamnar pa sitt eget spar.
+Textfargen pa REC visar laget (rod / gron / barnsten), och REC blinkar under inspelningen.
+Om du kryssar i START WITH THIS MODE, den sista raden i menyn, blir det valda laget det som REC anvander varje gang programmet startar; annars galler ett valt lage tills programmet stangs, och programmet startar med ONE TRACK.
+
+ALL TRACKS startar Event at dig, valjer sektionens variation (Arr A-D) och staller in tempot, sa att Event spelar stilen med sina egna instrument och volymer i sektionens tempo och inspelningen hamnar pa takterna. Pa Event:
+- tryck pa MENU, sedan MIDI, sedan UTILITY: kryssa i CLOCK IN och kontrollera att LOCAL OFF INTE ar ikryssat (om det ar det ger tangenterna inget ljud);
+- stang av K.START och sla pa HOLD;
+- tryck ackordet under inrakningen - C MAJ, C MIN eller C7 for en MAJ-, MIN- eller SEV-sektion - sa borjar bas och ackord med takt 1.
+Medan CLOCK IN ar ikryssat vantar Event pa programmets klocka och ett ackord startar inte stilen, sa kryssa ur det igen nar du spelar pa Event utan programmet. Programmet kan inte lasa taktart och tempo fran Event, sa stall in dem i PARAMETER som i stilen som spelar pa Event innan du spelar in. Det fungerar aven i x/8-taktarter, till exempel 7/8. Under en ALL TRACKS-tagning ar metronomen tyst - stilens trummor ger takten - men inrakningen hors fortfarande. Pan, reverb och chorus som Event rapporterar visas pa sparen och i MIX.
+
+KST MIX, en ny knapp till hoger om REC i fonstret Global, tar bara mixen - volym, pan, reverb och chorus per sektion - fran en Ketron-.kst in i sektionerna i det aktuella projektet; noter och instrument ligger kvar. Anvand den efter en inspelning med ALL TRACKS: Event skickar skalade volymer medan den spelar, sa de exakta volymerna kommer fran sjalva stilfilen. For att fa den filen, skapa en tom mapp DEV_STYLE pa Events USB-minne, starta om Event och spara stilen som User Style; dess .KST kan sedan anvandas med KST MIX eller dras in i fonstret Global. UNDO angrar KST MIX.
+
+MIDI RESET, en ny knapp bredvid REC, stoppar uppspelning och inspelning och tar bort hangande noter pa Event - samma som EXIT + SAVE pa Event. START, BAR, PLAY, STOP, REC och reglagen SINGLE/GLOBAL ar nu bara sa breda som sin text, sa att fonstret Global inte blir bredare med de nya knapparna.
+
+Tips overallt, pa fyra sprak. Varje synlig kontroll forklarar nu sig sjalv nar du haller pekaren over den: huvudfonstret (verktygsfaltet, menyerna File och Help, MIDI TEST, MIDI MONITOR, KETRON USB), fonstret Global (alla knappar och hogerklicksmenyer, aven markormenyn), MIX, PARAMETER, IMPORT PARTS och de andra dialogerna. Spraket valjs i fonstret Global: FILE -> TOOLTIP LANGUAGE - engelska, serbiska, italienska eller tyska. Engelska ar forvalt, och valet sparas till nasta start. Knappnamn och tekniska termer forblir pa engelska.
+
+Ett tempo for varje variation. ARR A, ARR B, ARR C och ARR D kan nu spela i var sitt tempo. Det stalls in i fonstret PARAMETER (SINGLE) for sektionen. Event har ett tempo for en variation tillsammans med dess fill och break, sa ARR x, FILL x och BREAK x (och deras MIN och SEV) delar det alltid: andrar man ett andras de andra. Tempona sparas i stilen och lases tillbaka nar den oppnas.
+
+Licensavtal: programmet har nu ett licensavtal for slutanvandare, med uppgifterna om de komponenter fran tredje part som det innehaller. Att visa Event Studio Pro i videor, skarmbilder, handledningar och recensioner ar uttryckligen valkommet.
+
+STYLE MASTER PRO - FIXAT
+
+Att kopiera noter till en tom sektion ger den nu samma langd som sektionen noterna kommer fran - 4 takter forblir 4 takter - som PARAMETER visar.
+
+En MIDI-fil med kvarblivna data efter sitt slut (vissa program skriver sadant) lases nu i stallet for att avvisas med "data byte must be in range 0..127", bade nar den dras in i fonstret Global och i IMPORT PARTS.
+
+IMPORT PARTS: en MIDI-fil vars markorer bar Events egna sektionsnamn (ARRA_MAJ, END1_MIN ...) kanns nu igen som en stil, inte som en lat.
+
+IMPORT PARTS, Korg-stilar: avslutningarna kopieras nu ocksa till MIN- och SEV-varianterna, som introna redan gjorde, sa att en avslutning spelar i varje ackordtyp.
+
+START i fonstret Global tar nu vyn tillbaka till borjan aven nar takter ar markerade pa bandet.
+
+Takter kan inte langre markeras inuti markoren "Audya Style 1.0" pa taktbandet ovanfor noterna.
+
+I ett nytt, tomt projekt skickar ett klick pa en markor eller ett taktnummer inte langre programmets standardinstrument till Event, dar de ersatte instrumenten i stilen som spelade dar.
+
+Efter inspelningen gar uppspelningslinjen tillbaka dit inspelningen borjade, redo att lyssna pa.
+
+Metronomen under inspelning (fonstret Global) haller nu takten under hela tagningen. Tidigare hamnade den allt langre efter ju langre tagningen var.
+
+De sista meddelandena som fortfarande visades pa serbiska - i statusraden i fonstret Global och i DK MAPPER -> JV remap editor - ar nu pa engelska.
+
+BRA ATT VETA
+
+TRANSPOSE -> C, nere till vanster i fonstret Global under notvyn, transponerar en hel latfil sa att den kan spelas i C.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v4.8.3</span>
