@@ -252,6 +252,43 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.0.1</span>
+    <span class="version-date">2026-10-04</span>
+  </div>
+  <div class="version-body">v5.0.1 - SHOW for uneven sections, .KST styles at their true length
+
+PLEASE NOTE:
+- v5.0.1 is a free update for every existing customer, like all the updates before it.
+- Global window -&gt; REMOVE: MIN &amp; SEV now empties only ARRANGE, FILL and BREAK. Intros and endings keep their MIN and SEV.
+- Import - Korg -&gt; KEEP KORG PITCH is now unticked by default, so Korg styles are transposed to C, as the Event expects.
+
+STYLE MASTER PRO - NEW
+
+SHOW, a new button in the "Section lengths do not match" question in the Global window, shows the MAJ, MIN and SEV of the uneven section side by side on the screen, so you can see where they differ. Each further click shows the next uneven section.
+
+Loading a style in the Global window: the questions that follow it (marker names, empty bars, section lengths) now come one after another, no longer all on the screen at the same time.
+
+STYLE MASTER PRO - FIXED
+
+Export to .KST: a MIN or SEV of ARRANGE, FILL or BREAK that the style does not have is now written empty and one bar long, as in Ketron's own styles, instead of as a copy of its MAJ. Styles are no longer made three times longer than they are.
+
+Export: a note that starts on the first beat of a section's last bar now keeps that bar. Before, the section was exported one bar short and the note moved into the next section.
+
+Loading a style in the Global window: the last section of a file keeps its final notes (for example the last hit of an ending) and takes the length of its MAJ or MIN when the notes fit in it.
+
+Right-click a marker -&gt; ADD/DELETE BARS on an EMPTY section now changes only that section. Before, it also shortened the variations of the same section that hold notes - ARRA_MAJ could go from 4 bars to 1.
+
+Right-click a note -&gt; "Select all &lt;note&gt; in &lt;track&gt;": the note clicked before no longer keeps a dashed frame.
+
+Global window -&gt; AUDIO: SOUNDFONT:
+- the bass no longer sounds an octave lower than on the Event;
+- choosing a SoundFont instrument (a click or the mouse wheel on the instrument name, or in the main window) changes only the sound on the PC. The track keeps its Ketron voice, and that is what the Event gets with AUDIO: KETRON.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.0.0</span>
     <span class="version-date">2026-10-01</span>
   </div>
@@ -1648,6 +1685,43 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.0.1</span>
+    <span class="version-date">2026-10-04</span>
+  </div>
+  <div class="version-body">v5.0.1 - SHOW za neujednacene sekcije, .KST stilovi u svojoj pravoj duzini
+
+VAZNO:
+- v5.0.1 je besplatan update za svakog postojeceg kupca, kao i svi update-i prije njega.
+- Global prozor -&gt; REMOVE: MIN &amp; SEV sada prazni samo ARRANGE, FILL i BREAK. Intro-i i zavrseci zadrzavaju svoje MIN i SEV.
+- Import - Korg -&gt; KEEP KORG PITCH sada po defaultu nije stikliran, pa se Korg stilovi transponuju u C, kako Event i ocekuje.
+
+STYLE MASTER PRO - NOVO
+
+SHOW, novo dugme u pitanju "Section lengths do not match" u Global prozoru, prikazuje MAJ, MIN i SEV neujednacene sekcije jednu pored druge na ekranu, pa vidite gdje se razlikuju. Svaki sledeci klik prikazuje sledecu neujednacenu sekciju.
+
+Ucitavanje stila u Global prozoru: pitanja koja slijede poslije njega (imena markera, prazni taktovi, duzine sekcija) sada dolaze jedno za drugim, a ne vise sva u isto vrijeme na ekranu.
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Export u .KST: MIN ili SEV od ARRANGE, FILL ili BREAK koji stil nema sada se upisuje prazan i dug jedan takt, kao u Ketronovim vlastitim stilovima, umjesto kao kopija svog MAJ. Stilovi vise ne ispadaju tri puta duzi nego sto jesu.
+
+Export: nota koja pocinje na prvom udaru posljednjeg takta sekcije sada zadrzava taj takt. Ranije je sekcija bila eksportovana takt kraca, a nota je prelazila u sledecu sekciju.
+
+Ucitavanje stila u Global prozoru: posljednja sekcija fajla zadrzava svoje zavrsne note (na primjer posljednji udarac zavrsetka) i dobija duzinu svog MAJ ili MIN kada note u nju stanu.
+
+Desni klik na marker -&gt; ADD/DELETE BARS na PRAZNOJ sekciji sada mijenja samo tu sekciju. Ranije je skracivao i varijacije iste sekcije koje imaju note - ARRA_MAJ je mogao sa 4 takta pasti na 1.
+
+Desni klik na notu -&gt; "Select all &lt;note&gt; in &lt;track&gt;": prethodno kliknuta nota vise ne zadrzava isprekidani okvir.
+
+Global prozor -&gt; AUDIO: SOUNDFONT:
+- bas vise ne zvuci oktavu nize nego na Eventu;
+- izbor SoundFont instrumenta (klik ili tockic misa na imenu instrumenta, ili u glavnom prozoru) mijenja samo zvuk na PC-u. Traka zadrzava svoj Ketron zvuk, i to je ono sto Event dobija uz AUDIO: KETRON.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.0.0</span>
     <span class="version-date">2026-10-01</span>
   </div>
@@ -2996,6 +3070,43 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.0.1</span>
+    <span class="version-date">2026-10-04</span>
+  </div>
+  <div class="version-body">v5.0.1 - SHOW per le sezioni disuguali, stili .KST nella loro vera lunghezza
+
+NOTA:
+- v5.0.1 e un aggiornamento gratuito per ogni cliente esistente, come tutti gli aggiornamenti precedenti.
+- Finestra Global -&gt; REMOVE: MIN &amp; SEV ora svuota solo ARRANGE, FILL e BREAK. Intro e finali mantengono i loro MIN e SEV.
+- Import - Korg -&gt; KEEP KORG PITCH ora e non spuntato per impostazione predefinita, cosi gli stili Korg vengono trasposti in Do, come si aspetta l'Event.
+
+STYLE MASTER PRO - NUOVO
+
+SHOW, un nuovo pulsante nella domanda "Section lengths do not match" nella finestra Global, mostra MAJ, MIN e SEV della sezione disuguale uno accanto all'altro sullo schermo, cosi vedete dove differiscono. Ogni clic successivo mostra la sezione disuguale seguente.
+
+Caricamento di uno stile nella finestra Global: le domande che seguono (nomi dei marker, battute vuote, lunghezze delle sezioni) ora arrivano una dopo l'altra, non piu tutte sullo schermo nello stesso momento.
+
+STYLE MASTER PRO - CORRETTO
+
+Esportazione in .KST: un MIN o SEV di ARRANGE, FILL o BREAK che lo stile non ha ora viene scritto vuoto e lungo una battuta, come negli stili Ketron stessi, invece che come copia del suo MAJ. Gli stili non diventano piu tre volte piu lunghi di quanto sono.
+
+Esportazione: una nota che inizia sul primo movimento dell'ultima battuta di una sezione ora mantiene quella battuta. Prima la sezione veniva esportata una battuta piu corta e la nota passava nella sezione seguente.
+
+Caricamento di uno stile nella finestra Global: l'ultima sezione di un file mantiene le sue note finali (per esempio l'ultimo colpo di un finale) e prende la lunghezza del suo MAJ o MIN quando le note ci stanno.
+
+Clic destro su un marker -&gt; ADD/DELETE BARS su una sezione VUOTA ora cambia solo quella sezione. Prima accorciava anche le variazioni della stessa sezione che contengono note - ARRA_MAJ poteva passare da 4 battute a 1.
+
+Clic destro su una nota -&gt; "Select all &lt;note&gt; in &lt;track&gt;": la nota cliccata prima non mantiene piu una cornice tratteggiata.
+
+Finestra Global -&gt; AUDIO: SOUNDFONT:
+- il basso non suona piu un'ottava sotto rispetto all'Event;
+- la scelta di uno strumento SoundFont (clic o rotella del mouse sul nome dello strumento, o nella finestra principale) cambia solo il suono sul PC. La traccia mantiene la sua voce Ketron, ed e quella che l'Event riceve con AUDIO: KETRON.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.0.0</span>
@@ -4348,6 +4459,43 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.0.1</span>
+    <span class="version-date">2026-10-04</span>
+  </div>
+  <div class="version-body">v5.0.1 - SHOW fuer ungleiche Sektionen, .KST-Styles in ihrer wahren Laenge
+
+HINWEIS:
+- v5.0.1 ist ein kostenloses Update fuer jeden bestehenden Kunden, wie alle Updates davor.
+- Global-Fenster -&gt; REMOVE: MIN &amp; SEV leert jetzt nur ARRANGE, FILL und BREAK. Intros und Endings behalten ihre MIN und SEV.
+- Import - Korg -&gt; KEEP KORG PITCH ist jetzt standardmaessig nicht angehakt, sodass Korg-Styles nach C transponiert werden, wie das Event es erwartet.
+
+STYLE MASTER PRO - NEU
+
+SHOW, eine neue Schaltflaeche in der Frage "Section lengths do not match" im Global-Fenster, zeigt MAJ, MIN und SEV der ungleichen Sektion nebeneinander auf dem Bildschirm, sodass Sie sehen, wo sie sich unterscheiden. Jeder weitere Klick zeigt die naechste ungleiche Sektion.
+
+Laden eines Styles im Global-Fenster: die Fragen danach (Markernamen, leere Takte, Sektionslaengen) kommen jetzt nacheinander, nicht mehr alle gleichzeitig auf dem Bildschirm.
+
+STYLE MASTER PRO - BEHOBEN
+
+Export nach .KST: ein MIN oder SEV von ARRANGE, FILL oder BREAK, das der Style nicht hat, wird jetzt leer und einen Takt lang geschrieben, wie in Ketrons eigenen Styles, statt als Kopie seines MAJ. Styles werden nicht mehr dreimal so lang, wie sie sind.
+
+Export: eine Note, die auf dem ersten Schlag des letzten Takts einer Sektion beginnt, behaelt jetzt diesen Takt. Vorher wurde die Sektion einen Takt zu kurz exportiert und die Note rutschte in die naechste Sektion.
+
+Laden eines Styles im Global-Fenster: die letzte Sektion einer Datei behaelt ihre letzten Noten (zum Beispiel den letzten Schlag eines Endings) und bekommt die Laenge ihres MAJ oder MIN, wenn die Noten hineinpassen.
+
+Rechtsklick auf einen Marker -&gt; ADD/DELETE BARS auf einer LEEREN Sektion aendert jetzt nur diese Sektion. Vorher kuerzte es auch die Variationen derselben Sektion, die Noten enthalten - ARRA_MAJ konnte von 4 Takten auf 1 fallen.
+
+Rechtsklick auf eine Note -&gt; "Select all &lt;note&gt; in &lt;track&gt;": die vorher angeklickte Note behaelt keinen gestrichelten Rahmen mehr.
+
+Global-Fenster -&gt; AUDIO: SOUNDFONT:
+- der Bass klingt nicht mehr eine Oktave tiefer als am Event;
+- die Wahl eines SoundFont-Instruments (Klick oder Mausrad auf dem Instrumentnamen, oder im Hauptfenster) aendert nur den Klang am PC. Die Spur behaelt ihre Ketron-Stimme, und die bekommt das Event mit AUDIO: KETRON.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.0.0</span>
     <span class="version-date">2026-10-01</span>
   </div>
@@ -5698,6 +5846,43 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.0.1</span>
+    <span class="version-date">2026-10-04</span>
+  </div>
+  <div class="version-body">v5.0.1 - SHOW для неравных секций, стили .KST в их настоящей длине
+
+ВНИМАНИЕ:
+- v5.0.1 - бесплатное обновление для каждого существующего клиента, как и все обновления до него.
+- Окно Global -&gt; REMOVE: MIN &amp; SEV теперь очищает только ARRANGE, FILL и BREAK. Вступления и концовки сохраняют свои MIN и SEV.
+- Import - Korg -&gt; KEEP KORG PITCH теперь по умолчанию не отмечен, поэтому стили Korg транспонируются в До, как ожидает Event.
+
+STYLE MASTER PRO - НОВОЕ
+
+SHOW, новая кнопка в вопросе "Section lengths do not match" в окне Global, показывает MAJ, MIN и SEV неравной секции рядом друг с другом на экране, и видно, где они различаются. Каждый следующий щелчок показывает следующую неравную секцию.
+
+Загрузка стиля в окне Global: вопросы после неё (имена маркеров, пустые такты, длины секций) теперь идут один за другим, а не все одновременно на экране.
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Экспорт в .KST: MIN или SEV для ARRANGE, FILL или BREAK, которых в стиле нет, теперь записываются пустыми и длиной в один такт, как в собственных стилях Ketron, а не копией своего MAJ. Стили больше не становятся в три раза длиннее, чем они есть.
+
+Экспорт: нота, которая начинается на первой доле последнего такта секции, теперь сохраняет этот такт. Раньше секция экспортировалась на такт короче, а нота переходила в следующую секцию.
+
+Загрузка стиля в окне Global: последняя секция файла сохраняет свои последние ноты (например, последний удар концовки) и получает длину своего MAJ или MIN, если ноты в неё помещаются.
+
+Правый щелчок по маркеру -&gt; ADD/DELETE BARS на ПУСТОЙ секции теперь меняет только эту секцию. Раньше укорачивались и вариации той же секции, в которых есть ноты, - ARRA_MAJ мог сократиться с 4 тактов до 1.
+
+Правый щелчок по ноте -&gt; "Select all &lt;note&gt; in &lt;track&gt;": нота, по которой щёлкнули раньше, больше не сохраняет пунктирную рамку.
+
+Окно Global -&gt; AUDIO: SOUNDFONT:
+- бас больше не звучит на октаву ниже, чем на Event;
+- выбор инструмента SoundFont (щелчок или колесо мыши на имени инструмента, или в главном окне) меняет только звук на ПК. Дорожка сохраняет свой голос Ketron, и именно его Event получает при AUDIO: KETRON.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.0.0</span>
     <span class="version-date">2026-10-01</span>
   </div>
@@ -7046,6 +7231,43 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.0.1</span>
+    <span class="version-date">2026-10-04</span>
+  </div>
+  <div class="version-body">v5.0.1 - SHOW for ojamna sektioner, .KST-stilar i sin ratta langd
+
+OBS:
+- v5.0.1 ar en gratis uppdatering for alla befintliga kunder, liksom alla uppdateringar fore den.
+- Fonstret Global -&gt; REMOVE: MIN &amp; SEV tommer nu bara ARRANGE, FILL och BREAK. Intron och avslutningar behaller sina MIN och SEV.
+- Import - Korg -&gt; KEEP KORG PITCH ar nu urkryssat som standard, sa att Korg-stilar transponeras till C, som Event forvantar sig.
+
+STYLE MASTER PRO - NYTT
+
+SHOW, en ny knapp i fragan "Section lengths do not match" i fonstret Global, visar MAJ, MIN och SEV for den ojamna sektionen bredvid varandra pa skarmen, sa att du ser var de skiljer sig. Varje nytt klick visar nasta ojamna sektion.
+
+Att ladda en stil i fonstret Global: fragorna som foljer (markornamn, tomma takter, sektionslangder) kommer nu en efter en, inte langre alla pa skarmen samtidigt.
+
+STYLE MASTER PRO - FIXAT
+
+Export till .KST: en MIN eller SEV av ARRANGE, FILL eller BREAK som stilen inte har skrivs nu tom och en takt lang, som i Ketrons egna stilar, i stallet for som en kopia av dess MAJ. Stilar blir inte langre tre ganger langre an de ar.
+
+Export: en ton som borjar pa forsta slaget i en sektions sista takt behaller nu den takten. Tidigare exporterades sektionen en takt for kort och tonen flyttade in i nasta sektion.
+
+Att ladda en stil i fonstret Global: den sista sektionen i en fil behaller sina sista toner (till exempel det sista slaget i en avslutning) och far langden av sin MAJ eller MIN nar tonerna ryms i den.
+
+Hogerklick pa en markor -&gt; ADD/DELETE BARS pa en TOM sektion andrar nu bara den sektionen. Tidigare kortades aven variationerna av samma sektion som har toner - ARRA_MAJ kunde ga fran 4 takter till 1.
+
+Hogerklick pa en ton -&gt; "Select all &lt;note&gt; in &lt;track&gt;": tonen som klickades tidigare behaller inte langre en streckad ram.
+
+Fonstret Global -&gt; AUDIO: SOUNDFONT:
+- basen later inte langre en oktav lagre an pa Event;
+- att valja ett SoundFont-instrument (klick eller mushjulet pa instrumentnamnet, eller i huvudfonstret) andrar bara ljudet pa datorn. Sparet behaller sin Ketron-rost, och det ar den som Event far med AUDIO: KETRON.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.0.0</span>
