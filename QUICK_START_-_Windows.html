@@ -252,6 +252,40 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.1.2</span>
+    <span class="version-date">2026-10-08</span>
+  </div>
+  <div class="version-body">v5.1.2 - Sustain pedal, a new chord reader, ALL BARS TO C
+
+PLEASE NOTE:
+- v5.1.2 is a free update for every existing customer, like all the updates before it.
+- Edits in the Global window now always reach the saved style. Before, TRANSPOSE -&gt; C and some other edits changed the notes on screen but not in the saved style. If you saved a style after such an edit, open it, make the edit again and save it once more.
+
+STYLE MASTER PRO - NEW
+
+Sustain pedal. In the Global window and when recording (REC), the sustain pedal (CC64) is now recorded with the notes, kept with its section, saved to the style, read back from a loaded style or MIDI file and played by PLAY. On the Event, a style track with the pedal rings on as it should.
+
+PEDAL lane: in the Global window, under the chord strip, a PEDAL lane for the armed track (or the single solo track). Drag to draw the pedal, drag its ends to move them, right-click to delete. Ctrl+Z and the bar and track edits (insert / delete bars, swap / clear track, shift) carry the pedal with the notes.
+
+A new chord reader: Global window -&gt; SHOW CHORDS reads what sounds, beat by beat, in every track - arpeggios and held notes too. A chord track counts most, a melody line little, and the bass settles the root (C E G A is C6 over C, Am7 over A). The names appear where the chord changes. Measured on 15 styles, the chord progressions are read right 90-95 % of the time (the root 97-99 %), against 72-77 % before.
+
+ALL BARS TO C: right-click a section marker in the Global window -&gt; ALL BARS TO C... finds the chords of the section (or of the marked bars) where they change, also inside a bar, and shows each one ("Bar 1 beat 3: sounds like G") for you to confirm or skip. It then moves each to C major, minor or seventh - chords and bass; the drums stay. Moved chords go to the octave of the chords already in C. One Ctrl+Z takes it all back.
+
+STYLE MASTER PRO - FIXED
+
+Global window: TRANSPOSE -&gt; C and ten other edits (CHORD QUALITY IN SELECTION, TRANSPOSE SELECTION, DELETE SELECTED BARS, REMOVE MIN &amp; SEV, the bar count, SHIFT BARS, SNAP TO BAR, drum dedup, trims after a copy) changed the notes on screen but not in the saved style - a style moved to C still played in E on the Event. Every such edit now reaches the saved style.
+
+Recording: E4 and F4 (notes 76 and 77) were lost on chord, bass and lead tracks, because they were taken for the echo of the metronome. They are now dropped only on CH10, where the click comes back.
+
+C MAJOR, in ALL BARS TO C and in CHORD QUALITY IN SELECTION -&gt; Make it C MAJOR, is now a plain major chord: a seventh goes up to C (D7 -&gt; C, not C7), and a chord read as sus4 gets its third (Bsus4 -&gt; C, not Csus4). A passing fourth in an ordinary chord stays. C SEVENTH keeps the seventh.
+
+Yamaha import: a voice on bank 0 with a variation LSB (for example Mandolin, 0/114/26) now becomes the Event's own voice (Mandolin) instead of the plain GM one (Folk guitar). After a Yamaha import the track strip shows every voice name instead of "(no voice)".
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.1.1</span>
     <span class="version-date">2026-10-07</span>
   </div>
@@ -1737,6 +1771,40 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.1.2</span>
+    <span class="version-date">2026-10-08</span>
+  </div>
+  <div class="version-body">v5.1.2 - Pedala, novi citac akorda, ALL BARS TO C
+
+VAZNO:
+- v5.1.2 je besplatan update za svakog postojeceg kupca, kao i svi update-i prije njega.
+- Izmjene u Global prozoru sada uvijek stizu u sacuvani stil. Ranije su TRANSPOSE -&gt; C i jos neke izmjene mijenjale note na ekranu, ali ne i u sacuvanom stilu. Ako ste poslije takve izmjene sacuvali stil, otvorite ga, ponovite izmjenu i sacuvajte ga jos jednom.
+
+STYLE MASTER PRO - NOVO
+
+Pedala (sustain). U Global prozoru i pri snimanju (REC) pedala (CC64) se sada snima zajedno sa notama, ostaje uz svoju sekciju, cuva se u stil, cita se nazad iz ucitanog stila ili MIDI fajla i svira je PLAY. Na Eventu traka stila sa pedalom zvoni kako treba.
+
+PEDAL traka: u Global prozoru, ispod trake akorda, PEDAL traka za naoruzanu traku (ili za jedinu solo traku). Prevlacenjem crtate pedalu, prevlacenjem njenih krajeva ih pomjerate, desni klik je brise. Ctrl+Z i izmjene taktova i traka (umetanje / brisanje taktova, zamjena / brisanje trake, pomjeranje) nose pedalu zajedno sa notama.
+
+Novi citac akorda: Global prozor -&gt; SHOW CHORDS cita ono sto zvuci, udar po udar, u svakoj traci - i arpedja i drzane note. Traka akorda se racuna najvise, melodija malo, a bas odredjuje osnovni ton (C E G A je C6 preko C, Am7 preko A). Imena se pojavljuju tamo gdje se akord mijenja. Izmjereno na 15 stilova, nizovi akorda se citaju tacno u 90-95 % slucajeva (osnovni ton 97-99 %), naspram 72-77 % ranije.
+
+ALL BARS TO C: desni klik na marker sekcije u Global prozoru -&gt; ALL BARS TO C... nalazi akorde sekcije (ili oznacenih taktova) tamo gdje se mijenjaju, i unutar takta, i pokazuje svaki ("Bar 1 beat 3: sounds like G") da ga potvrdite ili preskocite. Zatim svaki prebacuje u C dur, mol ili septakord - akorde i bas; bubnjevi ostaju. Prebaceni akordi idu u oktavu akorda koji su vec u C. Jedan Ctrl+Z vraca sve.
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Global prozor: TRANSPOSE -&gt; C i jos deset izmjena (CHORD QUALITY IN SELECTION, TRANSPOSE SELECTION, DELETE SELECTED BARS, REMOVE MIN &amp; SEV, broj taktova, SHIFT BARS, SNAP TO BAR, uklanjanje duplih udaraca bubnja, skracivanje poslije kopiranja) mijenjale su note na ekranu, ali ne i u sacuvanom stilu - stil prebacen u C je na Eventu i dalje svirao u E. Svaka takva izmjena sada stize u sacuvani stil.
+
+Snimanje: E4 i F4 (note 76 i 77) gubile su se na trakama akorda, basa i melodije, jer su smatrane odjekom metronoma. Sada se odbacuju samo na CH10, gdje se klik vraca.
+
+C MAJOR, u ALL BARS TO C i u CHORD QUALITY IN SELECTION -&gt; Make it C MAJOR, sada je obican durski akord: septima ide gore na C (D7 -&gt; C, a ne C7), a akord procitan kao sus4 dobija tercu (Bsus4 -&gt; C, a ne Csus4). Prolazna kvarta u obicnom akordu ostaje. C SEVENTH zadrzava septimu.
+
+Yamaha import: zvuk na banci 0 sa varijacijom u LSB (na primjer Mandolin, 0/114/26) sada postaje Eventov vlastiti zvuk (Mandolin) umjesto obicnog GM zvuka (Folk guitar). Poslije Yamaha importa traka pokazuje ime svakog zvuka umjesto "(no voice)".
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.1.1</span>
     <span class="version-date">2026-10-07</span>
   </div>
@@ -3174,6 +3242,40 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.1.2</span>
+    <span class="version-date">2026-10-08</span>
+  </div>
+  <div class="version-body">v5.1.2 - Pedale sustain, un nuovo lettore di accordi, ALL BARS TO C
+
+NOTA:
+- v5.1.2 e un aggiornamento gratuito per ogni cliente esistente, come tutti gli aggiornamenti precedenti.
+- Le modifiche nella finestra Global ora arrivano sempre nello stile salvato. Prima TRANSPOSE -&gt; C e alcune altre modifiche cambiavano le note sullo schermo ma non nello stile salvato. Se avete salvato uno stile dopo una tale modifica, apritelo, ripetete la modifica e salvatelo ancora una volta.
+
+STYLE MASTER PRO - NUOVO
+
+Pedale sustain. Nella finestra Global e durante la registrazione (REC) il pedale sustain (CC64) viene ora registrato con le note, resta con la sua sezione, viene salvato nello stile, riletto da uno stile o file MIDI caricato e suonato da PLAY. Sull'Event una traccia di stile con il pedale risuona come deve.
+
+Corsia PEDAL: nella finestra Global, sotto la striscia degli accordi, una corsia PEDAL per la traccia armata (o per l'unica traccia in solo). Trascinate per disegnare il pedale, trascinate le estremita per spostarle, clic destro per cancellare. Ctrl+Z e le modifiche di battute e tracce (inserire / cancellare battute, scambiare / svuotare una traccia, spostare) portano il pedale insieme alle note.
+
+Un nuovo lettore di accordi: finestra Global -&gt; SHOW CHORDS legge cio che suona, movimento per movimento, in ogni traccia - anche arpeggi e note tenute. Una traccia di accordi conta di piu, una melodia poco, e il basso decide la fondamentale (C E G A e C6 su C, Am7 su A). I nomi compaiono dove l'accordo cambia. Misurato su 15 stili, le progressioni sono lette correttamente nel 90-95 % dei casi (la fondamentale nel 97-99 %), contro il 72-77 % di prima.
+
+ALL BARS TO C: clic destro su un marker di sezione nella finestra Global -&gt; ALL BARS TO C... trova gli accordi della sezione (o delle battute marcate) dove cambiano, anche dentro una battuta, e li mostra uno per uno ("Bar 1 beat 3: sounds like G") da confermare o saltare. Poi porta ciascuno in Do maggiore, minore o settima - accordi e basso; la batteria resta. Gli accordi spostati vanno all'ottava degli accordi gia in Do. Un solo Ctrl+Z annulla tutto.
+
+STYLE MASTER PRO - CORRETTO
+
+Finestra Global: TRANSPOSE -&gt; C e altre dieci modifiche (CHORD QUALITY IN SELECTION, TRANSPOSE SELECTION, DELETE SELECTED BARS, REMOVE MIN &amp; SEV, il numero di battute, SHIFT BARS, SNAP TO BAR, la rimozione dei colpi di batteria doppi, i tagli dopo una copia) cambiavano le note sullo schermo ma non nello stile salvato - uno stile portato in Do suonava ancora in Mi sull'Event. Ogni modifica di questo tipo ora arriva nello stile salvato.
+
+Registrazione: E4 e F4 (note 76 e 77) andavano perse sulle tracce di accordi, basso e melodia, perche venivano prese per l'eco del metronomo. Ora vengono scartate solo sul CH10, dove torna il clic.
+
+C MAJOR, in ALL BARS TO C e in CHORD QUALITY IN SELECTION -&gt; Make it C MAJOR, e ora un semplice accordo maggiore: una settima sale a Do (D7 -&gt; C, non C7), e un accordo letto come sus4 riceve la terza (Bsus4 -&gt; C, non Csus4). Una quarta di passaggio in un accordo normale resta. C SEVENTH mantiene la settima.
+
+Import Yamaha: un suono sul banco 0 con una variazione LSB (per esempio Mandolin, 0/114/26) diventa ora il suono proprio dell'Event (Mandolin) invece di quello GM semplice (Folk guitar). Dopo un import Yamaha la striscia delle tracce mostra il nome di ogni suono invece di "(no voice)".
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.1.1</span>
@@ -4615,6 +4717,40 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.1.2</span>
+    <span class="version-date">2026-10-08</span>
+  </div>
+  <div class="version-body">v5.1.2 - Sustain-Pedal, ein neuer Akkordleser, ALL BARS TO C
+
+HINWEIS:
+- v5.1.2 ist ein kostenloses Update fuer jeden bestehenden Kunden, wie alle Updates davor.
+- Aenderungen im Global-Fenster kommen jetzt immer im gespeicherten Style an. Vorher aenderten TRANSPOSE -&gt; C und einige andere Bearbeitungen die Noten auf dem Bildschirm, aber nicht im gespeicherten Style. Wenn Sie einen Style nach einer solchen Bearbeitung gespeichert haben, oeffnen Sie ihn, wiederholen Sie die Bearbeitung und speichern Sie ihn noch einmal.
+
+STYLE MASTER PRO - NEU
+
+Sustain-Pedal. Im Global-Fenster und bei der Aufnahme (REC) wird das Sustain-Pedal (CC64) jetzt mit den Noten aufgenommen, bleibt bei seiner Sektion, wird im Style gespeichert, aus einem geladenen Style oder einer MIDI-Datei wieder gelesen und von PLAY gespielt. Auf dem Event klingt eine Style-Spur mit Pedal so nach, wie sie soll.
+
+PEDAL-Spur: im Global-Fenster, unter dem Akkordstreifen, eine PEDAL-Spur fuer die scharfgeschaltete Spur (oder die einzige Solo-Spur). Ziehen zeichnet das Pedal, Ziehen an den Enden verschiebt sie, Rechtsklick loescht. Ctrl+Z und die Takt- und Spurbearbeitungen (Takte einfuegen / loeschen, Spur tauschen / leeren, verschieben) nehmen das Pedal mit den Noten mit.
+
+Ein neuer Akkordleser: Global-Fenster -&gt; SHOW CHORDS liest, was klingt, Schlag fuer Schlag, in jeder Spur - auch Arpeggien und gehaltene Noten. Eine Akkordspur zaehlt am meisten, eine Melodie wenig, und der Bass bestimmt den Grundton (C E G A ist C6 ueber C, Am7 ueber A). Die Namen erscheinen dort, wo sich der Akkord aendert. Gemessen an 15 Styles werden die Akkordfolgen zu 90-95 % richtig gelesen (der Grundton zu 97-99 %), gegenueber 72-77 % vorher.
+
+ALL BARS TO C: Rechtsklick auf einen Sektionsmarker im Global-Fenster -&gt; ALL BARS TO C... findet die Akkorde der Sektion (oder der markierten Takte) dort, wo sie wechseln, auch innerhalb eines Takts, und zeigt jeden einzeln ("Bar 1 beat 3: sounds like G") zum Bestaetigen oder Ueberspringen. Dann setzt es jeden nach C-Dur, Moll oder Septime - Akkorde und Bass; das Schlagzeug bleibt. Verschobene Akkorde kommen in die Oktave der Akkorde, die schon in C sind. Ein Ctrl+Z nimmt alles zurueck.
+
+STYLE MASTER PRO - BEHOBEN
+
+Global-Fenster: TRANSPOSE -&gt; C und zehn weitere Bearbeitungen (CHORD QUALITY IN SELECTION, TRANSPOSE SELECTION, DELETE SELECTED BARS, REMOVE MIN &amp; SEV, die Taktanzahl, SHIFT BARS, SNAP TO BAR, das Entfernen doppelter Schlagzeugschlaege, Kuerzungen nach einer Kopie) aenderten die Noten auf dem Bildschirm, aber nicht im gespeicherten Style - ein nach C verschobener Style spielte auf dem Event noch in E. Jede solche Bearbeitung kommt jetzt im gespeicherten Style an.
+
+Aufnahme: E4 und F4 (Noten 76 und 77) gingen auf Akkord-, Bass- und Melodiespuren verloren, weil sie fuer das Echo des Metronoms gehalten wurden. Sie werden jetzt nur auf CH10 verworfen, wo der Klick zurueckkommt.
+
+C MAJOR, in ALL BARS TO C und in CHORD QUALITY IN SELECTION -&gt; Make it C MAJOR, ist jetzt ein einfacher Durakkord: eine Septime geht hinauf zu C (D7 -&gt; C, nicht C7), und ein als sus4 gelesener Akkord bekommt seine Terz (Bsus4 -&gt; C, nicht Csus4). Eine Durchgangsquarte in einem normalen Akkord bleibt. C SEVENTH behaelt die Septime.
+
+Yamaha-Import: eine Stimme auf Bank 0 mit einer Variation im LSB (zum Beispiel Mandolin, 0/114/26) wird jetzt zur eigenen Stimme des Events (Mandolin) statt zur einfachen GM-Stimme (Folk guitar). Nach einem Yamaha-Import zeigt die Spurleiste jeden Stimmennamen statt "(no voice)".
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.1.1</span>
     <span class="version-date">2026-10-07</span>
   </div>
@@ -6054,6 +6190,40 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.1.2</span>
+    <span class="version-date">2026-10-08</span>
+  </div>
+  <div class="version-body">v5.1.2 - Педаль sustain, новый распознаватель аккордов, ALL BARS TO C
+
+ВНИМАНИЕ:
+- v5.1.2 - бесплатное обновление для каждого существующего клиента, как и все обновления до него.
+- Изменения в окне Global теперь всегда попадают в сохранённый стиль. Раньше TRANSPOSE -&gt; C и некоторые другие правки меняли ноты на экране, но не в сохранённом стиле. Если вы сохранили стиль после такой правки, откройте его, повторите правку и сохраните его ещё раз.
+
+STYLE MASTER PRO - НОВОЕ
+
+Педаль sustain. В окне Global и при записи (REC) педаль sustain (CC64) теперь записывается вместе с нотами, остаётся со своей секцией, сохраняется в стиль, читается обратно из загруженного стиля или MIDI-файла и воспроизводится по PLAY. На Event дорожка стиля с педалью звучит так, как должна.
+
+Полоса PEDAL: в окне Global, под полосой аккордов, полоса PEDAL для дорожки, готовой к записи (или единственной дорожки в соло). Протягивание рисует педаль, протягивание её концов передвигает их, правый щелчок удаляет. Ctrl+Z и правки тактов и дорожек (вставка / удаление тактов, обмен / очистка дорожки, сдвиг) переносят педаль вместе с нотами.
+
+Новый распознаватель аккордов: окно Global -&gt; SHOW CHORDS читает то, что звучит, доля за долей, во всех дорожках - и арпеджио, и выдержанные ноты. Дорожка аккордов весит больше всего, мелодия мало, а бас определяет основной тон (C E G A - это C6 над C, Am7 над A). Названия появляются там, где аккорд меняется. По измерениям на 15 стилях последовательности аккордов читаются верно в 90-95 % случаев (основной тон в 97-99 %), против 72-77 % раньше.
+
+ALL BARS TO C: правый щелчок по маркеру секции в окне Global -&gt; ALL BARS TO C... находит аккорды секции (или отмеченных тактов) там, где они меняются, в том числе внутри такта, и показывает каждый ("Bar 1 beat 3: sounds like G"), чтобы вы подтвердили или пропустили его. Затем каждый переводится в до мажор, минор или септаккорд - аккорды и бас; ударные остаются. Перенесённые аккорды попадают в октаву аккордов, уже стоящих в C. Один Ctrl+Z отменяет всё.
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Окно Global: TRANSPOSE -&gt; C и ещё десять правок (CHORD QUALITY IN SELECTION, TRANSPOSE SELECTION, DELETE SELECTED BARS, REMOVE MIN &amp; SEV, число тактов, SHIFT BARS, SNAP TO BAR, удаление двойных ударов барабанов, обрезка после копирования) меняли ноты на экране, но не в сохранённом стиле - стиль, перенесённый в C, на Event всё ещё играл в E. Теперь каждая такая правка попадает в сохранённый стиль.
+
+Запись: E4 и F4 (ноты 76 и 77) терялись на дорожках аккордов, баса и мелодии, потому что принимались за эхо метронома. Теперь они отбрасываются только на CH10, куда возвращается щелчок.
+
+C MAJOR, в ALL BARS TO C и в CHORD QUALITY IN SELECTION -&gt; Make it C MAJOR, теперь простой мажорный аккорд: септима поднимается до C (D7 -&gt; C, а не C7), а аккорд, прочитанный как sus4, получает терцию (Bsus4 -&gt; C, а не Csus4). Проходящая кварта в обычном аккорде остаётся. C SEVENTH сохраняет септиму.
+
+Импорт Yamaha: голос в банке 0 с вариацией в LSB (например, Mandolin, 0/114/26) теперь становится собственным голосом Event (Mandolin), а не простым голосом GM (Folk guitar). После импорта Yamaha полоса дорожек показывает имя каждого голоса вместо "(no voice)".
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.1.1</span>
     <span class="version-date">2026-10-07</span>
   </div>
@@ -7491,6 +7661,40 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.1.2</span>
+    <span class="version-date">2026-10-08</span>
+  </div>
+  <div class="version-body">v5.1.2 - Sustainpedal, en ny ackordlasare, ALL BARS TO C
+
+OBS:
+- v5.1.2 ar en gratis uppdatering for alla befintliga kunder, liksom alla uppdateringar fore den.
+- Andringar i fonstret Global nar nu alltid den sparade stilen. Tidigare andrade TRANSPOSE -&gt; C och nagra andra andringar tonerna pa skarmen men inte i den sparade stilen. Om du sparade en stil efter en sadan andring, oppna den, gor andringen igen och spara den en gang till.
+
+STYLE MASTER PRO - NYTT
+
+Sustainpedal. I fonstret Global och vid inspelning (REC) spelas sustainpedalen (CC64) nu in med tonerna, stannar med sin sektion, sparas i stilen, lases tillbaka fran en laddad stil eller MIDI-fil och spelas av PLAY. Pa Event klingar ett stilspar med pedal ut som det ska.
+
+PEDAL-fil: i fonstret Global, under ackordremsan, en PEDAL-fil for det armerade sparet (eller det enda solosparet). Dra for att rita pedalen, dra i dess andar for att flytta dem, hogerklicka for att ta bort. Ctrl+Z och takt- och sparandringarna (infoga / ta bort takter, byta / tomma spar, flytta) tar med pedalen tillsammans med tonerna.
+
+En ny ackordlasare: fonstret Global -&gt; SHOW CHORDS laser det som later, slag for slag, i varje spar - aven arpeggion och hallna toner. Ett ackordspar raknas mest, en melodi lite, och basen avgor grundtonen (C E G A ar C6 over C, Am7 over A). Namnen visas dar ackordet byts. Matt pa 15 stilar lases ackordfoljderna ratt i 90-95 % av fallen (grundtonen i 97-99 %), mot 72-77 % tidigare.
+
+ALL BARS TO C: hogerklicka pa en sektionsmarkor i fonstret Global -&gt; ALL BARS TO C... hittar sektionens ackord (eller de markerade takternas) dar de byts, aven inne i en takt, och visar vart och ett ("Bar 1 beat 3: sounds like G") for att bekrafta eller hoppa over. Sedan flyttas vart och ett till C-dur, moll eller septim - ackord och bas; trummorna stannar. Flyttade ackord hamnar i oktaven for de ackord som redan ar i C. Ett Ctrl+Z tar tillbaka allt.
+
+STYLE MASTER PRO - FIXAT
+
+Fonstret Global: TRANSPOSE -&gt; C och tio andra andringar (CHORD QUALITY IN SELECTION, TRANSPOSE SELECTION, DELETE SELECTED BARS, REMOVE MIN &amp; SEV, antalet takter, SHIFT BARS, SNAP TO BAR, borttagning av dubbla trumslag, trimningar efter en kopiering) andrade tonerna pa skarmen men inte i den sparade stilen - en stil flyttad till C spelade fortfarande i E pa Event. Varje sadan andring nar nu den sparade stilen.
+
+Inspelning: E4 och F4 (toner 76 och 77) forsvann pa ackord-, bas- och melodispar, eftersom de togs for ekot fran metronomen. Nu tas de bort bara pa CH10, dar klicket kommer tillbaka.
+
+C MAJOR, i ALL BARS TO C och i CHORD QUALITY IN SELECTION -&gt; Make it C MAJOR, ar nu ett enkelt durackord: en septim gar upp till C (D7 -&gt; C, inte C7), och ett ackord som lases som sus4 far sin ters (Bsus4 -&gt; C, inte Csus4). En genomgangskvart i ett vanligt ackord stannar. C SEVENTH behaller septimen.
+
+Yamaha-import: en rost pa bank 0 med en variation i LSB (till exempel Mandolin, 0/114/26) blir nu Events egen rost (Mandolin) i stallet for den enkla GM-rosten (Folk guitar). Efter en Yamaha-import visar sparremsan varje rostnamn i stallet for "(no voice)".
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.1.1</span>
