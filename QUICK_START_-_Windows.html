@@ -252,6 +252,42 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.1</span>
+    <span class="version-date">2026-10-12</span>
+  </div>
+  <div class="version-body">v5.2.1 - Export always matches the screen, ALIGN and HUMANIZE
+
+PLEASE NOTE:
+- v5.2.1 is a free update for every existing customer, like all the updates before it.
+- EXPORT and SAVE WORKING PROJECT now always write what the Global window shows. Before, after some edits, notes deleted on the screen could still be in the exported .kst and play on the Event. If you exported a style right after CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS or transposing a section, export it once more.
+
+STYLE MASTER PRO - NEW
+
+ALIGN THIS NOTE TO THE BAR: in the Global window, right-click a note -&gt; ALIGN THIS NOTE TO THE BAR. The whole section (or song) moves so that this note sits on the nearest bar line - notes, pedal, pitch bend, the channels without a track and the song's markers together. If there is no room on the left, it moves right to the next bar. One Ctrl+Z takes it back.
+
+HUMANIZE: in the Global window, right-click selected notes -&gt; HUMANIZE... Each note moves a little in time and in velocity, by its own random amount (Timing +/- ticks, Velocity +/-). The notes stay in their section. One Ctrl+Z takes it back.
+
+Selecting notes: Ctrl+click adds or removes a note, Shift+click adds - also on narrow drum notes. Before, a click on a narrow note was taken as resizing its edge and cleared the selection.
+
+User manual (FILE -&gt; USER MANUAL), chapter 9: ALIGN, HUMANIZE and Ctrl/Shift selection, in all four languages.
+
+STYLE MASTER PRO - FIXED
+
+EXPORT and SAVE WORKING PROJECT: some edits (CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS, transposing a section) did not reach the export until the next other edit. Now every edit does.
+
+Loading a Ketron .kst keeps each section at the length its markers give. Before, every section was cut to where its notes end, so a section made longer with "Section lengths do not match" -&gt; YES came back short after saving and loading, and the question came back on every load. Korg, Yamaha and MIDI files are trimmed as before.
+
+FILE -&gt; Open Working Project: the track strip shows the project's instruments and volumes at once, and the Event gets the project's voices and mix. Before, the strip kept the previous style's names with every slider at 100, and the Event kept what it had.
+
+SHOW CHORDS names the chords again after every edit. Before, it kept the old names after CHORD QUALITY, TRANSPOSE SELECTION, paste or drag.
+
+PARAMETER window: a section square turns blue or light at once when notes are copied into it or removed from it. Before, only after a click on another square.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.0</span>
     <span class="version-date">2026-10-09</span>
   </div>
@@ -1805,6 +1841,42 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.1</span>
+    <span class="version-date">2026-10-12</span>
+  </div>
+  <div class="version-body">v5.2.1 - Export uvijek odgovara ekranu, ALIGN i HUMANIZE
+
+VAZNO:
+- v5.2.1 je besplatan update za svakog postojeceg kupca, kao i svi update-i prije njega.
+- EXPORT i SAVE WORKING PROJECT sada uvijek upisuju ono sto pokazuje Global prozor. Ranije su, poslije nekih izmjena, note obrisane na ekranu mogle ostati u exportovanom .kst-u i svirati na Eventu. Ako ste exportovali ritam odmah poslije CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS ili transponovanja sekcije, exportujte ga jos jednom.
+
+STYLE MASTER PRO - NOVO
+
+ALIGN THIS NOTE TO THE BAR: u Global prozoru, desni klik na notu -&gt; ALIGN THIS NOTE TO THE BAR. Cijela sekcija (ili pjesma) se pomjera tako da ta nota stane na najblizu taktnu crtu - note, pedala, pitch bend, kanali bez trake i markeri pjesme zajedno. Ako lijevo nema mjesta, pomjera se desno do sledeceg takta. Jedan Ctrl+Z vraca.
+
+HUMANIZE: u Global prozoru, desni klik na oznacene note -&gt; HUMANIZE... Svaka nota se malo pomjeri u vremenu i jacini, za svoj slucajni iznos (Timing +/- tikova, Velocity +/-). Note ostaju u svojoj sekciji. Jedan Ctrl+Z vraca.
+
+Biranje nota: Ctrl+klik dodaje ili uklanja notu, Shift+klik dodaje - i na uskim notama bubnja. Ranije je klik na usku notu bio shvacen kao promjena duzine i brisao izbor.
+
+Uputstvo (FILE -&gt; USER MANUAL), poglavlje 9: ALIGN, HUMANIZE i biranje sa Ctrl/Shift, na sva cetiri jezika.
+
+STYLE MASTER PRO - POPRAVLJENO
+
+EXPORT i SAVE WORKING PROJECT: neke izmjene (CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS, transponovanje sekcije) nisu stizale u export do sledece druge izmjene. Sada stize svaka izmjena.
+
+Ucitavanje Ketron .kst fajla zadrzava svaku sekciju u duzini koju joj daju markeri. Ranije je svaka sekcija skracivana do kraja svojih nota, pa se sekcija produzena sa "Section lengths do not match" -&gt; YES vracala kraca poslije cuvanja i ucitavanja, a pitanje se vracalo pri svakom ucitavanju. Korg, Yamaha i MIDI fajlovi se skracuju kao i ranije.
+
+FILE -&gt; Open Working Project: traka sa trakama odmah pokazuje instrumente i jacine projekta, a Event dobija zvukove i miks projekta. Ranije je traka zadrzavala imena prethodnog ritma sa svim klizacima na 100, a Event je zadrzavao ono sto je imao.
+
+SHOW CHORDS ponovo imenuje akorde poslije svake izmjene. Ranije je zadrzavao stara imena poslije CHORD QUALITY, TRANSPOSE SELECTION, lijepljenja ili prevlacenja.
+
+PARAMETER prozor: kvadrat sekcije odmah postaje plav ili svijetao kada se note kopiraju u nju ili uklone iz nje. Ranije tek poslije klika na drugi kvadrat.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.0</span>
     <span class="version-date">2026-10-09</span>
   </div>
@@ -3310,6 +3382,42 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.2.1</span>
+    <span class="version-date">2026-10-12</span>
+  </div>
+  <div class="version-body">v5.2.1 - L'esportazione corrisponde sempre allo schermo, ALIGN e HUMANIZE
+
+NOTA:
+- v5.2.1 e un aggiornamento gratuito per ogni cliente esistente, come tutti gli aggiornamenti precedenti.
+- EXPORT e SAVE WORKING PROJECT ora scrivono sempre cio che mostra la finestra Global. Prima, dopo alcune modifiche, note cancellate sullo schermo potevano restare nel .kst esportato e suonare sull'Event. Se avete esportato uno stile subito dopo CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS o la trasposizione di una sezione, esportatelo ancora una volta.
+
+STYLE MASTER PRO - NUOVO
+
+ALIGN THIS NOTE TO THE BAR: nella finestra Global, clic destro su una nota -&gt; ALIGN THIS NOTE TO THE BAR. L'intera sezione (o brano) si sposta in modo che quella nota cada sulla linea di battuta piu vicina - note, pedale, pitch bend, i canali senza traccia e i marker del brano insieme. Se a sinistra non c'e spazio, si sposta a destra alla battuta seguente. Un solo Ctrl+Z annulla.
+
+HUMANIZE: nella finestra Global, clic destro sulle note selezionate -&gt; HUMANIZE... Ogni nota si sposta un poco nel tempo e nella dinamica, di una quantita casuale propria (Timing +/- tick, Velocity +/-). Le note restano nella loro sezione. Un solo Ctrl+Z annulla.
+
+Selezione delle note: Ctrl+clic aggiunge o toglie una nota, Shift+clic aggiunge - anche sulle note strette della batteria. Prima un clic su una nota stretta veniva preso come ridimensionamento del bordo e cancellava la selezione.
+
+Manuale (FILE -&gt; USER MANUAL), capitolo 9: ALIGN, HUMANIZE e la selezione con Ctrl/Shift, in tutte e quattro le lingue.
+
+STYLE MASTER PRO - CORRETTO
+
+EXPORT e SAVE WORKING PROJECT: alcune modifiche (CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS, trasposizione di una sezione) non arrivavano all'esportazione fino alla modifica successiva. Ora ci arriva ogni modifica.
+
+Il caricamento di un .kst Ketron mantiene ogni sezione alla lunghezza data dai suoi marker. Prima ogni sezione veniva tagliata dove finiscono le sue note, quindi una sezione allungata con "Section lengths do not match" -&gt; YES tornava corta dopo salvataggio e caricamento, e la domanda tornava a ogni caricamento. I file Korg, Yamaha e MIDI vengono accorciati come prima.
+
+FILE -&gt; Open Working Project: la striscia delle tracce mostra subito gli strumenti e i volumi del progetto, e l'Event riceve i suoni e il mix del progetto. Prima la striscia teneva i nomi dello stile precedente con tutti i cursori a 100, e l'Event teneva cio che aveva.
+
+SHOW CHORDS nomina di nuovo gli accordi dopo ogni modifica. Prima teneva i vecchi nomi dopo CHORD QUALITY, TRANSPOSE SELECTION, incolla o trascinamento.
+
+Finestra PARAMETER: il quadrato di una sezione diventa subito blu o chiaro quando vi si copiano note o se ne tolgono. Prima solo dopo un clic su un altro quadrato.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.2.0</span>
@@ -4819,6 +4927,42 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.1</span>
+    <span class="version-date">2026-10-12</span>
+  </div>
+  <div class="version-body">v5.2.1 - Export entspricht immer dem Bildschirm, ALIGN und HUMANIZE
+
+HINWEIS:
+- v5.2.1 ist ein kostenloses Update fuer jeden bestehenden Kunden, wie alle Updates davor.
+- EXPORT und SAVE WORKING PROJECT schreiben jetzt immer, was das Global-Fenster zeigt. Vorher konnten nach einigen Bearbeitungen auf dem Bildschirm geloeschte Noten noch im exportierten .kst sein und auf dem Event spielen. Wenn Sie einen Style direkt nach CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS oder dem Transponieren einer Sektion exportiert haben, exportieren Sie ihn noch einmal.
+
+STYLE MASTER PRO - NEU
+
+ALIGN THIS NOTE TO THE BAR: im Global-Fenster Rechtsklick auf eine Note -&gt; ALIGN THIS NOTE TO THE BAR. Die ganze Sektion (oder der Song) verschiebt sich so, dass diese Note auf dem naechsten Taktstrich liegt - Noten, Pedal, Pitch Bend, die Kanaele ohne Spur und die Marker des Songs zusammen. Ist links kein Platz, verschiebt sie sich nach rechts zum naechsten Takt. Ein Ctrl+Z nimmt es zurueck.
+
+HUMANIZE: im Global-Fenster Rechtsklick auf markierte Noten -&gt; HUMANIZE... Jede Note verschiebt sich ein wenig in Zeit und Anschlagstaerke, um ihren eigenen Zufallswert (Timing +/- Ticks, Velocity +/-). Die Noten bleiben in ihrer Sektion. Ein Ctrl+Z nimmt es zurueck.
+
+Noten auswaehlen: Ctrl+Klick fuegt eine Note hinzu oder entfernt sie, Shift+Klick fuegt hinzu - auch bei schmalen Schlagzeugnoten. Vorher wurde ein Klick auf eine schmale Note als Groessenaenderung ihres Rands genommen und hob die Auswahl auf.
+
+Handbuch (FILE -&gt; USER MANUAL), Kapitel 9: ALIGN, HUMANIZE und die Auswahl mit Ctrl/Shift, in allen vier Sprachen.
+
+STYLE MASTER PRO - BEHOBEN
+
+EXPORT und SAVE WORKING PROJECT: einige Bearbeitungen (CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS, das Transponieren einer Sektion) kamen erst mit der naechsten anderen Bearbeitung im Export an. Jetzt kommt jede Bearbeitung an.
+
+Das Laden einer Ketron-.kst behaelt jede Sektion in der Laenge, die ihre Marker angeben. Vorher wurde jede Sektion dort abgeschnitten, wo ihre Noten enden, sodass eine mit "Section lengths do not match" -&gt; YES verlaengerte Sektion nach Speichern und Laden wieder kurz war und die Frage bei jedem Laden wiederkam. Korg-, Yamaha- und MIDI-Dateien werden wie bisher gekuerzt.
+
+FILE -&gt; Open Working Project: die Spurleiste zeigt sofort die Instrumente und Lautstaerken des Projekts, und das Event erhaelt die Stimmen und den Mix des Projekts. Vorher behielt die Leiste die Namen des vorigen Styles mit allen Reglern auf 100, und das Event behielt, was es hatte.
+
+SHOW CHORDS benennt die Akkorde nach jeder Bearbeitung neu. Vorher behielt es die alten Namen nach CHORD QUALITY, TRANSPOSE SELECTION, Einfuegen oder Ziehen.
+
+PARAMETER-Fenster: das Quadrat einer Sektion wird sofort blau oder hell, wenn Noten hineinkopiert oder daraus entfernt werden. Vorher erst nach einem Klick auf ein anderes Quadrat.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.0</span>
     <span class="version-date">2026-10-09</span>
   </div>
@@ -6326,6 +6470,42 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.1</span>
+    <span class="version-date">2026-10-12</span>
+  </div>
+  <div class="version-body">v5.2.1 - Экспорт всегда совпадает с экраном, ALIGN и HUMANIZE
+
+ВНИМАНИЕ:
+- v5.2.1 - бесплатное обновление для каждого существующего клиента, как и все обновления до него.
+- EXPORT и SAVE WORKING PROJECT теперь всегда записывают то, что показывает окно Global. Раньше после некоторых правок ноты, удалённые на экране, могли остаться в экспортированном .kst и звучать на Event. Если вы экспортировали стиль сразу после CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS или транспонирования секции, экспортируйте его ещё раз.
+
+STYLE MASTER PRO - НОВОЕ
+
+ALIGN THIS NOTE TO THE BAR: в окне Global правый щелчок по ноте -&gt; ALIGN THIS NOTE TO THE BAR. Вся секция (или песня) сдвигается так, чтобы эта нота встала на ближайшую тактовую черту, - ноты, педаль, pitch bend, каналы без дорожки и маркеры песни вместе. Если слева нет места, она сдвигается вправо до следующего такта. Один Ctrl+Z отменяет.
+
+HUMANIZE: в окне Global правый щелчок по выделенным нотам -&gt; HUMANIZE... Каждая нота немного сдвигается во времени и по громкости на свою случайную величину (Timing +/- тиков, Velocity +/-). Ноты остаются в своей секции. Один Ctrl+Z отменяет.
+
+Выделение нот: Ctrl+щелчок добавляет или убирает ноту, Shift+щелчок добавляет - и на узких нотах ударных. Раньше щелчок по узкой ноте принимался за изменение её края и снимал выделение.
+
+Руководство (FILE -&gt; USER MANUAL), глава 9: ALIGN, HUMANIZE и выделение с Ctrl/Shift, на всех четырёх языках.
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+EXPORT и SAVE WORKING PROJECT: некоторые правки (CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS, транспонирование секции) попадали в экспорт только после следующей другой правки. Теперь попадает каждая правка.
+
+Загрузка Ketron .kst сохраняет каждую секцию той длины, которую задают её маркеры. Раньше каждая секция обрезалась там, где кончаются её ноты, поэтому секция, удлинённая через "Section lengths do not match" -&gt; YES, после сохранения и загрузки снова становилась короткой, а вопрос возвращался при каждой загрузке. Файлы Korg, Yamaha и MIDI обрезаются как прежде.
+
+FILE -&gt; Open Working Project: полоса дорожек сразу показывает инструменты и громкости проекта, а Event получает голоса и микс проекта. Раньше полоса сохраняла названия предыдущего стиля со всеми регуляторами на 100, а Event оставлял то, что у него было.
+
+SHOW CHORDS заново называет аккорды после каждой правки. Раньше он оставлял старые названия после CHORD QUALITY, TRANSPOSE SELECTION, вставки или перетаскивания.
+
+Окно PARAMETER: квадрат секции сразу становится синим или светлым, когда в неё копируются ноты или из неё удаляются. Раньше только после щелчка по другому квадрату.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.0</span>
     <span class="version-date">2026-10-09</span>
   </div>
@@ -7831,6 +8011,42 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.2.1</span>
+    <span class="version-date">2026-10-12</span>
+  </div>
+  <div class="version-body">v5.2.1 - Export motsvarar alltid skarmen, ALIGN och HUMANIZE
+
+OBS:
+- v5.2.1 ar en gratis uppdatering for alla befintliga kunder, liksom alla uppdateringar fore den.
+- EXPORT och SAVE WORKING PROJECT skriver nu alltid det som fonstret Global visar. Tidigare kunde toner som tagits bort pa skarmen efter vissa andringar finnas kvar i den exporterade .kst-filen och spela pa Event. Om du exporterade en stil direkt efter CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS eller transponering av en sektion, exportera den en gang till.
+
+STYLE MASTER PRO - NYTT
+
+ALIGN THIS NOTE TO THE BAR: i fonstret Global, hogerklicka pa en ton -&gt; ALIGN THIS NOTE TO THE BAR. Hela sektionen (eller laten) flyttas sa att tonen hamnar pa narmaste taktstreck - toner, pedal, pitch bend, kanalerna utan spar och latens markorer tillsammans. Om det inte finns plats till vanster flyttas den at hoger till nasta takt. Ett Ctrl+Z tar tillbaka.
+
+HUMANIZE: i fonstret Global, hogerklicka pa markerade toner -&gt; HUMANIZE... Varje ton flyttas lite i tid och anslagsstyrka, med sitt eget slumpvarde (Timing +/- ticks, Velocity +/-). Tonerna stannar i sin sektion. Ett Ctrl+Z tar tillbaka.
+
+Markera toner: Ctrl+klick lagger till eller tar bort en ton, Shift+klick lagger till - aven pa smala trumtoner. Tidigare togs ett klick pa en smal ton som en storleksandring av kanten och rensade markeringen.
+
+Bruksanvisningen (FILE -&gt; USER MANUAL), kapitel 9: ALIGN, HUMANIZE och markering med Ctrl/Shift, pa alla fyra sprak.
+
+STYLE MASTER PRO - FIXAT
+
+EXPORT och SAVE WORKING PROJECT: vissa andringar (CHORD QUALITY IN SELECTION, ALL BARS TO C, TRANSPOSE SELECTION, DELETE SELECTED BARS, transponering av en sektion) nadde inte exporten forran vid nasta annan andring. Nu nar varje andring fram.
+
+Att ladda en Ketron .kst behaller varje sektion i den langd som dess markorer anger. Tidigare kortades varje sektion till dar dess toner slutar, sa en sektion som forlangts med "Section lengths do not match" -&gt; YES kom tillbaka kort efter sparning och laddning, och fragan kom tillbaka vid varje laddning. Korg-, Yamaha- och MIDI-filer kortas som tidigare.
+
+FILE -&gt; Open Working Project: sparremsan visar genast projektets instrument och volymer, och Event far projektets roster och mix. Tidigare beholl remsan den forra stilens namn med alla reglage pa 100, och Event beholl det den hade.
+
+SHOW CHORDS namnger ackorden pa nytt efter varje andring. Tidigare beholl den de gamla namnen efter CHORD QUALITY, TRANSPOSE SELECTION, inklistring eller dragning.
+
+Fonstret PARAMETER: en sektions ruta blir genast bla eller ljus nar toner kopieras in i den eller tas bort fran den. Tidigare forst efter ett klick pa en annan ruta.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.2.0</span>
