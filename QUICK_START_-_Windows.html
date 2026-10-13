@@ -252,6 +252,46 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.2</span>
+    <span class="version-date">2026-10-13</span>
+  </div>
+  <div class="version-body">v5.2.2 - STYLE BALANCER, VELOCITY %, CRESCENDO
+
+PLEASE NOTE:
+- v5.2.2 is a free update for every existing customer, like all the updates before it.
+- Exporting an Event .kst could move the voices and volumes of its sections to other sections, when the style's sections were not in the order ARR A, FIL A, BRK A, ARR B and so on - ARR A could play with the bass of ARR B. This is fixed. If a style you exported before sounds wrong on the Event, export it once more.
+
+STYLE MASTER PRO - NEW
+
+STYLE BALANCER: in the Global window, a new button under SHOW CHORDS (also in the right-click menu of a note). It makes the drums of a style play like a style you choose as the reference: the strength of each hit by kind of drum and place in the bar, if you want also its place in time (the groove), the reference's hi-hat and drum sounds, its drum kit, the drum volume and Master Vol. DRUM, and - ticked separately - BALANCE and Master Vol. BASS / CHORD. References are learned from any .kst or MIDI file (LEARN FROM FILE...), saved under a name, deleted, imported and exported as files. Strength 0-100 % with - / + and a slider, heard at once, also during PLAY. OK keeps it as one Ctrl+Z, Cancel puts everything back. Master Vol. and BALANCE are written into the exported .kst.
+
+VELOCITY %: right-click selected notes -&gt; VELOCITY % makes them stronger or softer in steps of one percent (10-200 %); accents stay accents.
+
+CRESCENDO / DECRESCENDO: right-click selected notes -&gt; the strength grows or falls from the first selected note to the last (From % / To %).
+
+HUMANIZE, VELOCITY % and CRESCENDO no longer block the program while their window is open, and VELOCITY % and CRESCENDO are heard at every - / + step.
+
+FILE -&gt; EXPORT SOUNDS (MIDI): a MIDI file with only the sounds of the tracks in ARR A (volume, pan, reverb, chorus, bank, program).
+
+User manual (FILE -&gt; USER MANUAL or F1): a coloured "New in v5.2.2" box at the top - a click on an item jumps to its explanation - with earlier versions folded below it. STYLE BALANCER in chapter 18, VELOCITY %, CRESCENDO and HUMANIZE in chapter 9, new pictures, in all four languages.
+
+STYLE MASTER PRO - FIXED
+
+Export of an Event .kst: each section now takes its own voices and mix, whatever the order of the sections in the style, and sections the style does not have keep what the Event saved.
+
+INSERT BAR(S) HERE and DELETE THIS BAR now move the pitch bend and the Real parts (Real Drum, Real Chord ...) together with the notes.
+
+Loading a .kst: an empty last section keeps the length the file gives it.
+
+MIDI SETUP help: the Rx settings are now described as they really are on the Event - the same as Tx, with four differences (Lower1 Off, Lower2 Off, Global 1, Reg./Perf. Off), in four languages.
+
+Check boxes no longer cut off their labels at a small UI scale (for example "Show unchanged too" in DK MAPPER -&gt; Auto Match by Name).
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.1</span>
     <span class="version-date">2026-10-12</span>
   </div>
@@ -1841,6 +1881,46 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.2</span>
+    <span class="version-date">2026-10-13</span>
+  </div>
+  <div class="version-body">v5.2.2 - STYLE BALANCER, VELOCITY %, CRESCENDO
+
+VAZNO:
+- v5.2.2 je besplatan update za svakog postojeceg kupca, kao i svi update-i prije njega.
+- Export Event .kst fajla je mogao premjestiti zvukove i jacine sekcija u druge sekcije, kada sekcije ritma nisu bile poredane ARR A, FIL A, BRK A, ARR B i tako dalje - ARR A je mogao svirati sa basom iz ARR B. To je popravljeno. Ako ritam koji ste ranije exportovali zvuci pogresno na Eventu, exportujte ga jos jednom.
+
+STYLE MASTER PRO - NOVO
+
+STYLE BALANCER: u Global prozoru, novo dugme ispod SHOW CHORDS (i u meniju desnog klika na notu). Bubnjevi ritma sviraju kao ritam koji izaberete za uzor: jacina svakog udarca prema vrsti bubnja i mjestu u taktu, po zelji i njegovo mjesto u vremenu (groove), zvuci hi-hata i bubnjeva iz uzora, njegov drum kit, jacina bubnjeva i Master Vol. DRUM, a - posebno stiklirano - BALANCE i Master Vol. BASS / CHORD. Uzori se uce iz bilo kog .kst ili MIDI fajla (LEARN FROM FILE...), cuvaju pod imenom, brisu, uvoze i izvoze kao fajlovi. Jacina 0-100 % sa - / + i klizacem, cuje se odmah, i za vrijeme PLAY. OK je cuva kao jedan Ctrl+Z, Cancel vraca sve. Master Vol. i BALANCE se upisuju u exportovani .kst.
+
+VELOCITY %: desni klik na oznacene note -&gt; VELOCITY % ih pojacava ili utisava za po jedan posto (10-200 %); akcenti ostaju akcenti.
+
+CRESCENDO / DECRESCENDO: desni klik na oznacene note -&gt; jacina raste ili opada od prve oznacene note do posljednje (From % / To %).
+
+HUMANIZE, VELOCITY % i CRESCENDO vise ne blokiraju program dok im je prozor otvoren, a VELOCITY % i CRESCENDO se cuju na svaki korak - / +.
+
+FILE -&gt; EXPORT SOUNDS (MIDI): MIDI fajl samo sa zvukovima traka u ARR A (jacina, pan, reverb, chorus, banka, program).
+
+Uputstvo (FILE -&gt; USER MANUAL ili F1): na vrhu obojeni okvir "Novo u v5.2.2" - klik na stavku skace na njeno objasnjenje - a ranije verzije su sklopljene ispod. STYLE BALANCER u poglavlju 18, VELOCITY %, CRESCENDO i HUMANIZE u poglavlju 9, nove slike, na sva cetiri jezika.
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Export Event .kst fajla: svaka sekcija sada dobija svoje zvukove i miks, bez obzira na redoslijed sekcija u ritmu, a sekcije koje ritam nema zadrzavaju ono sto je Event sacuvao.
+
+INSERT BAR(S) HERE i DELETE THIS BAR sada pomjeraju pitch bend i Real dijelove (Real Drum, Real Chord ...) zajedno sa notama.
+
+Ucitavanje .kst fajla: prazna posljednja sekcija zadrzava duzinu koju joj daje fajl.
+
+MIDI SETUP pomoc: podesavanja Rx su sada opisana kakva zaista jesu na Eventu - ista kao Tx, sa cetiri razlike (Lower1 Off, Lower2 Off, Global 1, Reg./Perf. Off), na cetiri jezika.
+
+Kvadratici za stikliranje vise ne odsijecaju svoje natpise pri malom UI Scale (na primjer "Show unchanged too" u DK MAPPER -&gt; Auto Match by Name).
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.1</span>
     <span class="version-date">2026-10-12</span>
   </div>
@@ -3382,6 +3462,46 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.2.2</span>
+    <span class="version-date">2026-10-13</span>
+  </div>
+  <div class="version-body">v5.2.2 - STYLE BALANCER, VELOCITY %, CRESCENDO
+
+NOTA:
+- v5.2.2 e un aggiornamento gratuito per ogni cliente esistente, come tutti gli aggiornamenti precedenti.
+- L'esportazione di un .kst dell'Event poteva spostare i suoni e i volumi delle sezioni in altre sezioni, quando le sezioni dello stile non erano nell'ordine ARR A, FIL A, BRK A, ARR B e cosi via - ARR A poteva suonare con il basso di ARR B. E corretto. Se uno stile esportato in precedenza suona male sull'Event, esportatelo ancora una volta.
+
+STYLE MASTER PRO - NUOVO
+
+STYLE BALANCER: nella finestra Global, un nuovo pulsante sotto SHOW CHORDS (anche nel menu del clic destro su una nota). Fa suonare la batteria di uno stile come uno stile scelto come riferimento: la forza di ogni colpo per tipo di tamburo e posizione nella battuta, se volete anche la sua posizione nel tempo (il groove), i suoni di hi-hat e batteria del riferimento, il suo drum kit, il volume della batteria e Master Vol. DRUM, e - spuntati a parte - BALANCE e Master Vol. BASS / CHORD. I riferimenti si imparano da qualsiasi file .kst o MIDI (LEARN FROM FILE...), si salvano con un nome, si cancellano, si importano e si esportano come file. Intensita 0-100 % con - / + e un cursore, si sente subito, anche durante PLAY. OK la tiene come un solo Ctrl+Z, Cancel rimette tutto. Master Vol. e BALANCE vengono scritti nel .kst esportato.
+
+VELOCITY %: clic destro sulle note selezionate -&gt; VELOCITY % le rende piu forti o piu deboli a passi di un percento (10-200 %); gli accenti restano accenti.
+
+CRESCENDO / DECRESCENDO: clic destro sulle note selezionate -&gt; la forza cresce o cala dalla prima nota selezionata all'ultima (From % / To %).
+
+HUMANIZE, VELOCITY % e CRESCENDO non bloccano piu il programma mentre la loro finestra e aperta, e VELOCITY % e CRESCENDO si sentono a ogni passo - / +.
+
+FILE -&gt; EXPORT SOUNDS (MIDI): un file MIDI con solo i suoni delle tracce di ARR A (volume, pan, riverbero, chorus, banco, programma).
+
+Manuale (FILE -&gt; USER MANUAL o F1): in alto un riquadro colorato "Novita in v5.2.2" - un clic su una voce salta alla sua spiegazione - con le versioni precedenti raccolte sotto. STYLE BALANCER nel capitolo 18, VELOCITY %, CRESCENDO e HUMANIZE nel capitolo 9, nuove immagini, in tutte e quattro le lingue.
+
+STYLE MASTER PRO - CORRETTO
+
+Esportazione di un .kst dell'Event: ogni sezione prende ora i propri suoni e il proprio mix, qualunque sia l'ordine delle sezioni nello stile, e le sezioni che lo stile non ha mantengono cio che l'Event ha salvato.
+
+INSERT BAR(S) HERE e DELETE THIS BAR ora spostano il pitch bend e le parti Real (Real Drum, Real Chord ...) insieme alle note.
+
+Caricamento di un .kst: un'ultima sezione vuota mantiene la lunghezza che le da il file.
+
+Aiuto MIDI SETUP: le impostazioni Rx sono ora descritte come sono davvero sull'Event - uguali a Tx, con quattro differenze (Lower1 Off, Lower2 Off, Global 1, Reg./Perf. Off), in quattro lingue.
+
+Le caselle di spunta non tagliano piu le loro etichette con una scala UI piccola (per esempio "Show unchanged too" in DK MAPPER -&gt; Auto Match by Name).
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.2.1</span>
@@ -4927,6 +5047,46 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.2</span>
+    <span class="version-date">2026-10-13</span>
+  </div>
+  <div class="version-body">v5.2.2 - STYLE BALANCER, VELOCITY %, CRESCENDO
+
+HINWEIS:
+- v5.2.2 ist ein kostenloses Update fuer jeden bestehenden Kunden, wie alle Updates davor.
+- Der Export einer Event-.kst konnte die Stimmen und Lautstaerken von Sektionen in andere Sektionen verschieben, wenn die Sektionen des Styles nicht in der Reihenfolge ARR A, FIL A, BRK A, ARR B usw. standen - ARR A konnte mit dem Bass von ARR B spielen. Das ist behoben. Wenn ein frueher exportierter Style auf dem Event falsch klingt, exportieren Sie ihn noch einmal.
+
+STYLE MASTER PRO - NEU
+
+STYLE BALANCER: im Global-Fenster eine neue Schaltflaeche unter SHOW CHORDS (auch im Rechtsklickmenue einer Note). Das Schlagzeug eines Styles spielt dann wie ein Style, den Sie als Vorbild waehlen: die Staerke jedes Schlags nach Trommelart und Platz im Takt, auf Wunsch auch sein Platz in der Zeit (der Groove), die Hi-Hat- und Schlagzeugklaenge des Vorbilds, sein Drum Kit, die Schlagzeuglautstaerke und Master Vol. DRUM sowie - separat angehakt - BALANCE und Master Vol. BASS / CHORD. Vorbilder werden aus jeder .kst- oder MIDI-Datei gelernt (LEARN FROM FILE...), unter einem Namen gespeichert, geloescht, als Dateien importiert und exportiert. Staerke 0-100 % mit - / + und einem Schieberegler, sofort hoerbar, auch waehrend PLAY. OK behaelt es als ein Ctrl+Z, Cancel stellt alles zurueck. Master Vol. und BALANCE werden in die exportierte .kst geschrieben.
+
+VELOCITY %: Rechtsklick auf markierte Noten -&gt; VELOCITY % macht sie in Schritten von einem Prozent staerker oder schwaecher (10-200 %); Akzente bleiben Akzente.
+
+CRESCENDO / DECRESCENDO: Rechtsklick auf markierte Noten -&gt; die Staerke steigt oder faellt von der ersten markierten Note bis zur letzten (From % / To %).
+
+HUMANIZE, VELOCITY % und CRESCENDO blockieren das Programm nicht mehr, solange ihr Fenster offen ist, und VELOCITY % und CRESCENDO sind bei jedem Schritt - / + zu hoeren.
+
+FILE -&gt; EXPORT SOUNDS (MIDI): eine MIDI-Datei nur mit den Klaengen der Spuren in ARR A (Lautstaerke, Pan, Reverb, Chorus, Bank, Programm).
+
+Handbuch (FILE -&gt; USER MANUAL oder F1): oben ein farbiger Kasten "Neu in v5.2.2" - ein Klick auf einen Punkt springt zu seiner Erklaerung - mit den frueheren Versionen darunter eingeklappt. STYLE BALANCER in Kapitel 18, VELOCITY %, CRESCENDO und HUMANIZE in Kapitel 9, neue Bilder, in allen vier Sprachen.
+
+STYLE MASTER PRO - BEHOBEN
+
+Export einer Event-.kst: jede Sektion bekommt jetzt ihre eigenen Stimmen und ihren eigenen Mix, gleich in welcher Reihenfolge die Sektionen im Style stehen, und Sektionen, die der Style nicht hat, behalten, was das Event gespeichert hat.
+
+INSERT BAR(S) HERE und DELETE THIS BAR verschieben jetzt Pitch Bend und die Real-Teile (Real Drum, Real Chord ...) zusammen mit den Noten.
+
+Laden einer .kst: eine leere letzte Sektion behaelt die Laenge, die die Datei ihr gibt.
+
+MIDI-SETUP-Hilfe: die Rx-Einstellungen sind jetzt so beschrieben, wie sie auf dem Event wirklich sind - wie Tx, mit vier Unterschieden (Lower1 Off, Lower2 Off, Global 1, Reg./Perf. Off), in vier Sprachen.
+
+Kontrollkaestchen schneiden ihre Beschriftung bei kleiner UI-Skalierung nicht mehr ab (zum Beispiel "Show unchanged too" in DK MAPPER -&gt; Auto Match by Name).
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.1</span>
     <span class="version-date">2026-10-12</span>
   </div>
@@ -6470,6 +6630,46 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.2</span>
+    <span class="version-date">2026-10-13</span>
+  </div>
+  <div class="version-body">v5.2.2 - STYLE BALANCER, VELOCITY %, CRESCENDO
+
+ВНИМАНИЕ:
+- v5.2.2 - бесплатное обновление для каждого существующего клиента, как и все обновления до него.
+- Экспорт .kst для Event мог переносить голоса и громкости секций в другие секции, если секции стиля шли не в порядке ARR A, FIL A, BRK A, ARR B и так далее, - ARR A мог играть с басом из ARR B. Это исправлено. Если ранее экспортированный стиль звучит на Event неправильно, экспортируйте его ещё раз.
+
+STYLE MASTER PRO - НОВОЕ
+
+STYLE BALANCER: в окне Global новая кнопка под SHOW CHORDS (а также в меню правого щелчка по ноте). Ударные стиля начинают играть как стиль, выбранный образцом: сила каждого удара по виду барабана и месту в такте, при желании и его место во времени (грув), звуки хай-хэта и барабанов образца, его драм-кит, громкость ударных и Master Vol. DRUM, а также - отдельной галочкой - BALANCE и Master Vol. BASS / CHORD. Образцы изучаются из любого файла .kst или MIDI (LEARN FROM FILE...), сохраняются под именем, удаляются, импортируются и экспортируются как файлы. Сила 0-100 % кнопками - / + и ползунком, слышна сразу, и во время PLAY. OK сохраняет результат как один Ctrl+Z, Cancel возвращает всё. Master Vol. и BALANCE записываются в экспортированный .kst.
+
+VELOCITY %: правый щелчок по выделенным нотам -&gt; VELOCITY % делает их громче или тише с шагом в один процент (10-200 %); акценты остаются акцентами.
+
+CRESCENDO / DECRESCENDO: правый щелчок по выделенным нотам -&gt; сила растёт или убывает от первой выделенной ноты к последней (From % / To %).
+
+HUMANIZE, VELOCITY % и CRESCENDO больше не блокируют программу, пока открыто их окно, а VELOCITY % и CRESCENDO слышны на каждом шаге - / +.
+
+FILE -&gt; EXPORT SOUNDS (MIDI): MIDI-файл только со звуками дорожек в ARR A (громкость, панорама, реверберация, хорус, банк, программа).
+
+Руководство (FILE -&gt; USER MANUAL или F1): вверху цветная рамка "Новое в v5.2.2" - щелчок по пункту переходит к его объяснению, - а прежние версии свёрнуты под ней. STYLE BALANCER в главе 18, VELOCITY %, CRESCENDO и HUMANIZE в главе 9, новые картинки, на всех четырёх языках.
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Экспорт .kst для Event: каждая секция теперь получает свои голоса и свой микс, независимо от порядка секций в стиле, а секции, которых в стиле нет, сохраняют то, что сохранил Event.
+
+INSERT BAR(S) HERE и DELETE THIS BAR теперь сдвигают pitch bend и Real-партии (Real Drum, Real Chord ...) вместе с нотами.
+
+Загрузка .kst: пустая последняя секция сохраняет длину, которую ей задаёт файл.
+
+Справка MIDI SETUP: настройки Rx теперь описаны так, как они есть на Event на самом деле, - как Tx, с четырьмя отличиями (Lower1 Off, Lower2 Off, Global 1, Reg./Perf. Off), на четырёх языках.
+
+Флажки больше не обрезают свои подписи при малом масштабе UI (например, "Show unchanged too" в DK MAPPER -&gt; Auto Match by Name).
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.1</span>
     <span class="version-date">2026-10-12</span>
   </div>
@@ -8011,6 +8211,46 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.2.2</span>
+    <span class="version-date">2026-10-13</span>
+  </div>
+  <div class="version-body">v5.2.2 - STYLE BALANCER, VELOCITY %, CRESCENDO
+
+OBS:
+- v5.2.2 ar en gratis uppdatering for alla befintliga kunder, liksom alla uppdateringar fore den.
+- Export av en Event-.kst kunde flytta sektioners roster och volymer till andra sektioner, nar stilens sektioner inte lag i ordningen ARR A, FIL A, BRK A, ARR B och sa vidare - ARR A kunde spela med basen fran ARR B. Det ar atgardat. Om en stil som du exporterat tidigare later fel pa Event, exportera den en gang till.
+
+STYLE MASTER PRO - NYTT
+
+STYLE BALANCER: i fonstret Global, en ny knapp under SHOW CHORDS (aven i hogerklicksmenyn for en ton). Den far en stils trummor att spela som en stil du valjer som forebild: styrkan i varje slag efter trumtyp och plats i takten, om du vill aven dess plats i tiden (groovet), forebildens hi-hat- och trumljud, dess trumkit, trumvolymen och Master Vol. DRUM, och - separat ikryssat - BALANCE och Master Vol. BASS / CHORD. Forebilder lars in fran vilken .kst- eller MIDI-fil som helst (LEARN FROM FILE...), sparas under ett namn, tas bort, importeras och exporteras som filer. Styrka 0-100 % med - / + och ett skjutreglage, hors direkt, aven under PLAY. OK behaller det som ett Ctrl+Z, Cancel aterstaller allt. Master Vol. och BALANCE skrivs in i den exporterade .kst-filen.
+
+VELOCITY %: hogerklicka pa markerade toner -&gt; VELOCITY % gor dem starkare eller svagare i steg om en procent (10-200 %); accenter forblir accenter.
+
+CRESCENDO / DECRESCENDO: hogerklicka pa markerade toner -&gt; styrkan okar eller minskar fran den forsta markerade tonen till den sista (From % / To %).
+
+HUMANIZE, VELOCITY % och CRESCENDO blockerar inte langre programmet medan deras fonster ar oppet, och VELOCITY % och CRESCENDO hors vid varje steg - / +.
+
+FILE -&gt; EXPORT SOUNDS (MIDI): en MIDI-fil med bara sparens ljud i ARR A (volym, pan, reverb, chorus, bank, program).
+
+Bruksanvisningen (FILE -&gt; USER MANUAL eller F1): overst en fargad ruta "Nytt i v5.2.2" - ett klick pa en punkt hoppar till dess forklaring - med tidigare versioner hopfallda under. STYLE BALANCER i kapitel 18, VELOCITY %, CRESCENDO och HUMANIZE i kapitel 9, nya bilder, pa alla fyra sprak.
+
+STYLE MASTER PRO - FIXAT
+
+Export av en Event-.kst: varje sektion far nu sina egna roster och sin egen mix, oavsett i vilken ordning sektionerna ligger i stilen, och sektioner som stilen inte har behaller det Event sparade.
+
+INSERT BAR(S) HERE och DELETE THIS BAR flyttar nu pitch bend och Real-delarna (Real Drum, Real Chord ...) tillsammans med tonerna.
+
+Laddning av en .kst: en tom sista sektion behaller den langd som filen ger den.
+
+MIDI SETUP-hjalpen: Rx-installningarna beskrivs nu som de verkligen ar pa Event - samma som Tx, med fyra skillnader (Lower1 Off, Lower2 Off, Global 1, Reg./Perf. Off), pa fyra sprak.
+
+Kryssrutor klipper inte langre av sina etiketter vid liten UI-skala (till exempel "Show unchanged too" i DK MAPPER -&gt; Auto Match by Name).
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.2.1</span>
