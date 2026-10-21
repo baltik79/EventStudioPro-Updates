@@ -252,6 +252,109 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.4</span>
+    <span class="version-date">2026-10-22</span>
+  </div>
+  <div class="version-body">v5.2.4 - Voice to ABCD, a user manual in every module, safer editing
+
+PLEASE NOTE:
+- v5.2.4 is a free update for every existing customer, like all the updates before it.
+- Yamaha import: STRIP GUITAR NOISE (11) is now on by default - the high MegaVoice notes (C7 and up) no longer play as out-of-tune tones.
+- Performance: the SET buttons now follow the order of the SET folders on the USB stick, as on the Event - no longer alphabetical. A renamed SET stays on its button.
+
+STYLE MASTER PRO - NEW
+
+MIX -&gt; Voice to ABCD: a new tab, like Home -&gt; VOICE TO ABCD on the Event - 4 voices named as on the Event, Octave, VOICE BALANCE per voice and Variation, written into the exported style.
+
+Global window: new button REAL NAMES under KETRON, level with STYLE BALANCER - the file names the Event uses for Real loops (Live Drum, Real Bass, Real Chord); click a name to copy it. The window follows FILE -&gt; TOOLTIP LANGUAGE.
+
+Yamaha import: the Chord Setup (Close / Parallel, Retrigger / Normal) of each Chord track is taken from the Yamaha style itself.
+
+User manual: a "New in v5.2.4" box, Voice to ABCD with two new pictures, ALL CHORD VARIATIONS for Yamaha, REAL NAMES, and bigger red numbers on the pictures. All four languages.
+
+STYLE MASTER PRO - FIXED
+
+Yamaha import with ALL CHORD VARIATIONS (10): SEV sections are now a real seventh chord (the highest C of each chord becomes Bb; the lowest note never moves). Until now SEV was a plain major chord.
+
+Yamaha import: DJ scratches (Scratch H / L) are left out instead of becoming loud side sticks.
+
+An empty last section (e.g. END3_SEV) gets 1 bar, and after loading another style the previous style's section lengths no longer show up.
+
+MIDI Monitor: SysEx from the Event (ARR A-D, FILL, BREAK, INTRO / END, START / STOP) is now shown - it was filtered out.
+
+USER MANUALS - NEW
+
+Registration, Lyrics Converter, User Voice, User Style and Performance now each have their own user manual with pictures: FILE -&gt; User Manual or F1 (Lyrics Converter: the USER MANUAL button). SR / EN / IT / DE, with a search box; a red number on a picture lights up the text that explains it.
+
+REGISTRATION
+
+Open accepts only a REGISTRATION folder, one of its BANK folders, or the USB stick that holds it. Any other folder is refused and nothing in it is changed.
+
+Save removes from your folder only what you deleted or moved in "Invalid content"; everything else in the root stays.
+
+Closing with unsaved changes asks Save / Discard / Cancel, also when you close Event Studio Pro. FILE -&gt; Exit closes the program (it used to leave an empty page).
+
+Save As asks before replacing an existing REGISTRATION. NEW PROJECT: the first Save works as Save As.
+
+FILL GAPS no longer locks unlocked registrations. Files dragged in from Explorer keep their name and lock. Ctrl + drag onto a filled row copies. Deleting several registrations asks once, and one Undo brings them back.
+
+Messages were unreadable in the Windows Light theme. Fixed.
+
+LYRICS CONVERTER
+
+OCR picks the right script: an English picture no longer comes out in Cyrillic (River -&gt; Кјуег) and Serbian Cyrillic no longer in Latin; Macedonian keeps ќ ѓ ѕ. Scanned PDF -&gt; TXT uses the same OCR, at a higher resolution.
+
+English and Italian: no more Serbian text in Conversion errors, the status line, Extract, OCR, Live Preview and the preset list. "Rit." / "Ritornello" is recognised as a refrain, like "Ref.".
+
+"1 error", not "1 errors" (also for files, in every language).
+
+USER VOICE
+
+Save keeps every voice on its number; empty slots stay empty. A voice without a number, or a second voice on the same number, gets a free number.
+
+No more lost voices: Insert + Shift, Paste and dragging from Explorer never overwrite a voice, and if a move fails half way, everything is put back.
+
+Save As never deletes the folder you are editing and asks "Replace it?" (default No). FILE -&gt; Discard changes is new. FILE -&gt; Exit closes the program, and closing asks about unsaved changes.
+
+Open accepts USER_VOICE, one of its family folders, or the USB stick that holds it; family folders in any letter case.
+
+Ctrl+C / Ctrl+V no longer take over text fields elsewhere in the program. New: Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1.
+
+Undo for Delete and Rename in Find Duplicates; Undo / Redo buttons grey out; readable messages, Voice Editor labels and OVERVIEW headers.
+
+Every Save first keeps a backup in Documents\Event Studio Pro\Backups\User Voice (the last 20).
+
+USER STYLE
+
+No more lost styles: Cut + Paste inside one family works (the styles used to disappear), files whose name starts with "__" are no longer deleted, Save never leaves a family half deleted, and what an interrupted operation left behind is recovered.
+
+Deploy 100% Screen Order: the registration tag (_01, _02 ...) is off by default. Tested on the Event: it sorts each family by file name, so the 001# numbers alone give the order. The window explains why the family is deleted on the Event first, and its checkboxes are readable.
+
+EXPERT MODE: Paste puts the styles exactly into the slot you click and keeps the gaps; an occupied slot is refused, as when dragging.
+
+Closing asks about unsaved changes; FILE -&gt; Exit closes the program; Overwrite? defaults to No; Ctrl+C / Ctrl+V no longer take over other text fields; new Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1; readable messages.
+
+PERFORMANCE
+
+Save never deletes or re-creates a SET folder - it changes only what is inside, and a renamed SET keeps its place.
+
+Save is safe: if it is interrupted (the USB stick is pulled out), the next opening completes or undoes it. A SET is never left half deleted.
+
+Names are no longer damaged when a folder is opened: "80s Disco" stays "80s Disco" (it became "s Disco"). Rename keeps the Number Assign lock [NNNN].
+
+Invalid content: Delete and Move to PC act only on the items you select, and Delete asks first. Before, with nothing selected they acted on every SET.
+
+Undo works per window; Thumbs.db and similar files are ignored; a folder can no longer be put inside a subfolder; folders with more than 1000 items keep their order; several items moved down land in the right place.
+
+Closing asks about unsaved changes, also when you close Event Studio Pro; FILE -&gt; Exit closes the program; Overwrite? defaults to No.
+
+New: Ctrl+C, Ctrl+X, Ctrl+V, Delete, Ctrl+Z, Ctrl+Y, Ctrl+O, Ctrl+S, F1. Readable labels; the OVERVIEW heading is no longer cut off.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.3</span>
     <span class="version-date">2026-10-14</span>
   </div>
@@ -1903,6 +2006,109 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.4</span>
+    <span class="version-date">2026-10-22</span>
+  </div>
+  <div class="version-body">v5.2.4 - Voice to ABCD, uputstvo u svakom modulu, sigurnije uredjivanje
+
+VAZNO:
+- v5.2.4 je besplatan update za svakog postojeceg kupca, kao i svi update-i prije njega.
+- Yamaha import: STRIP GUITAR NOISE (11) je sada podrazumijevano ukljucen - visoke MegaVoice note (C7 i vise) vise ne sviraju kao rastimovani tonovi.
+- Performance: SET dugmad sada prate redoslijed SET foldera na USB sticku, kao na Eventu - vise ne abecedno. Preimenovani SET ostaje na svom dugmetu.
+
+STYLE MASTER PRO - NOVO
+
+MIX -&gt; Voice to ABCD: novi tab, kao Home -&gt; VOICE TO ABCD na Eventu - 4 zvuka nazvana kao na Eventu, Octave, VOICE BALANCE za svaki zvuk i Variation, upisano u exportovani ritam.
+
+Global prozor: novo dugme REAL NAMES ispod KETRON, u ravni sa STYLE BALANCER - imena fajlova koja Event koristi za Real loopove (Live Drum, Real Bass, Real Chord); klik na ime ga kopira. Prozor prati FILE -&gt; TOOLTIP LANGUAGE.
+
+Yamaha import: Chord Setup (Close / Parallel, Retrigger / Normal) svake Chord trake uzima se iz samog Yamaha ritma.
+
+Uputstvo: okvir "Novo u v5.2.4", Voice to ABCD sa dvije nove slike, ALL CHORD VARIATIONS za Yamahu, REAL NAMES i veci crveni brojevi na slikama. Sva cetiri jezika.
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Yamaha import sa ALL CHORD VARIATIONS (10): SEV sekcije su sada pravi septakord (najvise C svakog akorda postaje Bb; najniza nota se nikad ne pomjera). Do sada je SEV bio obican durski akord.
+
+Yamaha import: DJ scratchevi (Scratch H / L) se izostavljaju, umjesto da postanu glasni side stickovi.
+
+Prazna posljednja sekcija (npr. END3_SEV) dobija 1 takt, a nakon ucitavanja drugog ritma duzine sekcija prethodnog ritma se vise ne pojavljuju.
+
+MIDI Monitor: SysEx sa Eventa (ARR A-D, FILL, BREAK, INTRO / END, START / STOP) se sada prikazuje - bio je filtriran.
+
+UPUTSTVA - NOVO
+
+Registration, Lyrics Converter, User Voice, User Style i Performance sada svaki imaju svoje uputstvo sa slikama: FILE -&gt; User Manual ili F1 (Lyrics Converter: dugme USER MANUAL). SR / EN / IT / DE, sa poljem za pretragu; crveni broj na slici osvjetljava tekst koji ga objasnjava.
+
+REGISTRATION
+
+Open prihvata samo REGISTRATION folder, jedan od njegovih BANK foldera ili USB stick na kojem se nalazi. Svaki drugi folder se odbija i nista u njemu se ne mijenja.
+
+Save uklanja iz foldera samo ono sto ste obrisali ili premjestili u "Invalid content"; sve ostalo u root folderu ostaje.
+
+Zatvaranje sa nesacuvanim izmjenama pita Save / Discard / Cancel, i kada zatvarate Event Studio Pro. FILE -&gt; Exit zatvara program (ranije je ostavljao praznu stranicu).
+
+Save As pita prije zamjene postojeceg REGISTRATION. NEW PROJECT: prvi Save radi kao Save As.
+
+FILL GAPS vise ne zakljucava otkljucane registracije. Fajlovi prevuceni iz Explorera zadrzavaju svoje ime i zakljucavanje. Ctrl + prevlacenje na popunjen red kopira. Brisanje vise registracija pita jednom, a jedan Undo ih vraca.
+
+Poruke su bile necitljive u Windows Light temi. Popravljeno.
+
+LYRICS CONVERTER
+
+OCR bira pravo pismo: engleska slika vise ne izlazi na cirilici (River -&gt; Кјуег), a srpska cirilica vise ne izlazi na latinici; makedonski zadrzava ќ ѓ ѕ. Skenirani PDF -&gt; TXT koristi isti OCR, u vecoj rezoluciji.
+
+Engleski i italijanski: nema vise srpskog teksta u Conversion errors, statusnoj liniji, Extract, OCR, Live Preview i listi preseta. "Rit." / "Ritornello" se prepoznaje kao refren, kao "Ref.".
+
+"1 greska", a ne "1 greske" (i za fajlove, na svakom jeziku).
+
+USER VOICE
+
+Save drzi svaki zvuk na njegovom broju; prazna mjesta ostaju prazna. Zvuk bez broja, ili drugi zvuk na istom broju, dobija slobodan broj.
+
+Nema vise izgubljenih zvukova: Insert + Shift, Paste i prevlacenje iz Explorera nikad ne prepisuju zvuk, a ako premjestanje ne uspije na pola puta, sve se vraca.
+
+Save As nikad ne brise folder koji uredjujete i pita "Replace it?" (podrazumijevano No). FILE -&gt; Discard changes je novo. FILE -&gt; Exit zatvara program, a zatvaranje pita za nesacuvane izmjene.
+
+Open prihvata USER_VOICE, jedan od njegovih foldera familija ili USB stick na kojem se nalazi; foldere familija sa bilo kojom velicinom slova.
+
+Ctrl+C / Ctrl+V vise ne preuzimaju tekstualna polja na drugim mjestima u programu. Novo: Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1.
+
+Undo za Delete i Rename u Find Duplicates; dugmad Undo / Redo postaju siva; citljive poruke, natpisi u Voice Editor i zaglavlja u OVERVIEW.
+
+Svaki Save prvo sacuva rezervnu kopiju u Documents\Event Studio Pro\Backups\User Voice (posljednjih 20).
+
+USER STYLE
+
+Nema vise izgubljenih ritmova: Cut + Paste unutar jedne familije radi (ritmovi su nestajali), fajlovi cije ime pocinje sa "__" se vise ne brisu, Save nikad ne ostavlja familiju napola obrisanu, a ono sto je prekinuta operacija ostavila za sobom se vraca.
+
+Deploy 100% Screen Order: oznaka registracije (_01, _02 ...) je podrazumijevano iskljucena. Testirano na Eventu: on sortira svaku familiju po imenu fajla, pa sami 001# brojevi daju redoslijed. Prozor objasnjava zasto se familija na Eventu prvo brise, a njegovi kvadratici su citljivi.
+
+EXPERT MODE: Paste stavlja ritmove tacno u mjesto na koje kliknete i cuva praznine; zauzeto mjesto se odbija, kao kod prevlacenja.
+
+Zatvaranje pita za nesacuvane izmjene; FILE -&gt; Exit zatvara program; Overwrite? je podrazumijevano No; Ctrl+C / Ctrl+V vise ne preuzimaju druga tekstualna polja; novo Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1; citljive poruke.
+
+PERFORMANCE
+
+Save nikad ne brise niti ponovo pravi SET folder - mijenja samo ono sto je unutra, a preimenovani SET zadrzava svoje mjesto.
+
+Save je siguran: ako se prekine (USB stick se izvuce), sljedece otvaranje ga zavrsava ili ponistava. SET nikad ne ostaje napola obrisan.
+
+Imena se vise ne ostecuju kada se folder otvori: "80s Disco" ostaje "80s Disco" (postajalo je "s Disco"). Rename zadrzava Number Assign zakljucavanje [NNNN].
+
+Invalid content: Delete i Move to PC djeluju samo na stavke koje izaberete, a Delete prvo pita. Ranije su, kada nista nije bilo izabrano, djelovali na svaki SET.
+
+Undo radi za svaki prozor posebno; Thumbs.db i slicni fajlovi se ignorisu; folder se vise ne moze staviti unutar podfoldera; folderi sa vise od 1000 stavki zadrzavaju redoslijed; vise stavki pomjerenih nadolje zavrsava na pravom mjestu.
+
+Zatvaranje pita za nesacuvane izmjene, i kada zatvarate Event Studio Pro; FILE -&gt; Exit zatvara program; Overwrite? je podrazumijevano No.
+
+Novo: Ctrl+C, Ctrl+X, Ctrl+V, Delete, Ctrl+Z, Ctrl+Y, Ctrl+O, Ctrl+S, F1. Citljivi natpisi; naslov OVERVIEW vise nije odsjecen.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.3</span>
     <span class="version-date">2026-10-14</span>
   </div>
@@ -3506,6 +3712,109 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.2.4</span>
+    <span class="version-date">2026-10-22</span>
+  </div>
+  <div class="version-body">v5.2.4 - Voice to ABCD, un manuale in ogni modulo, modifiche piu sicure
+
+NOTA:
+- v5.2.4 e un aggiornamento gratuito per ogni cliente esistente, come tutti gli aggiornamenti precedenti.
+- Importazione Yamaha: STRIP GUITAR NOISE (11) e ora attivo di default - le note MegaVoice alte (da C7 in su) non suonano piu come toni stonati.
+- Performance: i pulsanti SET ora seguono l'ordine delle cartelle SET sulla chiavetta USB, come sull'Event - non piu in ordine alfabetico. Un SET rinominato resta sul suo pulsante.
+
+STYLE MASTER PRO - NUOVO
+
+MIX -&gt; Voice to ABCD: una nuova scheda, come Home -&gt; VOICE TO ABCD sull'Event - 4 suoni con i nomi come sull'Event, Octave, VOICE BALANCE per ogni suono e Variation, scritti nello stile esportato.
+
+Finestra Global: nuovo pulsante REAL NAMES sotto KETRON, allo stesso livello di STYLE BALANCER - i nomi dei file che l'Event usa per i loop Real (Live Drum, Real Bass, Real Chord); un clic su un nome lo copia. La finestra segue FILE -&gt; TOOLTIP LANGUAGE.
+
+Importazione Yamaha: il Chord Setup (Close / Parallel, Retrigger / Normal) di ogni traccia Chord viene preso dallo stile Yamaha stesso.
+
+Manuale: un riquadro "Novita in v5.2.4", Voice to ABCD con due nuove immagini, ALL CHORD VARIATIONS per Yamaha, REAL NAMES e numeri rossi piu grandi sulle immagini. Tutte e quattro le lingue.
+
+STYLE MASTER PRO - CORRETTO
+
+Importazione Yamaha con ALL CHORD VARIATIONS (10): le sezioni SEV sono ora un vero accordo di settima (il C piu alto di ogni accordo diventa Bb; la nota piu bassa non si sposta mai). Finora SEV era un semplice accordo maggiore.
+
+Importazione Yamaha: gli scratch da DJ (Scratch H / L) vengono tralasciati invece di diventare side stick forti.
+
+Un'ultima sezione vuota (ad es. END3_SEV) riceve 1 battuta, e dopo aver caricato un altro stile le lunghezze delle sezioni dello stile precedente non compaiono piu.
+
+MIDI Monitor: il SysEx dall'Event (ARR A-D, FILL, BREAK, INTRO / END, START / STOP) ora viene mostrato - veniva filtrato.
+
+MANUALI - NUOVO
+
+Registration, Lyrics Converter, User Voice, User Style e Performance ora hanno ciascuno il proprio manuale con immagini: FILE -&gt; User Manual o F1 (Lyrics Converter: il pulsante USER MANUAL). SR / EN / IT / DE, con una casella di ricerca; un numero rosso su un'immagine illumina il testo che lo spiega.
+
+REGISTRATION
+
+Open accetta solo una cartella REGISTRATION, una delle sue cartelle BANK o la chiavetta USB che la contiene. Qualsiasi altra cartella viene rifiutata e nulla al suo interno viene modificato.
+
+Save rimuove dalla vostra cartella solo cio che avete cancellato o spostato in "Invalid content"; tutto il resto nella radice rimane.
+
+La chiusura con modifiche non salvate chiede Save / Discard / Cancel, anche quando chiudete Event Studio Pro. FILE -&gt; Exit chiude il programma (prima lasciava una pagina vuota).
+
+Save As chiede prima di sostituire una REGISTRATION esistente. NEW PROJECT: il primo Save funziona come Save As.
+
+FILL GAPS non blocca piu le registrazioni sbloccate. I file trascinati da Explorer mantengono il loro nome e il blocco. Ctrl + trascinamento su una riga piena copia. La cancellazione di piu registrazioni chiede una sola volta, e un solo Undo le riporta indietro.
+
+I messaggi erano illeggibili nel tema Light di Windows. Corretto.
+
+LYRICS CONVERTER
+
+L'OCR sceglie l'alfabeto giusto: un'immagine in inglese non esce piu in cirillico (River -&gt; Кјуег) e il cirillico serbo non piu in latino; il macedone mantiene ќ ѓ ѕ. PDF scansionato -&gt; TXT usa lo stesso OCR, a una risoluzione piu alta.
+
+Inglese e italiano: niente piu testo serbo in Conversion errors, nella riga di stato, in Extract, OCR, Live Preview e nella lista dei preset. "Rit." / "Ritornello" viene riconosciuto come ritornello, come "Ref.".
+
+"1 errore", non "1 errori" (anche per i file, in ogni lingua).
+
+USER VOICE
+
+Save mantiene ogni suono sul suo numero; le posizioni vuote restano vuote. Un suono senza numero, o un secondo suono sullo stesso numero, riceve un numero libero.
+
+Niente piu suoni persi: Insert + Shift, Paste e il trascinamento da Explorer non sovrascrivono mai un suono, e se uno spostamento fallisce a meta, tutto viene rimesso a posto.
+
+Save As non cancella mai la cartella che state modificando e chiede "Replace it?" (predefinito No). FILE -&gt; Discard changes e nuovo. FILE -&gt; Exit chiude il programma, e la chiusura chiede delle modifiche non salvate.
+
+Open accetta USER_VOICE, una delle sue cartelle di famiglia o la chiavetta USB che la contiene; cartelle di famiglia con lettere maiuscole o minuscole.
+
+Ctrl+C / Ctrl+V non si impadroniscono piu dei campi di testo in altre parti del programma. Nuovo: Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1.
+
+Undo per Delete e Rename in Find Duplicates; i pulsanti Undo / Redo diventano grigi; messaggi, etichette del Voice Editor e intestazioni di OVERVIEW leggibili.
+
+Ogni Save conserva prima una copia di backup in Documents\Event Studio Pro\Backups\User Voice (le ultime 20).
+
+USER STYLE
+
+Niente piu stili persi: Cut + Paste all'interno di una famiglia funziona (gli stili sparivano), i file il cui nome inizia con "__" non vengono piu cancellati, Save non lascia mai una famiglia cancellata a meta, e cio che un'operazione interrotta ha lasciato indietro viene recuperato.
+
+Deploy 100% Screen Order: il tag di registrazione (_01, _02 ...) e disattivato di default. Testato sull'Event: ordina ogni famiglia per nome del file, quindi bastano i numeri 001# a dare l'ordine. La finestra spiega perche la famiglia viene prima cancellata sull'Event, e le sue caselle di spunta sono leggibili.
+
+EXPERT MODE: Paste mette gli stili esattamente nella posizione su cui cliccate e mantiene i vuoti; una posizione occupata viene rifiutata, come quando si trascina.
+
+La chiusura chiede delle modifiche non salvate; FILE -&gt; Exit chiude il programma; Overwrite? ha No come predefinito; Ctrl+C / Ctrl+V non si impadroniscono piu degli altri campi di testo; nuovi Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1; messaggi leggibili.
+
+PERFORMANCE
+
+Save non cancella ne ricrea mai una cartella SET - cambia solo cio che c'e dentro, e un SET rinominato mantiene il suo posto.
+
+Save e sicuro: se viene interrotto (la chiavetta USB viene estratta), l'apertura successiva lo completa o lo annulla. Un SET non resta mai cancellato a meta.
+
+I nomi non vengono piu danneggiati quando si apre una cartella: "80s Disco" resta "80s Disco" (diventava "s Disco"). Rename mantiene il blocco Number Assign [NNNN].
+
+Invalid content: Delete e Move to PC agiscono solo sugli elementi che selezionate, e Delete chiede prima. Prima, senza nulla selezionato, agivano su ogni SET.
+
+Undo funziona per ogni finestra; Thumbs.db e file simili vengono ignorati; una cartella non puo piu essere messa dentro una sottocartella; le cartelle con piu di 1000 elementi mantengono il loro ordine; piu elementi spostati in basso finiscono al posto giusto.
+
+La chiusura chiede delle modifiche non salvate, anche quando chiudete Event Studio Pro; FILE -&gt; Exit chiude il programma; Overwrite? ha No come predefinito.
+
+Nuovo: Ctrl+C, Ctrl+X, Ctrl+V, Delete, Ctrl+Z, Ctrl+Y, Ctrl+O, Ctrl+S, F1. Etichette leggibili; l'intestazione OVERVIEW non viene piu tagliata.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.2.3</span>
@@ -5113,6 +5422,109 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.4</span>
+    <span class="version-date">2026-10-22</span>
+  </div>
+  <div class="version-body">v5.2.4 - Voice to ABCD, ein Handbuch in jedem Modul, sichereres Bearbeiten
+
+HINWEIS:
+- v5.2.4 ist ein kostenloses Update fuer jeden bestehenden Kunden, wie alle Updates davor.
+- Yamaha-Import: STRIP GUITAR NOISE (11) ist jetzt standardmaessig eingeschaltet - die hohen MegaVoice-Noten (ab C7) spielen nicht mehr als verstimmte Toene.
+- Performance: die SET-Tasten folgen jetzt der Reihenfolge der SET-Ordner auf dem USB-Stick, wie auf dem Event - nicht mehr alphabetisch. Ein umbenanntes SET bleibt auf seiner Taste.
+
+STYLE MASTER PRO - NEU
+
+MIX -&gt; Voice to ABCD: ein neuer Tab, wie Home -&gt; VOICE TO ABCD auf dem Event - 4 Stimmen, benannt wie auf dem Event, Octave, VOICE BALANCE pro Stimme und Variation, in den exportierten Style geschrieben.
+
+Global-Fenster: neue Schaltflaeche REAL NAMES unter KETRON, auf gleicher Hoehe mit STYLE BALANCER - die Dateinamen, die das Event fuer Real-Loops verwendet (Live Drum, Real Bass, Real Chord); ein Klick auf einen Namen kopiert ihn. Das Fenster folgt FILE -&gt; TOOLTIP LANGUAGE.
+
+Yamaha-Import: das Chord Setup (Close / Parallel, Retrigger / Normal) jeder Chord-Spur wird aus dem Yamaha-Style selbst uebernommen.
+
+Handbuch: ein Kasten "Neu in v5.2.4", Voice to ABCD mit zwei neuen Bildern, ALL CHORD VARIATIONS fuer Yamaha, REAL NAMES und groessere rote Zahlen auf den Bildern. Alle vier Sprachen.
+
+STYLE MASTER PRO - BEHOBEN
+
+Yamaha-Import mit ALL CHORD VARIATIONS (10): SEV-Sektionen sind jetzt ein echter Septakkord (das hoechste C jedes Akkords wird zu Bb; die tiefste Note bewegt sich nie). Bisher war SEV ein einfacher Durakkord.
+
+Yamaha-Import: DJ-Scratches (Scratch H / L) werden weggelassen, statt zu lauten Side Sticks zu werden.
+
+Eine leere letzte Sektion (z. B. END3_SEV) bekommt 1 Takt, und nach dem Laden eines anderen Styles erscheinen die Sektionslaengen des vorherigen Styles nicht mehr.
+
+MIDI Monitor: SysEx vom Event (ARR A-D, FILL, BREAK, INTRO / END, START / STOP) wird jetzt angezeigt - es wurde herausgefiltert.
+
+HANDBUECHER - NEU
+
+Registration, Lyrics Converter, User Voice, User Style und Performance haben jetzt jeweils ein eigenes Handbuch mit Bildern: FILE -&gt; User Manual oder F1 (Lyrics Converter: die Schaltflaeche USER MANUAL). SR / EN / IT / DE, mit einem Suchfeld; eine rote Zahl auf einem Bild hebt den Text hervor, der sie erklaert.
+
+REGISTRATION
+
+Open akzeptiert nur einen REGISTRATION-Ordner, einen seiner BANK-Ordner oder den USB-Stick, auf dem er liegt. Jeder andere Ordner wird abgelehnt, und nichts darin wird veraendert.
+
+Save entfernt aus Ihrem Ordner nur, was Sie in "Invalid content" geloescht oder verschoben haben; alles andere im Stammverzeichnis bleibt.
+
+Schliessen mit ungespeicherten Aenderungen fragt Save / Discard / Cancel, auch wenn Sie Event Studio Pro schliessen. FILE -&gt; Exit schliesst das Programm (frueher blieb eine leere Seite zurueck).
+
+Save As fragt, bevor eine bestehende REGISTRATION ersetzt wird. NEW PROJECT: das erste Save funktioniert wie Save As.
+
+FILL GAPS sperrt entsperrte Registrierungen nicht mehr. Aus dem Explorer hereingezogene Dateien behalten ihren Namen und ihre Sperre. Ctrl + Ziehen auf eine belegte Zeile kopiert. Das Loeschen mehrerer Registrierungen fragt einmal, und ein einziges Undo holt sie zurueck.
+
+Meldungen waren im Windows-Light-Theme unlesbar. Behoben.
+
+LYRICS CONVERTER
+
+OCR waehlt die richtige Schrift: ein englisches Bild kommt nicht mehr in Kyrillisch heraus (River -&gt; Кјуег) und serbisches Kyrillisch nicht mehr in Lateinschrift; Mazedonisch behaelt ќ ѓ ѕ. Gescanntes PDF -&gt; TXT verwendet dasselbe OCR, mit hoeherer Aufloesung.
+
+Englisch und Italienisch: kein serbischer Text mehr in Conversion errors, in der Statuszeile, Extract, OCR, Live Preview und der Preset-Liste. "Rit." / "Ritornello" wird als Refrain erkannt, wie "Ref.".
+
+"1 error", nicht "1 errors" (auch bei Dateien, in jeder Sprache).
+
+USER VOICE
+
+Save behaelt jede Stimme auf ihrer Nummer; leere Plaetze bleiben leer. Eine Stimme ohne Nummer oder eine zweite Stimme auf derselben Nummer bekommt eine freie Nummer.
+
+Keine verlorenen Stimmen mehr: Insert + Shift, Paste und Ziehen aus dem Explorer ueberschreiben nie eine Stimme, und wenn ein Verschieben auf halbem Weg scheitert, wird alles zurueckgestellt.
+
+Save As loescht nie den Ordner, den Sie bearbeiten, und fragt "Replace it?" (Standard No). FILE -&gt; Discard changes ist neu. FILE -&gt; Exit schliesst das Programm, und beim Schliessen wird nach ungespeicherten Aenderungen gefragt.
+
+Open akzeptiert USER_VOICE, einen seiner Familienordner oder den USB-Stick, auf dem er liegt; Familienordner in beliebiger Gross-/Kleinschreibung.
+
+Ctrl+C / Ctrl+V uebernehmen nicht mehr Textfelder an anderen Stellen im Programm. Neu: Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1.
+
+Undo fuer Delete und Rename in Find Duplicates; die Schaltflaechen Undo / Redo werden grau; lesbare Meldungen, Voice-Editor-Beschriftungen und OVERVIEW-Ueberschriften.
+
+Jedes Save legt zuerst eine Sicherung in Documents\Event Studio Pro\Backups\User Voice an (die letzten 20).
+
+USER STYLE
+
+Keine verlorenen Styles mehr: Cut + Paste innerhalb einer Familie funktioniert (die Styles verschwanden), Dateien, deren Name mit "__" beginnt, werden nicht mehr geloescht, Save laesst nie eine Familie halb geloescht zurueck, und was ein unterbrochener Vorgang hinterlassen hat, wird wiederhergestellt.
+
+Deploy 100% Screen Order: das Registrierungs-Tag (_01, _02 ...) ist standardmaessig aus. Auf dem Event getestet: es sortiert jede Familie nach Dateiname, also bestimmen die 001#-Nummern allein die Reihenfolge. Das Fenster erklaert, warum die Familie auf dem Event zuerst geloescht wird, und seine Kontrollkaestchen sind lesbar.
+
+EXPERT MODE: Paste setzt die Styles genau auf den Platz, den Sie anklicken, und behaelt die Luecken; ein belegter Platz wird abgelehnt, wie beim Ziehen.
+
+Beim Schliessen wird nach ungespeicherten Aenderungen gefragt; FILE -&gt; Exit schliesst das Programm; Overwrite? steht standardmaessig auf No; Ctrl+C / Ctrl+V uebernehmen keine anderen Textfelder mehr; neu Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1; lesbare Meldungen.
+
+PERFORMANCE
+
+Save loescht oder erstellt nie einen SET-Ordner neu - es aendert nur, was darin ist, und ein umbenanntes SET behaelt seinen Platz.
+
+Save ist sicher: wird es unterbrochen (der USB-Stick wird abgezogen), schliesst das naechste Oeffnen es ab oder macht es rueckgaengig. Ein SET bleibt nie halb geloescht zurueck.
+
+Namen werden beim Oeffnen eines Ordners nicht mehr beschaedigt: "80s Disco" bleibt "80s Disco" (es wurde zu "s Disco"). Rename behaelt die Number-Assign-Sperre [NNNN].
+
+Invalid content: Delete und Move to PC wirken nur auf die Elemente, die Sie auswaehlen, und Delete fragt vorher. Frueher wirkten sie ohne Auswahl auf jedes SET.
+
+Undo funktioniert pro Fenster; Thumbs.db und aehnliche Dateien werden ignoriert; ein Ordner kann nicht mehr in einen Unterordner gelegt werden; Ordner mit mehr als 1000 Elementen behalten ihre Reihenfolge; mehrere nach unten verschobene Elemente landen am richtigen Platz.
+
+Beim Schliessen wird nach ungespeicherten Aenderungen gefragt, auch wenn Sie Event Studio Pro schliessen; FILE -&gt; Exit schliesst das Programm; Overwrite? steht standardmaessig auf No.
+
+Neu: Ctrl+C, Ctrl+X, Ctrl+V, Delete, Ctrl+Z, Ctrl+Y, Ctrl+O, Ctrl+S, F1. Lesbare Beschriftungen; die Ueberschrift OVERVIEW wird nicht mehr abgeschnitten.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.3</span>
     <span class="version-date">2026-10-14</span>
   </div>
@@ -6718,6 +7130,109 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v5.2.4</span>
+    <span class="version-date">2026-10-22</span>
+  </div>
+  <div class="version-body">v5.2.4 - Voice to ABCD, руководство в каждом модуле, более безопасное редактирование
+
+ВНИМАНИЕ:
+- v5.2.4 - бесплатное обновление для каждого существующего клиента, как и все обновления до него.
+- Импорт Yamaha: STRIP GUITAR NOISE (11) теперь включён по умолчанию - высокие ноты MegaVoice (от C7 и выше) больше не звучат как расстроенные тоны.
+- Performance: кнопки SET теперь следуют порядку папок SET на USB-флешке, как на Event, - больше не по алфавиту. Переименованный SET остаётся на своей кнопке.
+
+STYLE MASTER PRO - НОВОЕ
+
+MIX -&gt; Voice to ABCD: новая вкладка, как Home -&gt; VOICE TO ABCD на Event, - 4 голоса с названиями как на Event, Octave, VOICE BALANCE для каждого голоса и Variation, записываются в экспортированный стиль.
+
+Окно Global: новая кнопка REAL NAMES под KETRON, на одном уровне со STYLE BALANCER, - имена файлов, которые Event использует для Real-лупов (Live Drum, Real Bass, Real Chord); щелчок по имени копирует его. Окно следует FILE -&gt; TOOLTIP LANGUAGE.
+
+Импорт Yamaha: Chord Setup (Close / Parallel, Retrigger / Normal) каждой дорожки Chord берётся из самого стиля Yamaha.
+
+Руководство: рамка "Новое в v5.2.4", Voice to ABCD с двумя новыми картинками, ALL CHORD VARIATIONS для Yamaha, REAL NAMES и более крупные красные цифры на картинках. Все четыре языка.
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Импорт Yamaha с ALL CHORD VARIATIONS (10): секции SEV теперь настоящий септаккорд (самое высокое C каждого аккорда становится Bb; самая низкая нота никогда не сдвигается). До сих пор SEV был простым мажорным аккордом.
+
+Импорт Yamaha: DJ-скретчи (Scratch H / L) пропускаются, вместо того чтобы становиться громкими сайд-стиками.
+
+Пустая последняя секция (например, END3_SEV) получает 1 такт, а после загрузки другого стиля длины секций предыдущего стиля больше не появляются.
+
+MIDI Monitor: SysEx от Event (ARR A-D, FILL, BREAK, INTRO / END, START / STOP) теперь отображается - раньше он отфильтровывался.
+
+РУКОВОДСТВА - НОВОЕ
+
+Registration, Lyrics Converter, User Voice, User Style и Performance теперь имеют каждый своё руководство с картинками: FILE -&gt; User Manual или F1 (Lyrics Converter: кнопка USER MANUAL). SR / EN / IT / DE, с полем поиска; красная цифра на картинке подсвечивает текст, который её объясняет.
+
+REGISTRATION
+
+Open принимает только папку REGISTRATION, одну из её папок BANK или USB-флешку, на которой она находится. Любая другая папка отклоняется, и ничего в ней не изменяется.
+
+Save удаляет из вашей папки только то, что вы удалили или переместили в "Invalid content"; всё остальное в корне остаётся.
+
+Закрытие с несохранёнными изменениями спрашивает Save / Discard / Cancel, также когда вы закрываете Event Studio Pro. FILE -&gt; Exit закрывает программу (раньше оставалась пустая страница).
+
+Save As спрашивает перед заменой существующей REGISTRATION. NEW PROJECT: первый Save работает как Save As.
+
+FILL GAPS больше не блокирует разблокированные регистрации. Файлы, перетащенные из Проводника, сохраняют своё имя и блокировку. Ctrl + перетаскивание на заполненную строку копирует. Удаление нескольких регистраций спрашивает один раз, и один Undo возвращает их.
+
+Сообщения были нечитаемы в светлой теме Windows (Light). Исправлено.
+
+LYRICS CONVERTER
+
+OCR выбирает правильную письменность: английская картинка больше не выходит кириллицей (River -&gt; Кјуег), а сербская кириллица - латиницей; македонский сохраняет ќ ѓ ѕ. Отсканированный PDF -&gt; TXT использует тот же OCR, с более высоким разрешением.
+
+Английский и итальянский: больше нет сербского текста в Conversion errors, строке состояния, Extract, OCR, Live Preview и списке пресетов. "Rit." / "Ritornello" распознаётся как припев, как и "Ref.".
+
+"1 error", а не "1 errors" (также для файлов, на каждом языке).
+
+USER VOICE
+
+Save оставляет каждый голос на его номере; пустые места остаются пустыми. Голос без номера или второй голос на том же номере получает свободный номер.
+
+Больше никаких потерянных голосов: Insert + Shift, Paste и перетаскивание из Проводника никогда не перезаписывают голос, а если перемещение не удалось на полпути, всё возвращается на место.
+
+Save As никогда не удаляет папку, которую вы редактируете, и спрашивает "Replace it?" (по умолчанию No). FILE -&gt; Discard changes - новое. FILE -&gt; Exit закрывает программу, а при закрытии программа спрашивает о несохранённых изменениях.
+
+Open принимает USER_VOICE, одну из её папок семейств или USB-флешку, на которой она находится; папки семейств в любом регистре букв.
+
+Ctrl+C / Ctrl+V больше не перехватывают текстовые поля в других местах программы. Новое: Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1.
+
+Undo для Delete и Rename в Find Duplicates; кнопки Undo / Redo становятся серыми; читаемые сообщения, надписи Voice Editor и заголовки OVERVIEW.
+
+Каждый Save сначала сохраняет резервную копию в Documents\Event Studio Pro\Backups\User Voice (последние 20).
+
+USER STYLE
+
+Больше никаких потерянных стилей: Cut + Paste внутри одного семейства работает (стили исчезали), файлы, имя которых начинается с "__", больше не удаляются, Save никогда не оставляет семейство наполовину удалённым, а то, что оставила прерванная операция, восстанавливается.
+
+Deploy 100% Screen Order: тег регистрации (_01, _02 ...) по умолчанию выключен. Проверено на Event: он сортирует каждое семейство по имени файла, так что порядок задают одни только номера 001#. Окно объясняет, почему семейство на Event сначала удаляется, и его флажки читаемы.
+
+EXPERT MODE: Paste ставит стили точно в ту ячейку, по которой вы щёлкнули, и сохраняет пропуски; занятая ячейка отклоняется, как при перетаскивании.
+
+Закрытие спрашивает о несохранённых изменениях; FILE -&gt; Exit закрывает программу; Overwrite? по умолчанию No; Ctrl+C / Ctrl+V больше не перехватывают другие текстовые поля; новые Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1; читаемые сообщения.
+
+PERFORMANCE
+
+Save никогда не удаляет и не создаёт заново папку SET - он изменяет только то, что внутри, а переименованный SET сохраняет своё место.
+
+Save безопасен: если он прерван (USB-флешку вынули), следующее открытие завершает или отменяет его. SET никогда не остаётся наполовину удалённым.
+
+Имена больше не портятся при открытии папки: "80s Disco" остаётся "80s Disco" (раньше становилось "s Disco"). Rename сохраняет блокировку Number Assign [NNNN].
+
+Invalid content: Delete и Move to PC действуют только на выбранные вами элементы, а Delete сначала спрашивает. Раньше, когда ничего не было выбрано, они действовали на каждый SET.
+
+Undo работает для каждого окна отдельно; Thumbs.db и похожие файлы игнорируются; папку больше нельзя поместить внутрь подпапки; папки с более чем 1000 элементами сохраняют свой порядок; несколько элементов, перемещённых вниз, попадают на правильное место.
+
+Закрытие спрашивает о несохранённых изменениях, также когда вы закрываете Event Studio Pro; FILE -&gt; Exit закрывает программу; Overwrite? по умолчанию No.
+
+Новое: Ctrl+C, Ctrl+X, Ctrl+V, Delete, Ctrl+Z, Ctrl+Y, Ctrl+O, Ctrl+S, F1. Читаемые надписи; заголовок OVERVIEW больше не обрезается.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.3</span>
     <span class="version-date">2026-10-14</span>
   </div>
@@ -8321,6 +8836,109 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v5.2.4</span>
+    <span class="version-date">2026-10-22</span>
+  </div>
+  <div class="version-body">v5.2.4 - Voice to ABCD, en bruksanvisning i varje modul, sakrare redigering
+
+OBS:
+- v5.2.4 ar en gratis uppdatering for alla befintliga kunder, liksom alla uppdateringar fore den.
+- Yamaha-import: STRIP GUITAR NOISE (11) ar nu pa som standard - de hoga MegaVoice-tonerna (C7 och uppat) spelar inte langre som ostamda toner.
+- Performance: SET-knapparna foljer nu ordningen pa SET-mapparna pa USB-minnet, som pa Event - inte langre i bokstavsordning. Ett omdopt SET stannar pa sin knapp.
+
+STYLE MASTER PRO - NYTT
+
+MIX -&gt; Voice to ABCD: en ny flik, som Home -&gt; VOICE TO ABCD pa Event - 4 roster med namn som pa Event, Octave, VOICE BALANCE per rost och Variation, inskrivna i den exporterade stilen.
+
+Fonstret Global: ny knapp REAL NAMES under KETRON, i hojd med STYLE BALANCER - filnamnen som Event anvander for Real-loopar (Live Drum, Real Bass, Real Chord); klicka pa ett namn for att kopiera det. Fonstret foljer FILE -&gt; TOOLTIP LANGUAGE.
+
+Yamaha-import: Chord Setup (Close / Parallel, Retrigger / Normal) for varje Chord-spar hamtas fran sjalva Yamaha-stilen.
+
+Bruksanvisningen: en ruta "Nytt i v5.2.4", Voice to ABCD med tva nya bilder, ALL CHORD VARIATIONS for Yamaha, REAL NAMES och storre roda siffror pa bilderna. Alla fyra sprak.
+
+STYLE MASTER PRO - FIXAT
+
+Yamaha-import med ALL CHORD VARIATIONS (10): SEV-sektioner ar nu ett riktigt septimackord (det hogsta C:et i varje ackord blir Bb; den lagsta tonen flyttas aldrig). Hittills var SEV ett vanligt durackord.
+
+Yamaha-import: DJ-scratchar (Scratch H / L) utelamnas i stallet for att bli hoga side sticks.
+
+En tom sista sektion (t.ex. END3_SEV) far 1 takt, och efter att en annan stil laddats visas inte langre den foregaende stilens sektionslangder.
+
+MIDI Monitor: SysEx fran Event (ARR A-D, FILL, BREAK, INTRO / END, START / STOP) visas nu - det filtrerades bort.
+
+BRUKSANVISNINGAR - NYTT
+
+Registration, Lyrics Converter, User Voice, User Style och Performance har nu var sin egen bruksanvisning med bilder: FILE -&gt; User Manual eller F1 (Lyrics Converter: knappen USER MANUAL). SR / EN / IT / DE, med en sokruta; en rod siffra pa en bild lyser upp texten som forklarar den.
+
+REGISTRATION
+
+Open godtar bara en REGISTRATION-mapp, en av dess BANK-mappar eller USB-minnet som innehaller den. Alla andra mappar avvisas och ingenting i dem andras.
+
+Save tar bort fran din mapp bara det som du tagit bort eller flyttat i "Invalid content"; allt annat i roten blir kvar.
+
+Stangning med osparade andringar fragar Save / Discard / Cancel, aven nar du stanger Event Studio Pro. FILE -&gt; Exit stanger programmet (forut lamnade det en tom sida).
+
+Save As fragar innan en befintlig REGISTRATION ersatts. NEW PROJECT: den forsta Save fungerar som Save As.
+
+FILL GAPS laser inte langre olasta registreringar. Filer som dras in fran Utforskaren behaller sitt namn och sitt las. Ctrl + dra till en fylld rad kopierar. Borttagning av flera registreringar fragar en gang, och ett enda Undo tar tillbaka dem.
+
+Meddelanden var olasliga i Windows ljusa tema (Light). Fixat.
+
+LYRICS CONVERTER
+
+OCR valjer ratt skrift: en engelsk bild kommer inte langre ut pa kyrilliska (River -&gt; Кјуег) och serbisk kyrilliska inte langre pa latinska bokstaver; makedonska behaller ќ ѓ ѕ. Skannad PDF -&gt; TXT anvander samma OCR, med hogre upplosning.
+
+Engelska och italienska: ingen serbisk text langre i Conversion errors, statusraden, Extract, OCR, Live Preview och preset-listan. "Rit." / "Ritornello" kanns igen som refrang, som "Ref.".
+
+"1 error", inte "1 errors" (aven for filer, pa alla sprak).
+
+USER VOICE
+
+Save behaller varje rost pa sitt nummer; tomma platser forblir tomma. En rost utan nummer, eller en andra rost pa samma nummer, far ett ledigt nummer.
+
+Inga fler forlorade roster: Insert + Shift, Paste och att dra fran Utforskaren skriver aldrig over en rost, och om en flytt misslyckas halvvags aterstalls allt.
+
+Save As tar aldrig bort mappen du redigerar och fragar "Replace it?" (standard No). FILE -&gt; Discard changes ar nytt. FILE -&gt; Exit stanger programmet, och vid stangning fragar programmet om osparade andringar.
+
+Open godtar USER_VOICE, en av dess familjemappar eller USB-minnet som innehaller den; familjemappar med valfria stora eller sma bokstaver.
+
+Ctrl+C / Ctrl+V tar inte langre over textfalt pa andra stallen i programmet. Nytt: Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1.
+
+Undo for Delete och Rename i Find Duplicates; knapparna Undo / Redo blir gra; lasbara meddelanden, etiketter i Voice Editor och rubriker i OVERVIEW.
+
+Varje Save sparar forst en sakerhetskopia i Documents\Event Studio Pro\Backups\User Voice (de senaste 20).
+
+USER STYLE
+
+Inga fler forlorade stilar: Cut + Paste inom en familj fungerar (stilarna forsvann), filer vars namn borjar med "__" tas inte langre bort, Save lamnar aldrig en familj halvt borttagen, och det som en avbruten atgard lamnade efter sig aterstalls.
+
+Deploy 100% Screen Order: registreringstaggen (_01, _02 ...) ar avstangd som standard. Testat pa Event: den sorterar varje familj efter filnamn, sa 001#-numren ensamma ger ordningen. Fonstret forklarar varfor familjen forst tas bort pa Event, och dess kryssrutor ar lasbara.
+
+EXPERT MODE: Paste lagger stilarna exakt pa den plats du klickar pa och behaller luckorna; en upptagen plats avvisas, som nar man drar.
+
+Stangning fragar om osparade andringar; FILE -&gt; Exit stanger programmet; Overwrite? har No som standard; Ctrl+C / Ctrl+V tar inte langre over andra textfalt; nytt Ctrl+X, Delete, Ctrl+O, Ctrl+S, F1; lasbara meddelanden.
+
+PERFORMANCE
+
+Save tar aldrig bort eller skapar om en SET-mapp - det andrar bara det som finns inuti, och ett omdopt SET behaller sin plats.
+
+Save ar sakert: om det avbryts (USB-minnet dras ut) slutfor eller angrar nasta oppning det. Ett SET lamnas aldrig halvt borttaget.
+
+Namn skadas inte langre nar en mapp oppnas: "80s Disco" forblir "80s Disco" (det blev "s Disco"). Rename behaller Number Assign-laset [NNNN].
+
+Invalid content: Delete och Move to PC paverkar bara de objekt du valjer, och Delete fragar forst. Forut paverkade de, nar ingenting var valt, varje SET.
+
+Undo fungerar per fonster; Thumbs.db och liknande filer ignoreras; en mapp kan inte langre laggas inuti en undermapp; mappar med fler an 1000 objekt behaller sin ordning; flera objekt som flyttas nedat hamnar pa ratt plats.
+
+Stangning fragar om osparade andringar, aven nar du stanger Event Studio Pro; FILE -&gt; Exit stanger programmet; Overwrite? har No som standard.
+
+Nytt: Ctrl+C, Ctrl+X, Ctrl+V, Delete, Ctrl+Z, Ctrl+Y, Ctrl+O, Ctrl+S, F1. Lasbara etiketter; rubriken OVERVIEW klipps inte langre av.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.2.3</span>
