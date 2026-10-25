@@ -252,6 +252,54 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v6.0.0</span>
+    <span class="version-date">2026-10-25</span>
+  </div>
+  <div class="version-body">v6.0.0 - Korg styles without .mid files, Korg Pa5X, a What's New that opens the manual
+
+PLEASE NOTE:
+- v6.0.0 is a free update for every existing customer, like all the updates before it.
+- Korg styles that Korg itself has protected are shown with a lock (🔒) in the Korg window; they cannot be opened or converted.
+
+STYLE MASTER PRO - NEW
+
+Korg styles without .mid files: Style Master Pro now opens the styles of a Korg Pa4X set (.SET folder) or style bank (.STY) directly. Drop it on the Global window, or click KORG SET… under IMPORT – KORG. A window like the Pa4X STYLE SELECT page opens (Factory / User tabs, banks, pages P1–P6); double-click a style and it is converted for the Event, with each track's KEY and the tempo taken from the bank. No Pa Manager export is needed any more.
+
+Korg Pa5X: Pa5X styles (.stg) are converted too, one style at a time. Drop a .stg on the Global window, or drop a whole Pa5X set to pick a style from it: the set opens in a window like the Pa5X STYLE page, with a search over all banks (DRIVES picks another set). Your own Pa5X sounds are recognised by their names and get a matching Ketron voice, the style brings its own mix (volume, pan, reverb, chorus per section), and SHOW CHORDS shows the chords Korg wrote for intros and endings. Only the styles are converted - not the set's samples and sounds.
+
+Korg style windows: both windows open where you left them (bank, page, selected style, search) and stay open while you work. Drag a style from them with the mouse into the Global window, onto IMPORT PARTS or onto KOLO STYLE.
+
+IMPORT PARTS and KOLO STYLE take Korg styles: drop a Korg bank (.STY), a .SET folder or a Pa5X style (.stg) on them. In IMPORT PARTS the Korg bass comes in the same octave as when the style is dropped on the Global window, and the imported part brings its pitch bend, pedal and Chord Setup along.
+
+TRANSPOSE on the right-click: right-click a selected note and choose TRANSPOSE Up (+) or Down (−) to move the selected notes by 1–12 semitones. Right-click a track for Transpose whole track, TRANSPOSE PART (one part with all its MAJ / MIN / SEV variations) or TRANSPOSE SELECTED NOTES.
+
++ Slot Before: in VOICE SELECT and DRUMSET SELECT (with Calibrate on), + Slot Before puts an empty slot in front of a voice or kit - for when the Event places a new sample in front of the existing ones. The other voices keep their names and numbers.
+
+User manual: it opens right at the place that explains a new feature (click an item in What's New), asks for your language the first time you open it, and has new pictures.
+
+STYLE MASTER PRO - FIXED
+
+Korg conversion: each part keeps its level per section as in the original style, STRIP GUITAR NOISE removes notes only where the Korg sound really is a guitar (a user sound or a drum kit keeps all its notes), chord tracks written in a key of their own are moved to C correctly, Min7 and 7 chords in the style's key data are recognised, and drum notes 35–59 are no longer folded together.
+
+UNDO / REDO in the Global window remember every action, one step at a time, and moved notes stay selected after UNDO. UNDO in the main window also takes back changes made in MIX, ALL SECTIONS too.
+
+A note sounded by clicking its velocity bar under the notes now stops when you release the mouse button (it kept playing until MIDI RESET).
+
+WHAT'S NEW AND USER MANUALS
+
+What's New (main window): click an underlined item and the user manual of that module opens at the place that explains it, lit up; What's New stays open. The text is larger and easier to read.
+
+User manuals of Registration, Lyrics Converter, User Voice, User Style and Performance: the first time you open one, it asks for your language. You can change it any time with the SR | EN | IT | DE buttons at the top of the left panel.
+
+USER VOICE
+
+Every Save first keeps a backup of your USER_VOICE as it was before the Save, in Documents\Event Studio Pro\Backups\User Voice (the last 20). Save As keeps a backup of a USER_VOICE it replaces.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.4</span>
     <span class="version-date">2026-10-22</span>
   </div>
@@ -2006,6 +2054,54 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v6.0.0</span>
+    <span class="version-date">2026-10-25</span>
+  </div>
+  <div class="version-body">v6.0.0 - Korg ritmovi bez .mid fajlova, Korg Pa5X, What's New koji otvara uputstvo
+
+VAZNO:
+- v6.0.0 je besplatan update za svakog postojeceg kupca, kao i svi update-i prije njega.
+- Korg ritmovi koje je sam Korg zastitio prikazani su sa katancem (🔒) u Korg prozoru; ne mogu se otvoriti niti konvertovati.
+
+STYLE MASTER PRO - NOVO
+
+Korg ritmovi bez .mid fajlova: Style Master Pro sada direktno otvara ritmove iz Korg Pa4X seta (.SET folder) ili banke ritmova (.STY). Prevuci ga na Global prozor, ili klikni KORG SET… ispod IMPORT – KORG. Otvara se prozor kao strana STYLE SELECT na Pa4X (tabovi Factory / User, banke, strane P1–P6); dupli klik na ritam i on se konvertuje za Event, sa KEY svake trake i tempom iz banke. Export iz Pa Managera vise nije potreban.
+
+Korg Pa5X: konvertuju se i Pa5X ritmovi (.stg), jedan po jedan. Prevuci .stg na Global prozor, ili prevuci cijeli Pa5X set i izaberi ritam iz njega: set se otvara u prozoru kao strana STYLE na Pa5X, sa pretragom kroz sve banke (DRIVES bira drugi set). Tvoji Pa5X zvuci se prepoznaju po imenu i dobijaju odgovarajuci Ketron zvuk, ritam donosi svoj mix (volume, pan, reverb, chorus po sekciji), a SHOW CHORDS pokazuje akorde koje je Korg napisao za intro i end. Konvertuju se samo ritmovi - ne i sampleovi i zvuci iz seta.
+
+Korg prozori za ritmove: oba prozora se otvaraju tamo gdje si stao (banka, strana, izabrani ritam, pretraga) i ostaju otvoreni dok radis. Ritam iz njih prevuci misem u Global prozor, na IMPORT PARTS ili na KOLO STYLE.
+
+IMPORT PARTS i KOLO STYLE primaju Korg ritmove: prevuci na njih Korg banku (.STY), .SET folder ili Pa5X ritam (.stg). U IMPORT PARTS Korg bas dolazi u istoj oktavi kao kad se ritam prevuce na Global prozor, a uvezeni dio donosi svoj pitch bend, pedal i Chord Setup.
+
+TRANSPOSE na desni klik: desni klik na izabranu notu, pa TRANSPOSE Up (+) ili Down (−) pomjera izabrane note za 1–12 polutonova. Desni klik na traku: Transpose whole track, TRANSPOSE PART (jedan dio sa svim MAJ / MIN / SEV varijacijama) ili TRANSPOSE SELECTED NOTES.
+
++ Slot Before: u VOICE SELECT i DRUMSET SELECT (sa ukljucenim Calibrate), + Slot Before ubacuje prazan slot ispred zvuka ili kita - za slucaj kad Event novi sample stavi ispred postojecih. Ostali zvuci zadrzavaju imena i brojeve.
+
+Uputstvo: otvara se tacno na mjestu koje objasnjava novu funkciju (klik na stavku u What's New), prvi put pita za jezik, i ima nove slike.
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Korg konverzija: svaki dio zadrzava jacinu po sekciji kao u originalnom ritmu, STRIP GUITAR NOISE brise note samo tamo gdje je Korg zvuk zaista gitara (user zvuk ili drum kit zadrzava sve note), akordske trake pisane u svom tonalitetu ispravno se prebacuju u C, Min7 i 7 akordi u podacima ritma se prepoznaju, a drum note 35–59 se vise ne spajaju.
+
+UNDO / REDO u Global prozoru pamte svaku akciju, korak po korak, a pomjerene note ostaju izabrane i poslije UNDO. UNDO u glavnom prozoru vraca i izmjene napravljene u MIX, i u ALL SECTIONS.
+
+Nota koja zazvuci klikom na njen velocity stubic ispod nota sada prestaje kad pustis dugme misa (svirala je do MIDI RESET).
+
+WHAT'S NEW I UPUTSTVA
+
+What's New (glavni prozor): klikni podvucenu stavku i uputstvo tog modula se otvara na mjestu koje je objasnjava, obiljezeno; What's New ostaje otvoren. Tekst je veci i lakse se cita.
+
+Uputstva za Registration, Lyrics Converter, User Voice, User Style i Performance: prvi put kad ga otvoris, pita za jezik. Jezik mijenjas bilo kada dugmadima SR | EN | IT | DE na vrhu lijevog panela.
+
+USER VOICE
+
+Svaki Save prvo sacuva backup tvog USER_VOICE kakav je bio prije Save, u Documents\Event Studio Pro\Backups\User Voice (zadnjih 20). Save As sacuva backup USER_VOICE-a koji zamjenjuje.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.4</span>
     <span class="version-date">2026-10-22</span>
   </div>
@@ -3712,6 +3808,54 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v6.0.0</span>
+    <span class="version-date">2026-10-25</span>
+  </div>
+  <div class="version-body">v6.0.0 - Stili Korg senza file .mid, Korg Pa5X, un What's New che apre il manuale
+
+NOTA:
+- v6.0.0 e un aggiornamento gratuito per ogni cliente esistente, come tutti gli aggiornamenti precedenti.
+- Gli stili Korg protetti da Korg stessa sono mostrati con un lucchetto (🔒) nella finestra Korg; non possono essere aperti ne convertiti.
+
+STYLE MASTER PRO - NUOVO
+
+Stili Korg senza file .mid: Style Master Pro ora apre direttamente gli stili di un set Korg Pa4X (cartella .SET) o di un banco di stili (.STY). Trascinalo sulla finestra Global, oppure clicca KORG SET… sotto IMPORT – KORG. Si apre una finestra come la pagina STYLE SELECT del Pa4X (schede Factory / User, banchi, pagine P1–P6); doppio clic su uno stile e viene convertito per l'Event, con la KEY di ogni traccia e il tempo presi dal banco. L'export da Pa Manager non serve piu.
+
+Korg Pa5X: vengono convertiti anche gli stili Pa5X (.stg), uno alla volta. Trascina un .stg sulla finestra Global, oppure trascina un intero set Pa5X per sceglierne uno stile: il set si apre in una finestra come la pagina STYLE del Pa5X, con una ricerca in tutti i banchi (DRIVES sceglie un altro set). I tuoi suoni Pa5X vengono riconosciuti dal nome e ricevono un suono Ketron adatto, lo stile porta il proprio mix (volume, pan, reverb, chorus per sezione) e SHOW CHORDS mostra gli accordi che Korg ha scritto per intro e finali. Vengono convertiti solo gli stili - non i sample e i suoni del set.
+
+Finestre degli stili Korg: entrambe le finestre si aprono dove le avevi lasciate (banco, pagina, stile selezionato, ricerca) e restano aperte mentre lavori. Trascina uno stile con il mouse nella finestra Global, su IMPORT PARTS o su KOLO STYLE.
+
+IMPORT PARTS e KOLO STYLE accettano stili Korg: trascinaci sopra un banco Korg (.STY), una cartella .SET o uno stile Pa5X (.stg). In IMPORT PARTS il basso Korg arriva nella stessa ottava di quando lo stile viene trascinato sulla finestra Global, e la parte importata porta con se pitch bend, pedale e Chord Setup.
+
+TRANSPOSE con il clic destro: clic destro su una nota selezionata, poi TRANSPOSE Up (+) o Down (−) sposta le note selezionate di 1–12 semitoni. Clic destro su una traccia: Transpose whole track, TRANSPOSE PART (una parte con tutte le sue variazioni MAJ / MIN / SEV) o TRANSPOSE SELECTED NOTES.
+
++ Slot Before: in VOICE SELECT e DRUMSET SELECT (con Calibrate attivo), + Slot Before inserisce uno slot vuoto davanti a un suono o a un kit - per quando l'Event mette un nuovo sample davanti a quelli esistenti. Gli altri suoni mantengono nomi e numeri.
+
+Manuale: si apre proprio nel punto che spiega una nuova funzione (clic su una voce in What's New), la prima volta chiede la lingua e ha nuove immagini.
+
+STYLE MASTER PRO - CORRETTO
+
+Conversione Korg: ogni parte mantiene il suo livello per sezione come nello stile originale, STRIP GUITAR NOISE toglie note solo dove il suono Korg e davvero una chitarra (un suono utente o un drum kit mantiene tutte le note), le tracce di accordi scritte in una tonalita propria vengono portate in C correttamente, gli accordi Min7 e 7 nei dati dello stile vengono riconosciuti, e le note di batteria 35–59 non vengono piu unite.
+
+UNDO / REDO nella finestra Global ricordano ogni azione, un passo alla volta, e le note spostate restano selezionate dopo UNDO. UNDO nella finestra principale annulla anche le modifiche fatte in MIX, anche in ALL SECTIONS.
+
+Una nota fatta suonare cliccando la sua barra di velocity sotto le note ora si ferma quando rilasci il pulsante del mouse (continuava a suonare fino a MIDI RESET).
+
+WHAT'S NEW E MANUALI
+
+What's New (finestra principale): clicca una voce sottolineata e il manuale di quel modulo si apre nel punto che la spiega, evidenziato; What's New resta aperto. Il testo e piu grande e piu facile da leggere.
+
+Manuali di Registration, Lyrics Converter, User Voice, User Style e Performance: la prima volta che ne apri uno, chiede la lingua. Puoi cambiarla in qualsiasi momento con i pulsanti SR | EN | IT | DE in alto nel pannello di sinistra.
+
+USER VOICE
+
+Ogni Save salva prima una copia di sicurezza della tua USER_VOICE com'era prima del Save, in Documents\Event Studio Pro\Backups\User Voice (le ultime 20). Save As salva una copia di sicurezza della USER_VOICE che sostituisce.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.2.4</span>
@@ -5422,6 +5566,54 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v6.0.0</span>
+    <span class="version-date">2026-10-25</span>
+  </div>
+  <div class="version-body">v6.0.0 - Korg-Styles ohne .mid-Dateien, Korg Pa5X, ein What's New, das das Handbuch oeffnet
+
+HINWEIS:
+- v6.0.0 ist ein kostenloses Update fuer jeden bestehenden Kunden, wie alle Updates davor.
+- Korg-Styles, die Korg selbst geschuetzt hat, werden im Korg-Fenster mit einem Schloss (🔒) gezeigt; sie koennen nicht geoeffnet oder konvertiert werden.
+
+STYLE MASTER PRO - NEU
+
+Korg-Styles ohne .mid-Dateien: Style Master Pro oeffnet jetzt die Styles eines Korg Pa4X-Sets (.SET-Ordner) oder einer Style-Bank (.STY) direkt. Zieh es auf das Global-Fenster oder klick KORG SET… unter IMPORT – KORG. Es oeffnet sich ein Fenster wie die Seite STYLE SELECT am Pa4X (Tabs Factory / User, Banken, Seiten P1–P6); Doppelklick auf einen Style, und er wird fuer das Event konvertiert, mit dem KEY jeder Spur und dem Tempo aus der Bank. Ein Export aus Pa Manager ist nicht mehr noetig.
+
+Korg Pa5X: auch Pa5X-Styles (.stg) werden konvertiert, einer nach dem anderen. Zieh eine .stg auf das Global-Fenster, oder zieh ein ganzes Pa5X-Set darauf, um einen Style daraus zu waehlen: das Set oeffnet sich in einem Fenster wie die Seite STYLE am Pa5X, mit einer Suche ueber alle Banken (DRIVES waehlt ein anderes Set). Deine eigenen Pa5X-Sounds werden am Namen erkannt und bekommen eine passende Ketron-Stimme, der Style bringt seinen eigenen Mix mit (Volume, Pan, Reverb, Chorus pro Sektion), und SHOW CHORDS zeigt die Akkorde, die Korg fuer Intros und Endings geschrieben hat. Konvertiert werden nur die Styles - nicht die Samples und Sounds des Sets.
+
+Korg-Style-Fenster: beide Fenster oeffnen sich dort, wo du aufgehoert hast (Bank, Seite, gewaehlter Style, Suche), und bleiben offen, waehrend du arbeitest. Zieh einen Style mit der Maus ins Global-Fenster, auf IMPORT PARTS oder auf KOLO STYLE.
+
+IMPORT PARTS und KOLO STYLE nehmen Korg-Styles: zieh eine Korg-Bank (.STY), einen .SET-Ordner oder einen Pa5X-Style (.stg) darauf. In IMPORT PARTS kommt der Korg-Bass in derselben Oktave wie beim Ziehen des Styles auf das Global-Fenster, und der importierte Teil bringt Pitch Bend, Pedal und Chord Setup mit.
+
+TRANSPOSE per Rechtsklick: Rechtsklick auf eine gewaehlte Note, dann verschiebt TRANSPOSE Up (+) oder Down (−) die gewaehlten Noten um 1–12 Halbtoene. Rechtsklick auf eine Spur: Transpose whole track, TRANSPOSE PART (ein Teil mit allen MAJ / MIN / SEV-Variationen) oder TRANSPOSE SELECTED NOTES.
+
++ Slot Before: in VOICE SELECT und DRUMSET SELECT (mit eingeschaltetem Calibrate) setzt + Slot Before einen leeren Slot vor eine Stimme oder ein Kit - fuer den Fall, dass das Event ein neues Sample vor die vorhandenen setzt. Die anderen Stimmen behalten Namen und Nummern.
+
+Handbuch: es oeffnet sich genau an der Stelle, die eine neue Funktion erklaert (Klick auf einen Eintrag in What's New), fragt beim ersten Oeffnen nach der Sprache und hat neue Bilder.
+
+STYLE MASTER PRO - BEHOBEN
+
+Korg-Konvertierung: jeder Teil behaelt seine Lautstaerke pro Sektion wie im Original-Style, STRIP GUITAR NOISE entfernt Noten nur dort, wo der Korg-Sound wirklich eine Gitarre ist (ein User-Sound oder ein Drum-Kit behaelt alle Noten), Akkordspuren in einer eigenen Tonart werden richtig nach C gebracht, Min7- und 7-Akkorde in den Style-Daten werden erkannt, und die Drum-Noten 35–59 werden nicht mehr zusammengelegt.
+
+UNDO / REDO im Global-Fenster merken sich jede Aktion, Schritt fuer Schritt, und verschobene Noten bleiben nach UNDO gewaehlt. UNDO im Hauptfenster nimmt auch Aenderungen in MIX zurueck, auch in ALL SECTIONS.
+
+Eine Note, die durch Klick auf ihren Velocity-Balken unter den Noten erklingt, hoert jetzt auf, wenn du die Maustaste loslaesst (sie spielte bis MIDI RESET weiter).
+
+WHAT'S NEW UND HANDBUECHER
+
+What's New (Hauptfenster): klick auf einen unterstrichenen Eintrag, und das Handbuch dieses Moduls oeffnet sich an der Stelle, die ihn erklaert, hervorgehoben; What's New bleibt offen. Der Text ist groesser und leichter zu lesen.
+
+Handbuecher von Registration, Lyrics Converter, User Voice, User Style und Performance: beim ersten Oeffnen fragt es nach der Sprache. Du kannst sie jederzeit mit den Tasten SR | EN | IT | DE oben im linken Bereich aendern.
+
+USER VOICE
+
+Jedes Save speichert zuerst eine Sicherungskopie deiner USER_VOICE, wie sie vor dem Save war, in Documents\Event Studio Pro\Backups\User Voice (die letzten 20). Save As speichert eine Sicherungskopie der USER_VOICE, die es ersetzt.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.4</span>
     <span class="version-date">2026-10-22</span>
   </div>
@@ -7130,6 +7322,54 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v6.0.0</span>
+    <span class="version-date">2026-10-25</span>
+  </div>
+  <div class="version-body">v6.0.0 - стили Korg без файлов .mid, Korg Pa5X, What's New, который открывает руководство
+
+ВНИМАНИЕ:
+- v6.0.0 - бесплатное обновление для каждого существующего клиента, как и все обновления до него.
+- Стили Korg, защищённые самой Korg, показаны в окне Korg с замком (🔒); их нельзя открыть или конвертировать.
+
+STYLE MASTER PRO - НОВОЕ
+
+Стили Korg без файлов .mid: Style Master Pro теперь открывает стили сета Korg Pa4X (папка .SET) или банка стилей (.STY) напрямую. Перетащите его на окно Global или нажмите KORG SET… под IMPORT – KORG. Открывается окно, как страница STYLE SELECT на Pa4X (вкладки Factory / User, банки, страницы P1–P6); двойной щелчок по стилю - и он конвертируется для Event, с KEY каждой дорожки и темпом из банка. Экспорт из Pa Manager больше не нужен.
+
+Korg Pa5X: конвертируются и стили Pa5X (.stg), по одному. Перетащите .stg на окно Global или перетащите целый сет Pa5X, чтобы выбрать из него стиль: сет открывается в окне, как страница STYLE на Pa5X, с поиском по всем банкам (DRIVES выбирает другой сет). Ваши собственные звуки Pa5X распознаются по имени и получают подходящий голос Ketron, стиль приносит свой микс (громкость, панорама, реверб, хорус по секциям), а SHOW CHORDS показывает аккорды, которые Korg написал для вступлений и концовок. Конвертируются только стили - не сэмплы и звуки сета.
+
+Окна стилей Korg: оба окна открываются там, где вы их оставили (банк, страница, выбранный стиль, поиск), и остаются открытыми, пока вы работаете. Перетащите стиль мышью в окно Global, на IMPORT PARTS или на KOLO STYLE.
+
+IMPORT PARTS и KOLO STYLE принимают стили Korg: перетащите на них банк Korg (.STY), папку .SET или стиль Pa5X (.stg). В IMPORT PARTS бас Korg приходит в той же октаве, что и при перетаскивании стиля на окно Global, а импортированная часть приносит свой pitch bend, педаль и Chord Setup.
+
+TRANSPOSE по правому щелчку: щёлкните правой кнопкой по выбранной ноте и выберите TRANSPOSE Up (+) или Down (−), чтобы сдвинуть выбранные ноты на 1–12 полутонов. Правый щелчок по дорожке: Transpose whole track, TRANSPOSE PART (одна часть со всеми вариациями MAJ / MIN / SEV) или TRANSPOSE SELECTED NOTES.
+
++ Slot Before: в VOICE SELECT и DRUMSET SELECT (с включённым Calibrate) + Slot Before вставляет пустой слот перед голосом или китом - на случай, когда Event ставит новый сэмпл перед существующими. Остальные голоса сохраняют свои имена и номера.
+
+Руководство: оно открывается прямо в месте, которое объясняет новую функцию (щелчок по пункту в What's New), при первом открытии спрашивает язык и содержит новые картинки.
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Конвертация Korg: каждая часть сохраняет свою громкость по секциям, как в исходном стиле, STRIP GUITAR NOISE удаляет ноты только там, где звук Korg действительно гитара (пользовательский звук или драм-кит сохраняет все ноты), аккордовые дорожки, записанные в своей тональности, правильно переносятся в C, аккорды Min7 и 7 в данных стиля распознаются, а ноты ударных 35–59 больше не сливаются.
+
+UNDO / REDO в окне Global запоминают каждое действие, шаг за шагом, а сдвинутые ноты остаются выбранными после UNDO. UNDO в главном окне отменяет и изменения, сделанные в MIX, в том числе в ALL SECTIONS.
+
+Нота, зазвучавшая при щелчке по её столбику velocity под нотами, теперь умолкает, когда вы отпускаете кнопку мыши (раньше звучала до MIDI RESET).
+
+WHAT'S NEW И РУКОВОДСТВА
+
+What's New (главное окно): щёлкните подчёркнутый пункт - и руководство этого модуля откроется в месте, которое его объясняет, с подсветкой; What's New остаётся открытым. Текст крупнее и легче читается.
+
+Руководства Registration, Lyrics Converter, User Voice, User Style и Performance: при первом открытии спрашивают язык. Его можно сменить в любой момент кнопками SR | EN | IT | DE вверху левой панели.
+
+USER VOICE
+
+Каждый Save сначала сохраняет резервную копию вашей USER_VOICE в том виде, в каком она была до Save, в Documents\Event Studio Pro\Backups\User Voice (последние 20). Save As сохраняет резервную копию USER_VOICE, которую заменяет.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v5.2.4</span>
     <span class="version-date">2026-10-22</span>
   </div>
@@ -8836,6 +9076,54 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v6.0.0</span>
+    <span class="version-date">2026-10-25</span>
+  </div>
+  <div class="version-body">v6.0.0 - Korg-stilar utan .mid-filer, Korg Pa5X, ett What's New som oppnar bruksanvisningen
+
+OBS:
+- v6.0.0 ar en gratis uppdatering for alla befintliga kunder, liksom alla uppdateringar fore den.
+- Korg-stilar som Korg sjalv har skyddat visas med ett hanglas (🔒) i Korg-fonstret; de kan inte oppnas eller konverteras.
+
+STYLE MASTER PRO - NYTT
+
+Korg-stilar utan .mid-filer: Style Master Pro oppnar nu stilarna i ett Korg Pa4X-set (.SET-mapp) eller en stilbank (.STY) direkt. Dra den till Global-fonstret, eller klicka KORG SET… under IMPORT – KORG. Ett fonster som sidan STYLE SELECT pa Pa4X oppnas (flikarna Factory / User, banker, sidor P1–P6); dubbelklicka pa en stil sa konverteras den for Event, med varje spars KEY och tempot fran banken. Export fran Pa Manager behovs inte langre.
+
+Korg Pa5X: aven Pa5X-stilar (.stg) konverteras, en stil i taget. Dra en .stg till Global-fonstret, eller dra ett helt Pa5X-set for att valja en stil ur det: setet oppnas i ett fonster som sidan STYLE pa Pa5X, med sokning i alla banker (DRIVES valjer ett annat set). Dina egna Pa5X-ljud kanns igen pa namnet och far en passande Ketron-rost, stilen tar med sin egen mix (volym, pan, reverb, chorus per sektion), och SHOW CHORDS visar ackorden som Korg skrev for intron och avslutningar. Bara stilarna konverteras - inte setets samplingar och ljud.
+
+Korg-stilfonster: bada fonstren oppnas dar du lamnade dem (bank, sida, vald stil, sokning) och star kvar medan du arbetar. Dra en stil med musen till Global-fonstret, till IMPORT PARTS eller till KOLO STYLE.
+
+IMPORT PARTS och KOLO STYLE tar emot Korg-stilar: dra en Korg-bank (.STY), en .SET-mapp eller en Pa5X-stil (.stg) till dem. I IMPORT PARTS kommer Korg-basen i samma oktav som nar stilen dras till Global-fonstret, och den importerade delen tar med sig pitch bend, pedal och Chord Setup.
+
+TRANSPOSE pa hogerklick: hogerklicka pa en vald not och valj TRANSPOSE Up (+) eller Down (−) for att flytta de valda tonerna 1–12 halvtoner. Hogerklicka pa ett spar for Transpose whole track, TRANSPOSE PART (en del med alla dess MAJ / MIN / SEV-variationer) eller TRANSPOSE SELECTED NOTES.
+
++ Slot Before: i VOICE SELECT och DRUMSET SELECT (med Calibrate pa) lagger + Slot Before in en tom plats framfor en rost eller ett kit - for nar Event lagger en ny sampling framfor de befintliga. De andra rosterna behaller sina namn och nummer.
+
+Bruksanvisning: den oppnas precis dar en ny funktion forklaras (klicka pa en rad i What's New), fragar efter ditt sprak forsta gangen du oppnar den och har nya bilder.
+
+STYLE MASTER PRO - RATTAT
+
+Korg-konvertering: varje del behaller sin niva per sektion som i originalstilen, STRIP GUITAR NOISE tar bort toner bara dar Korg-ljudet verkligen ar en gitarr (ett eget ljud eller ett trumkit behaller alla toner), ackordspar skrivna i en egen tonart flyttas korrekt till C, Min7- och 7-ackord i stilens data kanns igen, och trumtonerna 35–59 slas inte langre ihop.
+
+UNDO / REDO i Global-fonstret minns varje atgard, ett steg i taget, och flyttade toner forblir valda efter UNDO. UNDO i huvudfonstret tar ocksa tillbaka andringar gjorda i MIX, aven i ALL SECTIONS.
+
+En ton som spelas genom att klicka pa dess velocity-stapel under tonerna slutar nu nar du slapper musknappen (den spelade tills MIDI RESET).
+
+WHAT'S NEW OCH BRUKSANVISNINGAR
+
+What's New (huvudfonstret): klicka pa en understruken rad sa oppnas modulens bruksanvisning dar den forklaras, markerad; What's New star kvar. Texten ar storre och lattare att lasa.
+
+Bruksanvisningarna for Registration, Lyrics Converter, User Voice, User Style och Performance: forsta gangen du oppnar en fragar den efter ditt sprak. Du kan byta nar som helst med knapparna SR | EN | IT | DE overst i den vanstra panelen.
+
+USER VOICE
+
+Varje Save sparar forst en sakerhetskopia av din USER_VOICE som den var fore Save, i Documents\Event Studio Pro\Backups\User Voice (de senaste 20). Save As sparar en sakerhetskopia av den USER_VOICE den ersatter.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v5.2.4</span>
