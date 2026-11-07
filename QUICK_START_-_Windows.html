@@ -252,6 +252,78 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v7.2.2</span>
+    <span class="version-date">2026-11-07</span>
+  </div>
+  <div class="version-body">v7.2.2 - BALTIK SAMPLER: Korg Pa5X SET, Ketron SD9 sound banks, Export .ms3 fixed; Style Master Pro: Guitar Mode from Pa3X / Pa4X banks; new program icon
+
+PLEASE NOTE:
+- v7.2.2 is a free update for every existing customer, like all the updates before it.
+- BALTIK SAMPLER users: in v7.2.1 FILE -&gt; Export .ms3 stopped with an error. Please update - it works again in v7.2.2.
+
+EVENT STUDIO PRO - NEW
+
+New program icon: Event Studio Pro has a new, modern icon - on the desktop, in the taskbar and in the title bar of the window.
+
+STYLE MASTER PRO - NEW
+
+The guitarist from Korg Pa3X and Pa4X banks: parts a Korg style plays in Guitar Mode are now recognised in a .STY bank too - also one saved on a Pa3X - and played as a real guitar, as with Pa5X styles: the keys that drive the Korg's guitar become the guitar's own notes, as a C, Cm or C7 chord in the MAJ, MIN and SEV sections. Such a part on one of your own Korg sounds gets a guitar voice (Ac Stereo) instead of the track's default.
+
+Sampler (ms3) drum kits on Drum Set 1: the Event does not take a sampler kit over MIDI - it would switch to a factory kit with the same number instead. So the program no longer sends it, and when you choose one a short notice says what to do: choose the kit on the Event, and EXPORT writes it into the style, where the Event plays it. Tip: a User Drum kit made from the same samples works from the program too. Kits from .sbk files work as before.
+
+STYLE MASTER PRO - FIXED
+
+A sampler (ms3) drum kit chosen in the main window was written into the style as the factory kit with the same number; it is now written the way the Event itself saves it.
+
+Intros and endings of styles from a Korg Pa3X: their MIN and SEV versions now have the same length as MAJ - the SEV used to come out one bar longer.
+
+AUTO VOICES gave a Guitar Mode part of a Pa3X / Pa4X style on a custom Korg sound the track's default voice, for example a piano; it now gets a guitar.
+
+BALTIK SAMPLER - NEW
+
+Korg Pa5X: multisamples and samples straight from a Korg Pa5X SET (.KST folder) into the program and into an .ms3.
+
+Korg SET loading: a Korg SET opens with a progress bar, and the same SET opens instantly the next time; FILE -&gt; Another instrument from the last Korg SET.
+
+Ketron SD9 sound banks (.KSB): pick an instrument of the bank and load it like an .MS2.
+
+Loops at a similar volume: Optimize all puts the loops of samples that die away (bass, guitar, piano) at a similar volume in every sample.
+
+Loop search range: the automatic loop search can be limited to a part of the sample, e.g. 10 % - 60 % (off by default).
+
+WAV export with all settings: every WAV keeps its note, loop, key range and velocity, plus an .sfz file with the whole instrument.
+
+Light window theme: "Light window - like FILE" makes the whole main window light.
+
+Every row of the FILE menu has a tooltip: what it does, from what and for what.
+
+BALTIK SAMPLER - CHANGED
+
+WAV export is 16 bit by default; "Export all slices" is now "Export all samples".
+
+Undo / Redo moved next to the Change choice, above the loop tools.
+
+BALTIK SAMPLER - FIXED
+
+FILE -&gt; Export .ms3 works again (in v7.2.1 it stopped with an error).
+
+Ketron SD9 .MS2: the original loops and notes are used, and the sample end is clean (no noise at the loop).
+
+Korg Pa5X samples without compression no longer sound like noise.
+
+Korg samples whose loop was on the silence after the tone (e.g. bass) now get a loop in the sound.
+
+Change: all samples now also changes Crossfade, Shape, Even out loop volume, Fade out, Steady volume and Optimize.
+
+Even out + maximize (group 8) evens out the samples again, instead of only maximizing them.
+
+Event backups (.sysbk) that are incomplete or damaged are read as far as possible.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v7.2.1</span>
     <span class="version-date">2026-11-06</span>
   </div>
@@ -2264,6 +2336,78 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v7.2.2</span>
+    <span class="version-date">2026-11-07</span>
+  </div>
+  <div class="version-body">v7.2.2 - BALTIK SAMPLER: Korg Pa5X SET, Ketron SD9 banke zvukova, popravljen Export .ms3; Style Master Pro: Guitar Mode iz Pa3X / Pa4X banaka; nova ikonica programa
+
+VAZNO:
+- v7.2.2 je besplatan update za svakog postojeceg kupca, kao i svi update-i prije njega.
+- Korisnici BALTIK SAMPLER-a: u v7.2.1 FILE -&gt; Export .ms3 se zaustavljao sa greskom. Molimo uradite update - u v7.2.2 ponovo radi.
+
+EVENT STUDIO PRO - NOVO
+
+Nova ikonica programa: Event Studio Pro ima novu, modernu ikonicu - na desktopu, u taskbaru i u naslovu prozora.
+
+STYLE MASTER PRO - NOVO
+
+Gitarista iz Korg Pa3X i Pa4X banaka: dijelovi koje Korg ritam svira u Guitar Mode-u sada se prepoznaju i u .STY banci - i onoj snimljenoj na Pa3X - i sviraju kao prava gitara, kao kod Pa5X ritmova: dirke koje pokrecu Korgovu gitaru postaju prave note gitare, kao akord C, Cm ili C7 u sekcijama MAJ, MIN i SEV. Takav dio na Vasem Korg zvuku dobija gitaru (Ac Stereo) umjesto podrazumijevanog voice-a trake.
+
+Sampler (ms3) drum kitovi na Drum Set 1: Event ne prima sampler kit preko MIDI-ja - umjesto njega bi prebacio na fabricki kit sa istim brojem. Zato ga program vise ne salje, a kada ga izaberete, kratka poruka kaze sta da radite: izaberite kit na Eventu, a EXPORT ga upisuje u ritam, gdje ga Event svira. Savjet: User Drum kit napravljen od istih semplova radi i iz programa. Kitovi iz .sbk fajlova rade kao i ranije.
+
+STYLE MASTER PRO - POPRAVLJENO
+
+Sampler (ms3) drum kit izabran u glavnom prozoru upisivao se u ritam kao fabricki kit sa istim brojem; sada se upisuje onako kako ga sam Event snima.
+
+Intro-i i ending-i ritmova sa Korg Pa3X: njihove MIN i SEV verzije sada imaju istu duzinu kao MAJ - SEV je ranije ispadao za jedan takt duzi.
+
+AUTO VOICES je Guitar Mode dijelu Pa3X / Pa4X ritma na posebnom Korg zvuku davao podrazumijevani voice trake, npr. klavir; sada dobija gitaru.
+
+BALTIK SAMPLER - NOVO
+
+Korg Pa5X: multisemplovi i semplovi direktno iz Korg Pa5X SET-a (.KST folder) u program i u .ms3.
+
+Ucitavanje Korg SET-a: Korg SET se otvara sa trakom napretka, a isti SET se sljedeci put otvara odmah; FILE -&gt; Another instrument from the last Korg SET.
+
+Ketron SD9 banke zvukova (.KSB): izaberite instrument iz banke i ucitajte ga kao .MS2.
+
+Loopovi slicne jacine: Optimize all stavlja loopove semplova koji se gase (bas, gitara, klavir) na slicnu jacinu u svakom semplu.
+
+Opseg trazenja loopa: automatsko trazenje loopa moze se ograniciti na dio sempla, npr. 10 % - 60 % (podrazumijevano iskljuceno).
+
+WAV export sa svim podesavanjima: svaki WAV cuva notu, loop, opseg dirki i velocity, uz .sfz fajl sa cijelim instrumentom.
+
+Tema svijetlog prozora: "Light window - like FILE" pravi cijeli glavni prozor svijetlim.
+
+Svaki red menija FILE ima objasnjenje (tooltip): sta radi, od cega i za sta.
+
+BALTIK SAMPLER - IZMIJENJENO
+
+WAV export je podrazumijevano 16 bit; "Export all slices" se sada zove "Export all samples".
+
+Undo / Redo su premjesteni pored izbora Change, iznad alata za loop.
+
+BALTIK SAMPLER - POPRAVLJENO
+
+FILE -&gt; Export .ms3 ponovo radi (u v7.2.1 se zaustavljao sa greskom).
+
+Ketron SD9 .MS2: koriste se originalni loopovi i note, a kraj sempla je cist (bez suma kod loopa).
+
+Korg Pa5X semplovi bez kompresije vise ne zvuce kao sum.
+
+Korg semplovi ciji je loop bio na tisini poslije tona (npr. bas) sada dobijaju loop u zvuku.
+
+Change: all samples sada mijenja i Crossfade, Shape, Even out loop volume, Fade out, Steady volume i Optimize.
+
+Even out + maximize (grupa 8) ponovo ujednacava semplove, umjesto da ih samo pojacava do maksimuma.
+
+Event backup-i (.sysbk) koji su nepotpuni ili osteceni citaju se koliko god je moguce.
+
+Postojeci kupci: BESPLATAN auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v7.2.1</span>
     <span class="version-date">2026-11-06</span>
   </div>
@@ -4228,6 +4372,78 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v7.2.2</span>
+    <span class="version-date">2026-11-07</span>
+  </div>
+  <div class="version-body">v7.2.2 - BALTIK SAMPLER: SET Korg Pa5X, banche suoni Ketron SD9, Export .ms3 corretto; Style Master Pro: Guitar Mode dalle banche Pa3X / Pa4X; nuova icona del programma
+
+NOTA:
+- v7.2.2 e un aggiornamento gratuito per ogni cliente esistente, come tutti gli aggiornamenti precedenti.
+- Utenti di BALTIK SAMPLER: nella v7.2.1 FILE -&gt; Export .ms3 si fermava con un errore. Aggiornate - nella v7.2.2 funziona di nuovo.
+
+EVENT STUDIO PRO - NUOVO
+
+Nuova icona del programma: Event Studio Pro ha una nuova icona moderna - sul desktop, nella barra delle applicazioni e nel titolo della finestra.
+
+STYLE MASTER PRO - NUOVO
+
+Il chitarrista dalle banche Korg Pa3X e Pa4X: le parti che uno stile Korg suona in Guitar Mode ora vengono riconosciute anche in una banca .STY - anche salvata su un Pa3X - e suonate come una vera chitarra, come per gli stili Pa5X: i tasti che pilotano la chitarra del Korg diventano le note della chitarra, come accordo C, Cm o C7 nelle sezioni MAJ, MIN e SEV. Una tale parte su un vostro suono Korg riceve una chitarra (Ac Stereo) invece della voce predefinita della traccia.
+
+Drum kit del campionatore (ms3) su Drum Set 1: l'Event non accetta un kit del campionatore via MIDI - passerebbe invece al kit di fabbrica con lo stesso numero. Percio il programma non lo invia piu, e quando ne scegliete uno un breve avviso dice cosa fare: scegliete il kit sull'Event, ed EXPORT lo scrive nello stile, dove l'Event lo suona. Consiglio: un User Drum kit fatto con gli stessi campioni funziona anche dal programma. I kit da file .sbk funzionano come prima.
+
+STYLE MASTER PRO - CORRETTO
+
+Un drum kit del campionatore (ms3) scelto nella finestra principale veniva scritto nello stile come il kit di fabbrica con lo stesso numero; ora viene scritto come lo salva l'Event stesso.
+
+Intro ed ending degli stili da un Korg Pa3X: le loro versioni MIN e SEV ora hanno la stessa lunghezza di MAJ - la SEV risultava una battuta piu lunga.
+
+AUTO VOICES dava a una parte Guitar Mode di uno stile Pa3X / Pa4X su un suono Korg personalizzato la voce predefinita della traccia, per esempio un pianoforte; ora riceve una chitarra.
+
+BALTIK SAMPLER - NUOVO
+
+Korg Pa5X: multicampioni e campioni direttamente da un SET Korg Pa5X (cartella .KST) nel programma e in un .ms3.
+
+Caricamento del SET Korg: un SET Korg si apre con una barra di avanzamento, e lo stesso SET si apre subito la volta successiva; FILE -&gt; Another instrument from the last Korg SET.
+
+Banche suoni Ketron SD9 (.KSB): scegliete uno strumento della banca e caricatelo come un .MS2.
+
+Loop a volume simile: Optimize all porta i loop dei campioni che si smorzano (basso, chitarra, pianoforte) a un volume simile in ogni campione.
+
+Intervallo di ricerca del loop: la ricerca automatica del loop si puo limitare a una parte del campione, es. 10 % - 60 % (disattivato di default).
+
+Export WAV con tutte le impostazioni: ogni WAV conserva nota, loop, estensione dei tasti e velocity, piu un file .sfz con tutto lo strumento.
+
+Tema finestra chiara: "Light window - like FILE" rende chiara tutta la finestra principale.
+
+Ogni riga del menu FILE ha una spiegazione (tooltip): cosa fa, da cosa e per cosa.
+
+BALTIK SAMPLER - MODIFICATO
+
+L'export WAV e a 16 bit di default; "Export all slices" ora si chiama "Export all samples".
+
+Undo / Redo sono stati spostati accanto alla scelta Change, sopra gli strumenti per il loop.
+
+BALTIK SAMPLER - CORRETTO
+
+FILE -&gt; Export .ms3 funziona di nuovo (nella v7.2.1 si fermava con un errore).
+
+Ketron SD9 .MS2: vengono usati i loop e le note originali, e la fine del campione e pulita (nessun rumore al loop).
+
+I campioni Korg Pa5X senza compressione non suonano piu come rumore.
+
+I campioni Korg il cui loop era sul silenzio dopo il suono (es. basso) ora ricevono un loop nel suono.
+
+Change: all samples ora cambia anche Crossfade, Shape, Even out loop volume, Fade out, Steady volume e Optimize.
+
+Even out + maximize (gruppo 8) uniforma di nuovo i campioni, invece di portarli solo al massimo.
+
+I backup dell'Event (.sysbk) incompleti o danneggiati vengono letti per quanto possibile.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v7.2.1</span>
@@ -6196,6 +6412,78 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v7.2.2</span>
+    <span class="version-date">2026-11-07</span>
+  </div>
+  <div class="version-body">v7.2.2 - BALTIK SAMPLER: Korg Pa5X SET, Ketron SD9 Soundbanks, Export .ms3 behoben; Style Master Pro: Guitar Mode aus Pa3X- / Pa4X-Banken; neues Programmsymbol
+
+HINWEIS:
+- v7.2.2 ist ein kostenloses Update fuer jeden bestehenden Kunden, wie alle Updates davor.
+- BALTIK SAMPLER-Nutzer: in v7.2.1 brach FILE -&gt; Export .ms3 mit einem Fehler ab. Bitte aktualisieren - in v7.2.2 funktioniert es wieder.
+
+EVENT STUDIO PRO - NEU
+
+Neues Programmsymbol: Event Studio Pro hat ein neues, modernes Symbol - auf dem Desktop, in der Taskleiste und in der Titelleiste des Fensters.
+
+STYLE MASTER PRO - NEU
+
+Der Gitarrist aus Korg-Pa3X- und Pa4X-Banken: Parts, die ein Korg-Style im Guitar Mode spielt, werden jetzt auch in einer .STY-Bank erkannt - auch in einer auf einem Pa3X gespeicherten - und wie eine echte Gitarre gespielt, wie bei Pa5X-Styles: die Tasten, die die Gitarre des Korg steuern, werden zu den eigenen Noten der Gitarre, als C-, Cm- oder C7-Akkord in den Sections MAJ, MIN und SEV. Ein solcher Part auf einem Ihrer eigenen Korg-Sounds bekommt eine Gitarre (Ac Stereo) statt der Standard-Voice der Spur.
+
+Sampler-Drumkits (ms3) auf Drum Set 1: das Event nimmt ein Sampler-Kit nicht ueber MIDI an - es wuerde stattdessen auf ein Werks-Kit mit derselben Nummer wechseln. Deshalb sendet das Programm es nicht mehr, und wenn Sie eines waehlen, sagt ein kurzer Hinweis, was zu tun ist: waehlen Sie das Kit am Event, und EXPORT schreibt es in den Style, wo das Event es spielt. Tipp: ein User-Drum-Kit aus denselben Samples funktioniert auch aus dem Programm. Kits aus .sbk-Dateien funktionieren wie bisher.
+
+STYLE MASTER PRO - BEHOBEN
+
+Ein im Hauptfenster gewaehltes Sampler-Drumkit (ms3) wurde als Werks-Kit mit derselben Nummer in den Style geschrieben; jetzt wird es so geschrieben, wie das Event selbst es speichert.
+
+Intros und Endings von Styles aus einem Korg Pa3X: ihre MIN- und SEV-Versionen haben jetzt dieselbe Laenge wie MAJ - SEV war vorher einen Takt laenger.
+
+AUTO VOICES gab einem Guitar-Mode-Part eines Pa3X- / Pa4X-Styles auf einem eigenen Korg-Sound die Standard-Voice der Spur, zum Beispiel ein Klavier; jetzt bekommt er eine Gitarre.
+
+BALTIK SAMPLER - NEU
+
+Korg Pa5X: Multisamples und Samples direkt aus einem Korg Pa5X SET (.KST-Ordner) ins Programm und in eine .ms3.
+
+Laden eines Korg SET: ein Korg SET oeffnet sich mit einem Fortschrittsbalken, und dasselbe SET oeffnet sich beim naechsten Mal sofort; FILE -&gt; Another instrument from the last Korg SET.
+
+Ketron SD9 Soundbanks (.KSB): waehlen Sie ein Instrument der Bank und laden Sie es wie eine .MS2.
+
+Loops in aehnlicher Lautstaerke: Optimize all bringt die Loops ausklingender Samples (Bass, Gitarre, Klavier) in jedem Sample auf eine aehnliche Lautstaerke.
+
+Loop-Suchbereich: die automatische Loop-Suche kann auf einen Teil des Samples begrenzt werden, z. B. 10 % - 60 % (standardmaessig aus).
+
+WAV-Export mit allen Einstellungen: jede WAV behaelt Note, Loop, Tastenbereich und Velocity, dazu eine .sfz-Datei mit dem ganzen Instrument.
+
+Theme helles Fenster: "Light window - like FILE" macht das ganze Hauptfenster hell.
+
+Jede Zeile des Menues FILE hat eine Erklaerung (Tooltip): was sie tut, woraus und wofuer.
+
+BALTIK SAMPLER - GEAENDERT
+
+Der WAV-Export ist standardmaessig 16 Bit; "Export all slices" heisst jetzt "Export all samples".
+
+Undo / Redo wurden neben die Auswahl Change verschoben, ueber die Loop-Werkzeuge.
+
+BALTIK SAMPLER - BEHOBEN
+
+FILE -&gt; Export .ms3 funktioniert wieder (in v7.2.1 brach es mit einem Fehler ab).
+
+Ketron SD9 .MS2: die originalen Loops und Noten werden verwendet, und das Sample-Ende ist sauber (kein Rauschen am Loop).
+
+Korg-Pa5X-Samples ohne Kompression klingen nicht mehr wie Rauschen.
+
+Korg-Samples, deren Loop auf der Stille nach dem Ton lag (z. B. Bass), bekommen jetzt einen Loop im Klang.
+
+Change: all samples aendert jetzt auch Crossfade, Shape, Even out loop volume, Fade out, Steady volume und Optimize.
+
+Even out + maximize (Gruppe 8) gleicht die Samples wieder aus, statt sie nur zu maximieren.
+
+Unvollstaendige oder beschaedigte Event-Backups (.sysbk) werden so weit wie moeglich gelesen.
+
+Bestehende Kunden: KOSTENLOSES Auto-Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v7.2.1</span>
     <span class="version-date">2026-11-06</span>
   </div>
@@ -8162,6 +8450,78 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v7.2.2</span>
+    <span class="version-date">2026-11-07</span>
+  </div>
+  <div class="version-body">v7.2.2 - BALTIK SAMPLER: Korg Pa5X SET, банки звуков Ketron SD9, исправлен Export .ms3; Style Master Pro: Guitar Mode из банков Pa3X / Pa4X; новая иконка программы
+
+ВНИМАНИЕ:
+- v7.2.2 - бесплатное обновление для каждого существующего клиента, как и все обновления до него.
+- Пользователи BALTIK SAMPLER: в v7.2.1 FILE -&gt; Export .ms3 останавливался с ошибкой. Пожалуйста, обновитесь - в v7.2.2 он снова работает.
+
+EVENT STUDIO PRO - НОВОЕ
+
+Новая иконка программы: у Event Studio Pro новая современная иконка - на рабочем столе, на панели задач и в заголовке окна.
+
+STYLE MASTER PRO - НОВОЕ
+
+Гитарист из банков Korg Pa3X и Pa4X: партии, которые стиль Korg играет в Guitar Mode, теперь распознаются и в банке .STY - в том числе сохранённой на Pa3X - и звучат как настоящая гитара, как у стилей Pa5X: клавиши, управляющие гитарой Korg, становятся собственными нотами гитары, как аккорд C, Cm или C7 в секциях MAJ, MIN и SEV. Такая партия на вашем собственном звуке Korg получает гитару (Ac Stereo) вместо голоса дорожки по умолчанию.
+
+Драм-киты сэмплера (ms3) на Drum Set 1: Event не принимает кит сэмплера по MIDI - вместо него он переключился бы на заводской кит с тем же номером. Поэтому программа его больше не отправляет, а когда вы его выбираете, короткое сообщение подсказывает, что делать: выберите кит на Event, и EXPORT запишет его в стиль, где Event его играет. Совет: User Drum кит из тех же сэмплов работает и из программы. Киты из файлов .sbk работают как раньше.
+
+STYLE MASTER PRO - ИСПРАВЛЕНО
+
+Драм-кит сэмплера (ms3), выбранный в главном окне, записывался в стиль как заводской кит с тем же номером; теперь он записывается так, как его сохраняет сам Event.
+
+Интро и эндинги стилей с Korg Pa3X: их версии MIN и SEV теперь той же длины, что и MAJ - раньше SEV получалась на такт длиннее.
+
+AUTO VOICES давал партии Guitar Mode стиля Pa3X / Pa4X на собственном звуке Korg голос дорожки по умолчанию, например фортепиано; теперь она получает гитару.
+
+BALTIK SAMPLER - НОВОЕ
+
+Korg Pa5X: мультисэмплы и сэмплы прямо из Korg Pa5X SET (папка .KST) в программу и в .ms3.
+
+Загрузка Korg SET: Korg SET открывается с индикатором прогресса, а тот же SET в следующий раз открывается сразу; FILE -&gt; Another instrument from the last Korg SET.
+
+Банки звуков Ketron SD9 (.KSB): выберите инструмент из банка и загрузите его как .MS2.
+
+Петли похожей громкости: Optimize all выставляет петли затухающих сэмплов (бас, гитара, фортепиано) на похожую громкость в каждом сэмпле.
+
+Диапазон поиска петли: автоматический поиск петли можно ограничить частью сэмпла, например 10 % - 60 % (по умолчанию выключено).
+
+Экспорт WAV со всеми настройками: каждый WAV хранит ноту, петлю, диапазон клавиш и velocity, плюс файл .sfz со всем инструментом.
+
+Тема светлого окна: "Light window - like FILE" делает всё главное окно светлым.
+
+У каждой строки меню FILE есть пояснение (подсказка): что она делает, из чего и для чего.
+
+BALTIK SAMPLER - ИЗМЕНЕНО
+
+Экспорт WAV по умолчанию 16 бит; "Export all slices" теперь называется "Export all samples".
+
+Undo / Redo перенесены к выбору Change, над инструментами петли.
+
+BALTIK SAMPLER - ИСПРАВЛЕНО
+
+FILE -&gt; Export .ms3 снова работает (в v7.2.1 он останавливался с ошибкой).
+
+Ketron SD9 .MS2: используются оригинальные петли и ноты, а конец сэмпла чистый (без шума у петли).
+
+Сэмплы Korg Pa5X без сжатия больше не звучат как шум.
+
+Сэмплы Korg, у которых петля была на тишине после звука (например, бас), теперь получают петлю в звуке.
+
+Change: all samples теперь меняет также Crossfade, Shape, Even out loop volume, Fade out, Steady volume и Optimize.
+
+Even out + maximize (группа 8) снова выравнивает сэмплы, а не только доводит их до максимума.
+
+Неполные или повреждённые бэкапы Event (.sysbk) читаются, насколько это возможно.
+
+Существующие клиенты: БЕСПЛАТНОЕ авто-обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v7.2.1</span>
     <span class="version-date">2026-11-06</span>
   </div>
@@ -10126,6 +10486,78 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v7.2.2</span>
+    <span class="version-date">2026-11-07</span>
+  </div>
+  <div class="version-body">v7.2.2 - BALTIK SAMPLER: Korg Pa5X SET, Ketron SD9-ljudbanker, Export .ms3 rattat; Style Master Pro: Guitar Mode fran Pa3X- / Pa4X-banker; ny programikon
+
+OBS:
+- v7.2.2 ar en gratis uppdatering for alla befintliga kunder, liksom alla uppdateringar fore den.
+- Anvandare av BALTIK SAMPLER: i v7.2.1 stoppade FILE -&gt; Export .ms3 med ett fel. Uppdatera - i v7.2.2 fungerar det igen.
+
+EVENT STUDIO PRO - NYTT
+
+Ny programikon: Event Studio Pro har en ny, modern ikon - pa skrivbordet, i aktivitetsfaltet och i fonstrets titelrad.
+
+STYLE MASTER PRO - NYTT
+
+Gitarristen fran Korg Pa3X- och Pa4X-banker: stammor som en Korg-stil spelar i Guitar Mode kanns nu igen aven i en .STY-bank - aven en som sparats pa en Pa3X - och spelas som en riktig gitarr, som med Pa5X-stilar: tangenterna som styr Korgs gitarr blir gitarrens egna toner, som ett C-, Cm- eller C7-ackord i sektionerna MAJ, MIN och SEV. En sadan stamma pa ett av era egna Korg-ljud far en gitarr (Ac Stereo) i stallet for sparets standardljud.
+
+Sampler-trumkit (ms3) pa Drum Set 1: Event tar inte emot ett sampler-kit via MIDI - det skulle i stallet byta till ett fabrikskit med samma nummer. Darfor skickar programmet det inte langre, och nar ni valjer ett sager ett kort meddelande vad ni ska gora: valj kitet pa Event, och EXPORT skriver in det i stilen, dar Event spelar det. Tips: ett User Drum-kit gjort av samma samplingar fungerar aven fran programmet. Kit fran .sbk-filer fungerar som tidigare.
+
+STYLE MASTER PRO - RATTAT
+
+Ett sampler-trumkit (ms3) som valts i huvudfonstret skrevs in i stilen som fabrikskitet med samma nummer; nu skrivs det sa som Event sjalv sparar det.
+
+Intron och endings i stilar fran en Korg Pa3X: deras MIN- och SEV-versioner har nu samma langd som MAJ - SEV blev tidigare en takt langre.
+
+AUTO VOICES gav en Guitar Mode-stamma i en Pa3X- / Pa4X-stil pa ett eget Korg-ljud sparets standardljud, till exempel ett piano; nu far den en gitarr.
+
+BALTIK SAMPLER - NYTT
+
+Korg Pa5X: multisamplingar och samplingar direkt fran ett Korg Pa5X SET (.KST-mapp) till programmet och till en .ms3.
+
+Laddning av Korg SET: ett Korg SET oppnas med en forloppsindikator, och samma SET oppnas direkt nasta gang; FILE -&gt; Another instrument from the last Korg SET.
+
+Ketron SD9-ljudbanker (.KSB): valj ett instrument i banken och ladda det som en .MS2.
+
+Loopar med liknande volym: Optimize all satter looparna i samplingar som klingar av (bas, gitarr, piano) pa liknande volym i varje sampling.
+
+Loopens sokomrade: den automatiska loopsokningen kan begransas till en del av samplingen, t.ex. 10 % - 60 % (av som standard).
+
+WAV-export med alla installningar: varje WAV behaller ton, loop, tangentomfang och velocity, plus en .sfz-fil med hela instrumentet.
+
+Tema ljust fonster: "Light window - like FILE" gor hela huvudfonstret ljust.
+
+Varje rad i menyn FILE har en forklaring (tooltip): vad den gor, fran vad och till vad.
+
+BALTIK SAMPLER - ANDRAT
+
+WAV-export ar 16 bit som standard; "Export all slices" heter nu "Export all samples".
+
+Undo / Redo har flyttats bredvid valet Change, ovanfor loopverktygen.
+
+BALTIK SAMPLER - RATTAT
+
+FILE -&gt; Export .ms3 fungerar igen (i v7.2.1 stoppade det med ett fel).
+
+Ketron SD9 .MS2: de ursprungliga looparna och tonerna anvands, och samplingens slut ar rent (inget brus vid loopen).
+
+Korg Pa5X-samplingar utan komprimering later inte langre som brus.
+
+Korg-samplingar vars loop lag pa tystnaden efter tonen (t.ex. bas) far nu en loop i ljudet.
+
+Change: all samples andrar nu ocksa Crossfade, Shape, Even out loop volume, Fade out, Steady volume och Optimize.
+
+Even out + maximize (grupp 8) jamnar ut samplingarna igen, i stallet for att bara maximera dem.
+
+Ofullstandiga eller skadade Event-backuper (.sysbk) lases sa langt det gar.
+
+Befintliga kunder: GRATIS auto-uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v7.2.1</span>
