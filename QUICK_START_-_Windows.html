@@ -252,6 +252,77 @@ code { background: #16213E; padding: 2px 8px; border-radius: 3px; font-family: C
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v7.3.3</span>
+    <span class="version-date">2026-11-17</span>
+  </div>
+  <div class="version-body">v7.3.3 - SET SCANNER (BETA); one language for the whole program
+
+PLEASE NOTE:
+- v7.3.3 is a free update for every existing customer, like all the updates before it.
+
+EVENT STUDIO PRO - NEW
+
+SET SCANNER (BETA): a new module that reads the state of your whole Event set and tells you what the instrument will not be able to play. Copy everything from the Event's USBACK SSD into one folder on your computer and drag that whole folder onto the module.
+
+What SET SCANNER finds: broken links between a style and the material it calls for, registrations pointing at styles and voices that are no longer there, files the Event will not read, samples longer than the Event takes, leftovers from deleted material, names the Event trips over, and empty folders that are supposed to hold something.
+
+Every finding in plain words: each one says what it is, where it is and what it costs you on stage. The list goes out as a CSV file, and the straightforward problems - a trailing space in a name, a tempo written into the wrong place - are repaired from inside the module. Nothing is written back to your set unless you ask for it: the scan itself only reads.
+
+Registrations: SET SCANNER now reads them the way the Event does. A registration carries its own copy of the style and keeps playing it after the style was moved, renumbered or deleted, and a groove that is missing is taken from the factory ones - so neither is reported as an error any more. A voice that only moved to another slot (after Fill gaps, for example) does leave the registration's button empty: SET SCANNER says on which slot the voice is now, and FIX puts the registration's first voice back on it, with a copy of the original kept aside.
+
+FIX for styles whose section table is off (K10): the section positions go back exactly onto their markers, so every variation plays as it should again. Only those positions change, and the original style is kept aside first.
+
+LANGUAGE: one button, next to UI Scale, sets the language of the whole program - English, Srpski, Italiano, Deutsch, Español, Magyar and Български. The program restarts to apply it, the same way UI Scale does. The names of the Event's own controls (FILE, Save, OVERVIEW, LOCK) stay in English, exactly as they read on the instrument.
+
+Every window speaks it too: Registration, Performance, User Style, User Voice and Lyrics Converter are translated in full - the buttons, the messages, the bubbles that explain them, and every window that opens from them. The names of the Event's own controls (FILE, OVERVIEW, LOCK, BANK) stay in English, exactly as they read on the instrument, and so do the names of the program's own features (EXPERT MODE, Fill gaps, Insert + Shift).
+
+Lyrics Converter follows the same button, and its own EN / SR / IT flags are gone. It runs in a window of its own, so it watches your choice: change the language in the main window and Lyrics Converter translates itself within a second and a half, with nothing to close and open again. If a conversion is running, it waits for it to finish.
+
+The user manuals are now in seven languages: Registration, Performance, User Style, User Voice and Lyrics Converter are now also in Spanish, Bulgarian and Hungarian, next to Serbian, English, Italian and German. F1 opens them in any module.
+
+About: the window has been rewritten and is now in all seven languages. It had fallen behind - it still said seven modules, had no SET SCANNER at all, and left out FILL GAPS, the subfolders, Move and Fix slot numbering, EXPERT MODE, Deploy 100% Screen Order, LIVE PREVIEW and TAG FILES.
+
+What's New: this window itself now speaks your language, and from this release on a release note can carry its own text per language.
+
+STYLE MASTER PRO - NEW
+
+Empty sections the Event never plays: when you open a style from the Event, an empty section that the style itself marks as not played becomes 1 bar by itself, as in the factory styles.
+
+Fix: sections played by Live Drum, Real or Groove - a section without MIDI notes that the Event plays with Live Drum, Real or Groove is no longer offered as empty and keeps its length on EXPORT.
+
+Fix: SD9 styles with an old copy of their settings - some SD9 styles carry an older copy of their settings inside the file; the program now always takes the real ones, and EXPORT keeps them.
+
+The user manual is now also in Spanish, Bulgarian and Hungarian.
+
+The windows of Style Master Pro now speak the program's language: messages, questions and explanations follow the LANGUAGE button in 7 languages, while the names of buttons and menus stay in English, exactly as in the user manual.
+
+Tooltips are now also in Spanish, Bulgarian and Hungarian, and they follow the program's LANGUAGE button; FILE -&gt; TOOLTIP LANGUAGE can still set another language for Style Master Pro.
+
+BALTIK SAMPLER - NEW / FIXED
+
+NEW: Tooltips - the explanation bubbles are now also in Spanish, Bulgarian and Hungarian: the Tooltip language menu has 7 languages (English, Srpski, Italiano, Deutsch, Español, Български, Magyar); a Spanish, Bulgarian or Hungarian Windows gets them by itself.
+
+NEW: User Manual - the manual is now also in Spanish, Bulgarian and Hungarian: SR | EN | IT | DE | ES | BG | HU.
+
+NEW: Tempo &amp; Loops - Layers - several loops play together in one tempo (for example darbuka + def) and are saved as one loop, or parts of different loops follow one another (bars 1-4 from one loop, bars 5-8 from another). The layers are shown one under another in the same bars; each is edited on its own with all the tools of the window, and Ctrl + click edits several at once (Quantize, Cut, EQ, Effects). Every layer has Mute, Solo, Vol, Pan, the bar it starts on and how many bars it plays.
+
+NEW: Tempo &amp; Loops - ✂ Cut - delete the parts of a recording you do not need, keep only one part, or delete everything before or after it; ↶ / ↷ take it back or repeat it, and the start and length of the loop follow the cut.
+
+NEW: Tempo &amp; Loops - MP3 - MP3 files open too (📂 Open WAV…, drag &amp; drop, + Add layer); the MP3 itself is never changed.
+
+FIXED: Tooltips - the tooltip language follows the LANGUAGE button of Event Studio Pro (Tooltip language -&gt; Follow program language, the default), or the language you choose there yourself; without either, the language of Windows. The lines are shorter, so an explanation is not cut off at the edge of the screen.
+
+FIXED: User Manual - in the Spanish, Bulgarian and Hungarian manual a reference such as "chapter 17" is now also a link that jumps to that chapter.
+
+FIXED: Tempo &amp; Loops - Bar 1 - set by itself just before the first hit of a recording, in the silence, so the attack stays whole and nothing clicks.
+
+FIXED: Tempo &amp; Loops - Slider - the slider under the wave is white and easy to see; a long file name no longer makes the window wider.
+
+Existing customers: FREE auto-update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v7.3.2</span>
     <span class="version-date">2026-11-15</span>
   </div>
@@ -2704,6 +2775,77 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v7.3.3</span>
+    <span class="version-date">2026-11-17</span>
+  </div>
+  <div class="version-body">v7.3.3 - SET SCANNER (BETA); jedan jezik za cijeli program
+
+NAPOMENA:
+- v7.3.3 je besplatan apdejt za svakog postojećeg kupca, kao i svi apdejti do sada.
+
+EVENT STUDIO PRO - NOVO
+
+SET SCANNER (BETA): nov modul koji pročita stanje cijelog vašeg Event seta i kaže vam šta instrument neće moći da odsvira. Prekopirajte sve sa Eventovog USBACK SSD-a u jedan folder na računaru i prevucite taj cijeli folder na modul.
+
+Šta SET SCANNER nalazi: pokidane veze između stila i materijala koji traži, registracije koje pokazuju na stilove i glasove kojih više nema, fajlove koje Event neće pročitati, semplove duže nego što Event uzima, ostatke obrisanog materijala, imena o koja se Event saplete, i prazne foldere koji bi trebalo nešto da sadrže.
+
+Svaki nalaz običnim riječima: uz svaki piše šta je, gdje je i šta vas košta na bini. Spisak izlazi kao CSV fajl, a jednostavni problemi - razmak na kraju imena, tempo upisan na pogrešno mjesto - popravljaju se iz samog modula. U vaš set se ne upisuje ništa osim ako to ne zatražite: samo skeniranje isključivo čita.
+
+Registracije: SET SCANNER ih sada čita onako kako ih čita Event. Registracija nosi svoju kopiju stila i svira je i kad je stil premješten, prenumerisan ili obrisan, a groove kojeg nema uzima se iz fabričkih - zato se ni jedno ni drugo više ne prijavljuje kao greška. Glas koji je samo prešao na drugi slot (na primjer poslije Fill gaps) ipak ostavlja dugme registracije prazno: SET SCANNER kaže na kojem je slotu glas sada, a FIX vraća prvi glas registracije na njega, uz kopiju originala koja se čuva po strani.
+
+FIX za stilove kojima tabela sekcija ne valja (K10): položaji sekcija vraćaju se tačno na svoje markere, pa svaka varijacija opet svira kako treba. Mijenjaju se samo ti položaji, a originalni stil se prije toga sačuva po strani.
+
+LANGUAGE: jedno dugme, pored UI Scale, postavlja jezik cijelog programa - English, Srpski, Italiano, Deutsch, Español, Magyar i Български. Program se ponovo pokreće da bi izbor stupio na snagu, isto kao kod UI Scale. Nazivi kontrola sa samog Eventa (FILE, Save, OVERVIEW, LOCK) ostaju na engleskom, tačno kako pišu na instrumentu.
+
+Govori ga i svaki prozor: Registration, Performance, User Style, User Voice i Lyrics Converter prevedeni su u cijelosti - dugmad, poruke, oblačići koji ih objašnjavaju i svaki prozor koji se iz njih otvara. Imena kontrola samog Eventa (FILE, OVERVIEW, LOCK, BANK) ostaju na engleskom, tačno onako kako pišu na instrumentu, a tako i imena funkcija programa (EXPERT MODE, Fill gaps, Insert + Shift).
+
+Lyrics Converter sluša isto dugme, a njegove zastavice EN / SR / IT su uklonjene. Radi u svom prozoru, pa sam prati izbor: promijenite jezik u glavnom prozoru i Lyrics Converter se prevede za sekundu i po, bez gašenja i ponovnog otvaranja. Ako je konverzija u toku, sačeka da završi.
+
+Uputstva su sada na sedam jezika: Registration, Performance, User Style, User Voice i Lyrics Converter sada su i na španskom, bugarskom i mađarskom, uz srpski, engleski, italijanski i njemački. F1 ih otvara u svakom modulu.
+
+About: prozor je napisan iznova i sada je na svih sedam jezika. Bio je zaostao - još je govorio o sedam modula, SET SCANNER-a nije bilo nigdje, a izostavljeni su FILL GAPS, podfolderi, Move i Fix slot numbering, EXPERT MODE, Deploy 100% Screen Order, LIVE PREVIEW i TAG FILES.
+
+What's New: sam ovaj prozor sada govori vašim jezikom, a od ovog izdanja zapis o izdanju može da nosi svoj tekst po jeziku.
+
+STYLE MASTER PRO - NOVO
+
+Prazne sekcije koje Event nikad ne svira: kad otvorite stil sa Eventa, prazna sekcija koju sam stil označi kao neodsviranu postaje 1 takt sama od sebe, kao u fabričkim stilovima.
+
+Ispravka: sekcije koje sviraju Live Drum, Real ili Groove - sekcija bez MIDI nota koju Event svira preko Live Drum, Real ili Groove više se ne nudi kao prazna i zadrži svoju dužinu pri EXPORT-u.
+
+Ispravka: SD9 stilovi sa starom kopijom svojih postavki - neki SD9 stilovi nose stariju kopiju svojih postavki unutar fajla; program sada uvijek uzima prave, a EXPORT ih zadrži.
+
+Uputstvo je sada i na španskom, bugarskom i mađarskom.
+
+Prozori Style Master Pro-a sada govore jezikom programa: poruke, pitanja i objašnjenja prate dugme LANGUAGE na 7 jezika, a imena dugmadi i menija ostaju na engleskom, tačno kao u uputstvu.
+
+Tooltipovi su sada i na španskom, bugarskom i mađarskom, i prate dugme LANGUAGE samog programa; FILE -&gt; TOOLTIP LANGUAGE i dalje može da postavi drugi jezik za Style Master Pro.
+
+BALTIK SAMPLER - NOVO / ISPRAVKE
+
+NOVO: Tooltipovi - oblačići sa objašnjenjima sada su i na španskom, bugarskom i mađarskom: meni Tooltip language ima 7 jezika (English, Srpski, Italiano, Deutsch, Español, Български, Magyar); španski, bugarski ili mađarski Windows ih dobije sam.
+
+NOVO: Uputstvo - uputstvo je sada i na španskom, bugarskom i mađarskom: SR | EN | IT | DE | ES | BG | HU.
+
+NOVO: Tempo &amp; Loops - Slojevi - više loop-ova svira zajedno u jednom tempu (na primjer darbuka + def) i snima se kao jedan loop, ili dijelovi različitih loop-ova idu jedan za drugim (taktovi 1-4 iz jednog, 5-8 iz drugog). Slojevi se vide jedan ispod drugog u istim taktovima; svaki se uređuje posebno svim alatima prozora, a Ctrl + klik uređuje više njih odjednom (Quantize, Cut, EQ, Effects). Svaki sloj ima Mute, Solo, Vol, Pan, takt na kojem počinje i koliko taktova svira.
+
+NOVO: Tempo &amp; Loops - ✂ Cut - izbrišite dijelove snimka koji Vam ne trebaju, zadržite samo jedan dio, ili izbrišite sve prije ili poslije njega; ↶ / ↷ to vraćaju ili ponavljaju, a početak i dužina loop-a prate rez.
+
+NOVO: Tempo &amp; Loops - MP3 - otvaraju se i MP3 fajlovi (📂 Open WAV…, prevlačenje mišem, + Add layer); sam MP3 se nikad ne mijenja.
+
+ISPRAVKA: Tooltipovi - jezik tooltipova prati dugme LANGUAGE programa Event Studio Pro (Tooltip language -&gt; Follow program language, podrazumijevano), ili jezik koji tamo sami izaberete; bez jednog i drugog, jezik Windowsa. Redovi su kraći, pa se objašnjenje ne presiječe na ivici ekrana.
+
+ISPRAVKA: Uputstvo - u španskom, bugarskom i mađarskom uputstvu poziv kao "poglavlje 17" sada je i veza koja skoči na to poglavlje.
+
+ISPRAVKA: Tempo &amp; Loops - Takt 1 - sam se postavi tik prije prvog udarca snimka, u tišini, pa udarac ostaje cio i ništa ne pucne.
+
+ISPRAVKA: Tempo &amp; Loops - Klizač - klizač ispod talasa je bijel i lako se vidi; dugo ime fajla više ne širi prozor.
+
+Postojeći kupci: BESPLATAN automatski apdejt.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v7.3.2</span>
     <span class="version-date">2026-11-15</span>
   </div>
@@ -5108,6 +5250,77 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Novità negli aggiornamenti<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v7.3.3</span>
+    <span class="version-date">2026-11-17</span>
+  </div>
+  <div class="version-body">v7.3.3 - SET SCANNER (BETA); una lingua per tutto il programma
+
+NOTA:
+- La v7.3.3 è un aggiornamento gratuito per ogni cliente esistente, come tutti gli aggiornamenti precedenti.
+
+EVENT STUDIO PRO - NOVITÀ
+
+SET SCANNER (BETA): un nuovo modulo che legge lo stato di tutto il vostro set dell'Event e vi dice che cosa lo strumento non riuscirà a suonare. Copiate tutto dall'SSD USBACK dell'Event in una cartella sul computer e trascinate quella cartella intera sul modulo.
+
+Che cosa trova SET SCANNER: collegamenti rotti tra uno stile e il materiale che richiede, registrazioni che puntano a stili e voci che non ci sono più, file che l'Event non legge, campioni più lunghi di quanto l'Event accetti, resti di materiale cancellato, nomi su cui l'Event inciampa, e cartelle vuote che dovrebbero contenere qualcosa.
+
+Ogni rilievo in parole semplici: ciascuno dice che cos'è, dov'è e che cosa vi costa sul palco. L'elenco esce come file CSV, e i problemi semplici - uno spazio in fondo a un nome, un tempo scritto nel posto sbagliato - si correggono dal modulo stesso. Nel vostro set non viene scritto nulla se non lo chiedete: la scansione in sé si limita a leggere.
+
+Registrazioni: SET SCANNER ora le legge come le legge l'Event. Una registrazione porta con sé la propria copia dello stile e continua a suonarla anche se lo stile è stato spostato, rinumerato o cancellato, e un groove che manca viene preso da quelli di fabbrica - per questo nessuno dei due viene più segnalato come errore. Una voce che è solo passata a un altro slot (per esempio dopo Fill gaps) lascia invece vuoto il pulsante della registrazione: SET SCANNER dice in quale slot si trova ora la voce, e FIX vi riporta la prima voce della registrazione, conservando a parte una copia dell'originale.
+
+FIX per gli stili con la tabella delle sezioni sbagliata (K10): le posizioni delle sezioni tornano esattamente sui loro marker, così ogni variazione suona di nuovo come deve. Cambiano solo quelle posizioni, e lo stile originale viene prima conservato a parte.
+
+LANGUAGE: un pulsante, accanto a UI Scale, imposta la lingua di tutto il programma - English, Srpski, Italiano, Deutsch, Español, Magyar e Български. Il programma si riavvia per applicarla, come fa UI Scale. I nomi dei comandi dell'Event (FILE, Save, OVERVIEW, LOCK) restano in inglese, esattamente come si leggono sullo strumento.
+
+Lo parla anche ogni finestra: Registration, Performance, User Style, User Voice e Lyrics Converter sono tradotti per intero - i pulsanti, i messaggi, i fumetti che li spiegano e ogni finestra che si apre da essi. I nomi dei comandi dell'Event (FILE, OVERVIEW, LOCK, BANK) restano in inglese, esattamente come si leggono sullo strumento, e così anche i nomi delle funzioni del programma (EXPERT MODE, Fill gaps, Insert + Shift).
+
+Lyrics Converter segue lo stesso pulsante e le sue bandierine EN / SR / IT sono state tolte. Gira in una finestra propria, quindi segue la vostra scelta: cambiate lingua nella finestra principale e Lyrics Converter si traduce da solo in un secondo e mezzo, senza chiudere e riaprire nulla. Se è in corso una conversione, aspetta che finisca.
+
+I manuali sono ora in sette lingue: Registration, Performance, User Style, User Voice e Lyrics Converter sono ora anche in spagnolo, bulgaro e ungherese, accanto a serbo, inglese, italiano e tedesco. F1 li apre in ogni modulo.
+
+About: la finestra è stata riscritta ed è ora in tutte e sette le lingue. Era rimasta indietro - parlava ancora di sette moduli, di SET SCANNER non c'era traccia, e mancavano FILL GAPS, le sottocartelle, Move e Fix slot numbering, EXPERT MODE, Deploy 100% Screen Order, LIVE PREVIEW e TAG FILES.
+
+What's New: questa finestra stessa parla ora la vostra lingua, e da questa versione una nota di rilascio può portare il proprio testo per ogni lingua.
+
+STYLE MASTER PRO - NOVITÀ
+
+Sezioni vuote che l'Event non suona mai: quando aprite uno stile dall'Event, una sezione vuota che lo stile stesso segna come non suonata diventa 1 battuta da sola, come negli stili di fabbrica.
+
+Correzione: sezioni suonate da Live Drum, Real o Groove - una sezione senza note MIDI che l'Event suona con Live Drum, Real o Groove non viene più proposta come vuota e conserva la sua lunghezza all'EXPORT.
+
+Correzione: stili SD9 con una vecchia copia delle loro impostazioni - alcuni stili SD9 portano dentro il file una copia più vecchia delle impostazioni; il programma prende ora sempre quelle vere, e l'EXPORT le conserva.
+
+Il manuale è ora anche in spagnolo, bulgaro e ungherese.
+
+Le finestre di Style Master Pro ora parlano la lingua del programma: messaggi, domande e spiegazioni seguono il pulsante LANGUAGE in 7 lingue, mentre i nomi dei pulsanti e dei menu restano in inglese, esattamente come nel manuale.
+
+I suggerimenti sono ora anche in spagnolo, bulgaro e ungherese, e seguono il pulsante LANGUAGE del programma; FILE -&gt; TOOLTIP LANGUAGE può comunque impostare un'altra lingua per Style Master Pro.
+
+BALTIK SAMPLER - NOVITÀ / CORREZIONI
+
+NOVITÀ: Suggerimenti - i fumetti con le spiegazioni sono ora anche in spagnolo, bulgaro e ungherese: il menu Tooltip language ha 7 lingue (English, Srpski, Italiano, Deutsch, Español, Български, Magyar); un Windows spagnolo, bulgaro o ungherese le riceve da solo.
+
+NOVITÀ: Manuale - il manuale è ora anche in spagnolo, bulgaro e ungherese: SR | EN | IT | DE | ES | BG | HU.
+
+NOVITÀ: Tempo &amp; Loops - Livelli - più loop suonano insieme in un unico tempo (per esempio darbuka + def) e si salvano come un solo loop, oppure parti di loop diversi si susseguono (battute 1-4 da uno, 5-8 da un altro). I livelli si vedono uno sotto l'altro nelle stesse battute; ognuno si modifica a parte con tutti gli strumenti della finestra, e Ctrl + clic ne modifica diversi insieme (Quantize, Cut, EQ, Effects). Ogni livello ha Mute, Solo, Vol, Pan, la battuta da cui parte e quante battute suona.
+
+NOVITÀ: Tempo &amp; Loops - ✂ Cut - cancellate le parti della registrazione che non vi servono, tenete solo una parte, o cancellate tutto prima o dopo di essa; ↶ / ↷ annullano o ripetono, e l'inizio e la lunghezza del loop seguono il taglio.
+
+NOVITÀ: Tempo &amp; Loops - MP3 - si aprono anche i file MP3 (📂 Open WAV…, trascinamento, + Add layer); l'MP3 stesso non viene mai modificato.
+
+CORREZIONE: Suggerimenti - la lingua dei suggerimenti segue il pulsante LANGUAGE di Event Studio Pro (Tooltip language -&gt; Follow program language, l'impostazione predefinita), oppure la lingua che scegliete lì voi stessi; senza né l'una né l'altra, la lingua di Windows. Le righe sono più corte, così una spiegazione non viene tagliata al bordo dello schermo.
+
+CORREZIONE: Manuale - nel manuale spagnolo, bulgaro e ungherese un riferimento come "capitolo 17" è ora anche un collegamento che salta a quel capitolo.
+
+CORREZIONE: Tempo &amp; Loops - Battuta 1 - si posiziona da sola subito prima del primo colpo della registrazione, nel silenzio, così l'attacco resta intero e non si sente nessun clic.
+
+CORREZIONE: Tempo &amp; Loops - Cursore - il cursore sotto l'onda è bianco e ben visibile; un nome di file lungo non allarga più la finestra.
+
+Clienti esistenti: aggiornamento automatico GRATUITO.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v7.3.2</span>
@@ -7516,6 +7729,77 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v7.3.3</span>
+    <span class="version-date">2026-11-17</span>
+  </div>
+  <div class="version-body">v7.3.3 - SET SCANNER (BETA); eine Sprache für das ganze Programm
+
+HINWEIS:
+- v7.3.3 ist ein kostenloses Update für jeden bestehenden Kunden, wie alle Updates davor.
+
+EVENT STUDIO PRO - NEU
+
+SET SCANNER (BETA): ein neues Modul, das den Zustand Ihres gesamten Event-Sets liest und Ihnen sagt, was das Instrument nicht wird spielen können. Kopieren Sie alles von der USBACK-SSD des Event in einen Ordner auf Ihrem Rechner und ziehen Sie diesen ganzen Ordner auf das Modul.
+
+Was SET SCANNER findet: zerrissene Verbindungen zwischen einem Style und dem Material, das er verlangt, Registrierungen, die auf nicht mehr vorhandene Styles und Klänge zeigen, Dateien, die der Event nicht liest, Samples, die länger sind, als der Event nimmt, Reste gelöschten Materials, Namen, über die der Event stolpert, und leere Ordner, in denen etwas stehen sollte.
+
+Jeder Befund in einfachen Worten: zu jedem steht, was er ist, wo er ist und was er Sie auf der Bühne kostet. Die Liste geht als CSV-Datei hinaus, und die einfachen Probleme - ein Leerzeichen am Ende eines Namens, ein an der falschen Stelle eingetragenes Tempo - werden aus dem Modul heraus repariert. In Ihr Set wird nichts geschrieben, solange Sie es nicht verlangen: das Prüfen selbst liest nur.
+
+Registrierungen: SET SCANNER liest sie jetzt so, wie der Event sie liest. Eine Registrierung trägt ihre eigene Kopie des Styles und spielt sie weiter, auch wenn der Style verschoben, umnummeriert oder gelöscht wurde, und ein fehlender Groove wird aus den Werks-Grooves genommen - deshalb wird beides nicht mehr als Fehler gemeldet. Eine Voice, die nur auf einen anderen Slot gewandert ist (zum Beispiel nach Fill gaps), lässt die Taste der Registrierung dagegen leer: SET SCANNER sagt, auf welchem Slot die Voice jetzt liegt, und FIX setzt die erste Voice der Registrierung wieder darauf - eine Kopie des Originals wird vorher beiseitegelegt.
+
+FIX für Styles mit falscher Section-Tabelle (K10): Die Positionen der Sections kommen genau auf ihre Marker zurück, sodass jede Variation wieder spielt, wie sie soll. Nur diese Positionen ändern sich, und der Original-Style wird vorher beiseitegelegt.
+
+LANGUAGE: eine Schaltfläche, neben UI Scale, stellt die Sprache des ganzen Programms ein - English, Srpski, Italiano, Deutsch, Español, Magyar und Български. Das Programm startet neu, um sie anzuwenden, genau wie bei UI Scale. Die Namen der Bedienelemente des Event (FILE, Save, OVERVIEW, LOCK) bleiben englisch, genau so, wie sie am Instrument stehen.
+
+Jedes Fenster spricht sie ebenfalls: Registration, Performance, User Style, User Voice und Lyrics Converter sind vollständig übersetzt - die Schaltflächen, die Meldungen, die Blasen, die sie erklären, und jedes Fenster, das sich daraus öffnet. Die Namen der Bedienelemente des Event (FILE, OVERVIEW, LOCK, BANK) bleiben auf Englisch, genau so, wie sie auf dem Instrument stehen, ebenso die Namen der Programmfunktionen (EXPERT MODE, Fill gaps, Insert + Shift).
+
+Lyrics Converter folgt derselben Schaltfläche, seine eigenen Flaggen EN / SR / IT sind verschwunden. Er läuft in einem eigenen Fenster und verfolgt daher Ihre Wahl: Ändern Sie die Sprache im Hauptfenster, und Lyrics Converter übersetzt sich innerhalb von anderthalb Sekunden selbst - nichts muss geschlossen und wieder geöffnet werden. Läuft gerade eine Umwandlung, wartet er, bis sie fertig ist.
+
+Die Anleitungen gibt es jetzt in sieben Sprachen: Registration, Performance, User Style, User Voice und Lyrics Converter sind jetzt auch auf Spanisch, Bulgarisch und Ungarisch, neben Serbisch, Englisch, Italienisch und Deutsch. F1 öffnet sie in jedem Modul.
+
+About: das Fenster wurde neu geschrieben und ist jetzt in allen sieben Sprachen. Es war zurückgeblieben - es sprach noch von sieben Modulen, von SET SCANNER war nirgends die Rede, und FILL GAPS, die Unterordner, Move und Fix slot numbering, EXPERT MODE, Deploy 100% Screen Order, LIVE PREVIEW und TAG FILES fehlten.
+
+What's New: dieses Fenster selbst spricht jetzt Ihre Sprache, und ab dieser Version kann ein Versionshinweis seinen eigenen Text je Sprache tragen.
+
+STYLE MASTER PRO - NEU
+
+Leere Abschnitte, die der Event nie spielt: wenn Sie einen Style vom Event öffnen, wird ein leerer Abschnitt, den der Style selbst als nicht gespielt kennzeichnet, von allein 1 Takt lang, wie in den Werks-Styles.
+
+Korrektur: Abschnitte, die Live Drum, Real oder Groove spielen - ein Abschnitt ohne MIDI-Noten, den der Event mit Live Drum, Real oder Groove spielt, wird nicht mehr als leer angeboten und behält seine Länge beim EXPORT.
+
+Korrektur: SD9-Styles mit einer alten Kopie ihrer Einstellungen - manche SD9-Styles tragen eine ältere Kopie ihrer Einstellungen in der Datei; das Programm nimmt jetzt immer die echten, und der EXPORT behält sie.
+
+Die Anleitung gibt es jetzt auch auf Spanisch, Bulgarisch und Ungarisch.
+
+Die Fenster von Style Master Pro sprechen jetzt die Sprache des Programms: Meldungen, Fragen und Erklärungen folgen der Schaltfläche LANGUAGE in 7 Sprachen, die Namen der Schaltflächen und Menüs bleiben Englisch, genau wie in der Anleitung.
+
+Die Kurzhinweise gibt es jetzt auch auf Spanisch, Bulgarisch und Ungarisch, und sie folgen der Schaltfläche LANGUAGE des Programms; FILE -&gt; TOOLTIP LANGUAGE kann für Style Master Pro weiterhin eine andere Sprache einstellen.
+
+BALTIK SAMPLER - NEU / KORREKTUREN
+
+NEU: Kurzhinweise - die Erklärungsblasen gibt es jetzt auch auf Spanisch, Bulgarisch und Ungarisch: das Menü Tooltip language hat 7 Sprachen (English, Srpski, Italiano, Deutsch, Español, Български, Magyar); ein spanisches, bulgarisches oder ungarisches Windows bekommt sie von selbst.
+
+NEU: Anleitung - die Anleitung gibt es jetzt auch auf Spanisch, Bulgarisch und Ungarisch: SR | EN | IT | DE | ES | BG | HU.
+
+NEU: Tempo &amp; Loops - Ebenen - mehrere Loops spielen zusammen in einem Tempo (zum Beispiel Darbuka + Def) und werden als ein Loop gespeichert, oder Teile verschiedener Loops folgen aufeinander (Takte 1-4 aus einem, 5-8 aus einem anderen). Die Ebenen stehen untereinander in denselben Takten; jede wird für sich mit allen Werkzeugen des Fensters bearbeitet, und Strg + Klick bearbeitet mehrere zugleich (Quantize, Cut, EQ, Effects). Jede Ebene hat Mute, Solo, Vol, Pan, den Takt, in dem sie beginnt, und wie viele Takte sie spielt.
+
+NEU: Tempo &amp; Loops - ✂ Cut - löschen Sie die Teile einer Aufnahme, die Sie nicht brauchen, behalten Sie nur einen Teil, oder löschen Sie alles davor oder danach; ↶ / ↷ machen es rückgängig oder wiederholen es, und Anfang und Länge des Loops folgen dem Schnitt.
+
+NEU: Tempo &amp; Loops - MP3 - auch MP3-Dateien lassen sich öffnen (📂 Open WAV…, Ziehen mit der Maus, + Add layer); die MP3 selbst wird nie verändert.
+
+KORREKTUR: Kurzhinweise - die Sprache der Kurzhinweise folgt der Schaltfläche LANGUAGE von Event Studio Pro (Tooltip language -&gt; Follow program language, die Voreinstellung), oder der Sprache, die Sie dort selbst wählen; ohne beides die Sprache von Windows. Die Zeilen sind kürzer, so wird eine Erklärung nicht am Bildschirmrand abgeschnitten.
+
+KORREKTUR: Anleitung - in der spanischen, bulgarischen und ungarischen Anleitung ist ein Verweis wie "Kapitel 17" jetzt auch ein Link, der zu diesem Kapitel springt.
+
+KORREKTUR: Tempo &amp; Loops - Takt 1 - wird von selbst kurz vor den ersten Schlag der Aufnahme gesetzt, in die Stille, sodass der Anschlag ganz bleibt und nichts knackt.
+
+KORREKTUR: Tempo &amp; Loops - Schieberegler - der Schieberegler unter der Welle ist weiß und gut zu sehen; ein langer Dateiname macht das Fenster nicht mehr breiter.
+
+Bestehende Kunden: KOSTENLOSES automatisches Update.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v7.3.2</span>
     <span class="version-date">2026-11-15</span>
   </div>
@@ -9922,6 +10206,77 @@ Updated Quick Start guide with new Edge UI flow</div>
   <div class="whats-new-panel">
 <div class="version-card">
   <div class="version-header">
+    <span class="version-num">v7.3.3</span>
+    <span class="version-date">2026-11-17</span>
+  </div>
+  <div class="version-body">v7.3.3 - SET SCANNER (BETA); один язык для всей программы
+
+ВНИМАНИЕ:
+- v7.3.3 - бесплатное обновление для каждого существующего клиента, как и все обновления до него.
+
+EVENT STUDIO PRO - НОВОЕ
+
+SET SCANNER (BETA): новый модуль, который читает состояние всего вашего сета Event и говорит вам, что инструмент не сможет сыграть. Скопируйте всё с SSD USBACK вашего Event в папку на компьютере и перетащите эту папку целиком на модуль.
+
+Что находит SET SCANNER: разорванные связи между стилем и материалом, который он запрашивает, регистрации, указывающие на стили и голоса, которых больше нет, файлы, которые Event не прочитает, сэмплы длиннее того, что Event принимает, остатки удалённого материала, имена, на которых Event спотыкается, и пустые папки, в которых должно что-то быть.
+
+Каждая находка простыми словами: при каждой написано, что это, где это и чего это вам стоит на сцене. Список выходит файлом CSV, а простые неполадки - пробел в конце имени, темп, записанный не в том месте - исправляются из самого модуля. В ваш сет ничего не записывается, если вы об этом не попросите: сама проверка только читает.
+
+Регистрации: SET SCANNER теперь читает их так же, как Event. Регистрация несёт собственную копию стиля и продолжает играть её, даже если стиль перемещён, перенумерован или удалён, а недостающий groove берётся из заводских - поэтому ни то, ни другое больше не считается ошибкой. А вот голос, который только перешёл на другой слот (например, после Fill gaps), оставляет кнопку регистрации пустой: SET SCANNER говорит, на каком слоте голос теперь, а FIX возвращает на него первый голос регистрации, предварительно отложив копию оригинала.
+
+FIX для стилей с неверной таблицей секций (K10): позиции секций возвращаются точно на свои маркеры, так что каждая вариация снова играет как надо. Меняются только эти позиции, а оригинальный стиль сначала откладывается в сторону.
+
+LANGUAGE: одна кнопка, рядом с UI Scale, задаёт язык всей программы - English, Srpski, Italiano, Deutsch, Español, Magyar и Български. Программа перезапускается, чтобы это вступило в силу, так же как при UI Scale. Названия самих органов управления Event (FILE, Save, OVERVIEW, LOCK) остаются на английском, точно так, как они написаны на инструменте.
+
+На нём говорит и каждое окно: Registration, Performance, User Style, User Voice и Lyrics Converter переведены полностью - кнопки, сообщения, поясняющие подсказки и каждое окно, которое из них открывается. Названия органов управления самого Event (FILE, OVERVIEW, LOCK, BANK) остаются на английском, точно как на инструменте, как и названия функций программы (EXPERT MODE, Fill gaps, Insert + Shift).
+
+Lyrics Converter слушается той же кнопки, а его флажки EN / SR / IT убраны. Он работает в собственном окне и сам следит за выбором: смените язык в главном окне, и Lyrics Converter переведёт себя за полторы секунды, ничего не нужно закрывать и открывать заново. Если идёт преобразование, он дождётся его окончания.
+
+Руководства теперь на семи языках: Registration, Performance, User Style, User Voice и Lyrics Converter теперь есть и на испанском, болгарском и венгерском, вместе с сербским, английским, итальянским и немецким. F1 открывает их в любом модуле.
+
+About: окно написано заново и теперь есть на всех семи языках. Оно отстало - в нём всё ещё говорилось о семи модулях, SET SCANNER не было и следа, а не хватало FILL GAPS, подпапок, Move и Fix slot numbering, EXPERT MODE, Deploy 100% Screen Order, LIVE PREVIEW и TAG FILES.
+
+What's New: это самое окно теперь говорит на вашем языке, а начиная с этого выпуска запись о выпуске может нести свой текст на каждом языке.
+
+STYLE MASTER PRO - НОВОЕ
+
+Пустые секции, которые Event никогда не играет: когда вы открываете стиль с Event, пустая секция, которую сам стиль помечает как неигранную, сама становится длиной 1 такт, как в заводских стилях.
+
+Исправление: секции, которые играют Live Drum, Real или Groove - секция без нот MIDI, которую Event играет с Live Drum, Real или Groove, больше не предлагается как пустая и сохраняет свою длину при EXPORT.
+
+Исправление: стили SD9 со старой копией своих настроек - некоторые стили SD9 несут внутри файла более старую копию своих настроек; программа теперь всегда берёт настоящие, а EXPORT их сохраняет.
+
+Руководство теперь есть и на испанском, болгарском и венгерском.
+
+Окна Style Master Pro теперь говорят на языке программы: сообщения, вопросы и пояснения следуют кнопке LANGUAGE на 7 языках, а названия кнопок и меню остаются на английском, точно как в руководстве.
+
+Подсказки теперь есть и на испанском, болгарском и венгерском, и они следуют кнопке LANGUAGE самой программы; FILE -&gt; TOOLTIP LANGUAGE по-прежнему может задать другой язык для Style Master Pro.
+
+BALTIK SAMPLER - НОВОЕ / ИСПРАВЛЕНИЯ
+
+НОВОЕ: Подсказки - облачка с пояснениями теперь есть и на испанском, болгарском и венгерском: в меню Tooltip language 7 языков (English, Srpski, Italiano, Deutsch, Español, Български, Magyar); испанский, болгарский или венгерский Windows получает их сам.
+
+НОВОЕ: Руководство - руководство теперь есть и на испанском, болгарском и венгерском: SR | EN | IT | DE | ES | BG | HU.
+
+НОВОЕ: Tempo &amp; Loops - Слои - несколько loop-ов играют вместе в одном темпе (например, дарбука + деф) и сохраняются как один loop, или части разных loop-ов идут одна за другой (такты 1-4 из одного, 5-8 из другого). Слои показаны один под другим в тех же тактах; каждый редактируется отдельно всеми инструментами окна, а Ctrl + клик редактирует несколько сразу (Quantize, Cut, EQ, Effects). У каждого слоя есть Mute, Solo, Vol, Pan, такт, с которого он начинается, и сколько тактов он играет.
+
+НОВОЕ: Tempo &amp; Loops - ✂ Cut - удалите ненужные части записи, оставьте только одну часть или удалите всё до или после неё; ↶ / ↷ отменяют или повторяют, а начало и длина loop-а следуют за срезом.
+
+НОВОЕ: Tempo &amp; Loops - MP3 - открываются и файлы MP3 (📂 Open WAV…, перетаскивание мышью, + Add layer); сам MP3 никогда не изменяется.
+
+ИСПРАВЛЕНИЕ: Подсказки - язык подсказок следует кнопке LANGUAGE программы Event Studio Pro (Tooltip language -&gt; Follow program language, по умолчанию), или языку, который вы сами там выберете; без того и другого - языку Windows. Строки короче, так что пояснение не обрезается у края экрана.
+
+ИСПРАВЛЕНИЕ: Руководство - в испанском, болгарском и венгерском руководстве ссылка вида "глава 17" теперь тоже является ссылкой, которая переходит к этой главе.
+
+ИСПРАВЛЕНИЕ: Tempo &amp; Loops - Такт 1 - ставится сам прямо перед первым ударом записи, в тишине, поэтому атака остаётся целой и ничего не щёлкает.
+
+ИСПРАВЛЕНИЕ: Tempo &amp; Loops - Ползунок - ползунок под волной белый и хорошо виден; длинное имя файла больше не расширяет окно.
+
+Существующие клиенты: БЕСПЛАТНОЕ автоматическое обновление.</div>
+</div>
+
+<div class="version-card">
+  <div class="version-header">
     <span class="version-num">v7.3.2</span>
     <span class="version-date">2026-11-15</span>
   </div>
@@ -12326,6 +12681,77 @@ Updated Quick Start guide with new Edge UI flow</div>
 <div class="whats-new-wrap">
   <button class="whats-new-btn" onclick="toggleWhatsNew(this)">📋 Vad är nytt i uppdateringar<span class="chevron">▼</span></button>
   <div class="whats-new-panel">
+<div class="version-card">
+  <div class="version-header">
+    <span class="version-num">v7.3.3</span>
+    <span class="version-date">2026-11-17</span>
+  </div>
+  <div class="version-body">v7.3.3 - SET SCANNER (BETA); ett språk för hela programmet
+
+OBS:
+- v7.3.3 är en gratis uppdatering för alla befintliga kunder, liksom alla uppdateringar före den.
+
+EVENT STUDIO PRO - NYTT
+
+SET SCANNER (BETA): en ny modul som läser av tillståndet i hela ditt Event-set och säger vad instrumentet inte kommer att kunna spela. Kopiera allt från Events USBACK SSD till en mapp på din dator och dra hela den mappen till modulen.
+
+Vad SET SCANNER hittar: brutna länkar mellan en stil och det material den begär, registreringar som pekar på stilar och ljud som inte längre finns, filer som Event inte läser, samplingar längre än vad Event tar emot, rester av raderat material, namn som Event snavar på, och tomma mappar som borde innehålla något.
+
+Varje fynd i enkla ord: vid varje står vad det är, var det är och vad det kostar dig på scenen. Listan kommer ut som en CSV-fil, och de enkla problemen - ett blanksteg sist i ett namn, ett tempo skrivet på fel plats - rättas från själva modulen. Ingenting skrivs in i ditt set om du inte ber om det: själva granskningen bara läser.
+
+Registreringar: SET SCANNER läser dem nu som Event gör. En registrering bär sin egen kopia av stilen och spelar den även när stilen har flyttats, numrerats om eller tagits bort, och en groove som saknas tas från fabrikens - därför rapporteras ingetdera längre som fel. En röst som bara har flyttat till en annan plats (till exempel efter Fill gaps) lämnar däremot registreringens knapp tom: SET SCANNER säger på vilken plats rösten ligger nu, och FIX sätter registreringens första röst tillbaka på den, med en kopia av originalet sparad vid sidan.
+
+FIX för stilar vars sektionstabell är fel (K10): sektionernas positioner går tillbaka exakt på sina markörer, så varje variation spelar som den ska igen. Bara de positionerna ändras, och originalstilen sparas först vid sidan.
+
+LANGUAGE: en knapp, vid UI Scale, sätter språket för hela programmet - English, Srpski, Italiano, Deutsch, Español, Magyar och Български. Programmet startas om för att det ska gälla, precis som vid UI Scale. Namnen på Events egna reglage (FILE, Save, OVERVIEW, LOCK) står kvar på engelska, exakt som de står på instrumentet.
+
+Varje fönster talar det också: Registration, Performance, User Style, User Voice och Lyrics Converter är helt översatta - knapparna, meddelandena, bubblorna som förklarar dem och varje fönster som öppnas från dem. Namnen på Events egna reglage (FILE, OVERVIEW, LOCK, BANK) förblir på engelska, precis som de står på instrumentet, och det gör även namnen på programmets egna funktioner (EXPERT MODE, Fill gaps, Insert + Shift).
+
+Lyrics Converter följer samma knapp, och dess egna flaggor EN / SR / IT är borta. Den körs i ett eget fönster och följer därför ditt val: byt språk i huvudfönstret så översätter Lyrics Converter sig själv inom en och en halv sekund, utan att något behöver stängas och öppnas igen. Pågår en konvertering väntar den tills den är klar.
+
+Handböckerna finns nu på sju språk: Registration, Performance, User Style, User Voice och Lyrics Converter finns nu också på spanska, bulgariska och ungerska, vid sidan av serbiska, engelska, italienska och tyska. F1 öppnar dem i varje modul.
+
+About: fönstret är skrivet på nytt och finns nu på alla sju språk. Det hade hamnat efter - det talade fortfarande om sju moduler, SET SCANNER fanns inte med någonstans, och det saknade FILL GAPS, undermapparna, Move och Fix slot numbering, EXPERT MODE, Deploy 100% Screen Order, LIVE PREVIEW och TAG FILES.
+
+What's New: just detta fönster talar nu ditt språk, och från den här utgåvan kan en utgåvanteckning bära sin egen text per språk.
+
+STYLE MASTER PRO - NYTT
+
+Tomma sektioner som Event aldrig spelar: när du öppnar en stil från Event blir en tom sektion som stilen själv markerar som ospelad 1 takt lång av sig själv, som i fabriksstilarna.
+
+Rättelse: sektioner som spelas av Live Drum, Real eller Groove - en sektion utan MIDI-noter som Event spelar med Live Drum, Real eller Groove erbjuds inte längre som tom och behåller sin längd vid EXPORT.
+
+Rättelse: SD9-stilar med en gammal kopia av sina inställningar - vissa SD9-stilar bär inne i filen en äldre kopia av sina inställningar; programmet tar nu alltid de riktiga, och EXPORT behåller dem.
+
+Handboken finns nu också på spanska, bulgariska och ungerska.
+
+Style Master Pros fönster talar nu programmets språk: meddelanden, frågor och förklaringar följer LANGUAGE-knappen på 7 språk, medan namnen på knappar och menyer förblir på engelska, precis som i handboken.
+
+Knappbeskrivningarna finns nu också på spanska, bulgariska och ungerska, och de följer programmets LANGUAGE-knapp; FILE -&gt; TOOLTIP LANGUAGE kan fortfarande sätta ett annat språk för Style Master Pro.
+
+BALTIK SAMPLER - NYTT / RÄTTAT
+
+NYTT: Knappbeskrivningar - bubblorna med förklaringarna finns nu också på spanska, bulgariska och ungerska: menyn Tooltip language har 7 språk (English, Srpski, Italiano, Deutsch, Español, Български, Magyar); ett spanskt, bulgariskt eller ungerskt Windows får dem av sig självt.
+
+NYTT: Handbok - handboken finns nu också på spanska, bulgariska och ungerska: SR | EN | IT | DE | ES | BG | HU.
+
+NYTT: Tempo &amp; Loops - Lager - flera loopar spelar tillsammans i ett tempo (till exempel darbuka + def) och sparas som en loop, eller delar av olika loopar följer på varandra (takt 1-4 från en, 5-8 från en annan). Lagren visas under varandra i samma takter; vart och ett redigeras för sig med alla fönstrets verktyg, och Ctrl + klick redigerar flera på en gång (Quantize, Cut, EQ, Effects). Varje lager har Mute, Solo, Vol, Pan, takten det börjar på och hur många takter det spelar.
+
+NYTT: Tempo &amp; Loops - ✂ Cut - ta bort de delar av en inspelning du inte behöver, behåll bara en del, eller ta bort allt före eller efter den; ↶ / ↷ ångrar eller gör om, och loopens start och längd följer klippet.
+
+NYTT: Tempo &amp; Loops - MP3 - även MP3-filer går att öppna (📂 Open WAV…, dra och släpp, + Add layer); själva MP3-filen ändras aldrig.
+
+RÄTTAT: Knappbeskrivningar - språket i beskrivningarna följer LANGUAGE-knappen i Event Studio Pro (Tooltip language -&gt; Follow program language, det förvalda), eller det språk du själv väljer där; utan något av dem, Windows språk. Raderna är kortare, så en förklaring kapas inte vid skärmens kant.
+
+RÄTTAT: Handbok - i den spanska, bulgariska och ungerska handboken är en hänvisning som "kapitel 17" nu också en länk som hoppar till det kapitlet.
+
+RÄTTAT: Tempo &amp; Loops - Takt 1 - sätts av sig själv strax före inspelningens första slag, i tystnaden, så att anslaget förblir helt och inget klickar.
+
+RÄTTAT: Tempo &amp; Loops - Reglage - reglaget under vågen är vitt och lätt att se; ett långt filnamn gör inte längre fönstret bredare.
+
+Befintliga kunder: GRATIS automatisk uppdatering.</div>
+</div>
+
 <div class="version-card">
   <div class="version-header">
     <span class="version-num">v7.3.2</span>
